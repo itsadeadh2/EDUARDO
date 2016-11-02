@@ -10,7 +10,7 @@ namespace SisClinica.DAO
 {
     class Conexao
     {
-        private SqlConnection Conectar()
+        public private SqlConnection Conectar()
         {
             string StringConexao = "Data Source = MALAKI; Initial Catalog = BDSISCLIN; user ID = sa; Password = 0123654852; Min Pool Size=5;Max Pool Size=250; Connect Timeout=3";
             SqlConnection conexao = new SqlConnection(StringConexao);

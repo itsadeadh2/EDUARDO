@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SisClinica.Classes
 {
-    class Agenda
+    public class Agenda
     {
+        
     }
 }
