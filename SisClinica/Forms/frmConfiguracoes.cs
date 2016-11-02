@@ -20,12 +20,7 @@ namespace SisClinica.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Sessoes.horaEntrada = Convert.ToDateTime(cbHoraEntrada.SelectedItem);
-            Sessoes.horaAlmoco = Convert.ToDateTime(cbHoraAlmoco.SelectedItem);
-            Sessoes.horarioReentrada = Convert.ToDateTime(cbHoraReentrada.SelectedItem);
-            Sessoes.fimExpediente = Convert.ToDateTime(cbFimExpediente.SelectedItem);
-
-            MessageBox.Show("Configurações alteradas!");
+            MessageBox.Show("Configurações alteradas! (MENTIRA)");
             Close();
         }
     }

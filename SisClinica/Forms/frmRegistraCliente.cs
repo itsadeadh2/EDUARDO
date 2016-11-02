@@ -46,7 +46,7 @@ namespace SisClinica.Forms
                     objResponsavel.endereco = txtBoxEndereco.Text + ", " + txtBoxNumero.Text + ", " + txtBoxBairro.Text;
                     objResponsavel.cidadeEstado  = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
                     objCliente.objResponsavel = objResponsavel;
-
+                    objResponsavel.Registrar();
                     objCliente.Registrar();
 
                     MessageBox.Show("Cliente e Responsável vinculados e registrados com sucesso!");
@@ -107,6 +107,11 @@ namespace SisClinica.Forms
         {
             checaData();
         }
+
+        /// <summary>
+        /// Checa se a data informada no DateTimePicker é correspondente a uma pessoa maior de idade.
+        /// </summary>
+        /// <returns>true para maior de idade, false para menor de idade</returns>
         private bool checaData()
         {
             if (DateTime.Now.Year - dtpDataDeNascimento.Value.Year < 18)

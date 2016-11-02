@@ -14,38 +14,30 @@ namespace SisClinica.Classes
         public string adicionalInfo { get; set; }
         public Responsavel objResponsavel { get; set; }
         //-Métodos
+
         /// <summary>
-        /// Retorna uma iList (lista) de clientes que tem o nome igual ao que é passado pelo parâmetro.
-        /// </summary>
-        /// <param name="nome">Nome do cliente</param>
-        /// <returns></returns>
-        //public IList<Cliente> PesquisarPorNome(string nome)
-        //{
-        //    IList<Cliente> listaDeClientes = new List<Cliente>();
-        //    listaDeClientes = new ClienteDAO().PesquisarPorNome(nome);
-        //    return listaDeClientes;
-        //}
-        /// <summary>
-        /// Retorna uma iList (lista) com APENAS UM registro que é encontrado através do CPF passado como parâmetro.
+        /// Encontra um objeto do tipo cliente.
         /// </summary>
         /// <param name="cpf">CPF do cliente</param>
-        /// <returns></returns>
-        public IList<Cliente> PesquisarPorCpf(string cpf)
+        /// <returns>objeto cliente</returns>
+        public Cliente PesquisarPorCpf(string cpf)
         {
-            IList<Cliente> listaDeClientes = new List<Cliente>();
-            Cliente objCliente = new Cliente();
-            ClienteDAO objClienteDao = new ClienteDAO();
-            objCliente = objClienteDao.Pesquisar(cpf);
-            listaDeClientes.Add(objCliente);
-            //objCliente = new ClienteDAO().Pesquisar(cpf);
-            return listaDeClientes;
+            return new ClienteDAO().Pesquisar(cpf);
+           
         }
+
+        /// <summary>
+        /// Encontra um objeto do tipo cliente.
+        /// </summary>
+        /// <param name="id">id para a busca</param>
+        /// <returns>objeto cliente</returns>
         public Cliente PesquisarPorId(int id)
         {
             return new ClienteDAO().Pesquisar(id);
         }
+
         /// <summary>
-        /// Registra um cliente no banco de dados.
+        /// Determina se o cliente possui um responsável e caso tenha, vincula-o ao cliente. Caso não tenha, apenas registra o cliente.
         /// </summary>
         public void Registrar()
         {
@@ -56,13 +48,14 @@ namespace SisClinica.Classes
             else
             {
                 new ClienteDAO().Registrar(this);
-            }            
+            }                
         }
+        
         /// <summary>
-        /// Registra um cliente e seu responsável no banco de dados.
+        /// Retorna uma data table com alguns dados essenciais do cliente.
         /// </summary>
-        /// <param name="objResponsavel">Responsável a ser registrado.</param>       
-
+        /// <param name="nome">Nome do cliente</param>
+        /// <returns> DataTable com: ID, Nome, CPF, Nome Responsavel, CPF Responsavel</returns>
         public DataTable PesquisarPorNome(string nome)
         {
             IList<Cliente> listadeClientes = new List<Cliente>();
@@ -76,8 +69,14 @@ namespace SisClinica.Classes
             dt.Columns.Add("CPF Responsavel", typeof(string));
             foreach (Cliente objCliente in listadeClientes)
             {
-
-                dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, objCliente.objResponsavel.nome, objCliente.objResponsavel.cpf);
+                if (objCliente.objResponsavel!=null)
+                {
+                    dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, objCliente.objResponsavel.nome, objCliente.objResponsavel.cpf);
+                }
+                else
+                {
+                    dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, "-", "-");
+                }
             }
             return dt;
         }

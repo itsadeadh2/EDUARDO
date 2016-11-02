@@ -58,15 +58,16 @@ namespace SisClinica.DAO
             }
             return objSessao;
         }
-        public Sessoes Pesquisar(DateTime data, Medico objMedico)
+        public Sessoes Pesquisar(DateTime data, Medico objMedico, Consultorio objConsultorio)
         {
             Sessoes objSessao = new Sessoes();
 
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "SELECT * FROM Sessoes where horaInicio = @data and id_medico_responsavel = @id";
+            comando.CommandText = "SELECT * FROM Sessoes where horaInicio = @data and id_medico_responsavel = @id and id_consultorio=@idcons";
             comando.Parameters.AddWithValue("@data", data);
             comando.Parameters.AddWithValue("@id", objMedico.id);
+            comando.Parameters.AddWithValue("@idcons", objConsultorio.id);
 
             Conexao con = new Conexao();
             SqlDataReader dr = con.ExecutarSelect(comando);
@@ -89,9 +90,9 @@ namespace SisClinica.DAO
             return objSessao;
         }
 
-        public Sessoes Pesquisar(Medico objMedico)
+        public IList<Sessoes> Pesquisar(Medico objMedico)
         {
-            Sessoes objSessao = new Sessoes();
+            IList<Sessoes> listaDeSessoes = new List<Sessoes>();
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
             comando.CommandText = "SELECT * FROM Sessoes WHERE id_medico_responsavel = @id";
@@ -102,7 +103,9 @@ namespace SisClinica.DAO
 
             if (dr.HasRows)
             {
-                dr.Read();
+                while (dr.Read())
+                {
+                    Sessoes objSessao = new Sessoes();
                     objSessao.medicoResponsavel = new MedicoDAO().Pesquisar(Convert.ToInt32(dr["id_medico_responsavel"]));
                     objSessao.objCliente = new ClienteDAO().Pesquisar(Convert.ToInt32(dr["id_cliente"]));
                     objSessao.objConsultorio = new ConsultorioDAO().Pesquisar(Convert.ToInt32(dr["id_consultorio"]));
@@ -110,18 +113,19 @@ namespace SisClinica.DAO
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                     objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
-                
+                    listaDeSessoes.Add(objSessao);
+                }
             }
             else
             {
-                objSessao = null;
+                listaDeSessoes = null;
             }
-            return objSessao;
+            return listaDeSessoes;
         }
 
-        public Sessoes Pesquisar(Consultorio objConsultorio)
+        public IList<Sessoes> Pesquisar(Consultorio objConsultorio)
         {
-            Sessoes objSessao = new Sessoes();
+            IList<Sessoes> listaDeSessoes = new List<Sessoes>();
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
             comando.CommandText = "SELECT * FROM Sessoes WHERE id_consultorio = @id";
@@ -132,7 +136,9 @@ namespace SisClinica.DAO
 
             if (dr.HasRows)
             {
-                dr.Read();                    
+                while (dr.Read())
+                {
+                    Sessoes objSessao = new Sessoes();
                     objSessao.medicoResponsavel = new MedicoDAO().Pesquisar(Convert.ToInt32(dr["id_medico_responsavel"]));
                     objSessao.objCliente = new ClienteDAO().Pesquisar(Convert.ToInt32(dr["id_cliente"]));
                     objSessao.objConsultorio = new ConsultorioDAO().Pesquisar(Convert.ToInt32(dr["id_consultorio"]));
@@ -140,13 +146,14 @@ namespace SisClinica.DAO
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                     objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
-                
+                    listaDeSessoes.Add(objSessao);
+                }   
             }
             else
             {
-                objSessao = null;
+                listaDeSessoes = null;
             }
-            return objSessao;
+            return listaDeSessoes;
         }
     }
 }

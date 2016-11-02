@@ -17,7 +17,6 @@ namespace SisClinica.DAO
         /// <param name="objCliente">Objeto cliente a ser traduzido</param>
         public void RegistrarComResponsavel(Cliente objCliente)
         {
-            new ResponsavelDAO().Registrar(objCliente.objResponsavel);
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
             comando.CommandText = "INSERT INTO Cliente (cpf, email, endereco, cidadeEstado, nome, telefone, dataNascimento, adicionalInfo, cpf_responsavel) " +

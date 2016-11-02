@@ -12,14 +12,28 @@ namespace SisClinica.Classes
     {
         public string crm { get; set; }
 
+        /// <summary>
+        /// Registra o objeto medico no banco de dados.
+        /// </summary>
         public void Registrar()
         {
             new MedicoDAO().Registrar(this);
         }
+
+        /// <summary>
+        /// Pesquisa um medico.
+        /// </summary>
+        /// <param name="id">id do medico</param>
+        /// <returns>objeto medico</returns>
         public Medico Pesquisar(int id)
         {
            return new MedicoDAO().Pesquisar(id);
         }
+
+        /// <summary>
+        /// Retorna todos os medicos
+        /// </summary>
+        /// <returns>DataTable com todos os medicos</returns>
         public DataTable Pesquisar()
         {
             IList<Medico> listaDeMedicos = new MedicoDAO().Pesquisar();
@@ -33,6 +47,12 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+
+        /// <summary>
+        /// Pesquisa vários medicos
+        /// </summary>
+        /// <param name="nome">nome do medico</param>
+        /// <returns>DataTable de medicos</returns>
         public DataTable Pesquisar(string nome)
         {
             IList < Medico > listaDeMedicos = new MedicoDAO().Pesquisar(nome);
