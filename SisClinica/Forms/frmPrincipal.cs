@@ -93,5 +93,12 @@ namespace SisClinica.Forms
             frmConfig.MdiParent = this;
             frmConfig.Show();
         }
+
+        private void médicoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form frmAlterarMedico = new frmAlterarMedico();
+            frmAlterarMedico.MdiParent = this;
+            frmAlterarMedico.Show();
+        }
     }
 }

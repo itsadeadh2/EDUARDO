@@ -41,6 +41,8 @@
             this.médicoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sessõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.médicoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,8 @@
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoToolStripMenuItem,
             this.pesquisarToolStripMenuItem1,
-            this.configuraçõesToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem,
+            this.alterarToolStripMenuItem});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
             this.menuPrincipal.Size = new System.Drawing.Size(846, 24);
@@ -148,6 +151,21 @@
             this.configuraçõesToolStripMenuItem.Text = "Configurações";
             this.configuraçõesToolStripMenuItem.Click += new System.EventHandler(this.configuraçõesToolStripMenuItem_Click);
             // 
+            // alterarToolStripMenuItem
+            // 
+            this.alterarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.médicoToolStripMenuItem2});
+            this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.alterarToolStripMenuItem.Text = "Alterar";
+            // 
+            // médicoToolStripMenuItem2
+            // 
+            this.médicoToolStripMenuItem2.Name = "médicoToolStripMenuItem2";
+            this.médicoToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.médicoToolStripMenuItem2.Text = "Médico";
+            this.médicoToolStripMenuItem2.Click += new System.EventHandler(this.médicoToolStripMenuItem2_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +199,7 @@
         private System.Windows.Forms.ToolStripMenuItem médicoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sessõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem médicoToolStripMenuItem2;
     }
 }

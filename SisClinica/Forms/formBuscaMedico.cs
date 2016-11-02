@@ -17,6 +17,7 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
         }
+        public Medico objMedico { get; set; }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
@@ -50,6 +51,13 @@ namespace SisClinica.Forms
         private void dtgMedicos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnExcluir.Enabled = true;
+        }
+
+        private void dtgMedicos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgMedicos.CurrentRow.Cells["id"].Value));
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

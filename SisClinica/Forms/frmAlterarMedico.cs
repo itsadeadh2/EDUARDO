@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SisClinica.Classes;
 
 namespace SisClinica.Forms
 {
@@ -15,6 +16,32 @@ namespace SisClinica.Forms
         public frmAlterarMedico()
         {
             InitializeComponent();
+        }
+        private Medico objMedico;
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            using (var form = new formBuscaMedico())
+            {
+                var result = form.ShowDialog();
+                if (result==DialogResult.OK)
+                {
+                    objMedico = form.objMedico;
+                }
+            }
+            if (objMedico!=null)
+            {
+                txtbNome.Text = objMedico.nome;
+                txtbEmail.Text = objMedico.email;
+                txtbTelefone.Text = objMedico.telefone;
+                txtbEndereco.Text = objMedico.endereco;
+                txtbEstado.Text = objMedico.cidadeEstado;
+                txtbCidade.Text = objMedico.cidadeEstado;
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            objMedico.Alterar();
         }
     }
 }

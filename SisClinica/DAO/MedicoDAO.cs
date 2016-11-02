@@ -92,6 +92,12 @@ namespace SisClinica.DAO
             return listaDemedicos;
         }
 
+        public void Alterar(Medico objMedico)
+        {
+            SqlCommand comando = new SqlCommand();
+
+        }
+
         public IList<Medico> Pesquisar(string nome)
         {
             IList<Medico> listaDemedicos = new List<Medico>();

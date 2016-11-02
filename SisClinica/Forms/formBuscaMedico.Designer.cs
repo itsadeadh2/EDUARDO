@@ -106,6 +106,7 @@
             this.dtgMedicos.Size = new System.Drawing.Size(285, 119);
             this.dtgMedicos.TabIndex = 0;
             this.dtgMedicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMedicos_CellClick);
+            this.dtgMedicos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMedicos_CellContentDoubleClick);
             // 
             // btnExcluir
             // 
