@@ -63,7 +63,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(181, 410);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(131, 55);
-            this.btnAlterar.TabIndex = 1;
+            this.btnAlterar.TabIndex = 10;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -100,7 +100,7 @@
             this.txtbTelefone.Mask = "(99) 00000-0000";
             this.txtbTelefone.Name = "txtbTelefone";
             this.txtbTelefone.Size = new System.Drawing.Size(121, 23);
-            this.txtbTelefone.TabIndex = 7;
+            this.txtbTelefone.TabIndex = 4;
             // 
             // lblEmailRegMedico
             // 
@@ -119,7 +119,7 @@
             this.txtbEmail.Location = new System.Drawing.Point(88, 27);
             this.txtbEmail.Name = "txtbEmail";
             this.txtbEmail.Size = new System.Drawing.Size(287, 23);
-            this.txtbEmail.TabIndex = 8;
+            this.txtbEmail.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -158,7 +158,7 @@
             this.txtbEndereco.Location = new System.Drawing.Point(97, 32);
             this.txtbEndereco.Name = "txtbEndereco";
             this.txtbEndereco.Size = new System.Drawing.Size(287, 23);
-            this.txtbEndereco.TabIndex = 9;
+            this.txtbEndereco.TabIndex = 5;
             // 
             // lblCidadeRegMedico
             // 
@@ -178,7 +178,7 @@
             this.txtbCidade.Location = new System.Drawing.Point(299, 101);
             this.txtbCidade.Name = "txtbCidade";
             this.txtbCidade.Size = new System.Drawing.Size(121, 25);
-            this.txtbCidade.TabIndex = 13;
+            this.txtbCidade.TabIndex = 9;
             // 
             // lblEstadoRegMedico
             // 
@@ -197,7 +197,7 @@
             this.txtbBairro.Location = new System.Drawing.Point(97, 64);
             this.txtbBairro.Name = "txtbBairro";
             this.txtbBairro.Size = new System.Drawing.Size(142, 23);
-            this.txtbBairro.TabIndex = 11;
+            this.txtbBairro.TabIndex = 6;
             // 
             // txtbEstado
             // 
@@ -234,7 +234,7 @@
             this.txtbEstado.Location = new System.Drawing.Point(97, 99);
             this.txtbEstado.Name = "txtbEstado";
             this.txtbEstado.Size = new System.Drawing.Size(121, 25);
-            this.txtbEstado.TabIndex = 12;
+            this.txtbEstado.TabIndex = 8;
             // 
             // lblNumeroRegMedico
             // 
@@ -264,7 +264,7 @@
             this.txtbnumero.Location = new System.Drawing.Point(299, 66);
             this.txtbnumero.Name = "txtbnumero";
             this.txtbnumero.Size = new System.Drawing.Size(64, 23);
-            this.txtbnumero.TabIndex = 10;
+            this.txtbnumero.TabIndex = 7;
             // 
             // groupBox3
             // 
@@ -284,7 +284,7 @@
             this.txtbNome.Location = new System.Drawing.Point(88, 36);
             this.txtbNome.Name = "txtbNome";
             this.txtbNome.Size = new System.Drawing.Size(306, 23);
-            this.txtbNome.TabIndex = 3;
+            this.txtbNome.TabIndex = 2;
             // 
             // lblNomeRegistraMedico
             // 
@@ -317,7 +317,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(145, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(203, 40);
-            this.btnPesquisar.TabIndex = 34;
+            this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "Pesquisar Médico";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);

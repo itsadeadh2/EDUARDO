@@ -47,6 +47,8 @@ namespace SisClinica.Forms
             objMedico.endereco = txtbEndereco.Text + ", " + txtbBairro.Text + ", " + txtbNome;
             objMedico.cidadeEstado = txtbCidade.Text + "/" + txtbCidade.Text;
             objMedico.Alterar();
+            MessageBox.Show("Médico Alterado!");
+            Close();
         }
     }
 }
