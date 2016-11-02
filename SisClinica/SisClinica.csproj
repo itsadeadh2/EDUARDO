@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D4FBF20-A2AE-4999-A3B8-424EA67197DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SisClinica</RootNamespace>
+    <AssemblyName>SisClinica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Agenda.cs" />
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Consultorio.cs" />
+    <Compile Include="Classes\Medico.cs" />
+    <Compile Include="Classes\Pessoa.cs" />
+    <Compile Include="Classes\Responsavel.cs" />
+    <Compile Include="Classes\Sessoes.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\Conexao.cs" />
+    <Compile Include="DAO\ConsultorioDAO.cs" />
+    <Compile Include="DAO\MedicoDAO.cs" />
+    <Compile Include="DAO\ResponsavelDAO.cs" />
+    <Compile Include="DAO\SessoesDAO.cs" />
+    <Compile Include="Forms\formBuscaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formBuscaMedico.Designer.cs">
+      <DependentUpon>formBuscaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formInfoMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formInfoMedico.Designer.cs">
+      <DependentUpon>formInfoMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formRegistraMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formRegistraMedico.Designer.cs">
+      <DependentUpon>formRegistraMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAgendarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAgendarConsulta.Designer.cs">
+      <DependentUpon>frmAgendarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAgendarTratamentoComConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAgendarTratamentoComConsulta.Designer.cs">
+      <DependentUpon>frmAgendarTratamentoComConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAgendarTratamentoSemConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAgendarTratamentoSemConsulta.Designer.cs">
+      <DependentUpon>frmAgendarTratamentoSemConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlterarData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlterarData.Designer.cs">
+      <DependentUpon>frmAlterarData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuscaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuscaCliente.Designer.cs">
+      <DependentUpon>frmBuscaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuscaResponsavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuscaResponsavel.Designer.cs">
+      <DependentUpon>frmBuscaResponsavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuscarTratCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuscarTratCon.Designer.cs">
+      <DependentUpon>frmBuscarTratCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfiguracoes.Designer.cs">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsultaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultaInfo.Designer.cs">
+      <DependentUpon>frmConsultaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInfoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInfoCliente.Designer.cs">
+      <DependentUpon>frmInfoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegistraCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegistraCliente.Designer.cs">
+      <DependentUpon>frmRegistraCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTratamentoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTratamentoInfo.Designer.cs">
+      <DependentUpon>frmTratamentoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\formBuscaMedico.resx">
+      <DependentUpon>formBuscaMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formInfoMedico.resx">
+      <DependentUpon>formInfoMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formRegistraMedico.resx">
+      <DependentUpon>formRegistraMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAgendarConsulta.resx">
+      <DependentUpon>frmAgendarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAgendarTratamentoComConsulta.resx">
+      <DependentUpon>frmAgendarTratamentoComConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAgendarTratamentoSemConsulta.resx">
+      <DependentUpon>frmAgendarTratamentoSemConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlterarData.resx">
+      <DependentUpon>frmAlterarData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuscaCliente.resx">
+      <DependentUpon>frmBuscaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuscaResponsavel.resx">
+      <DependentUpon>frmBuscaResponsavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuscarTratCon.resx">
+      <DependentUpon>frmBuscarTratCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConfiguracoes.resx">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultaInfo.resx">
+      <DependentUpon>frmConsultaInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInfoCliente.resx">
+      <DependentUpon>frmInfoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegistraCliente.resx">
+      <DependentUpon>frmRegistraCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTratamentoInfo.resx">
+      <DependentUpon>frmTratamentoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
