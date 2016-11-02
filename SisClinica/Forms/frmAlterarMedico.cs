@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SisClinica.Forms
 {
-    public partial class FormMedicoAlterar : Form
+    public partial class frmAlterarMedico : Form
     {
-        public FormMedicoAlterar()
+        public frmAlterarMedico()
         {
             InitializeComponent();
         }

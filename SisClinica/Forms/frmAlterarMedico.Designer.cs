@@ -1,6 +1,6 @@
 ﻿namespace SisClinica.Forms
 {
-    partial class FormMedicoAlterar
+    partial class frmAlterarMedico
     {
         /// <summary>
         /// Required designer variable.
@@ -48,16 +48,19 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtBoxNomeRegistraMedico = new System.Windows.Forms.TextBox();
             this.lblNomeRegistraMedico = new System.Windows.Forms.Label();
+            this.gbInfoMedico = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.gbInfoMedico.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAlterar
             // 
             this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAlterar.Location = new System.Drawing.Point(150, 354);
+            this.btnAlterar.Location = new System.Drawing.Point(181, 439);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(131, 55);
             this.btnAlterar.TabIndex = 1;
@@ -71,7 +74,7 @@
             this.groupBox1.Controls.Add(this.lblEmailRegMedico);
             this.groupBox1.Controls.Add(this.txtboxEmailRegMedico);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 65);
+            this.groupBox1.Location = new System.Drawing.Point(27, 90);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(429, 104);
             this.groupBox1.TabIndex = 30;
@@ -130,7 +133,7 @@
             this.groupBox2.Controls.Add(this.lblBairroRegMedico);
             this.groupBox2.Controls.Add(this.txtboxNumeroRegMedico);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(12, 175);
+            this.groupBox2.Location = new System.Drawing.Point(27, 200);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(429, 173);
             this.groupBox2.TabIndex = 31;
@@ -267,7 +270,7 @@
             this.groupBox3.Controls.Add(this.txtBoxNomeRegistraMedico);
             this.groupBox3.Controls.Add(this.lblNomeRegistraMedico);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(12, 1);
+            this.groupBox3.Location = new System.Drawing.Point(27, 26);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(429, 68);
             this.groupBox3.TabIndex = 32;
@@ -293,17 +296,40 @@
             this.lblNomeRegistraMedico.TabIndex = 2;
             this.lblNomeRegistraMedico.Text = "Nome";
             // 
-            // FormMedicoAlterar
+            // gbInfoMedico
+            // 
+            this.gbInfoMedico.Controls.Add(this.groupBox3);
+            this.gbInfoMedico.Controls.Add(this.groupBox2);
+            this.gbInfoMedico.Controls.Add(this.groupBox1);
+            this.gbInfoMedico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbInfoMedico.Location = new System.Drawing.Point(5, 54);
+            this.gbInfoMedico.Name = "gbInfoMedico";
+            this.gbInfoMedico.Size = new System.Drawing.Size(482, 379);
+            this.gbInfoMedico.TabIndex = 33;
+            this.gbInfoMedico.TabStop = false;
+            this.gbInfoMedico.Text = "Informações";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPesquisar.Location = new System.Drawing.Point(145, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(203, 40);
+            this.btnPesquisar.TabIndex = 34;
+            this.btnPesquisar.Text = "Pesquisar Médico";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // frmAlterarMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 415);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(492, 506);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.gbInfoMedico);
             this.Controls.Add(this.btnAlterar);
             this.ForeColor = System.Drawing.SystemColors.Control;
-            this.Name = "FormMedicoAlterar";
+            this.Name = "frmAlterarMedico";
             this.Text = "Alterar Medico";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -311,6 +337,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.gbInfoMedico.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -337,5 +364,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtBoxNomeRegistraMedico;
         private System.Windows.Forms.Label lblNomeRegistraMedico;
+        private System.Windows.Forms.GroupBox gbInfoMedico;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }
