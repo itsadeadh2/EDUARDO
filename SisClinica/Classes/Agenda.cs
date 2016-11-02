@@ -8,5 +8,6 @@ namespace SisClinica.Classes
 {
     class Agenda
     {
+        
     }
 }
