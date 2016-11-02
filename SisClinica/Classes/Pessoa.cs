@@ -10,6 +10,7 @@ namespace SisClinica.Classes
     {
 
         //SUPER WA TACHIWAGARIYO
+        //WELCOME SEUS PUTO
         public string nome { get; set; }
         public string cpf { get; set; }
         public DateTime dataNascimento { get; set; }
