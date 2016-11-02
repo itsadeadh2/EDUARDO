@@ -9,7 +9,7 @@ using SisClinica.Classes;
 
 namespace SisClinica.DAO
 {
-    class ResponsavelDAO
+    public class ResponsavelDAO
     {
         public void Registrar(Responsavel objResponsvavel)
         {

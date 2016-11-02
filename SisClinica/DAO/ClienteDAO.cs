@@ -9,7 +9,7 @@ using SisClinica.Classes;
 
 namespace SisClinica.DAO
 {
-    class ClienteDAO
+    public class ClienteDAO
     {
         /// <summary>
         /// Traduz um objeto do tipo cliente para o banco de dados

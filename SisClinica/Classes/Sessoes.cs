@@ -8,7 +8,7 @@ using SisClinica.DAO;
 
 namespace SisClinica.Classes
 {
-    class Sessoes
+    public class Sessoes
     {
         public Medico medicoResponsavel { get; set; }
         public Cliente objCliente { get; set; }

@@ -9,7 +9,7 @@ using SisClinica.Classes;
 
 namespace SisClinica.DAO
 {
-    class ConsultorioDAO
+    public class ConsultorioDAO
     {
         public Consultorio Pesquisar(int id)
         {

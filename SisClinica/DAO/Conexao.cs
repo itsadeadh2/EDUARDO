@@ -8,7 +8,7 @@ using System.Data;
 
 namespace SisClinica.DAO
 {
-    class Conexao
+    public class Conexao
     {
         private SqlConnection Conectar()
         {

@@ -8,7 +8,7 @@ using System.Data;
 
 namespace SisClinica.Classes
 {
-    class Medico:Pessoa
+    public class Medico:Pessoa
     {
         public string crm { get; set; }
 
