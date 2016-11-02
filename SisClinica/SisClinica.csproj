@@ -85,6 +85,12 @@
     <Compile Include="Forms\formInfoMedico.Designer.cs">
       <DependentUpon>formInfoMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAlterarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlterarCliente.Designer.cs">
+      <DependentUpon>frmAlterarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAlterarMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formInfoMedico.resx">
       <DependentUpon>formInfoMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlterarCliente.resx">
+      <DependentUpon>frmAlterarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAlterarMedico.resx">
       <DependentUpon>frmAlterarMedico.cs</DependentUpon>
