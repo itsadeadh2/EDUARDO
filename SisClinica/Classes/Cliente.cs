@@ -10,7 +10,7 @@ namespace SisClinica.Classes
 {
     public class Cliente:Pessoa
     {
-        //-Propriedades
+        //-Propriedadesf
         public string adicionalInfo { get; set; }
         public Responsavel objResponsavel { get; set; }
         //-Métodos
