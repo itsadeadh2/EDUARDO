@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SisClinica.Classes;
 using SisClinica.DAO;
+using 
 
 namespace SisClinica.Forms
 {
@@ -17,8 +18,9 @@ namespace SisClinica.Forms
         public formRegistraMedico()
         {
             InitializeComponent();
+            
         }
-
+        
         private void btnSalvarRegMedico_Click(object sender, EventArgs e)
         {
 
