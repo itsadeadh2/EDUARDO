@@ -78,7 +78,7 @@ namespace SisClinica.Classes
 
         public void Alterar()
         {
-
+            new MedicoDAO().Alterar(this);
         }
 
         public bool Excluir()

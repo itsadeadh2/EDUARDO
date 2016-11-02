@@ -95,7 +95,17 @@ namespace SisClinica.DAO
         public void Alterar(Medico objMedico)
         {
             SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE MEDICO set cpf=@cpf, email=@email, endereco=@endereco, cidadeEstado=@cidadeEstado, nome=@nome, telefone=@telefone";
+            comando.Parameters.AddWithValue("@email", objMedico.email);
+            comando.Parameters.AddWithValue("@cpf", objMedico.cpf);
+            comando.Parameters.AddWithValue("@endereco", objMedico.endereco);
+            comando.Parameters.AddWithValue("@cidadeEstado", objMedico.cidadeEstado);
+            comando.Parameters.AddWithValue("@nome", objMedico.nome);
+            comando.Parameters.AddWithValue("@telefone", objMedico.telefone);
 
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
         }
 
         public IList<Medico> Pesquisar(string nome)

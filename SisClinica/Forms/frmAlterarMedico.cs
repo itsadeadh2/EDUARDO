@@ -41,6 +41,11 @@ namespace SisClinica.Forms
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            objMedico.nome = txtbNome.Text;
+            objMedico.email = txtbEmail.Text;
+            objMedico.telefone = txtbTelefone.Text;
+            objMedico.endereco = txtbEndereco.Text + ", " + txtbBairro.Text + ", " + txtbNome;
+            objMedico.cidadeEstado = txtbCidade.Text + "/" + txtbCidade.Text;
             objMedico.Alterar();
         }
     }
