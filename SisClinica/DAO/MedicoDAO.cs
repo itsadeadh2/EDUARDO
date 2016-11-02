@@ -9,7 +9,7 @@ using SisClinica.Classes;
 
 namespace SisClinica.DAO
 {
-    class MedicoDAO
+    public class MedicoDAO
     {
         public void Registrar(Medico objMedico)
         {
