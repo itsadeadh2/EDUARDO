@@ -85,6 +85,12 @@
     <Compile Include="Forms\formInfoMedico.Designer.cs">
       <DependentUpon>formInfoMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormMedicoAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMedicoAlterar.Designer.cs">
+      <DependentUpon>FormMedicoAlterar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\formRegistraMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formInfoMedico.resx">
       <DependentUpon>formInfoMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMedicoAlterar.resx">
+      <DependentUpon>FormMedicoAlterar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formRegistraMedico.resx">
       <DependentUpon>formRegistraMedico.cs</DependentUpon>
