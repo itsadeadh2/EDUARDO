@@ -8,7 +8,7 @@ namespace SisClinica.Classes
 {
     public abstract class Pessoa
     {
-        //Principal
+        
         public string nome { get; set; }
         public string cpf { get; set; }
         public DateTime dataNascimento { get; set; }
