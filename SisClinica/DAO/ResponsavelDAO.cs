@@ -41,6 +41,7 @@ namespace SisClinica.DAO
 
             if (dr.HasRows)
             {
+                dr.Read();
                 objResponsavel.id = Convert.ToInt32(dr["id"]);
                 objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.cpf = dr["cpf"].ToString();
@@ -83,6 +84,41 @@ namespace SisClinica.DAO
                 objResponsavel = null;
             }
             return objResponsavel;
+        }
+
+        public IList<Responsavel> PesquisarPorNome(string nome)
+        {
+            IList<Responsavel> listaDeResponsaveis = new List<Responsavel>();
+
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Responsavel where nome like @nome";
+            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Responsavel objResponsavel = new Responsavel();
+                    objResponsavel.id = (int)dr["id"];
+                    objResponsavel.cpf = dr["cpf"].ToString();
+                    objResponsavel.email = dr["email"].ToString();
+                    objResponsavel.endereco = dr["endereco"].ToString();
+                    objResponsavel.cidadeEstado = dr["cidadeEstado"].ToString();
+                    objResponsavel.nome = dr["nome"].ToString();
+                    objResponsavel.telefone = dr["telefone"].ToString();
+                    objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
+                    listaDeResponsaveis.Add(objResponsavel);
+                }
+            }
+            else
+            {
+                listaDeResponsaveis = null;
+            }
+            return listaDeResponsaveis;
         }
     }
 }

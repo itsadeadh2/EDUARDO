@@ -31,6 +31,23 @@ namespace SisClinica.Forms
                 {
                     MessageBox.Show("Nome inválido, por favor, digite um nome válido!");
                 }
+                else if (checaData()&&objResponsavel.id!=0)
+                {
+                    Cliente objCliente = new Cliente();
+                    objCliente.nome = txtBoxNomeCompleto.Text;
+                    objCliente.cpf = mskdCPF.Text;
+                    objCliente.dataNascimento = dtpDataDeNascimento.Value;
+                    objCliente.telefone = mskTxtBoxTelefone.Text;
+                    objCliente.email = txtBoxEmail.Text;
+                    objCliente.endereco = txtBoxEndereco.Text + ", " + txtBoxNumero.Text + ", " + txtBoxBairro.Text;
+                    objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
+                    objCliente.adicionalInfo = rtbAdicionalInfo.Text;
+
+                    objCliente.objResponsavel = objResponsavel;
+                    objCliente.Registrar();
+                    MessageBox.Show("Cliente registrado e vinculado ao Responsável!");
+                    Close();
+                }
                 else if (checaData())
                 {
                     Cliente objCliente = new Cliente();
@@ -50,7 +67,7 @@ namespace SisClinica.Forms
                     objCliente.Registrar();
 
                     MessageBox.Show("Cliente e Responsável vinculados e registrados com sucesso!");
-                    this.Close();
+                    Close();
                 }
                 else if (!checaData())
                 {
@@ -67,7 +84,7 @@ namespace SisClinica.Forms
                     objCliente.Registrar();
 
                     MessageBox.Show("Cliente Registrado com sucesso!");
-                    this.Close();
+                    Close();
                 }
             }
             catch (Exception erro)
@@ -89,11 +106,7 @@ namespace SisClinica.Forms
                 var result = form.ShowDialog();
                 if (result==DialogResult.OK)
                 {
-                    objResponsavel.nome = form.nomeCompleto;
-                    objResponsavel.cpf = form.cpf;
-                    objResponsavel.dataNascimento = Convert.ToDateTime(form.dataNascimento);
-                    objResponsavel.telefone = form.telefone;
-                    objResponsavel.email = form.email;
+                    objResponsavel = form.objResponsavel;
                 }
             }            
         }

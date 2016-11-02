@@ -18,11 +18,14 @@ namespace SisClinica.Forms
         public string dataNascimento { get; set; }
         public string telefone { get; set; }
         public string email { get; set; }
+        public Responsavel objResponsavel;
+
 
         public frmBuscaResponsavel()
         {
             InitializeComponent();
-            
+
+
         }
         
 
@@ -30,11 +33,11 @@ namespace SisClinica.Forms
         {
             if (!checaValidez())
             {
-                this.nomeCompleto = txtBoxNomeCompleto.Text;
-                this.cpf = mskdCPF.Text;
-                this.dataNascimento = dtpDataNascimento.Value.ToString();
-                this.telefone = mskTxtBoxTelefone.Text;
-                this.email = txtBoxEmail.Text;
+                objResponsavel.nome = txtBoxNomeCompleto.Text;
+                objResponsavel.cpf = mskdCPF.Text;
+                objResponsavel.dataNascimento = dtpDataNascimento.Value;
+                objResponsavel.telefone = mskTxtBoxTelefone.Text;
+                objResponsavel.email = txtBoxEmail.Text;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -67,6 +70,18 @@ namespace SisClinica.Forms
                 return false;
                 
             }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            dtgResponsaveis.DataSource = new Responsavel().Pesquisar(txtbNomePesq.Text);
+        }
+
+        private void dtgResponsaveis_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            objResponsavel = new Responsavel().Pesquisar(Convert.ToInt32(dtgResponsaveis.CurrentRow.Cells["ID"].Value));
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

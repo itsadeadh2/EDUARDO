@@ -41,7 +41,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.gbPesquisar = new System.Windows.Forms.GroupBox();
+            this.txtbNomePesq = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.dtgResponsaveis = new System.Windows.Forms.DataGridView();
             this.gbRegistrarNovo.SuspendLayout();
+            this.gbPesquisar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgResponsaveis)).BeginInit();
             this.SuspendLayout();
             // 
             // gbRegistrarNovo
@@ -183,17 +190,73 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefone";
             // 
+            // gbPesquisar
+            // 
+            this.gbPesquisar.Controls.Add(this.dtgResponsaveis);
+            this.gbPesquisar.Controls.Add(this.btnPesquisar);
+            this.gbPesquisar.Controls.Add(this.txtbNomePesq);
+            this.gbPesquisar.Controls.Add(this.label5);
+            this.gbPesquisar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPesquisar.Location = new System.Drawing.Point(12, 327);
+            this.gbPesquisar.Name = "gbPesquisar";
+            this.gbPesquisar.Size = new System.Drawing.Size(555, 225);
+            this.gbPesquisar.TabIndex = 48;
+            this.gbPesquisar.TabStop = false;
+            this.gbPesquisar.Text = "Pesquisar";
+            // 
+            // txtbNomePesq
+            // 
+            this.txtbNomePesq.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNomePesq.Location = new System.Drawing.Point(166, 40);
+            this.txtbNomePesq.Name = "txtbNomePesq";
+            this.txtbNomePesq.Size = new System.Drawing.Size(287, 22);
+            this.txtbNomePesq.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(58, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Nome completo:";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(459, 40);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(90, 23);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // dtgResponsaveis
+            // 
+            this.dtgResponsaveis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgResponsaveis.Location = new System.Drawing.Point(9, 69);
+            this.dtgResponsaveis.Name = "dtgResponsaveis";
+            this.dtgResponsaveis.Size = new System.Drawing.Size(540, 150);
+            this.dtgResponsaveis.TabIndex = 5;
+            this.dtgResponsaveis.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResponsaveis_CellDoubleClick);
+            // 
             // frmBuscaResponsavel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 555);
+            this.Controls.Add(this.gbPesquisar);
             this.Controls.Add(this.gbRegistrarNovo);
             this.Name = "frmBuscaResponsavel";
             this.Text = "frmBuscaResponsavel";
             this.Load += new System.EventHandler(this.frmBuscaResponsavel_Load);
             this.gbRegistrarNovo.ResumeLayout(false);
             this.gbRegistrarNovo.PerformLayout();
+            this.gbPesquisar.ResumeLayout(false);
+            this.gbPesquisar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgResponsaveis)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,5 +276,10 @@
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.MaskedTextBox mskdCPF;
         private System.Windows.Forms.Label lblAviso;
+        private System.Windows.Forms.GroupBox gbPesquisar;
+        private System.Windows.Forms.DataGridView dtgResponsaveis;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtbNomePesq;
+        private System.Windows.Forms.Label label5;
     }
 }

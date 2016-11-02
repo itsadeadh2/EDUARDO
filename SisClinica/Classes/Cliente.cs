@@ -15,6 +15,19 @@ namespace SisClinica.Classes
         public Responsavel objResponsavel { get; set; }
         //-Métodos
 
+        public void Excluir(int id)
+        {
+            IList<Sessoes> lista = new Sessoes().BuscaPorCliente(this);
+            if (lista==null)
+            {
+                new ClienteDAO().Excluir(this);
+            }
+            else
+            {
+                new ClienteDAO().ExcluirComSessao(this);
+            }
+        }
+
         /// <summary>
         /// Encontra um objeto do tipo cliente.
         /// </summary>

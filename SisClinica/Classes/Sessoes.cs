@@ -42,10 +42,6 @@ namespace SisClinica.Classes
         {
              new SessoesDAO().Registrar(this);
         }
-        public IList<Sessoes> BuscaPorCliente(Cliente objClienteDaBusca)
-        {
-            return null;
-        }
 
         /// <summary>
         /// Retorna uma sessao que tenha o médico, data e consultorios passados como parametros
@@ -67,6 +63,11 @@ namespace SisClinica.Classes
         public Sessoes BuscaPorData(DateTime data)
         {
             return new SessoesDAO().Pesquisar(data);
+        }
+
+        public IList<Sessoes> BuscaPorCliente(Cliente objCliente)
+        {
+            return new SessoesDAO().Pesquisar(objCliente);
         }
 
         /// <summary>

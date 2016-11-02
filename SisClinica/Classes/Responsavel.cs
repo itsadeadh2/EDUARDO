@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 using SisClinica.DAO;
 namespace SisClinica.Classes
 {
@@ -15,7 +17,6 @@ namespace SisClinica.Classes
         {
             new ResponsavelDAO().Registrar(this);
         }
-
         /// <summary>
         /// Pesquisa um responsável
         /// </summary>
@@ -24,6 +25,20 @@ namespace SisClinica.Classes
         public Responsavel Pesquisar(int id)
         {
             return new ResponsavelDAO().Pesquisar(id);
+        }
+        public DataTable Pesquisar(string nome)
+        {
+            IList<Responsavel> lista = new ResponsavelDAO().PesquisarPorNome(nome);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("Nome", typeof(string));
+            dt.Columns.Add("cpf", typeof(string));
+
+            foreach (Responsavel objResp in lista)
+            {
+                dt.Rows.Add(objResp.id, objResp.nome, objResp.cpf);
+            }
+            return dt;
         }
     }
 }
