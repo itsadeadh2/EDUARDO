@@ -115,6 +115,12 @@
     <Compile Include="Forms\frmAlterarData.Designer.cs">
       <DependentUpon>frmAlterarData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAlterarResponsavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlterarResponsavel.Designer.cs">
+      <DependentUpon>frmAlterarResponsavel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmBuscaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAlterarData.resx">
       <DependentUpon>frmAlterarData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlterarResponsavel.resx">
+      <DependentUpon>frmAlterarResponsavel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmBuscaCliente.resx">
       <DependentUpon>frmBuscaCliente.cs</DependentUpon>

@@ -42,7 +42,7 @@ namespace SisClinica.Forms
             }
             else
             {
-                MessageBox.Show("O médico possui sessões \n e como as procedures para exclusão com sessões ainda estão\n sendo elaboradas, não foi deletado!");
+                MessageBox.Show("O médico possui sessões e como as procedures para exclusão com sessões ainda\n estão sendo elaboradas, não foi deletado!");
             }
             Close();
         }
