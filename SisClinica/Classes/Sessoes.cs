@@ -189,5 +189,10 @@ namespace SisClinica.Classes
             }
             return horariosRetornar;
         }
+
+        public void Excluir()
+        {
+
+        }
     }
 }

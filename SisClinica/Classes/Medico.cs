@@ -62,11 +62,37 @@ namespace SisClinica.Classes
             dt.Columns.Add("cpf", typeof(string));
             dt.Columns.Add("crm", typeof(string));
 
-            foreach (Medico objMedico in listaDeMedicos)
+            if (listaDeMedicos!=null)
             {
-                dt.Rows.Add(objMedico.nome, objMedico.id, objMedico.cpf, objMedico.crm);
+                foreach (Medico objMedico in listaDeMedicos)
+                {
+                    dt.Rows.Add(objMedico.nome, objMedico.id, objMedico.cpf, objMedico.crm);
+                }
+            }
+            else
+            {
+
             }
             return dt;
+        }
+
+        public void Alterar()
+        {
+
+        }
+
+        public bool Excluir()
+        {
+            IList < Sessoes > lista = new Sessoes().BuscaPorMedico(this);
+            if (lista==null)
+            {
+                new MedicoDAO().Excluir(this);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

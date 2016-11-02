@@ -40,6 +40,8 @@ namespace SisClinica.Forms
                 objMedico.email = txtboxEmailRegMedico.Text;
 
                 objMedico.Registrar();
+                MessageBox.Show("Médico Registrado!");
+                Close();
 
             }
             catch (Exception erro)

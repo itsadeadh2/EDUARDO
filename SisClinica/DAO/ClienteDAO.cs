@@ -185,5 +185,23 @@ namespace SisClinica.DAO
             Conexao con = new Conexao();
             con.ExecutarCru(comando);
         }
+        public void Alterar(Cliente objCliente)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE Cliente SET cpf=@cpf email=@email endereco=@endereco cidadeEstado=@cidadeEstado nome=@nome telefone=@telefone dataNascimento=@dtNasc adicionalInfo = @ainfo cpf_responsavel = @cpfresp";
+            comando.Parameters.AddWithValue("@cpf", objCliente.cpf);
+            comando.Parameters.AddWithValue("@email", objCliente.email);
+            comando.Parameters.AddWithValue("@endereco", objCliente.endereco);
+            comando.Parameters.AddWithValue("@cidadeEstado", objCliente.cidadeEstado);
+            comando.Parameters.AddWithValue("@nome", objCliente.nome);
+            comando.Parameters.AddWithValue("@telefone", objCliente.telefone);
+            comando.Parameters.AddWithValue("@dtNasc", objCliente.dataNascimento);
+            comando.Parameters.AddWithValue("@ainfo", objCliente.adicionalInfo);
+            comando.Parameters.AddWithValue("@cpfresp", objCliente.objResponsavel.cpf);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
     }
 }

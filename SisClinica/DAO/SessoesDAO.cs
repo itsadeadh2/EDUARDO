@@ -128,7 +128,7 @@ namespace SisClinica.DAO
             IList<Sessoes> listaDeSessoes = new List<Sessoes>();
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "SELECT * FROM Sessoes WHERE id_medico_responsavel = @id";
+            comando.CommandText = "SELECT * FROM Sessoes WHERE id_cliente = @id";
             comando.Parameters.AddWithValue("@id", objCliente.id);
 
             Conexao con = new Conexao();

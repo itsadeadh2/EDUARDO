@@ -59,5 +59,15 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+
+        public void Excluir()
+        {
+
+        }
+
+        public void Registrar()
+        {
+
+        }
     }
 }

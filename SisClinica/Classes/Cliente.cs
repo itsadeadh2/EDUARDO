@@ -20,7 +20,7 @@ namespace SisClinica.Classes
             IList<Sessoes> lista = new Sessoes().BuscaPorCliente(this);
             if (lista==null)
             {
-                new ClienteDAO().Excluir(this);
+                new ClienteDAO().Excluir(this);                
             }
             else
             {
@@ -62,6 +62,11 @@ namespace SisClinica.Classes
             {
                 new ClienteDAO().Registrar(this);
             }                
+        }
+
+        public void Alterar()
+        {
+
         }
         
         /// <summary>

@@ -40,5 +40,9 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+        public void Excluir()
+        {
+
+        }
     }
 }

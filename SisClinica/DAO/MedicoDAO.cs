@@ -125,5 +125,16 @@ namespace SisClinica.DAO
             }
             return listaDemedicos;
         }
+
+        public void Excluir(Medico objMedico)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "DELETE FROM Medico where id=@id";
+            comando.Parameters.AddWithValue("@id", objMedico.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
     }
 }

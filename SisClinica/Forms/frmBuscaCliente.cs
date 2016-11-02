@@ -46,9 +46,23 @@ namespace SisClinica.Forms
 
         private void dtgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnExcluir.Enabled = true;
+        }
+
+        private void dtgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
             this.objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["Id"].Value));
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Cliente objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
+            objCliente.Excluir(objCliente.id);
+            MessageBox.Show("Cliente excluído!");
+            btnExcluir.Enabled = false;
         }
     }
 }
