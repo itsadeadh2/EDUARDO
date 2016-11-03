@@ -29,9 +29,9 @@ namespace SisClinica.DAO
             con.ExecutarCru(comando);
         }
 
-        public Sessoes Pesquisar(DateTime data)
+        public IList<Sessoes> PesquisarPorHorarioInicial(DateTime data)
         {
-            Sessoes objSessao = new Sessoes();
+            IList<Sessoes> listadeSessoes = new List<Sessoes>();
 
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
@@ -43,20 +43,59 @@ namespace SisClinica.DAO
 
             if (dr.HasRows)
             {
-                dr.Read();
+                while (dr.Read())
+                {
+                    Sessoes objSessao = new Sessoes();
                     objSessao.medicoResponsavel = new MedicoDAO().Pesquisar(Convert.ToInt32(dr["id_medico_responsavel"]));
                     objSessao.objCliente = new ClienteDAO().Pesquisar(Convert.ToInt32(dr["id_cliente"]));
                     objSessao.objConsultorio = new ConsultorioDAO().Pesquisar(Convert.ToInt32(dr["id_consultorio"]));
                     objSessao.dataSessao = Convert.ToDateTime(dr["dataSessao"]);
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
-                    objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();                    
+                    objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    objSessao.id = (int)dr["id"];
+                    listadeSessoes.Add(objSessao);
+                }                 
             }
             else
             {
-                objSessao = null;
+                listadeSessoes = null;
             }
-            return objSessao;
+            return listadeSessoes;
+        }
+        public IList<Sessoes> PesquisarPorData(DateTime data)
+        {
+            IList<Sessoes> listadeSessoes = new List<Sessoes>();
+
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Sessoes where dataSessao = @data";
+            comando.Parameters.AddWithValue("@data", data);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Sessoes objSessao = new Sessoes();
+                    objSessao.medicoResponsavel = new MedicoDAO().Pesquisar(Convert.ToInt32(dr["id_medico_responsavel"]));
+                    objSessao.objCliente = new ClienteDAO().Pesquisar(Convert.ToInt32(dr["id_cliente"]));
+                    objSessao.objConsultorio = new ConsultorioDAO().Pesquisar(Convert.ToInt32(dr["id_consultorio"]));
+                    objSessao.dataSessao = Convert.ToDateTime(dr["dataSessao"]);
+                    objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
+                    objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
+                    objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    objSessao.id = (int)dr["id"];
+                    listadeSessoes.Add(objSessao);
+                }
+            }
+            else
+            {
+                listadeSessoes = null;
+            }
+            return listadeSessoes;
         }
         public Sessoes Pesquisar(DateTime data, Medico objMedico, Consultorio objConsultorio)
         {
@@ -82,6 +121,7 @@ namespace SisClinica.DAO
                 objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                 objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                 objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                objSessao.id = (int)dr["id"];
             }
             else
             {
@@ -113,6 +153,7 @@ namespace SisClinica.DAO
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                     objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    objSessao.id = (int)dr["id"];
                     listaDeSessoes.Add(objSessao);
                 }
             }
@@ -122,6 +163,7 @@ namespace SisClinica.DAO
             }
             return listaDeSessoes;
         }
+
 
         public IList<Sessoes> Pesquisar(Cliente objCliente)
         {
@@ -146,6 +188,7 @@ namespace SisClinica.DAO
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                     objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    objSessao.id = (int)dr["id"];
                     listaDeSessoes.Add(objSessao);
                 }
             }
@@ -179,6 +222,7 @@ namespace SisClinica.DAO
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                     objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    objSessao.id = (int)dr["id"];
                     listaDeSessoes.Add(objSessao);
                 }   
             }

@@ -100,5 +100,12 @@ namespace SisClinica.Forms
             frmAlterarMedico.MdiParent = this;
             frmAlterarMedico.Show();
         }
+
+        private void sessõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmBuscaSessoes = new frmBuscaSessoes();
+            frmBuscaSessoes.MdiParent = this;
+            frmBuscaSessoes.Show();
+        }
     }
 }

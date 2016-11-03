@@ -68,12 +68,17 @@ namespace SisClinica.Classes
         {
 
         }
-        
+
         /// <summary>
         /// Retorna uma data table com alguns dados essenciais do cliente.
         /// </summary>
         /// <param name="nome">Nome do cliente</param>
         /// <returns> DataTable com: ID, Nome, CPF, Nome Responsavel, CPF Responsavel</returns>
+
+        public IList<Cliente> iListPesquisarPorNome(string nome)
+        {
+            return new ClienteDAO().PesquisarPorNome(nome);
+        }
         public DataTable PesquisarPorNome(string nome)
         {
             IList<Cliente> listadeClientes = new List<Cliente>();

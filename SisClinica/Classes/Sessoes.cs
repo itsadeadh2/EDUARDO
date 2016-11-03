@@ -19,6 +19,7 @@ namespace SisClinica.Classes
         public DateTime horaFim { get; set; }
         public string tipoDeSessao { get; set; }
         public int qtdeSessoes { get; set; }
+        public int id { get; set; }
 
         //-Propriedades que planejo utilizar no futuro para configurar os horarios.
             //public static DateTime horaEntrada { get; set; }
@@ -60,14 +61,205 @@ namespace SisClinica.Classes
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public Sessoes BuscaPorData(DateTime data)
+        public IList<Sessoes> BuscaPorData(DateTime data)
         {
-            return new SessoesDAO().Pesquisar(data);
+            return new SessoesDAO().PesquisarPorData(data.Date);
+        }
+
+        public IList<Sessoes> BuscaPorHoraInicial(DateTime data)
+        {
+            return new SessoesDAO().PesquisarPorHorarioInicial(data);
         }
 
         public IList<Sessoes> BuscaPorCliente(Cliente objCliente)
         {
             return new SessoesDAO().Pesquisar(objCliente);
+        }
+
+        public DataTable BuscaPorClienteMedicoData(string nome,tdp tipoDePesquisa, DateTime data, tdr tipoDeRetorno)
+        {
+            IList<Sessoes> listaPorData = new Sessoes().BuscaPorData(data);
+            IList<Cliente> listaDeClientes = new Cliente().iListPesquisarPorNome(nome);
+            IList<Medico> listaDeMedicos = new Medico().iListPesquisar(nome);
+            IList<Sessoes> listaDeSessoes = new List<Sessoes>();
+            #region
+            if (listaDeClientes!=null)
+            {
+                foreach (Cliente objCliente in listaDeClientes)
+                {
+                    IList<Sessoes> lista = new Sessoes().BuscaPorCliente(objCliente);
+                    if (lista!=null)
+                    {
+                        foreach (Sessoes objSessoes in lista)
+                        {
+                            listaDeSessoes.Add(objSessoes);
+                        }
+                    }                    
+                }
+            }
+            if (listaDeMedicos!=null)
+            {
+                foreach (Medico objMedico in listaDeMedicos)
+                {
+                    IList<Sessoes> lista = new Sessoes().BuscaPorMedico(objMedico);
+                    if (lista!=null)
+                    {
+                        foreach (Sessoes objSessoes in lista)
+                        {
+                            if (listaDeSessoes.Count!=0)
+                            {
+                                foreach (Sessoes s in listaDeSessoes)
+                                {
+                                    if (objSessoes.id != s.id)
+                                    {
+                                        listaDeSessoes.Add(objSessoes);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                listaDeSessoes.Add(objSessoes);
+                            }                            
+                        }
+                    }
+                    
+                }
+            }
+            if (listaPorData!=null)
+            {
+                foreach (Sessoes s in listaPorData)
+                {
+                    if (listaDeSessoes.Count != 0)
+                    {
+                        foreach (Sessoes ss in listaDeSessoes)
+                        {
+                            if (s.id != ss.id)
+                            {
+                                listaDeSessoes.Add(s);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        listaDeSessoes.Add(s);
+                    }
+                }
+            }
+            
+            #endregion
+            //A partir daqui ListaDeSessoes é uma lista generalizada
+            IList<Sessoes> listaDefinitiva = new List<Sessoes>();            
+            if (tipoDePesquisa==tdp.cliente)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.objCliente.nome.ToUpper().Contains(nome.ToUpper()))
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            else if (tipoDePesquisa==tdp.clienteData)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.objCliente.nome.ToUpper().Contains(nome.ToUpper())&&s.dataSessao==data.Date)
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            else if (tipoDePesquisa == tdp.clienteEMedico)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.objCliente.nome.ToUpper().Contains(nome.ToUpper()) || s.medicoResponsavel.nome.ToUpper().Contains(nome.ToUpper()))
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            else if (tipoDePesquisa==tdp.clienteMedicoEData)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.objCliente.nome.ToUpper().Contains(nome.ToUpper()) || s.medicoResponsavel.nome.ToUpper().Contains(nome.ToUpper()) && (s.dataSessao==data.Date))
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            else if (tipoDePesquisa==tdp.data)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.dataSessao==data.Date)
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            else if (tipoDePesquisa==tdp.medico)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.medicoResponsavel.nome.ToUpper().Contains(nome.ToUpper()))
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            else if (tipoDePesquisa==tdp.medicoData)
+            {
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    if (s.medicoResponsavel.nome.ToUpper().Contains(nome.ToUpper()) && s.dataSessao==data.Date)
+                    {
+                        listaDefinitiva.Add(s);
+                    }
+                }
+            }
+            IList<Sessoes> lst = new List<Sessoes>();
+            if (tipoDeRetorno==tdr.consulta)
+            {
+                foreach (Sessoes s in listaDefinitiva)
+                {
+                    if (s.tipoDeSessao=="Consulta")
+                    {
+                        lst.Add(s);
+                    }
+                }
+            }
+            else if (tipoDeRetorno==tdr.tratamento)
+            {
+                foreach (Sessoes s in listaDefinitiva)
+                {
+                    if (s.tipoDeSessao == "Tratamento")
+                    {
+                        lst.Add(s);
+                    }
+                }
+            }
+            else
+            {
+                foreach (Sessoes s in listaDefinitiva)
+                {
+                    lst.Add(s);
+                }
+            }
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Cliente", typeof(string));
+            dt.Columns.Add("Médico Responsável", typeof(string));
+            dt.Columns.Add("Tipo de sessão", typeof(string));
+            dt.Columns.Add("Data da Sessão", typeof(DateTime));
+            dt.Columns.Add("Horario de início", typeof(TimeSpan));
+            dt.Columns.Add("Horario de término", typeof(TimeSpan));
+
+            foreach (Sessoes objSessoes in lst)
+            {
+                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay);
+            }
+            return dt;
         }
 
         /// <summary>

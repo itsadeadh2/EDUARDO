@@ -145,11 +145,11 @@
     <Compile Include="Forms\frmBuscaResponsavel.Designer.cs">
       <DependentUpon>frmBuscaResponsavel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmBuscarTratCon.cs">
+    <Compile Include="Forms\frmBuscaSessoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmBuscarTratCon.Designer.cs">
-      <DependentUpon>frmBuscarTratCon.cs</DependentUpon>
+    <Compile Include="Forms\frmBuscaSessoes.Designer.cs">
+      <DependentUpon>frmBuscaSessoes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmConfiguracoes.cs">
       <SubType>Form</SubType>
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="Forms\frmBuscaResponsavel.resx">
       <DependentUpon>frmBuscaResponsavel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmBuscarTratCon.resx">
-      <DependentUpon>frmBuscarTratCon.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmBuscaSessoes.resx">
+      <DependentUpon>frmBuscaSessoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConfiguracoes.resx">
       <DependentUpon>frmConfiguracoes.cs</DependentUpon>

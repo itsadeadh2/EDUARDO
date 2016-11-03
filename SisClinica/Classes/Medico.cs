@@ -75,6 +75,10 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+        public IList<Medico> iListPesquisar(string nome)
+        {
+            return new MedicoDAO().Pesquisar(nome);
+        }
 
         public void Alterar()
         {
