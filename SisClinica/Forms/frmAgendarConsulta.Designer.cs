@@ -63,7 +63,7 @@
             this.gbCliente.Location = new System.Drawing.Point(12, 25);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(510, 100);
-            this.gbCliente.TabIndex = 0;
+            this.gbCliente.TabIndex = 1;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Cliente";
             // 
@@ -73,7 +73,7 @@
             this.btnRegistrarNovo.Location = new System.Drawing.Point(283, 35);
             this.btnRegistrarNovo.Name = "btnRegistrarNovo";
             this.btnRegistrarNovo.Size = new System.Drawing.Size(197, 47);
-            this.btnRegistrarNovo.TabIndex = 1;
+            this.btnRegistrarNovo.TabIndex = 3;
             this.btnRegistrarNovo.Text = "Registrar Novo";
             this.btnRegistrarNovo.UseVisualStyleBackColor = true;
             this.btnRegistrarNovo.Click += new System.EventHandler(this.button2_Click);
@@ -84,7 +84,7 @@
             this.btnSelecionarCliente.Location = new System.Drawing.Point(53, 35);
             this.btnSelecionarCliente.Name = "btnSelecionarCliente";
             this.btnSelecionarCliente.Size = new System.Drawing.Size(197, 47);
-            this.btnSelecionarCliente.TabIndex = 0;
+            this.btnSelecionarCliente.TabIndex = 2;
             this.btnSelecionarCliente.Text = "Selecionar Cliente";
             this.btnSelecionarCliente.UseVisualStyleBackColor = true;
             this.btnSelecionarCliente.Click += new System.EventHandler(this.button1_Click);
@@ -114,13 +114,14 @@
             this.groupBox1.Location = new System.Drawing.Point(114, 120);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(283, 78);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horário";
             // 
             // cbHorarioInicial
             // 
             this.cbHorarioInicial.DisplayMember = "Hora";
+            this.cbHorarioInicial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHorarioInicial.FormattingEnabled = true;
             this.cbHorarioInicial.Location = new System.Drawing.Point(32, 31);
@@ -133,12 +134,13 @@
             // cbHorarioFinal
             // 
             this.cbHorarioFinal.DisplayMember = "Hora";
+            this.cbHorarioFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHorarioFinal.FormattingEnabled = true;
             this.cbHorarioFinal.Location = new System.Drawing.Point(170, 31);
             this.cbHorarioFinal.Name = "cbHorarioFinal";
             this.cbHorarioFinal.Size = new System.Drawing.Size(81, 21);
-            this.cbHorarioFinal.TabIndex = 10;
+            this.cbHorarioFinal.TabIndex = 13;
             this.cbHorarioFinal.ValueMember = "data";
             this.cbHorarioFinal.SelectedIndexChanged += new System.EventHandler(this.cbHorarioFinal_SelectedIndexChanged);
             // 
@@ -149,7 +151,7 @@
             this.label2.Location = new System.Drawing.Point(132, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 9;
+            this.label2.TabIndex = 12;
             this.label2.Text = "As";
             // 
             // dtpDia
@@ -158,7 +160,7 @@
             this.dtpDia.Location = new System.Drawing.Point(100, 19);
             this.dtpDia.Name = "dtpDia";
             this.dtpDia.Size = new System.Drawing.Size(231, 20);
-            this.dtpDia.TabIndex = 7;
+            this.dtpDia.TabIndex = 5;
             this.dtpDia.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label1
@@ -168,18 +170,19 @@
             this.label1.Location = new System.Drawing.Point(11, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Selecionar data:";
             // 
             // cbConsultorio
             // 
             this.cbConsultorio.DisplayMember = "Nome";
+            this.cbConsultorio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsultorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbConsultorio.FormattingEnabled = true;
             this.cbConsultorio.Location = new System.Drawing.Point(100, 82);
             this.cbConsultorio.Name = "cbConsultorio";
             this.cbConsultorio.Size = new System.Drawing.Size(245, 21);
-            this.cbConsultorio.TabIndex = 5;
+            this.cbConsultorio.TabIndex = 9;
             this.cbConsultorio.ValueMember = "id";
             this.cbConsultorio.SelectedIndexChanged += new System.EventHandler(this.cbConsultorio_SelectedIndexChanged);
             // 
@@ -190,18 +193,19 @@
             this.lblInfoConsultorio.Location = new System.Drawing.Point(32, 85);
             this.lblInfoConsultorio.Name = "lblInfoConsultorio";
             this.lblInfoConsultorio.Size = new System.Drawing.Size(62, 13);
-            this.lblInfoConsultorio.TabIndex = 4;
+            this.lblInfoConsultorio.TabIndex = 8;
             this.lblInfoConsultorio.Text = "Consultório:";
             // 
             // cbMedicosDisponiveis
             // 
             this.cbMedicosDisponiveis.DisplayMember = "nome do medico";
+            this.cbMedicosDisponiveis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedicosDisponiveis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMedicosDisponiveis.FormattingEnabled = true;
             this.cbMedicosDisponiveis.Location = new System.Drawing.Point(100, 50);
             this.cbMedicosDisponiveis.Name = "cbMedicosDisponiveis";
             this.cbMedicosDisponiveis.Size = new System.Drawing.Size(245, 21);
-            this.cbMedicosDisponiveis.TabIndex = 3;
+            this.cbMedicosDisponiveis.TabIndex = 7;
             this.cbMedicosDisponiveis.ValueMember = "id medico";
             this.cbMedicosDisponiveis.SelectedIndexChanged += new System.EventHandler(this.cbMedicosDisponiveis_SelectedIndexChanged);
             // 
@@ -212,7 +216,7 @@
             this.lblInfoMedicos.Location = new System.Drawing.Point(50, 53);
             this.lblInfoMedicos.Name = "lblInfoMedicos";
             this.lblInfoMedicos.Size = new System.Drawing.Size(45, 13);
-            this.lblInfoMedicos.TabIndex = 2;
+            this.lblInfoMedicos.TabIndex = 6;
             this.lblInfoMedicos.Text = "Médico:";
             // 
             // gbVisualizacao
@@ -226,7 +230,7 @@
             this.gbVisualizacao.Location = new System.Drawing.Point(12, 376);
             this.gbVisualizacao.Name = "gbVisualizacao";
             this.gbVisualizacao.Size = new System.Drawing.Size(504, 148);
-            this.gbVisualizacao.TabIndex = 2;
+            this.gbVisualizacao.TabIndex = 14;
             this.gbVisualizacao.TabStop = false;
             this.gbVisualizacao.Text = "Visualização";
             // 
@@ -237,7 +241,7 @@
             this.lblHoraConsulta.Location = new System.Drawing.Point(246, 56);
             this.lblHoraConsulta.Name = "lblHoraConsulta";
             this.lblHoraConsulta.Size = new System.Drawing.Size(53, 16);
-            this.lblHoraConsulta.TabIndex = 8;
+            this.lblHoraConsulta.TabIndex = 17;
             this.lblHoraConsulta.Text = "Horário";
             // 
             // lblConsultorio
@@ -247,7 +251,7 @@
             this.lblConsultorio.Location = new System.Drawing.Point(6, 108);
             this.lblConsultorio.Name = "lblConsultorio";
             this.lblConsultorio.Size = new System.Drawing.Size(78, 16);
-            this.lblConsultorio.TabIndex = 7;
+            this.lblConsultorio.TabIndex = 19;
             this.lblConsultorio.Text = "Consultório:";
             // 
             // lblMedicoResponsavel
@@ -257,7 +261,7 @@
             this.lblMedicoResponsavel.Location = new System.Drawing.Point(6, 82);
             this.lblMedicoResponsavel.Name = "lblMedicoResponsavel";
             this.lblMedicoResponsavel.Size = new System.Drawing.Size(134, 16);
-            this.lblMedicoResponsavel.TabIndex = 6;
+            this.lblMedicoResponsavel.TabIndex = 18;
             this.lblMedicoResponsavel.Text = "Médico responsável:";
             // 
             // lblDataConsulta
@@ -267,7 +271,7 @@
             this.lblDataConsulta.Location = new System.Drawing.Point(6, 56);
             this.lblDataConsulta.Name = "lblDataConsulta";
             this.lblDataConsulta.Size = new System.Drawing.Size(112, 16);
-            this.lblDataConsulta.TabIndex = 5;
+            this.lblDataConsulta.TabIndex = 16;
             this.lblDataConsulta.Text = "Data da consulta:";
             // 
             // lblCliente
@@ -277,7 +281,7 @@
             this.lblCliente.Location = new System.Drawing.Point(6, 30);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(52, 16);
-            this.lblCliente.TabIndex = 4;
+            this.lblCliente.TabIndex = 15;
             this.lblCliente.Text = "Cliente:";
             // 
             // btnAgendar
@@ -286,7 +290,7 @@
             this.btnAgendar.Location = new System.Drawing.Point(195, 530);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(197, 39);
-            this.btnAgendar.TabIndex = 2;
+            this.btnAgendar.TabIndex = 20;
             this.btnAgendar.Text = "Agendar";
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.button3_Click);
@@ -301,7 +305,7 @@
             this.Controls.Add(this.gbConsulta);
             this.Controls.Add(this.gbCliente);
             this.Name = "frmAgendarConsulta";
-            this.Text = "Agendar Consulta";
+            this.Text = "frmAgendarConsulta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAgendarConsulta_Load);
             this.SizeChanged += new System.EventHandler(this.frmAgendarConsulta_SizeChanged);

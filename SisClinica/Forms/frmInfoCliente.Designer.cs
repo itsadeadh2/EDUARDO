@@ -28,213 +28,213 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.gpInformacoesPessoais = new System.Windows.Forms.GroupBox();
+            this.lbResponsavel = new System.Windows.Forms.Label();
+            this.lbCidade = new System.Windows.Forms.Label();
+            this.lbBairro = new System.Windows.Forms.Label();
+            this.lbNumero = new System.Windows.Forms.Label();
+            this.lbEndereco = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbTelefone = new System.Windows.Forms.Label();
+            this.lbDataNascimento = new System.Windows.Forms.Label();
+            this.lbNome = new System.Windows.Forms.Label();
+            this.gpConsultas = new System.Windows.Forms.GroupBox();
+            this.dtgConsultas = new System.Windows.Forms.DataGridView();
+            this.gpTratamentos = new System.Windows.Forms.GroupBox();
+            this.dtgTratamentos = new System.Windows.Forms.DataGridView();
+            this.gpInformacoesPessoais.SuspendLayout();
+            this.gpConsultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).BeginInit();
+            this.gpTratamentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTratamentos)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpInformacoesPessoais
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(860, 165);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informações Pessoais";
+            this.gpInformacoesPessoais.BackColor = System.Drawing.Color.Transparent;
+            this.gpInformacoesPessoais.Controls.Add(this.lbResponsavel);
+            this.gpInformacoesPessoais.Controls.Add(this.lbCidade);
+            this.gpInformacoesPessoais.Controls.Add(this.lbBairro);
+            this.gpInformacoesPessoais.Controls.Add(this.lbNumero);
+            this.gpInformacoesPessoais.Controls.Add(this.lbEndereco);
+            this.gpInformacoesPessoais.Controls.Add(this.lbEmail);
+            this.gpInformacoesPessoais.Controls.Add(this.lbTelefone);
+            this.gpInformacoesPessoais.Controls.Add(this.lbDataNascimento);
+            this.gpInformacoesPessoais.Controls.Add(this.lbNome);
+            this.gpInformacoesPessoais.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpInformacoesPessoais.Location = new System.Drawing.Point(12, 21);
+            this.gpInformacoesPessoais.Name = "gpInformacoesPessoais";
+            this.gpInformacoesPessoais.Size = new System.Drawing.Size(860, 140);
+            this.gpInformacoesPessoais.TabIndex = 1;
+            this.gpInformacoesPessoais.TabStop = false;
+            this.gpInformacoesPessoais.Text = "Informações Pessoais";
             // 
-            // label9
+            // lbResponsavel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(439, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Responsável:";
+            this.lbResponsavel.AutoSize = true;
+            this.lbResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResponsavel.Location = new System.Drawing.Point(439, 25);
+            this.lbResponsavel.Name = "lbResponsavel";
+            this.lbResponsavel.Size = new System.Drawing.Size(105, 20);
+            this.lbResponsavel.TabIndex = 3;
+            this.lbResponsavel.Text = "Responsável:";
             // 
-            // label8
+            // lbCidade
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(623, 128);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Cidade:";
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCidade.Location = new System.Drawing.Point(623, 103);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(63, 20);
+            this.lbCidade.TabIndex = 10;
+            this.lbCidade.Text = "Cidade:";
             // 
-            // label7
+            // lbBairro
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(439, 128);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Bairro:";
+            this.lbBairro.AutoSize = true;
+            this.lbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBairro.Location = new System.Drawing.Point(439, 103);
+            this.lbBairro.Name = "lbBairro";
+            this.lbBairro.Size = new System.Drawing.Size(55, 20);
+            this.lbBairro.TabIndex = 9;
+            this.lbBairro.Text = "Bairro:";
             // 
-            // label6
+            // lbNumero
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(304, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "N°:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lbNumero.AutoSize = true;
+            this.lbNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumero.Location = new System.Drawing.Point(304, 103);
+            this.lbNumero.Name = "lbNumero";
+            this.lbNumero.Size = new System.Drawing.Size(29, 20);
+            this.lbNumero.TabIndex = 8;
+            this.lbNumero.Text = "N°:";
+            this.lbNumero.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label5
+            // lbEndereco
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Endereço:";
+            this.lbEndereco.AutoSize = true;
+            this.lbEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEndereco.Location = new System.Drawing.Point(6, 103);
+            this.lbEndereco.Name = "lbEndereco";
+            this.lbEndereco.Size = new System.Drawing.Size(82, 20);
+            this.lbEndereco.TabIndex = 7;
+            this.lbEndereco.Text = "Endereço:";
             // 
-            // label4
+            // lbEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "E-mail:";
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(6, 83);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(57, 20);
+            this.lbEmail.TabIndex = 6;
+            this.lbEmail.Text = "E-mail:";
             // 
-            // label3
+            // lbTelefone
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Telefone:";
+            this.lbTelefone.AutoSize = true;
+            this.lbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefone.Location = new System.Drawing.Point(6, 63);
+            this.lbTelefone.Name = "lbTelefone";
+            this.lbTelefone.Size = new System.Drawing.Size(75, 20);
+            this.lbTelefone.TabIndex = 5;
+            this.lbTelefone.Text = "Telefone:";
             // 
-            // label2
+            // lbDataNascimento
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Data de Nascimento:";
+            this.lbDataNascimento.AutoSize = true;
+            this.lbDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataNascimento.Location = new System.Drawing.Point(6, 43);
+            this.lbDataNascimento.Name = "lbDataNascimento";
+            this.lbDataNascimento.Size = new System.Drawing.Size(158, 20);
+            this.lbDataNascimento.TabIndex = 4;
+            this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
-            // label1
+            // lbNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
+            this.lbNome.AutoSize = true;
+            this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.Location = new System.Drawing.Point(6, 23);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(55, 20);
+            this.lbNome.TabIndex = 2;
+            this.lbNome.Text = "Nome:";
             // 
-            // groupBox2
+            // gpConsultas
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 192);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(860, 205);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Consultas";
+            this.gpConsultas.BackColor = System.Drawing.Color.Transparent;
+            this.gpConsultas.Controls.Add(this.dtgConsultas);
+            this.gpConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpConsultas.Location = new System.Drawing.Point(12, 167);
+            this.gpConsultas.Name = "gpConsultas";
+            this.gpConsultas.Size = new System.Drawing.Size(860, 205);
+            this.gpConsultas.TabIndex = 11;
+            this.gpConsultas.TabStop = false;
+            this.gpConsultas.Text = "Consultas";
             // 
-            // dataGridView1
+            // dtgConsultas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(830, 161);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultas.Location = new System.Drawing.Point(10, 28);
+            this.dtgConsultas.Name = "dtgConsultas";
+            this.dtgConsultas.Size = new System.Drawing.Size(830, 161);
+            this.dtgConsultas.TabIndex = 12;
             // 
-            // groupBox3
+            // gpTratamentos
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 403);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(860, 205);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tratamentos";
+            this.gpTratamentos.BackColor = System.Drawing.Color.Transparent;
+            this.gpTratamentos.Controls.Add(this.dtgTratamentos);
+            this.gpTratamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpTratamentos.Location = new System.Drawing.Point(12, 378);
+            this.gpTratamentos.Name = "gpTratamentos";
+            this.gpTratamentos.Size = new System.Drawing.Size(860, 205);
+            this.gpTratamentos.TabIndex = 13;
+            this.gpTratamentos.TabStop = false;
+            this.gpTratamentos.Text = "Tratamentos";
             // 
-            // dataGridView2
+            // dtgTratamentos
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 28);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(830, 161);
-            this.dataGridView2.TabIndex = 0;
+            this.dtgTratamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTratamentos.Location = new System.Drawing.Point(10, 28);
+            this.dtgTratamentos.Name = "dtgTratamentos";
+            this.dtgTratamentos.Size = new System.Drawing.Size(830, 161);
+            this.dtgTratamentos.TabIndex = 14;
             // 
             // frmInfoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 619);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpTratamentos);
+            this.Controls.Add(this.gpConsultas);
+            this.Controls.Add(this.gpInformacoesPessoais);
             this.Name = "frmInfoCliente";
             this.Text = "Infomações do cliente";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.gpInformacoesPessoais.ResumeLayout(false);
+            this.gpInformacoesPessoais.PerformLayout();
+            this.gpConsultas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).EndInit();
+            this.gpTratamentos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTratamentos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox gpInformacoesPessoais;
+        private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.GroupBox gpConsultas;
+        private System.Windows.Forms.Label lbDataNascimento;
+        private System.Windows.Forms.Label lbTelefone;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Label lbEndereco;
+        private System.Windows.Forms.Label lbNumero;
+        private System.Windows.Forms.Label lbBairro;
+        private System.Windows.Forms.Label lbCidade;
+        private System.Windows.Forms.DataGridView dtgConsultas;
+        private System.Windows.Forms.GroupBox gpTratamentos;
+        private System.Windows.Forms.DataGridView dtgTratamentos;
+        private System.Windows.Forms.Label lbResponsavel;
     }
 }

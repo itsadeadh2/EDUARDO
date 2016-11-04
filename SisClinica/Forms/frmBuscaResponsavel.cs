@@ -30,11 +30,11 @@ namespace SisClinica.Forms
         {
             if (!checaValidez())
             {
-                this.nomeCompleto = txtBoxNomeCompleto.Text;
-                this.cpf = mskdCPF.Text;
-                this.dataNascimento = dtpDataNascimento.Value.ToString();
-                this.telefone = mskTxtBoxTelefone.Text;
-                this.email = txtBoxEmail.Text;
+                this.nomeCompleto = txtBoxNomeCompletoBuscarResponsavel.Text;
+                this.cpf = mskdCPFBuscarResponsavel.Text;
+                this.dataNascimento = dtpDataNascimentoBuscarResponsavel.Value.ToString();
+                this.telefone = mskTxtBoxTelefoneBuscarResponsavel.Text;
+                this.email = txtBoxEmailBuscarResponsavel.Text;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -56,7 +56,7 @@ namespace SisClinica.Forms
         }
         private bool checaValidez()
         {
-            if ((DateTime.Now.Year - dtpDataNascimento.Value.Year) < 18)
+            if ((DateTime.Now.Year - dtpDataNascimentoBuscarResponsavel.Value.Year) < 18)
             {
                 lblAviso.Visible = true;
                 return true;               

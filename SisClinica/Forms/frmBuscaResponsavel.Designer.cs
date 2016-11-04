@@ -28,44 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbRegistrarNovo = new System.Windows.Forms.GroupBox();
+            this.gbRegistrarNovoResponsavel = new System.Windows.Forms.GroupBox();
             this.lblAviso = new System.Windows.Forms.Label();
-            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataNascimentoBuscarResponsavel = new System.Windows.Forms.DateTimePicker();
             this.btnPreencher = new System.Windows.Forms.Button();
-            this.mskdCPF = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.mskTxtBoxTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.txtBoxNomeCompleto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.gbRegistrarNovo.SuspendLayout();
+            this.mskdCPFBuscarResponsavel = new System.Windows.Forms.MaskedTextBox();
+            this.lbCpfBuscarResponsavel = new System.Windows.Forms.Label();
+            this.mskTxtBoxTelefoneBuscarResponsavel = new System.Windows.Forms.MaskedTextBox();
+            this.txtBoxEmailBuscarResponsavel = new System.Windows.Forms.TextBox();
+            this.txtBoxNomeCompletoBuscarResponsavel = new System.Windows.Forms.TextBox();
+            this.lbEmailBuscarResponsavel = new System.Windows.Forms.Label();
+            this.lbNomeResponsavelBuscarResponsavel = new System.Windows.Forms.Label();
+            this.lbDataNascimentoBuscarResponsavel = new System.Windows.Forms.Label();
+            this.lbTelefoneBuscarResponsavel = new System.Windows.Forms.Label();
+            this.gbRegistrarNovoResponsavel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbRegistrarNovo
+            // gbRegistrarNovoResponsavel
             // 
-            this.gbRegistrarNovo.BackColor = System.Drawing.Color.Transparent;
-            this.gbRegistrarNovo.Controls.Add(this.lblAviso);
-            this.gbRegistrarNovo.Controls.Add(this.dtpDataNascimento);
-            this.gbRegistrarNovo.Controls.Add(this.btnPreencher);
-            this.gbRegistrarNovo.Controls.Add(this.mskdCPF);
-            this.gbRegistrarNovo.Controls.Add(this.label11);
-            this.gbRegistrarNovo.Controls.Add(this.mskTxtBoxTelefone);
-            this.gbRegistrarNovo.Controls.Add(this.txtBoxEmail);
-            this.gbRegistrarNovo.Controls.Add(this.txtBoxNomeCompleto);
-            this.gbRegistrarNovo.Controls.Add(this.label4);
-            this.gbRegistrarNovo.Controls.Add(this.label1);
-            this.gbRegistrarNovo.Controls.Add(this.label2);
-            this.gbRegistrarNovo.Controls.Add(this.label3);
-            this.gbRegistrarNovo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbRegistrarNovo.Location = new System.Drawing.Point(12, 12);
-            this.gbRegistrarNovo.Name = "gbRegistrarNovo";
-            this.gbRegistrarNovo.Size = new System.Drawing.Size(555, 309);
-            this.gbRegistrarNovo.TabIndex = 47;
-            this.gbRegistrarNovo.TabStop = false;
-            this.gbRegistrarNovo.Text = "Registrar Novo Responsavel";
+            this.gbRegistrarNovoResponsavel.BackColor = System.Drawing.Color.Transparent;
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.lblAviso);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.dtpDataNascimentoBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.btnPreencher);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.mskdCPFBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.lbCpfBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.mskTxtBoxTelefoneBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.txtBoxEmailBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.txtBoxNomeCompletoBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.lbEmailBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.lbNomeResponsavelBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.lbDataNascimentoBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Controls.Add(this.lbTelefoneBuscarResponsavel);
+            this.gbRegistrarNovoResponsavel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbRegistrarNovoResponsavel.Location = new System.Drawing.Point(12, 12);
+            this.gbRegistrarNovoResponsavel.Name = "gbRegistrarNovoResponsavel";
+            this.gbRegistrarNovoResponsavel.Size = new System.Drawing.Size(555, 309);
+            this.gbRegistrarNovoResponsavel.TabIndex = 1;
+            this.gbRegistrarNovoResponsavel.TabStop = false;
+            this.gbRegistrarNovoResponsavel.Text = "Registrar Novo Responsavel";
             // 
             // lblAviso
             // 
@@ -79,14 +79,14 @@
             this.lblAviso.Text = "O responsável precisa ter no mínimo 18 anos!";
             this.lblAviso.Visible = false;
             // 
-            // dtpDataNascimento
+            // dtpDataNascimentoBuscarResponsavel
             // 
-            this.dtpDataNascimento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataNascimento.Location = new System.Drawing.Point(189, 131);
-            this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(284, 26);
-            this.dtpDataNascimento.TabIndex = 23;
-            this.dtpDataNascimento.ValueChanged += new System.EventHandler(this.dtpDataNascimento_ValueChanged);
+            this.dtpDataNascimentoBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataNascimentoBuscarResponsavel.Location = new System.Drawing.Point(189, 131);
+            this.dtpDataNascimentoBuscarResponsavel.Name = "dtpDataNascimentoBuscarResponsavel";
+            this.dtpDataNascimentoBuscarResponsavel.Size = new System.Drawing.Size(284, 26);
+            this.dtpDataNascimentoBuscarResponsavel.TabIndex = 4;
+            this.dtpDataNascimentoBuscarResponsavel.ValueChanged += new System.EventHandler(this.dtpDataNascimento_ValueChanged);
             // 
             // btnPreencher
             // 
@@ -94,124 +94,124 @@
             this.btnPreencher.Location = new System.Drawing.Point(233, 262);
             this.btnPreencher.Name = "btnPreencher";
             this.btnPreencher.Size = new System.Drawing.Size(88, 41);
-            this.btnPreencher.TabIndex = 22;
+            this.btnPreencher.TabIndex = 7;
             this.btnPreencher.Text = "Preencher";
             this.btnPreencher.UseVisualStyleBackColor = true;
             this.btnPreencher.Click += new System.EventHandler(this.btnPreencher_Click);
             // 
-            // mskdCPF
+            // mskdCPFBuscarResponsavel
             // 
-            this.mskdCPF.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskdCPF.Location = new System.Drawing.Point(186, 94);
-            this.mskdCPF.Mask = "999.999.999-99";
-            this.mskdCPF.Name = "mskdCPF";
-            this.mskdCPF.Size = new System.Drawing.Size(121, 26);
-            this.mskdCPF.TabIndex = 2;
+            this.mskdCPFBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskdCPFBuscarResponsavel.Location = new System.Drawing.Point(186, 94);
+            this.mskdCPFBuscarResponsavel.Mask = "999.999.999-99";
+            this.mskdCPFBuscarResponsavel.Name = "mskdCPFBuscarResponsavel";
+            this.mskdCPFBuscarResponsavel.Size = new System.Drawing.Size(121, 26);
+            this.mskdCPFBuscarResponsavel.TabIndex = 3;
             // 
-            // label11
+            // lbCpfBuscarResponsavel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(123, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 21);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "CPF";
+            this.lbCpfBuscarResponsavel.AutoSize = true;
+            this.lbCpfBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfBuscarResponsavel.Location = new System.Drawing.Point(123, 97);
+            this.lbCpfBuscarResponsavel.Name = "lbCpfBuscarResponsavel";
+            this.lbCpfBuscarResponsavel.Size = new System.Drawing.Size(40, 21);
+            this.lbCpfBuscarResponsavel.TabIndex = 22;
+            this.lbCpfBuscarResponsavel.Text = "CPF";
             // 
-            // mskTxtBoxTelefone
+            // mskTxtBoxTelefoneBuscarResponsavel
             // 
-            this.mskTxtBoxTelefone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTxtBoxTelefone.Location = new System.Drawing.Point(186, 178);
-            this.mskTxtBoxTelefone.Mask = "(99) 00000-0000";
-            this.mskTxtBoxTelefone.Name = "mskTxtBoxTelefone";
-            this.mskTxtBoxTelefone.Size = new System.Drawing.Size(121, 26);
-            this.mskTxtBoxTelefone.TabIndex = 4;
+            this.mskTxtBoxTelefoneBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTxtBoxTelefoneBuscarResponsavel.Location = new System.Drawing.Point(186, 178);
+            this.mskTxtBoxTelefoneBuscarResponsavel.Mask = "(99) 00000-0000";
+            this.mskTxtBoxTelefoneBuscarResponsavel.Name = "mskTxtBoxTelefoneBuscarResponsavel";
+            this.mskTxtBoxTelefoneBuscarResponsavel.Size = new System.Drawing.Size(121, 26);
+            this.mskTxtBoxTelefoneBuscarResponsavel.TabIndex = 5;
             // 
-            // txtBoxEmail
+            // txtBoxEmailBuscarResponsavel
             // 
-            this.txtBoxEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(186, 220);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(287, 26);
-            this.txtBoxEmail.TabIndex = 5;
+            this.txtBoxEmailBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmailBuscarResponsavel.Location = new System.Drawing.Point(186, 220);
+            this.txtBoxEmailBuscarResponsavel.Name = "txtBoxEmailBuscarResponsavel";
+            this.txtBoxEmailBuscarResponsavel.Size = new System.Drawing.Size(287, 26);
+            this.txtBoxEmailBuscarResponsavel.TabIndex = 6;
             // 
-            // txtBoxNomeCompleto
+            // txtBoxNomeCompletoBuscarResponsavel
             // 
-            this.txtBoxNomeCompleto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNomeCompleto.Location = new System.Drawing.Point(186, 52);
-            this.txtBoxNomeCompleto.Name = "txtBoxNomeCompleto";
-            this.txtBoxNomeCompleto.Size = new System.Drawing.Size(287, 26);
-            this.txtBoxNomeCompleto.TabIndex = 1;
+            this.txtBoxNomeCompletoBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNomeCompletoBuscarResponsavel.Location = new System.Drawing.Point(186, 52);
+            this.txtBoxNomeCompletoBuscarResponsavel.Name = "txtBoxNomeCompletoBuscarResponsavel";
+            this.txtBoxNomeCompletoBuscarResponsavel.Size = new System.Drawing.Size(287, 26);
+            this.txtBoxNomeCompletoBuscarResponsavel.TabIndex = 2;
             // 
-            // label4
+            // lbEmailBuscarResponsavel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(110, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "E-mail";
+            this.lbEmailBuscarResponsavel.AutoSize = true;
+            this.lbEmailBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailBuscarResponsavel.Location = new System.Drawing.Point(110, 226);
+            this.lbEmailBuscarResponsavel.Name = "lbEmailBuscarResponsavel";
+            this.lbEmailBuscarResponsavel.Size = new System.Drawing.Size(56, 21);
+            this.lbEmailBuscarResponsavel.TabIndex = 26;
+            this.lbEmailBuscarResponsavel.Text = "E-mail";
             // 
-            // label1
+            // lbNomeResponsavelBuscarResponsavel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome completo";
+            this.lbNomeResponsavelBuscarResponsavel.AutoSize = true;
+            this.lbNomeResponsavelBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeResponsavelBuscarResponsavel.Location = new System.Drawing.Point(43, 54);
+            this.lbNomeResponsavelBuscarResponsavel.Name = "lbNomeResponsavelBuscarResponsavel";
+            this.lbNomeResponsavelBuscarResponsavel.Size = new System.Drawing.Size(137, 21);
+            this.lbNomeResponsavelBuscarResponsavel.TabIndex = 21;
+            this.lbNomeResponsavelBuscarResponsavel.Text = "Nome completo";
             // 
-            // label2
+            // lbDataNascimentoBuscarResponsavel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Data de nascimento";
+            this.lbDataNascimentoBuscarResponsavel.AutoSize = true;
+            this.lbDataNascimentoBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataNascimentoBuscarResponsavel.Location = new System.Drawing.Point(11, 140);
+            this.lbDataNascimentoBuscarResponsavel.Name = "lbDataNascimentoBuscarResponsavel";
+            this.lbDataNascimentoBuscarResponsavel.Size = new System.Drawing.Size(172, 21);
+            this.lbDataNascimentoBuscarResponsavel.TabIndex = 23;
+            this.lbDataNascimentoBuscarResponsavel.Text = "Data de nascimento";
             // 
-            // label3
+            // lbTelefoneBuscarResponsavel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 183);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Telefone";
+            this.lbTelefoneBuscarResponsavel.AutoSize = true;
+            this.lbTelefoneBuscarResponsavel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefoneBuscarResponsavel.Location = new System.Drawing.Point(92, 183);
+            this.lbTelefoneBuscarResponsavel.Name = "lbTelefoneBuscarResponsavel";
+            this.lbTelefoneBuscarResponsavel.Size = new System.Drawing.Size(76, 21);
+            this.lbTelefoneBuscarResponsavel.TabIndex = 25;
+            this.lbTelefoneBuscarResponsavel.Text = "Telefone";
             // 
             // frmBuscaResponsavel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 326);
-            this.Controls.Add(this.gbRegistrarNovo);
+            this.Controls.Add(this.gbRegistrarNovoResponsavel);
             this.Name = "frmBuscaResponsavel";
             this.Text = "Buscar Responsavel";
             this.Load += new System.EventHandler(this.frmBuscaResponsavel_Load);
-            this.gbRegistrarNovo.ResumeLayout(false);
-            this.gbRegistrarNovo.PerformLayout();
+            this.gbRegistrarNovoResponsavel.ResumeLayout(false);
+            this.gbRegistrarNovoResponsavel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbRegistrarNovo;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.MaskedTextBox mskTxtBoxTelefone;
-        private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.TextBox txtBoxNomeCompleto;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbRegistrarNovoResponsavel;
+        private System.Windows.Forms.Label lbCpfBuscarResponsavel;
+        private System.Windows.Forms.MaskedTextBox mskTxtBoxTelefoneBuscarResponsavel;
+        private System.Windows.Forms.TextBox txtBoxEmailBuscarResponsavel;
+        private System.Windows.Forms.TextBox txtBoxNomeCompletoBuscarResponsavel;
+        private System.Windows.Forms.Label lbEmailBuscarResponsavel;
+        private System.Windows.Forms.Label lbNomeResponsavelBuscarResponsavel;
+        private System.Windows.Forms.Label lbDataNascimentoBuscarResponsavel;
+        private System.Windows.Forms.Label lbTelefoneBuscarResponsavel;
         private System.Windows.Forms.Button btnPreencher;
-        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
-        private System.Windows.Forms.MaskedTextBox mskdCPF;
+        private System.Windows.Forms.DateTimePicker dtpDataNascimentoBuscarResponsavel;
+        private System.Windows.Forms.MaskedTextBox mskdCPFBuscarResponsavel;
         private System.Windows.Forms.Label lblAviso;
     }
 }

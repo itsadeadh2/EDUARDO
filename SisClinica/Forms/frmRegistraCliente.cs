@@ -120,6 +120,5 @@ namespace SisClinica.Forms
                 return false;
             }
         }
-
     }
 }

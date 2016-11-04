@@ -28,207 +28,208 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.gpClienteAgendarTratamentoSemConsulta = new System.Windows.Forms.GroupBox();
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta = new System.Windows.Forms.Button();
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta = new System.Windows.Forms.Button();
+            this.gpTratamentoAgendarTratamentoSemConsulta = new System.Windows.Forms.GroupBox();
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta = new System.Windows.Forms.ComboBox();
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta = new System.Windows.Forms.Label();
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta = new System.Windows.Forms.Label();
+            this.dtgHorariosTratamentosAgendarTratamentoSemConsulta = new System.Windows.Forms.DataGridView();
+            this.gpVisualizacaoAgendarTratamentoSemConsulta = new System.Windows.Forms.GroupBox();
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta = new System.Windows.Forms.Label();
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu = new System.Windows.Forms.Label();
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu = new System.Windows.Forms.Label();
+            this.lbNomeAgendarTratamentoSemConsulta = new System.Windows.Forms.Label();
+            this.btnAgendarAgendarTratamentoSemConsulta = new System.Windows.Forms.Button();
+            this.gpClienteAgendarTratamentoSemConsulta.SuspendLayout();
+            this.gpTratamentoAgendarTratamentoSemConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHorariosTratamentosAgendarTratamentoSemConsulta)).BeginInit();
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpClienteAgendarTratamentoSemConsulta
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(527, 100);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cliente";
+            this.gpClienteAgendarTratamentoSemConsulta.Controls.Add(this.btnRegistrarNovoAgendarTratamentoSemConsulta);
+            this.gpClienteAgendarTratamentoSemConsulta.Controls.Add(this.btnSelecionarClienteAgendarTratamentoSemConsulta);
+            this.gpClienteAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpClienteAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(12, 12);
+            this.gpClienteAgendarTratamentoSemConsulta.Name = "gpClienteAgendarTratamentoSemConsulta";
+            this.gpClienteAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(527, 100);
+            this.gpClienteAgendarTratamentoSemConsulta.TabIndex = 1;
+            this.gpClienteAgendarTratamentoSemConsulta.TabStop = false;
+            this.gpClienteAgendarTratamentoSemConsulta.Text = "Cliente";
             // 
-            // button2
+            // btnRegistrarNovoAgendarTratamentoSemConsulta
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(283, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 47);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Registrar Novo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(283, 35);
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.Name = "btnRegistrarNovoAgendarTratamentoSemConsulta";
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(197, 47);
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.TabIndex = 3;
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.Text = "Registrar Novo";
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.UseVisualStyleBackColor = true;
+            this.btnRegistrarNovoAgendarTratamentoSemConsulta.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnSelecionarClienteAgendarTratamentoSemConsulta
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(53, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Selecionar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(53, 35);
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.Name = "btnSelecionarClienteAgendarTratamentoSemConsulta";
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(197, 47);
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.TabIndex = 2;
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.Text = "Selecionar Cliente";
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.UseVisualStyleBackColor = true;
+            this.btnSelecionarClienteAgendarTratamentoSemConsulta.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox3
+            // gpTratamentoAgendarTratamentoSemConsulta
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 118);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(527, 198);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tratamento";
+            this.gpTratamentoAgendarTratamentoSemConsulta.Controls.Add(this.CbMedicoDisponiveisAgendarTratamentoSemConsulta);
+            this.gpTratamentoAgendarTratamentoSemConsulta.Controls.Add(this.lbMedicosDisponivelAgendarTratamentoSemConsulta);
+            this.gpTratamentoAgendarTratamentoSemConsulta.Controls.Add(this.lbHorariosTratamentoAgendarTratamentoSemConsulta);
+            this.gpTratamentoAgendarTratamentoSemConsulta.Controls.Add(this.dtgHorariosTratamentosAgendarTratamentoSemConsulta);
+            this.gpTratamentoAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpTratamentoAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(12, 118);
+            this.gpTratamentoAgendarTratamentoSemConsulta.Name = "gpTratamentoAgendarTratamentoSemConsulta";
+            this.gpTratamentoAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(527, 198);
+            this.gpTratamentoAgendarTratamentoSemConsulta.TabIndex = 6;
+            this.gpTratamentoAgendarTratamentoSemConsulta.TabStop = false;
+            this.gpTratamentoAgendarTratamentoSemConsulta.Text = "Tratamento";
             // 
-            // comboBox1
+            // CbMedicoDisponiveisAgendarTratamentoSemConsulta
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(202, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 21);
-            this.comboBox1.TabIndex = 3;
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.FormattingEnabled = true;
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(202, 152);
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.Name = "CbMedicoDisponiveisAgendarTratamentoSemConsulta";
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(245, 21);
+            this.CbMedicoDisponiveisAgendarTratamentoSemConsulta.TabIndex = 8;
             // 
-            // label5
+            // lbMedicosDisponivelAgendarTratamentoSemConsulta
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(89, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Médicos disponíveis:";
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.AutoSize = true;
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(89, 155);
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.Name = "lbMedicosDisponivelAgendarTratamentoSemConsulta";
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(107, 13);
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.TabIndex = 7;
+            this.lbMedicosDisponivelAgendarTratamentoSemConsulta.Text = "Médicos disponíveis:";
             // 
-            // label6
+            // lbHorariosTratamentoAgendarTratamentoSemConsulta
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Horários disponíveis";
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.AutoSize = true;
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(6, 31);
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.Name = "lbHorariosTratamentoAgendarTratamentoSemConsulta";
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(103, 13);
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.TabIndex = 5;
+            this.lbHorariosTratamentoAgendarTratamentoSemConsulta.Text = "Horários disponíveis";
             // 
-            // dataGridView1
+            // dtgHorariosTratamentosAgendarTratamentoSemConsulta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(498, 80);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgHorariosTratamentosAgendarTratamentoSemConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHorariosTratamentosAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(6, 47);
+            this.dtgHorariosTratamentosAgendarTratamentoSemConsulta.Name = "dtgHorariosTratamentosAgendarTratamentoSemConsulta";
+            this.dtgHorariosTratamentosAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(498, 80);
+            this.dtgHorariosTratamentosAgendarTratamentoSemConsulta.TabIndex = 6;
             // 
-            // groupBox4
+            // gpVisualizacaoAgendarTratamentoSemConsulta
             // 
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Location = new System.Drawing.Point(12, 322);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(527, 131);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Visualização";
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Controls.Add(this.lbMedicoResponsavelAgendarTratamentoSemConsulta);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Controls.Add(this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Controls.Add(this.lbResponsavelAgendarTratamentoSemConsultaVisu);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Controls.Add(this.lbNomeAgendarTratamentoSemConsulta);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(12, 322);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Name = "gpVisualizacaoAgendarTratamentoSemConsulta";
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(527, 106);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.TabIndex = 9;
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.TabStop = false;
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.Text = "Visualização";
             // 
-            // label7
+            // lbMedicoResponsavelAgendarTratamentoSemConsulta
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Médico Responsável:";
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta.AutoSize = true;
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(6, 79);
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta.Name = "lbMedicoResponsavelAgendarTratamentoSemConsulta";
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(110, 13);
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta.TabIndex = 13;
+            this.lbMedicoResponsavelAgendarTratamentoSemConsulta.Text = "Médico Responsável:";
             // 
-            // label8
+            // lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Data de inicio do tratamento:";
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu.AutoSize = true;
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu.Location = new System.Drawing.Point(6, 59);
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu.Name = "lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu";
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu.Size = new System.Drawing.Size(143, 13);
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu.TabIndex = 12;
+            this.lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu.Text = "Data de inicio do tratamento:";
             // 
-            // label9
+            // lbResponsavelAgendarTratamentoSemConsultaVisu
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Responsável:";
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu.AutoSize = true;
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu.Location = new System.Drawing.Point(6, 39);
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu.Name = "lbResponsavelAgendarTratamentoSemConsultaVisu";
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu.Size = new System.Drawing.Size(72, 13);
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu.TabIndex = 11;
+            this.lbResponsavelAgendarTratamentoSemConsultaVisu.Text = "Responsável:";
             // 
-            // label10
+            // lbNomeAgendarTratamentoSemConsulta
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Nome:";
+            this.lbNomeAgendarTratamentoSemConsulta.AutoSize = true;
+            this.lbNomeAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(6, 19);
+            this.lbNomeAgendarTratamentoSemConsulta.Name = "lbNomeAgendarTratamentoSemConsulta";
+            this.lbNomeAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(38, 13);
+            this.lbNomeAgendarTratamentoSemConsulta.TabIndex = 10;
+            this.lbNomeAgendarTratamentoSemConsulta.Text = "Nome:";
             // 
-            // button3
+            // btnAgendarAgendarTratamentoSemConsulta
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(177, 459);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 39);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Agendar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgendarAgendarTratamentoSemConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendarAgendarTratamentoSemConsulta.Location = new System.Drawing.Point(174, 434);
+            this.btnAgendarAgendarTratamentoSemConsulta.Name = "btnAgendarAgendarTratamentoSemConsulta";
+            this.btnAgendarAgendarTratamentoSemConsulta.Size = new System.Drawing.Size(197, 39);
+            this.btnAgendarAgendarTratamentoSemConsulta.TabIndex = 14;
+            this.btnAgendarAgendarTratamentoSemConsulta.Text = "Agendar";
+            this.btnAgendarAgendarTratamentoSemConsulta.UseVisualStyleBackColor = true;
             // 
             // frmAgendarTratamentoSemConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 510);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(551, 481);
+            this.Controls.Add(this.btnAgendarAgendarTratamentoSemConsulta);
+            this.Controls.Add(this.gpVisualizacaoAgendarTratamentoSemConsulta);
+            this.Controls.Add(this.gpTratamentoAgendarTratamentoSemConsulta);
+            this.Controls.Add(this.gpClienteAgendarTratamentoSemConsulta);
             this.Name = "frmAgendarTratamentoSemConsulta";
             this.Text = "Agendar tratamento sem consulta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.gpClienteAgendarTratamentoSemConsulta.ResumeLayout(false);
+            this.gpTratamentoAgendarTratamentoSemConsulta.ResumeLayout(false);
+            this.gpTratamentoAgendarTratamentoSemConsulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHorariosTratamentosAgendarTratamentoSemConsulta)).EndInit();
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.ResumeLayout(false);
+            this.gpVisualizacaoAgendarTratamentoSemConsulta.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox gpClienteAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Button btnRegistrarNovoAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Button btnSelecionarClienteAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.GroupBox gpTratamentoAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.ComboBox CbMedicoDisponiveisAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Label lbMedicosDisponivelAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Label lbHorariosTratamentoAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.DataGridView dtgHorariosTratamentosAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.GroupBox gpVisualizacaoAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Label lbMedicoResponsavelAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Label lbDataInicioTratamentoAgendarTratamentoSemConsultaVisu;
+        private System.Windows.Forms.Label lbResponsavelAgendarTratamentoSemConsultaVisu;
+        private System.Windows.Forms.Label lbNomeAgendarTratamentoSemConsulta;
+        private System.Windows.Forms.Button btnAgendarAgendarTratamentoSemConsulta;
     }
 }

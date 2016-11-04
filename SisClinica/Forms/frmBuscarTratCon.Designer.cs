@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gpBuscarSessoes = new System.Windows.Forms.GroupBox();
+            this.gpResultadosPesquisa = new System.Windows.Forms.GroupBox();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgResultadoPesquisa = new System.Windows.Forms.DataGridView();
             this.gbInfoPesquisa = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbData = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.mskdTxtBxCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -46,37 +46,37 @@
             this.cbConsultas = new System.Windows.Forms.CheckBox();
             this.cbMedico = new System.Windows.Forms.CheckBox();
             this.cbCliente = new System.Windows.Forms.CheckBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gpBuscarSessoes.SuspendLayout();
+            this.gpResultadosPesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoPesquisa)).BeginInit();
             this.gbInfoPesquisa.SuspendLayout();
             this.gbBusca.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpBuscarSessoes
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.gbInfoPesquisa);
-            this.groupBox1.Controls.Add(this.gbBusca);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(827, 310);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar Sessões";
+            this.gpBuscarSessoes.Controls.Add(this.gpResultadosPesquisa);
+            this.gpBuscarSessoes.Controls.Add(this.gbInfoPesquisa);
+            this.gpBuscarSessoes.Controls.Add(this.gbBusca);
+            this.gpBuscarSessoes.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpBuscarSessoes.Location = new System.Drawing.Point(6, 4);
+            this.gpBuscarSessoes.Name = "gpBuscarSessoes";
+            this.gpBuscarSessoes.Size = new System.Drawing.Size(827, 310);
+            this.gpBuscarSessoes.TabIndex = 2;
+            this.gpBuscarSessoes.TabStop = false;
+            this.gpBuscarSessoes.Text = "Buscar Sessões";
             // 
-            // groupBox2
+            // gpResultadosPesquisa
             // 
-            this.groupBox2.Controls.Add(this.lblInfo);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(418, 40);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(403, 264);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Resultados da pesquisa";
+            this.gpResultadosPesquisa.Controls.Add(this.lblInfo);
+            this.gpResultadosPesquisa.Controls.Add(this.dtgResultadoPesquisa);
+            this.gpResultadosPesquisa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpResultadosPesquisa.Location = new System.Drawing.Point(418, 40);
+            this.gpResultadosPesquisa.Name = "gpResultadosPesquisa";
+            this.gpResultadosPesquisa.Size = new System.Drawing.Size(403, 264);
+            this.gpResultadosPesquisa.TabIndex = 24;
+            this.gpResultadosPesquisa.TabStop = false;
+            this.gpResultadosPesquisa.Text = "Resultados da pesquisa";
             // 
             // lblInfo
             // 
@@ -85,20 +85,20 @@
             this.lblInfo.Location = new System.Drawing.Point(6, 49);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(237, 16);
-            this.lblInfo.TabIndex = 1;
+            this.lblInfo.TabIndex = 25;
             this.lblInfo.Text = "*Duplo clique na célula para ver detalhes";
             // 
-            // dataGridView1
+            // dtgResultadoPesquisa
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 180);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgResultadoPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgResultadoPesquisa.Location = new System.Drawing.Point(6, 78);
+            this.dtgResultadoPesquisa.Name = "dtgResultadoPesquisa";
+            this.dtgResultadoPesquisa.Size = new System.Drawing.Size(391, 180);
+            this.dtgResultadoPesquisa.TabIndex = 26;
             // 
             // gbInfoPesquisa
             // 
-            this.gbInfoPesquisa.Controls.Add(this.label1);
+            this.gbInfoPesquisa.Controls.Add(this.lbData);
             this.gbInfoPesquisa.Controls.Add(this.dtpData);
             this.gbInfoPesquisa.Controls.Add(this.mskdTxtBxCPF);
             this.gbInfoPesquisa.Controls.Add(this.btnPesquisar);
@@ -109,19 +109,19 @@
             this.gbInfoPesquisa.Location = new System.Drawing.Point(6, 141);
             this.gbInfoPesquisa.Name = "gbInfoPesquisa";
             this.gbInfoPesquisa.Size = new System.Drawing.Size(406, 163);
-            this.gbInfoPesquisa.TabIndex = 4;
+            this.gbInfoPesquisa.TabIndex = 20;
             this.gbInfoPesquisa.TabStop = false;
             this.gbInfoPesquisa.Text = "Informe os dados";
             // 
-            // label1
+            // lbData
             // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(6, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Data:";
+            this.lbData.AutoSize = true;
+            this.lbData.Enabled = false;
+            this.lbData.Location = new System.Drawing.Point(6, 96);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(45, 17);
+            this.lbData.TabIndex = 23;
+            this.lbData.Text = "Data:";
             // 
             // dtpData
             // 
@@ -129,7 +129,7 @@
             this.dtpData.Location = new System.Drawing.Point(64, 91);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 23);
-            this.dtpData.TabIndex = 10;
+            this.dtpData.TabIndex = 9;
             // 
             // mskdTxtBxCPF
             // 
@@ -139,7 +139,7 @@
             this.mskdTxtBxCPF.Mask = "000.000.000-00";
             this.mskdTxtBxCPF.Name = "mskdTxtBxCPF";
             this.mskdTxtBxCPF.Size = new System.Drawing.Size(116, 23);
-            this.mskdTxtBxCPF.TabIndex = 3;
+            this.mskdTxtBxCPF.TabIndex = 8;
             // 
             // btnPesquisar
             // 
@@ -148,7 +148,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(96, 128);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(214, 29);
-            this.btnPesquisar.TabIndex = 5;
+            this.btnPesquisar.TabIndex = 10;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
@@ -158,7 +158,7 @@
             this.txtbxNomePesquisa.Location = new System.Drawing.Point(64, 29);
             this.txtbxNomePesquisa.Name = "txtbxNomePesquisa";
             this.txtbxNomePesquisa.Size = new System.Drawing.Size(336, 23);
-            this.txtbxNomePesquisa.TabIndex = 2;
+            this.txtbxNomePesquisa.TabIndex = 7;
             // 
             // lblCRMCPF
             // 
@@ -167,7 +167,7 @@
             this.lblCRMCPF.Location = new System.Drawing.Point(6, 64);
             this.lblCRMCPF.Name = "lblCRMCPF";
             this.lblCRMCPF.Size = new System.Drawing.Size(37, 17);
-            this.lblCRMCPF.TabIndex = 1;
+            this.lblCRMCPF.TabIndex = 22;
             this.lblCRMCPF.Text = "CPF:";
             // 
             // lblNome
@@ -176,7 +176,7 @@
             this.lblNome.Location = new System.Drawing.Point(6, 31);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(52, 17);
-            this.lblNome.TabIndex = 0;
+            this.lblNome.TabIndex = 21;
             this.lblNome.Text = "Nome:";
             // 
             // gbBusca
@@ -249,13 +249,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 326);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpBuscarSessoes);
             this.Name = "frmBuscarTratCon";
             this.Text = "Buscar o tratamento da consulta";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gpBuscarSessoes.ResumeLayout(false);
+            this.gpResultadosPesquisa.ResumeLayout(false);
+            this.gpResultadosPesquisa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoPesquisa)).EndInit();
             this.gbInfoPesquisa.ResumeLayout(false);
             this.gbInfoPesquisa.PerformLayout();
             this.gbBusca.ResumeLayout(false);
@@ -266,12 +266,12 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gpBuscarSessoes;
+        private System.Windows.Forms.GroupBox gpResultadosPesquisa;
         private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgResultadoPesquisa;
         private System.Windows.Forms.GroupBox gbInfoPesquisa;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbData;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.MaskedTextBox mskdTxtBxCPF;
         private System.Windows.Forms.Button btnPesquisar;

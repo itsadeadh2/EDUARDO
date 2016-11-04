@@ -46,7 +46,7 @@
             this.label1.Location = new System.Drawing.Point(29, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 16);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Horario de Entrada:";
             // 
             // label2
@@ -56,7 +56,7 @@
             this.label2.Location = new System.Drawing.Point(33, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 16);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 7;
             this.label2.Text = "Horario de Almoço:";
             // 
             // label3
@@ -66,7 +66,7 @@
             this.label3.Location = new System.Drawing.Point(14, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 16);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Horario de re-entrada:";
             // 
             // label4
@@ -76,11 +76,12 @@
             this.label4.Location = new System.Drawing.Point(31, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 16);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 9;
             this.label4.Text = "Fim do expediente:";
             // 
             // cbHoraEntrada
             // 
+            this.cbHoraEntrada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHoraEntrada.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHoraEntrada.FormattingEnabled = true;
             this.cbHoraEntrada.Items.AddRange(new object[] {
@@ -125,10 +126,11 @@
             this.cbHoraEntrada.Location = new System.Drawing.Point(149, 14);
             this.cbHoraEntrada.Name = "cbHoraEntrada";
             this.cbHoraEntrada.Size = new System.Drawing.Size(81, 24);
-            this.cbHoraEntrada.TabIndex = 4;
+            this.cbHoraEntrada.TabIndex = 1;
             // 
             // cbHoraAlmoco
             // 
+            this.cbHoraAlmoco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHoraAlmoco.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHoraAlmoco.FormattingEnabled = true;
             this.cbHoraAlmoco.Items.AddRange(new object[] {
@@ -173,10 +175,11 @@
             this.cbHoraAlmoco.Location = new System.Drawing.Point(149, 52);
             this.cbHoraAlmoco.Name = "cbHoraAlmoco";
             this.cbHoraAlmoco.Size = new System.Drawing.Size(81, 24);
-            this.cbHoraAlmoco.TabIndex = 5;
+            this.cbHoraAlmoco.TabIndex = 2;
             // 
             // cbHoraReentrada
             // 
+            this.cbHoraReentrada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHoraReentrada.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHoraReentrada.FormattingEnabled = true;
             this.cbHoraReentrada.Items.AddRange(new object[] {
@@ -221,10 +224,11 @@
             this.cbHoraReentrada.Location = new System.Drawing.Point(149, 84);
             this.cbHoraReentrada.Name = "cbHoraReentrada";
             this.cbHoraReentrada.Size = new System.Drawing.Size(81, 24);
-            this.cbHoraReentrada.TabIndex = 6;
+            this.cbHoraReentrada.TabIndex = 3;
             // 
             // cbFimExpediente
             // 
+            this.cbFimExpediente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFimExpediente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFimExpediente.FormattingEnabled = true;
             this.cbFimExpediente.Items.AddRange(new object[] {
@@ -269,15 +273,15 @@
             this.cbFimExpediente.Location = new System.Drawing.Point(149, 119);
             this.cbFimExpediente.Name = "cbFimExpediente";
             this.cbFimExpediente.Size = new System.Drawing.Size(81, 24);
-            this.cbFimExpediente.TabIndex = 7;
+            this.cbFimExpediente.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button1.Location = new System.Drawing.Point(89, 149);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 5;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

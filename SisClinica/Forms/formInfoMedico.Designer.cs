@@ -76,7 +76,7 @@
             this.lblCrmInfoMedico.Location = new System.Drawing.Point(381, 68);
             this.lblCrmInfoMedico.Name = "lblCrmInfoMedico";
             this.lblCrmInfoMedico.Size = new System.Drawing.Size(49, 20);
-            this.lblCrmInfoMedico.TabIndex = 8;
+            this.lblCrmInfoMedico.TabIndex = 4;
             this.lblCrmInfoMedico.Text = "CRM:";
             // 
             // lblCidadeInfoMedico
@@ -86,7 +86,7 @@
             this.lblCidadeInfoMedico.Location = new System.Drawing.Point(623, 128);
             this.lblCidadeInfoMedico.Name = "lblCidadeInfoMedico";
             this.lblCidadeInfoMedico.Size = new System.Drawing.Size(63, 20);
-            this.lblCidadeInfoMedico.TabIndex = 7;
+            this.lblCidadeInfoMedico.TabIndex = 10;
             this.lblCidadeInfoMedico.Text = "Cidade:";
             // 
             // lblBairroInfoMedico
@@ -96,7 +96,7 @@
             this.lblBairroInfoMedico.Location = new System.Drawing.Point(439, 128);
             this.lblBairroInfoMedico.Name = "lblBairroInfoMedico";
             this.lblBairroInfoMedico.Size = new System.Drawing.Size(55, 20);
-            this.lblBairroInfoMedico.TabIndex = 6;
+            this.lblBairroInfoMedico.TabIndex = 9;
             this.lblBairroInfoMedico.Text = "Bairro:";
             // 
             // lblNumeroInfoMedico
@@ -106,7 +106,7 @@
             this.lblNumeroInfoMedico.Location = new System.Drawing.Point(304, 128);
             this.lblNumeroInfoMedico.Name = "lblNumeroInfoMedico";
             this.lblNumeroInfoMedico.Size = new System.Drawing.Size(29, 20);
-            this.lblNumeroInfoMedico.TabIndex = 5;
+            this.lblNumeroInfoMedico.TabIndex = 8;
             this.lblNumeroInfoMedico.Text = "N°:";
             // 
             // lblEnderecoInfoMedico
@@ -116,7 +116,7 @@
             this.lblEnderecoInfoMedico.Location = new System.Drawing.Point(6, 128);
             this.lblEnderecoInfoMedico.Name = "lblEnderecoInfoMedico";
             this.lblEnderecoInfoMedico.Size = new System.Drawing.Size(82, 20);
-            this.lblEnderecoInfoMedico.TabIndex = 4;
+            this.lblEnderecoInfoMedico.TabIndex = 7;
             this.lblEnderecoInfoMedico.Text = "Endereço:";
             // 
             // lblEmailInfoMedico
@@ -126,7 +126,7 @@
             this.lblEmailInfoMedico.Location = new System.Drawing.Point(6, 108);
             this.lblEmailInfoMedico.Name = "lblEmailInfoMedico";
             this.lblEmailInfoMedico.Size = new System.Drawing.Size(57, 20);
-            this.lblEmailInfoMedico.TabIndex = 3;
+            this.lblEmailInfoMedico.TabIndex = 6;
             this.lblEmailInfoMedico.Text = "E-mail:";
             // 
             // lblTelefoneInfoMedico
@@ -136,7 +136,7 @@
             this.lblTelefoneInfoMedico.Location = new System.Drawing.Point(6, 88);
             this.lblTelefoneInfoMedico.Name = "lblTelefoneInfoMedico";
             this.lblTelefoneInfoMedico.Size = new System.Drawing.Size(75, 20);
-            this.lblTelefoneInfoMedico.TabIndex = 2;
+            this.lblTelefoneInfoMedico.TabIndex = 5;
             this.lblTelefoneInfoMedico.Text = "Telefone:";
             // 
             // lblDataNascInfoMedico
@@ -146,7 +146,7 @@
             this.lblDataNascInfoMedico.Location = new System.Drawing.Point(6, 68);
             this.lblDataNascInfoMedico.Name = "lblDataNascInfoMedico";
             this.lblDataNascInfoMedico.Size = new System.Drawing.Size(158, 20);
-            this.lblDataNascInfoMedico.TabIndex = 1;
+            this.lblDataNascInfoMedico.TabIndex = 3;
             this.lblDataNascInfoMedico.Text = "Data de Nascimento:";
             // 
             // lblNomeInfoMedico
@@ -156,7 +156,7 @@
             this.lblNomeInfoMedico.Location = new System.Drawing.Point(6, 48);
             this.lblNomeInfoMedico.Name = "lblNomeInfoMedico";
             this.lblNomeInfoMedico.Size = new System.Drawing.Size(55, 20);
-            this.lblNomeInfoMedico.TabIndex = 0;
+            this.lblNomeInfoMedico.TabIndex = 2;
             this.lblNomeInfoMedico.Text = "Nome:";
             // 
             // gbConsultasAgendadas
@@ -167,7 +167,7 @@
             this.gbConsultasAgendadas.Location = new System.Drawing.Point(12, 183);
             this.gbConsultasAgendadas.Name = "gbConsultasAgendadas";
             this.gbConsultasAgendadas.Size = new System.Drawing.Size(860, 205);
-            this.gbConsultasAgendadas.TabIndex = 2;
+            this.gbConsultasAgendadas.TabIndex = 11;
             this.gbConsultasAgendadas.TabStop = false;
             this.gbConsultasAgendadas.Text = "Consultas Agendadas";
             // 
@@ -177,7 +177,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(10, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(830, 161);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 12;
             // 
             // gbTratamentosEmAndamento
             // 
@@ -187,7 +187,7 @@
             this.gbTratamentosEmAndamento.Location = new System.Drawing.Point(12, 394);
             this.gbTratamentosEmAndamento.Name = "gbTratamentosEmAndamento";
             this.gbTratamentosEmAndamento.Size = new System.Drawing.Size(860, 205);
-            this.gbTratamentosEmAndamento.TabIndex = 3;
+            this.gbTratamentosEmAndamento.TabIndex = 13;
             this.gbTratamentosEmAndamento.TabStop = false;
             this.gbTratamentosEmAndamento.Text = "Tratamentos em Andamento";
             // 
@@ -197,7 +197,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(10, 28);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(830, 161);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.TabIndex = 14;
             // 
             // formInfoMedico
             // 

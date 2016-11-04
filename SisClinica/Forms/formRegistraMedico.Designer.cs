@@ -139,6 +139,7 @@
             // 
             // cbCidadeRegMedico
             // 
+            this.cbCidadeRegMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidadeRegMedico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidadeRegMedico.FormattingEnabled = true;
             this.cbCidadeRegMedico.Location = new System.Drawing.Point(299, 101);
@@ -163,10 +164,11 @@
             this.txtboxBairroRegMedico.Location = new System.Drawing.Point(97, 64);
             this.txtboxBairroRegMedico.Name = "txtboxBairroRegMedico";
             this.txtboxBairroRegMedico.Size = new System.Drawing.Size(142, 23);
-            this.txtboxBairroRegMedico.TabIndex = 11;
+            this.txtboxBairroRegMedico.TabIndex = 10;
             // 
             // cbEstadoRegMedico
             // 
+            this.cbEstadoRegMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoRegMedico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoRegMedico.FormattingEnabled = true;
             this.cbEstadoRegMedico.Items.AddRange(new object[] {
@@ -230,12 +232,41 @@
             this.txtboxNumeroRegMedico.Location = new System.Drawing.Point(299, 66);
             this.txtboxNumeroRegMedico.Name = "txtboxNumeroRegMedico";
             this.txtboxNumeroRegMedico.Size = new System.Drawing.Size(64, 23);
-            this.txtboxNumeroRegMedico.TabIndex = 10;
+            this.txtboxNumeroRegMedico.TabIndex = 11;
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
             this.cbEstado.Location = new System.Drawing.Point(462, 63);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(36, 25);
@@ -370,7 +401,7 @@
             this.msktxtboxTelefoneRegMedico.Mask = "(99) 00000-0000";
             this.msktxtboxTelefoneRegMedico.Name = "msktxtboxTelefoneRegMedico";
             this.msktxtboxTelefoneRegMedico.Size = new System.Drawing.Size(121, 23);
-            this.msktxtboxTelefoneRegMedico.TabIndex = 7;
+            this.msktxtboxTelefoneRegMedico.TabIndex = 8;
             // 
             // lblEmailRegMedico
             // 
@@ -389,7 +420,7 @@
             this.txtboxEmailRegMedico.Location = new System.Drawing.Point(88, 27);
             this.txtboxEmailRegMedico.Name = "txtboxEmailRegMedico";
             this.txtboxEmailRegMedico.Size = new System.Drawing.Size(287, 23);
-            this.txtboxEmailRegMedico.TabIndex = 8;
+            this.txtboxEmailRegMedico.TabIndex = 7;
             // 
             // btnRegistrarMedico
             // 

@@ -28,230 +28,231 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gpCliente = new System.Windows.Forms.GroupBox();
+            this.btnSelecionarCliente = new System.Windows.Forms.Button();
+            this.gpInformacoesCliente = new System.Windows.Forms.GroupBox();
+            this.lbDiagnosticoConsulta = new System.Windows.Forms.Label();
+            this.lbDataConsulta = new System.Windows.Forms.Label();
+            this.lbNomeResponsavel = new System.Windows.Forms.Label();
+            this.lbNomeCliente = new System.Windows.Forms.Label();
+            this.gpTratamento = new System.Windows.Forms.GroupBox();
+            this.cbMedicosDisponiveis = new System.Windows.Forms.ComboBox();
+            this.lbMedicosDisponiveis = new System.Windows.Forms.Label();
+            this.lbHorariosDisponiveis = new System.Windows.Forms.Label();
+            this.dtgTratamento = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lbMedicoResponsavelVisu = new System.Windows.Forms.Label();
+            this.lbDataInicioTratamentoVisu = new System.Windows.Forms.Label();
+            this.lbResponsavelVisu = new System.Windows.Forms.Label();
+            this.lbNomeVisu = new System.Windows.Forms.Label();
+            this.btnAgendarTratamento = new System.Windows.Forms.Button();
+            this.gpCliente.SuspendLayout();
+            this.gpInformacoesCliente.SuspendLayout();
+            this.gpTratamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTratamento)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // gpCliente
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(527, 90);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cliente";
+            this.gpCliente.Controls.Add(this.btnSelecionarCliente);
+            this.gpCliente.Location = new System.Drawing.Point(12, 12);
+            this.gpCliente.Name = "gpCliente";
+            this.gpCliente.Size = new System.Drawing.Size(527, 90);
+            this.gpCliente.TabIndex = 1;
+            this.gpCliente.TabStop = false;
+            this.gpCliente.Text = "Cliente";
             // 
-            // button1
+            // btnSelecionarCliente
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(165, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Selecionar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelecionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecionarCliente.Location = new System.Drawing.Point(165, 19);
+            this.btnSelecionarCliente.Name = "btnSelecionarCliente";
+            this.btnSelecionarCliente.Size = new System.Drawing.Size(197, 47);
+            this.btnSelecionarCliente.TabIndex = 2;
+            this.btnSelecionarCliente.Text = "Selecionar Cliente";
+            this.btnSelecionarCliente.UseVisualStyleBackColor = true;
+            this.btnSelecionarCliente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox1
+            // gpInformacoesCliente
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 108);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(527, 145);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informações do Cliente";
+            this.gpInformacoesCliente.Controls.Add(this.lbDiagnosticoConsulta);
+            this.gpInformacoesCliente.Controls.Add(this.lbDataConsulta);
+            this.gpInformacoesCliente.Controls.Add(this.lbNomeResponsavel);
+            this.gpInformacoesCliente.Controls.Add(this.lbNomeCliente);
+            this.gpInformacoesCliente.Location = new System.Drawing.Point(12, 108);
+            this.gpInformacoesCliente.Name = "gpInformacoesCliente";
+            this.gpInformacoesCliente.Size = new System.Drawing.Size(527, 111);
+            this.gpInformacoesCliente.TabIndex = 3;
+            this.gpInformacoesCliente.TabStop = false;
+            this.gpInformacoesCliente.Text = "Informações do Cliente";
             // 
-            // label4
+            // lbDiagnosticoConsulta
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Diagnóstico da consulta:";
+            this.lbDiagnosticoConsulta.AutoSize = true;
+            this.lbDiagnosticoConsulta.Location = new System.Drawing.Point(6, 79);
+            this.lbDiagnosticoConsulta.Name = "lbDiagnosticoConsulta";
+            this.lbDiagnosticoConsulta.Size = new System.Drawing.Size(124, 13);
+            this.lbDiagnosticoConsulta.TabIndex = 7;
+            this.lbDiagnosticoConsulta.Text = "Diagnóstico da consulta:";
             // 
-            // label3
+            // lbDataConsulta
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Data da consulta:";
+            this.lbDataConsulta.AutoSize = true;
+            this.lbDataConsulta.Location = new System.Drawing.Point(6, 59);
+            this.lbDataConsulta.Name = "lbDataConsulta";
+            this.lbDataConsulta.Size = new System.Drawing.Size(91, 13);
+            this.lbDataConsulta.TabIndex = 6;
+            this.lbDataConsulta.Text = "Data da consulta:";
             // 
-            // label2
+            // lbNomeResponsavel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Responsável:";
+            this.lbNomeResponsavel.AutoSize = true;
+            this.lbNomeResponsavel.Location = new System.Drawing.Point(6, 39);
+            this.lbNomeResponsavel.Name = "lbNomeResponsavel";
+            this.lbNomeResponsavel.Size = new System.Drawing.Size(72, 13);
+            this.lbNomeResponsavel.TabIndex = 5;
+            this.lbNomeResponsavel.Text = "Responsável:";
             // 
-            // label1
+            // lbNomeCliente
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
+            this.lbNomeCliente.AutoSize = true;
+            this.lbNomeCliente.Location = new System.Drawing.Point(6, 19);
+            this.lbNomeCliente.Name = "lbNomeCliente";
+            this.lbNomeCliente.Size = new System.Drawing.Size(38, 13);
+            this.lbNomeCliente.TabIndex = 4;
+            this.lbNomeCliente.Text = "Nome:";
             // 
-            // groupBox3
+            // gpTratamento
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 259);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(527, 198);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tratamento";
+            this.gpTratamento.Controls.Add(this.cbMedicosDisponiveis);
+            this.gpTratamento.Controls.Add(this.lbMedicosDisponiveis);
+            this.gpTratamento.Controls.Add(this.lbHorariosDisponiveis);
+            this.gpTratamento.Controls.Add(this.dtgTratamento);
+            this.gpTratamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpTratamento.Location = new System.Drawing.Point(12, 225);
+            this.gpTratamento.Name = "gpTratamento";
+            this.gpTratamento.Size = new System.Drawing.Size(527, 198);
+            this.gpTratamento.TabIndex = 8;
+            this.gpTratamento.TabStop = false;
+            this.gpTratamento.Text = "Tratamento";
             // 
-            // comboBox1
+            // cbMedicosDisponiveis
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(202, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cbMedicosDisponiveis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMedicosDisponiveis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMedicosDisponiveis.FormattingEnabled = true;
+            this.cbMedicosDisponiveis.Location = new System.Drawing.Point(202, 152);
+            this.cbMedicosDisponiveis.Name = "cbMedicosDisponiveis";
+            this.cbMedicosDisponiveis.Size = new System.Drawing.Size(245, 21);
+            this.cbMedicosDisponiveis.TabIndex = 12;
             // 
-            // label5
+            // lbMedicosDisponiveis
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(89, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Médicos disponíveis:";
+            this.lbMedicosDisponiveis.AutoSize = true;
+            this.lbMedicosDisponiveis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMedicosDisponiveis.Location = new System.Drawing.Point(89, 155);
+            this.lbMedicosDisponiveis.Name = "lbMedicosDisponiveis";
+            this.lbMedicosDisponiveis.Size = new System.Drawing.Size(107, 13);
+            this.lbMedicosDisponiveis.TabIndex = 11;
+            this.lbMedicosDisponiveis.Text = "Médicos disponíveis:";
             // 
-            // label6
+            // lbHorariosDisponiveis
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Horários disponíveis";
+            this.lbHorariosDisponiveis.AutoSize = true;
+            this.lbHorariosDisponiveis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHorariosDisponiveis.Location = new System.Drawing.Point(6, 31);
+            this.lbHorariosDisponiveis.Name = "lbHorariosDisponiveis";
+            this.lbHorariosDisponiveis.Size = new System.Drawing.Size(103, 13);
+            this.lbHorariosDisponiveis.TabIndex = 9;
+            this.lbHorariosDisponiveis.Text = "Horários disponíveis";
             // 
-            // dataGridView1
+            // dtgTratamento
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(498, 80);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgTratamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTratamento.Location = new System.Drawing.Point(6, 47);
+            this.dtgTratamento.Name = "dtgTratamento";
+            this.dtgTratamento.Size = new System.Drawing.Size(498, 80);
+            this.dtgTratamento.TabIndex = 10;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Location = new System.Drawing.Point(12, 463);
+            this.groupBox4.Controls.Add(this.lbMedicoResponsavelVisu);
+            this.groupBox4.Controls.Add(this.lbDataInicioTratamentoVisu);
+            this.groupBox4.Controls.Add(this.lbResponsavelVisu);
+            this.groupBox4.Controls.Add(this.lbNomeVisu);
+            this.groupBox4.Location = new System.Drawing.Point(12, 429);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(527, 131);
-            this.groupBox4.TabIndex = 4;
+            this.groupBox4.Size = new System.Drawing.Size(527, 102);
+            this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Visualização";
             // 
-            // label7
+            // lbMedicoResponsavelVisu
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Médico Responsável:";
+            this.lbMedicoResponsavelVisu.AutoSize = true;
+            this.lbMedicoResponsavelVisu.Location = new System.Drawing.Point(6, 78);
+            this.lbMedicoResponsavelVisu.Name = "lbMedicoResponsavelVisu";
+            this.lbMedicoResponsavelVisu.Size = new System.Drawing.Size(110, 13);
+            this.lbMedicoResponsavelVisu.TabIndex = 17;
+            this.lbMedicoResponsavelVisu.Text = "Médico Responsável:";
             // 
-            // label8
+            // lbDataInicioTratamentoVisu
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Data de inicio do tratamento:";
+            this.lbDataInicioTratamentoVisu.AutoSize = true;
+            this.lbDataInicioTratamentoVisu.Location = new System.Drawing.Point(6, 58);
+            this.lbDataInicioTratamentoVisu.Name = "lbDataInicioTratamentoVisu";
+            this.lbDataInicioTratamentoVisu.Size = new System.Drawing.Size(143, 13);
+            this.lbDataInicioTratamentoVisu.TabIndex = 16;
+            this.lbDataInicioTratamentoVisu.Text = "Data de inicio do tratamento:";
             // 
-            // label9
+            // lbResponsavelVisu
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Responsável:";
+            this.lbResponsavelVisu.AutoSize = true;
+            this.lbResponsavelVisu.Location = new System.Drawing.Point(6, 38);
+            this.lbResponsavelVisu.Name = "lbResponsavelVisu";
+            this.lbResponsavelVisu.Size = new System.Drawing.Size(72, 13);
+            this.lbResponsavelVisu.TabIndex = 15;
+            this.lbResponsavelVisu.Text = "Responsável:";
             // 
-            // label10
+            // lbNomeVisu
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Nome:";
+            this.lbNomeVisu.AutoSize = true;
+            this.lbNomeVisu.Location = new System.Drawing.Point(6, 18);
+            this.lbNomeVisu.Name = "lbNomeVisu";
+            this.lbNomeVisu.Size = new System.Drawing.Size(38, 13);
+            this.lbNomeVisu.TabIndex = 14;
+            this.lbNomeVisu.Text = "Nome:";
             // 
-            // button3
+            // btnAgendarTratamento
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(177, 608);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 39);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Agendar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgendarTratamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendarTratamento.Location = new System.Drawing.Point(177, 537);
+            this.btnAgendarTratamento.Name = "btnAgendarTratamento";
+            this.btnAgendarTratamento.Size = new System.Drawing.Size(197, 39);
+            this.btnAgendarTratamento.TabIndex = 18;
+            this.btnAgendarTratamento.Text = "Agendar";
+            this.btnAgendarTratamento.UseVisualStyleBackColor = true;
             // 
             // frmAgendarTratamentoComConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 659);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(551, 584);
+            this.Controls.Add(this.btnAgendarTratamento);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gpTratamento);
+            this.Controls.Add(this.gpInformacoesCliente);
+            this.Controls.Add(this.gpCliente);
             this.Name = "frmAgendarTratamentoComConsulta";
             this.Text = "Agendar Tratamento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gpCliente.ResumeLayout(false);
+            this.gpInformacoesCliente.ResumeLayout(false);
+            this.gpInformacoesCliente.PerformLayout();
+            this.gpTratamento.ResumeLayout(false);
+            this.gpTratamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTratamento)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -260,23 +261,23 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox gpCliente;
+        private System.Windows.Forms.Button btnSelecionarCliente;
+        private System.Windows.Forms.GroupBox gpInformacoesCliente;
+        private System.Windows.Forms.Label lbDiagnosticoConsulta;
+        private System.Windows.Forms.Label lbDataConsulta;
+        private System.Windows.Forms.Label lbNomeResponsavel;
+        private System.Windows.Forms.Label lbNomeCliente;
+        private System.Windows.Forms.GroupBox gpTratamento;
+        private System.Windows.Forms.ComboBox cbMedicosDisponiveis;
+        private System.Windows.Forms.Label lbMedicosDisponiveis;
+        private System.Windows.Forms.Label lbHorariosDisponiveis;
+        private System.Windows.Forms.DataGridView dtgTratamento;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lbMedicoResponsavelVisu;
+        private System.Windows.Forms.Label lbDataInicioTratamentoVisu;
+        private System.Windows.Forms.Label lbResponsavelVisu;
+        private System.Windows.Forms.Label lbNomeVisu;
+        private System.Windows.Forms.Button btnAgendarTratamento;
     }
 }

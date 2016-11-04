@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -50,18 +50,18 @@
             this.groupBox1.Location = new System.Drawing.Point(15, 14);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(297, 152);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 53);
+            this.label1.Location = new System.Drawing.Point(66, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Nome";
+            this.label1.Size = new System.Drawing.Size(169, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Nome do médico";
             // 
             // btnPesquisar
             // 
@@ -69,7 +69,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(94, 117);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(115, 29);
-            this.btnPesquisar.TabIndex = 5;
+            this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -90,7 +90,7 @@
             this.groupBox2.Location = new System.Drawing.Point(15, 172);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(297, 161);
-            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clientes";
             // 
@@ -100,10 +100,10 @@
             this.dtgMedicos.Location = new System.Drawing.Point(6, 28);
             this.dtgMedicos.Name = "dtgMedicos";
             this.dtgMedicos.RowHeadersWidth = 60;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgMedicos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgMedicos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgMedicos.Size = new System.Drawing.Size(285, 119);
-            this.dtgMedicos.TabIndex = 0;
+            this.dtgMedicos.TabIndex = 6;
             // 
             // formBuscaMedico
             // 

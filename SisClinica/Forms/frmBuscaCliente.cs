@@ -35,7 +35,7 @@ namespace SisClinica.Forms
         {
             try
             {
-                dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtBoxNome.Text);    
+                dtgClientesBuscarCliente.DataSource = new Cliente().PesquisarPorNome(txtBoxNomeClienteBuscarCliente.Text);    
             }
             catch (Exception erro)
             {
@@ -46,7 +46,7 @@ namespace SisClinica.Forms
 
         private void dtgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["Id"].Value));
+            this.objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientesBuscarCliente.CurrentRow.Cells["Id"].Value));
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
