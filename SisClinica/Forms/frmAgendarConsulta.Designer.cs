@@ -43,12 +43,12 @@
             this.cbMedicosDisponiveis = new System.Windows.Forms.ComboBox();
             this.lblInfoMedicos = new System.Windows.Forms.Label();
             this.gbVisualizacao = new System.Windows.Forms.GroupBox();
+            this.lblHoraConsulta = new System.Windows.Forms.Label();
             this.lblConsultorio = new System.Windows.Forms.Label();
             this.lblMedicoResponsavel = new System.Windows.Forms.Label();
             this.lblDataConsulta = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnAgendar = new System.Windows.Forms.Button();
-            this.lblHoraConsulta = new System.Windows.Forms.Label();
             this.gbCliente.SuspendLayout();
             this.gbConsulta.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -230,6 +230,16 @@
             this.gbVisualizacao.TabStop = false;
             this.gbVisualizacao.Text = "Visualização";
             // 
+            // lblHoraConsulta
+            // 
+            this.lblHoraConsulta.AutoSize = true;
+            this.lblHoraConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraConsulta.Location = new System.Drawing.Point(246, 56);
+            this.lblHoraConsulta.Name = "lblHoraConsulta";
+            this.lblHoraConsulta.Size = new System.Drawing.Size(53, 16);
+            this.lblHoraConsulta.TabIndex = 8;
+            this.lblHoraConsulta.Text = "Horário";
+            // 
             // lblConsultorio
             // 
             this.lblConsultorio.AutoSize = true;
@@ -281,16 +291,6 @@
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // lblHoraConsulta
-            // 
-            this.lblHoraConsulta.AutoSize = true;
-            this.lblHoraConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraConsulta.Location = new System.Drawing.Point(246, 56);
-            this.lblHoraConsulta.Name = "lblHoraConsulta";
-            this.lblHoraConsulta.Size = new System.Drawing.Size(53, 16);
-            this.lblHoraConsulta.TabIndex = 8;
-            this.lblHoraConsulta.Text = "Horário";
-            // 
             // frmAgendarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,7 +301,7 @@
             this.Controls.Add(this.gbConsulta);
             this.Controls.Add(this.gbCliente);
             this.Name = "frmAgendarConsulta";
-            this.Text = "frmAgendarConsulta";
+            this.Text = "Agendar Consulta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAgendarConsulta_Load);
             this.SizeChanged += new System.EventHandler(this.frmAgendarConsulta_SizeChanged);

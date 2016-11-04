@@ -202,7 +202,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAgendarTratamentoSemConsulta";
-            this.Text = "frmAgendarTratamentoSemConsulta";
+            this.Text = "Agendar tratamento sem consulta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

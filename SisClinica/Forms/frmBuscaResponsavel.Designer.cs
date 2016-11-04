@@ -65,7 +65,7 @@
             this.gbRegistrarNovo.Size = new System.Drawing.Size(555, 309);
             this.gbRegistrarNovo.TabIndex = 47;
             this.gbRegistrarNovo.TabStop = false;
-            this.gbRegistrarNovo.Text = "Registrar Novo";
+            this.gbRegistrarNovo.Text = "Registrar Novo Responsavel";
             // 
             // lblAviso
             // 
@@ -187,10 +187,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 555);
+            this.ClientSize = new System.Drawing.Size(574, 326);
             this.Controls.Add(this.gbRegistrarNovo);
             this.Name = "frmBuscaResponsavel";
-            this.Text = "frmBuscaResponsavel";
+            this.Text = "Buscar Responsavel";
             this.Load += new System.EventHandler(this.frmBuscaResponsavel_Load);
             this.gbRegistrarNovo.ResumeLayout(false);
             this.gbRegistrarNovo.PerformLayout();

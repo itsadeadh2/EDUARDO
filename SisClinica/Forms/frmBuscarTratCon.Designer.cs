@@ -59,7 +59,7 @@
             this.groupBox1.Controls.Add(this.gbInfoPesquisa);
             this.groupBox1.Controls.Add(this.gbBusca);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(45, 96);
+            this.groupBox1.Location = new System.Drawing.Point(6, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(827, 310);
             this.groupBox1.TabIndex = 2;
@@ -73,7 +73,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(418, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(403, 206);
+            this.groupBox2.Size = new System.Drawing.Size(403, 264);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultados da pesquisa";
@@ -82,7 +82,7 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(6, 21);
+            this.lblInfo.Location = new System.Drawing.Point(6, 49);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(237, 16);
             this.lblInfo.TabIndex = 1;
@@ -91,9 +91,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 78);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 163);
+            this.dataGridView1.Size = new System.Drawing.Size(391, 180);
             this.dataGridView1.TabIndex = 0;
             // 
             // gbInfoPesquisa
@@ -248,10 +248,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 503);
+            this.ClientSize = new System.Drawing.Size(838, 326);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBuscarTratCon";
-            this.Text = "frmBuscarTratCon";
+            this.Text = "Buscar o tratamento da consulta";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

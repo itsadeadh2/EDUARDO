@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgMedicos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMedicos)).BeginInit();
@@ -53,6 +53,15 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(116, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 22);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Nome";
             // 
             // btnPesquisar
             // 
@@ -91,19 +100,10 @@
             this.dtgMedicos.Location = new System.Drawing.Point(6, 28);
             this.dtgMedicos.Name = "dtgMedicos";
             this.dtgMedicos.RowHeadersWidth = 60;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgMedicos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgMedicos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgMedicos.Size = new System.Drawing.Size(285, 119);
             this.dtgMedicos.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Nome";
             // 
             // formBuscaMedico
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "formBuscaMedico";
-            this.Text = "formBuscaMedico";
+            this.Text = "Buscar Médico";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

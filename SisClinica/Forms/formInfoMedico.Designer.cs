@@ -208,7 +208,7 @@
             this.Controls.Add(this.gbConsultasAgendadas);
             this.Controls.Add(this.groupBox1);
             this.Name = "formInfoMedico";
-            this.Text = "formInfoMedico";
+            this.Text = "Informações do Médico";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbConsultasAgendadas.ResumeLayout(false);

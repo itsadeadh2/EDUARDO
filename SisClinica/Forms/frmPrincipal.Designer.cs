@@ -157,7 +157,7 @@
             this.Controls.Add(this.menuPrincipal);
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
-            this.Text = "frmPrincipal";
+            this.Text = "Menu principal";
             this.MdiChildActivate += new System.EventHandler(this.frmPrincipal_MdiChildActivate);
             this.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.frmPrincipal_ControlAdded);
             this.menuPrincipal.ResumeLayout(false);

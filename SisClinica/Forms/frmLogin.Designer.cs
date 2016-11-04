@@ -77,7 +77,7 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "FrmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Text = "SisClin Login";
+            this.Text = "SisClinica Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

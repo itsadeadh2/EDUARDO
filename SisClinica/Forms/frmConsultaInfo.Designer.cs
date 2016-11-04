@@ -107,7 +107,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "frmConsultaInfo";
-            this.Text = "frmConsultaInfo";
+            this.Text = "Informações da consulta";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

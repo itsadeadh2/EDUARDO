@@ -244,7 +244,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmAgendarTratamentoComConsulta";
-            this.Text = "frmAgendarTratamento";
+            this.Text = "Agendar Tratamento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
