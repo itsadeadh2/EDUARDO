@@ -29,39 +29,39 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.gpPesquisa = new System.Windows.Forms.GroupBox();
+            this.lbNomeMedico = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtBoxNome = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBoxNomeMedico = new System.Windows.Forms.TextBox();
+            this.gpMedicos = new System.Windows.Forms.GroupBox();
             this.dtgMedicos = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gpPesquisa.SuspendLayout();
+            this.gpMedicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMedicos)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpPesquisa
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnPesquisar);
-            this.groupBox1.Controls.Add(this.txtBoxNome);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 152);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisa";
+            this.gpPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.gpPesquisa.Controls.Add(this.lbNomeMedico);
+            this.gpPesquisa.Controls.Add(this.btnPesquisar);
+            this.gpPesquisa.Controls.Add(this.txtBoxNomeMedico);
+            this.gpPesquisa.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpPesquisa.Location = new System.Drawing.Point(15, 14);
+            this.gpPesquisa.Name = "gpPesquisa";
+            this.gpPesquisa.Size = new System.Drawing.Size(297, 152);
+            this.gpPesquisa.TabIndex = 1;
+            this.gpPesquisa.TabStop = false;
+            this.gpPesquisa.Text = "Pesquisa";
             // 
-            // label1
+            // lbNomeMedico
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome do médico";
+            this.lbNomeMedico.AutoSize = true;
+            this.lbNomeMedico.Location = new System.Drawing.Point(66, 53);
+            this.lbNomeMedico.Name = "lbNomeMedico";
+            this.lbNomeMedico.Size = new System.Drawing.Size(169, 22);
+            this.lbNomeMedico.TabIndex = 2;
+            this.lbNomeMedico.Text = "Nome do médico";
             // 
             // btnPesquisar
             // 
@@ -74,25 +74,25 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // txtBoxNome
+            // txtBoxNomeMedico
             // 
-            this.txtBoxNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNome.Location = new System.Drawing.Point(48, 78);
-            this.txtBoxNome.Name = "txtBoxNome";
-            this.txtBoxNome.Size = new System.Drawing.Size(201, 26);
-            this.txtBoxNome.TabIndex = 3;
+            this.txtBoxNomeMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNomeMedico.Location = new System.Drawing.Point(48, 78);
+            this.txtBoxNomeMedico.Name = "txtBoxNomeMedico";
+            this.txtBoxNomeMedico.Size = new System.Drawing.Size(201, 26);
+            this.txtBoxNomeMedico.TabIndex = 3;
             // 
-            // groupBox2
+            // gpMedicos
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.dtgMedicos);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(15, 172);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(297, 161);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Clientes";
+            this.gpMedicos.BackColor = System.Drawing.Color.Transparent;
+            this.gpMedicos.Controls.Add(this.dtgMedicos);
+            this.gpMedicos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpMedicos.Location = new System.Drawing.Point(15, 172);
+            this.gpMedicos.Name = "gpMedicos";
+            this.gpMedicos.Size = new System.Drawing.Size(297, 161);
+            this.gpMedicos.TabIndex = 5;
+            this.gpMedicos.TabStop = false;
+            this.gpMedicos.Text = "Medicos";
             // 
             // dtgMedicos
             // 
@@ -111,13 +111,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(327, 346);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gpPesquisa);
+            this.Controls.Add(this.gpMedicos);
             this.Name = "formBuscaMedico";
             this.Text = "Buscar Médico";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gpPesquisa.ResumeLayout(false);
+            this.gpPesquisa.PerformLayout();
+            this.gpMedicos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMedicos)).EndInit();
             this.ResumeLayout(false);
 
@@ -125,11 +125,11 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtBoxNome;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtBoxNomeMedico;
+        private System.Windows.Forms.GroupBox gpMedicos;
         private System.Windows.Forms.DataGridView dtgMedicos;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbNomeMedico;
     }
 }

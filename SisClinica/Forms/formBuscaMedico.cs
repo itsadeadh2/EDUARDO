@@ -22,7 +22,7 @@ namespace SisClinica.Forms
         {
             try
             {
-                dtgMedicos.DataSource = new Medico().Pesquisar(txtBoxNome.Text);
+                dtgMedicos.DataSource = new Medico().Pesquisar(txtBoxNomeMedico.Text);
             }
             catch (Exception erro)
             {
