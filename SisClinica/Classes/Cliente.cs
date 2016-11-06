@@ -90,15 +90,19 @@ namespace SisClinica.Classes
             dt.Columns.Add("CPF", typeof(string));
             dt.Columns.Add("Nome Responsavel", typeof(string));
             dt.Columns.Add("CPF Responsavel", typeof(string));
-            foreach (Cliente objCliente in listadeClientes)
+            if (listadeClientes!=null)
             {
-                if (objCliente.objResponsavel!=null)
+
+                foreach (Cliente objCliente in listadeClientes)
                 {
-                    dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, objCliente.objResponsavel.nome, objCliente.objResponsavel.cpf);
-                }
-                else
-                {
-                    dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, "-", "-");
+                    if (objCliente.objResponsavel != null)
+                    {
+                        dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, objCliente.objResponsavel.nome, objCliente.objResponsavel.cpf);
+                    }
+                    else
+                    {
+                        dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, "-", "-");
+                    }
                 }
             }
             return dt;

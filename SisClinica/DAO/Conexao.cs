@@ -12,7 +12,7 @@ namespace SisClinica.DAO
     {
         private SqlConnection Conectar()
         {
-            string StringConexao = @"Data Source = DESKTOP-9DC897S\SQLEXPRESS; Initial Catalog = BDSISCLIN; user ID = sa; Password = 0123654852; Min Pool Size=5;Max Pool Size=250; Connect Timeout=3";
+            string StringConexao = @"Data Source = DESKTOP-9DC897S\SQLEXPRESS; Initial Catalog = BDSISCLIN; user ID = sa; Password = 0123654852;";// Min Pool Size=5;Max Pool Size=250; Connect Timeout=5";
             SqlConnection conexao = new SqlConnection(StringConexao);
             conexao.Open();
             return conexao;

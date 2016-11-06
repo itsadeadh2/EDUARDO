@@ -26,6 +26,11 @@ namespace SisClinica.Classes
         {
             return new ResponsavelDAO().Pesquisar(id);
         }
+
+        public Responsavel PesquisarPorCPF(string cpf)
+        {
+            return new ResponsavelDAO().Pesquisar(cpf);
+        }
         public DataTable Pesquisar(string nome)
         {
             IList<Responsavel> lista = new ResponsavelDAO().PesquisarPorNome(nome);

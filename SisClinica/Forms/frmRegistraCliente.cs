@@ -72,8 +72,11 @@ namespace SisClinica.Forms
                 {
                     objResponsavel.estado = cbEstadoRegCliente.Text;
                 }
+
                 objResponsavel.Registrar();
+                objResponsavel = new Responsavel().PesquisarPorCPF(objResponsavel.cpf);
                 objCliente.objResponsavel = objResponsavel;
+                MessageBox.Show(objCliente.objResponsavel.id.ToString());
                 objCliente.Registrar();
 
                 MessageBox.Show("Cliente e Responsável vinculados e registrados com sucesso!");
