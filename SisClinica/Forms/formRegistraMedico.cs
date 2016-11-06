@@ -36,7 +36,8 @@ namespace SisClinica.Forms
                 objMedico.dataNascimento = dtpDataNascimento.Value;
                 objMedico.telefone = msktxtboxTelefoneRegMedico.Text;
                 objMedico.endereco = txtboxEnderecoRegMedico.Text;
-                objMedico.cidadeEstado = cbCidadeRegMedico.Text + "/" + cbEstadoRegMedico.Text;
+                objMedico.cidade = cbCidadeRegMedico.Text;
+                objMedico.estado = cbEstadoRegMedico.Text;
                 objMedico.email = txtboxEmailRegMedico.Text;
 
                 objMedico.Registrar();

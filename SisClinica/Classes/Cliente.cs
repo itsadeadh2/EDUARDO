@@ -54,7 +54,7 @@ namespace SisClinica.Classes
         /// </summary>
         public void Registrar()
         {
-            if (this.objResponsavel!=null)
+            if (objResponsavel!=null)
             {
                 new ClienteDAO().RegistrarComResponsavel(this);
             }

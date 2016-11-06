@@ -15,11 +15,12 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "INSERT INTO Responsavel (cpf, email, endereco, cidadeEstado, nome, telefone, dataNascimento) values (@cpf, @email, @endereco, @cidadeEstado, @nome, @telefone, @dataNascimento)";
+            comando.CommandText = "INSERT INTO Responsavel (cpf, email, endereco, cidade, estado, nome, telefone, dataNascimento) values (@cpf, @email, @endereco, @cidade, @estado, @nome, @telefone, @dataNascimento)";
             comando.Parameters.AddWithValue("@cpf", objResponsvavel.cpf);
             comando.Parameters.AddWithValue("@email", objResponsvavel.email);
             comando.Parameters.AddWithValue("@endereco", objResponsvavel.endereco);
-            comando.Parameters.AddWithValue("@cidadeEstado", objResponsvavel.cidadeEstado);
+            comando.Parameters.AddWithValue("@cidade", objResponsvavel.cidade);
+            comando.Parameters.AddWithValue("@estado", objResponsvavel.estado);
             comando.Parameters.AddWithValue("@nome", objResponsvavel.nome);
             comando.Parameters.AddWithValue("@telefone", objResponsvavel.telefone);
             comando.Parameters.AddWithValue("@dataNascimento", objResponsvavel.dataNascimento);
@@ -43,10 +44,12 @@ namespace SisClinica.DAO
             {
                 dr.Read();
                 objResponsavel.id = Convert.ToInt32(dr["id"]);
-                objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.cpf = dr["cpf"].ToString();
                 objResponsavel.email = dr["email"].ToString();
-                objResponsavel.cidadeEstado = dr["cidadeEstado"].ToString();
+                objResponsavel.endereco = dr["endereco"].ToString();
+                objResponsavel.cidade = dr["cidade"].ToString();
+                objResponsavel.estado = dr["estado"].ToString();
+                objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.telefone = dr["telefone"].ToString();
                 objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
             }
@@ -62,7 +65,7 @@ namespace SisClinica.DAO
             Responsavel objResponsavel = new Responsavel();
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "SELECT * FROM Responsavel where cpf like @cpf";
+            comando.CommandText = "SELECT * FROM Responsavel where cpf = @cpf";
             comando.Parameters.AddWithValue("@cpf", cpf);
 
             Conexao con = new Conexao();
@@ -72,10 +75,12 @@ namespace SisClinica.DAO
             {
                 dr.Read();
                 objResponsavel.id = Convert.ToInt32(dr["id"]);
-                objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.cpf = dr["cpf"].ToString();
                 objResponsavel.email = dr["email"].ToString();
-                objResponsavel.cidadeEstado = dr["cidadeEstado"].ToString();
+                objResponsavel.endereco = dr["endereco"].ToString();
+                objResponsavel.cidade = dr["cidade"].ToString();
+                objResponsavel.estado = dr["estado"].ToString();
+                objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.telefone = dr["telefone"].ToString();
                 objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
             }
@@ -103,11 +108,12 @@ namespace SisClinica.DAO
                 while (dr.Read())
                 {
                     Responsavel objResponsavel = new Responsavel();
-                    objResponsavel.id = (int)dr["id"];
+                    objResponsavel.id = Convert.ToInt32(dr["id"]);
                     objResponsavel.cpf = dr["cpf"].ToString();
                     objResponsavel.email = dr["email"].ToString();
                     objResponsavel.endereco = dr["endereco"].ToString();
-                    objResponsavel.cidadeEstado = dr["cidadeEstado"].ToString();
+                    objResponsavel.cidade = dr["cidade"].ToString();
+                    objResponsavel.estado = dr["estado"].ToString();
                     objResponsavel.nome = dr["nome"].ToString();
                     objResponsavel.telefone = dr["telefone"].ToString();
                     objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);

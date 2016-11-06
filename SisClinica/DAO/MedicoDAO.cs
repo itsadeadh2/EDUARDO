@@ -15,11 +15,12 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "INSERT INTO Medico(cpf, email, endereco, cidadeEstado, nome, telefone, dataNascimento, crm) values (@cpf, @email, @endereco, @cidadeEstado, @nome, @telefone, @dataNascimento, @crm)";
+            comando.CommandText = "INSERT INTO Medico(cpf, email, endereco, cidade, estado, nome, telefone, dataNascimento, crm) values (@cpf, @email, @endereco, @cidade, @estado, @nome, @telefone, @dataNascimento, @crm)";
             comando.Parameters.AddWithValue("@cpf", objMedico.cpf);
             comando.Parameters.AddWithValue("@email", objMedico.email);
             comando.Parameters.AddWithValue("@endereco", objMedico.endereco);
-            comando.Parameters.AddWithValue("@cidadeEstado", objMedico.cidadeEstado);
+            comando.Parameters.AddWithValue("@cidade", objMedico.cidade);
+            comando.Parameters.AddWithValue("@estado", objMedico.estado);
             comando.Parameters.AddWithValue("@nome", objMedico.nome);
             comando.Parameters.AddWithValue("@telefone", objMedico.telefone);
             comando.Parameters.AddWithValue("@dataNascimento", objMedico.dataNascimento);
@@ -46,7 +47,8 @@ namespace SisClinica.DAO
                 objMedico.cpf = dr["cpf"].ToString();
                 objMedico.email = dr["email"].ToString();
                 objMedico.endereco = dr["endereco"].ToString();
-                objMedico.cidadeEstado = dr["cidadeEstado"].ToString();
+                objMedico.cidade = dr["cidade"].ToString();
+                objMedico.estado = dr["estado"].ToString();
                 objMedico.nome = dr["nome"].ToString();
                 objMedico.telefone = dr["telefone"].ToString();
                 objMedico.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -77,7 +79,8 @@ namespace SisClinica.DAO
                     objMedico.cpf = dr["cpf"].ToString();
                     objMedico.email = dr["email"].ToString();
                     objMedico.endereco = dr["endereco"].ToString();
-                    objMedico.cidadeEstado = dr["cidadeEstado"].ToString();
+                    objMedico.cidade = dr["cidade"].ToString();
+                    objMedico.estado = dr["estado"].ToString();
                     objMedico.nome = dr["nome"].ToString();
                     objMedico.telefone = dr["telefone"].ToString();
                     objMedico.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -96,11 +99,12 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "UPDATE MEDICO set cpf=@cpf, email=@email, endereco=@endereco, cidadeEstado=@cidadeEstado, nome=@nome, telefone=@telefone";
+            comando.CommandText = "UPDATE MEDICO set cpf=@cpf, email=@email, endereco=@endereco, cidade=@cidade. estado=@estado, nome=@nome, telefone=@telefone";
             comando.Parameters.AddWithValue("@email", objMedico.email);
             comando.Parameters.AddWithValue("@cpf", objMedico.cpf);
             comando.Parameters.AddWithValue("@endereco", objMedico.endereco);
-            comando.Parameters.AddWithValue("@cidadeEstado", objMedico.cidadeEstado);
+            comando.Parameters.AddWithValue("@cidade", objMedico.cidade);
+            comando.Parameters.AddWithValue("@estado", objMedico.estado);
             comando.Parameters.AddWithValue("@nome", objMedico.nome);
             comando.Parameters.AddWithValue("@telefone", objMedico.telefone);
 
@@ -127,7 +131,8 @@ namespace SisClinica.DAO
                     objMedico.cpf = dr["cpf"].ToString();
                     objMedico.email = dr["email"].ToString();
                     objMedico.endereco = dr["endereco"].ToString();
-                    objMedico.cidadeEstado = dr["cidadeEstado"].ToString();
+                    objMedico.cidade = dr["cidade"].ToString();
+                    objMedico.estado = dr["estado"].ToString();
                     objMedico.nome = dr["nome"].ToString();
                     objMedico.telefone = dr["telefone"].ToString();
                     objMedico.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);

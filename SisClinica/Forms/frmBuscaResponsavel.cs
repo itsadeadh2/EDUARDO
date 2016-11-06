@@ -18,14 +18,12 @@ namespace SisClinica.Forms
         public string dataNascimento { get; set; }
         public string telefone { get; set; }
         public string email { get; set; }
-        public Responsavel objResponsavel;
+        public Responsavel objResponsavel = new Responsavel();
 
 
         public frmBuscaResponsavel()
         {
             InitializeComponent();
-
-
         }
         
 
@@ -38,8 +36,8 @@ namespace SisClinica.Forms
                 objResponsavel.dataNascimento = dtpDataNascimento.Value;
                 objResponsavel.telefone = mskTxtBoxTelefone.Text;
                 objResponsavel.email = txtBoxEmail.Text;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                DialogResult = DialogResult.OK;
+                Close();
             }
             else
             {

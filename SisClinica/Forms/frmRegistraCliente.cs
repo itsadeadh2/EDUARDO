@@ -17,86 +17,85 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
         }
-        Responsavel objResponsavel = new Responsavel();
+        Responsavel objResponsavel;
 
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
-            try
+            if (checaData() && objResponsavel.cpf == null)
             {
-                if (checaData()&&objResponsavel.cpf==null)
-                {
-                    MessageBox.Show("O cliente é menor de idade, selecione um Responsável!");                       
-                }
-                else if (txtBoxNomeCompleto.TextLength<3)
-                {
-                    MessageBox.Show("Nome inválido, por favor, digite um nome válido!");
-                }
-                else if (checaData()&&objResponsavel.id!=0)
-                {
-                    Cliente objCliente = new Cliente();
-                    objCliente.nome = txtBoxNomeCompleto.Text;
-                    objCliente.cpf = mskdCPF.Text;
-                    objCliente.dataNascimento = dtpDataDeNascimento.Value;
-                    objCliente.telefone = mskTxtBoxTelefone.Text;
-                    objCliente.email = txtBoxEmail.Text;
-                    objCliente.endereco = txtBoxEndereco.Text;
-                    objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
-                    objCliente.adicionalInfo = rtbAdicionalInfo.Text;
-
-                    objCliente.objResponsavel = objResponsavel;
-                    objCliente.Registrar();
-                    MessageBox.Show("Cliente registrado e vinculado ao Responsável!");
-                    Close();
-                }
-                else if (checaData())
-                {
-                    Cliente objCliente = new Cliente();
-                    objCliente.nome = txtBoxNomeCompleto.Text;
-                    objCliente.cpf = mskdCPF.Text;
-                    objCliente.dataNascimento = dtpDataDeNascimento.Value;
-                    objCliente.telefone = mskTxtBoxTelefone.Text;
-                    objCliente.email = txtBoxEmail.Text;
-                    objCliente.endereco = txtBoxEndereco.Text;
-                    objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
-                    objCliente.adicionalInfo = rtbAdicionalInfo.Text;
-
-                    if (objResponsavel.endereco==null)
-                    {
-                        objResponsavel.endereco = txtBoxEndereco.Text;
-                    }
-                    if (objResponsavel.cidadeEstado==null)
-                    {
-                        objResponsavel.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
-                    }
-                    objCliente.objResponsavel = objResponsavel;
-                    objResponsavel.Registrar();
-                    objCliente.Registrar();
-
-                    MessageBox.Show("Cliente e Responsável vinculados e registrados com sucesso!");
-                    Close();
-                }
-                else if (!checaData())
-                {
-                    Cliente objCliente = new Cliente();
-                    objCliente.nome = txtBoxNomeCompleto.Text;
-                    objCliente.cpf = mskdCPF.Text;
-                    objCliente.dataNascimento = dtpDataDeNascimento.Value;
-                    objCliente.telefone = mskTxtBoxTelefone.Text;
-                    objCliente.email = txtBoxEmail.Text;
-                    objCliente.endereco = txtBoxEndereco.Text;
-                    objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
-                    objCliente.adicionalInfo = rtbAdicionalInfo.Text;
-
-                    objCliente.Registrar();
-
-                    MessageBox.Show("Cliente Registrado com sucesso!");
-                    Close();
-                }
+                MessageBox.Show("O cliente é menor de idade, selecione um Responsável!");
             }
-            catch (Exception erro)
+            else if (txtBoxNomeCompleto.TextLength < 3)
             {
+                MessageBox.Show("Nome inválido, por favor, digite um nome válido!");
+            }
+            else if (checaData() && objResponsavel.id != 0)
+            {
+                Cliente objCliente = new Cliente();
+                objCliente.nome = txtBoxNomeCompleto.Text;
+                objCliente.cpf = mskdCPF.Text;
+                objCliente.dataNascimento = dtpDataDeNascimento.Value;
+                objCliente.telefone = mskTxtBoxTelefone.Text;
+                objCliente.email = txtBoxEmail.Text;
+                objCliente.endereco = txtBoxEndereco.Text;
+                objCliente.cidade = cbCidadeRegCliente.Text;
+                objCliente.estado = cbEstadoRegCliente.Text;
+                objCliente.adicionalInfo = rtbAdicionalInfo.Text;
 
-                MessageBox.Show(erro.Message);
+                objCliente.objResponsavel = objResponsavel;
+                objCliente.Registrar();
+                MessageBox.Show("Cliente registrado e vinculado ao Responsável!");
+                Close();
+            }
+            else if (checaData())
+            {
+                Cliente objCliente = new Cliente();
+                objCliente.nome = txtBoxNomeCompleto.Text;
+                objCliente.cpf = mskdCPF.Text;
+                objCliente.dataNascimento = dtpDataDeNascimento.Value;
+                objCliente.telefone = mskTxtBoxTelefone.Text;
+                objCliente.email = txtBoxEmail.Text;
+                objCliente.endereco = txtBoxEndereco.Text;
+                objCliente.cidade = cbCidadeRegCliente.Text;
+                objCliente.estado = cbEstadoRegCliente.Text;
+                objCliente.adicionalInfo = rtbAdicionalInfo.Text;
+
+                if (objResponsavel.endereco == null)
+                {
+                    objResponsavel.endereco = txtBoxEndereco.Text;
+                }
+                if (objResponsavel.cidade == null)
+                {
+                    objResponsavel.cidade = cbCidadeRegCliente.Text;
+                }
+                if (objResponsavel.estado == null)
+                {
+                    objResponsavel.estado = cbEstadoRegCliente.Text;
+                }
+                objResponsavel.Registrar();
+                objCliente.objResponsavel = objResponsavel;
+                objCliente.Registrar();
+
+                MessageBox.Show("Cliente e Responsável vinculados e registrados com sucesso!");
+                Close();
+            }
+            else if (!checaData())
+            {
+                Cliente objCliente = new Cliente();
+                objCliente.nome = txtBoxNomeCompleto.Text;
+                objCliente.cpf = mskdCPF.Text;
+                objCliente.dataNascimento = dtpDataDeNascimento.Value;
+                objCliente.telefone = mskTxtBoxTelefone.Text;
+                objCliente.email = txtBoxEmail.Text;
+                objCliente.endereco = txtBoxEndereco.Text;
+                objCliente.cidade = cbCidadeRegCliente.Text;
+                objCliente.estado = cbEstadoRegCliente.Text;
+                objCliente.adicionalInfo = rtbAdicionalInfo.Text;
+
+                objCliente.Registrar();
+
+                MessageBox.Show("Cliente Registrado com sucesso!");
+                Close();
             }
         }
 
