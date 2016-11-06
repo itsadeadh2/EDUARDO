@@ -35,7 +35,7 @@ namespace SisClinica.Forms
                 objMedico.crm = mskdtxtbxCRM.Text + "-" + mskdTxtBoxDigitoCRM.Text + cbEstado.Text;
                 objMedico.dataNascimento = dtpDataNascimento.Value;
                 objMedico.telefone = msktxtboxTelefoneRegMedico.Text;
-                objMedico.endereco = txtboxEnderecoRegMedico.Text + ", " + txtboxNumeroRegMedico.Text + ", " + txtboxBairroRegMedico.Text;
+                objMedico.endereco = txtboxEnderecoRegMedico.Text;
                 objMedico.cidadeEstado = cbCidadeRegMedico.Text + "/" + cbEstadoRegMedico.Text;
                 objMedico.email = txtboxEmailRegMedico.Text;
 

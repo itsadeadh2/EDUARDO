@@ -39,7 +39,7 @@ namespace SisClinica.Forms
                     objCliente.dataNascimento = dtpDataDeNascimento.Value;
                     objCliente.telefone = mskTxtBoxTelefone.Text;
                     objCliente.email = txtBoxEmail.Text;
-                    objCliente.endereco = txtBoxEndereco.Text + ", " + txtBoxNumero.Text + ", " + txtBoxBairro.Text;
+                    objCliente.endereco = txtBoxEndereco.Text;
                     objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
                     objCliente.adicionalInfo = rtbAdicionalInfo.Text;
 
@@ -56,12 +56,18 @@ namespace SisClinica.Forms
                     objCliente.dataNascimento = dtpDataDeNascimento.Value;
                     objCliente.telefone = mskTxtBoxTelefone.Text;
                     objCliente.email = txtBoxEmail.Text;
-                    objCliente.endereco = txtBoxEndereco.Text + ", " + txtBoxNumero.Text + ", " + txtBoxBairro.Text;
+                    objCliente.endereco = txtBoxEndereco.Text;
                     objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
                     objCliente.adicionalInfo = rtbAdicionalInfo.Text;
 
-                    objResponsavel.endereco = txtBoxEndereco.Text + ", " + txtBoxNumero.Text + ", " + txtBoxBairro.Text;
-                    objResponsavel.cidadeEstado  = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
+                    if (objResponsavel.endereco==null)
+                    {
+                        objResponsavel.endereco = txtBoxEndereco.Text;
+                    }
+                    if (objResponsavel.cidadeEstado==null)
+                    {
+                        objResponsavel.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
+                    }
                     objCliente.objResponsavel = objResponsavel;
                     objResponsavel.Registrar();
                     objCliente.Registrar();
@@ -77,7 +83,7 @@ namespace SisClinica.Forms
                     objCliente.dataNascimento = dtpDataDeNascimento.Value;
                     objCliente.telefone = mskTxtBoxTelefone.Text;
                     objCliente.email = txtBoxEmail.Text;
-                    objCliente.endereco = txtBoxEndereco.Text + ", " + txtBoxNumero.Text + ", " + txtBoxBairro.Text;
+                    objCliente.endereco = txtBoxEndereco.Text;
                     objCliente.cidadeEstado = cbCidadeRegCliente.Text + cbEstadoRegCliente.Text;
                     objCliente.adicionalInfo = rtbAdicionalInfo.Text;
 

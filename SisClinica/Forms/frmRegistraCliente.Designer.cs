@@ -33,14 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtBoxNomeCompleto = new System.Windows.Forms.TextBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.txtBoxEndereco = new System.Windows.Forms.TextBox();
-            this.txtBoxNumero = new System.Windows.Forms.TextBox();
-            this.txtBoxBairro = new System.Windows.Forms.TextBox();
             this.btnRegistrarCliente = new System.Windows.Forms.Button();
             this.mskTxtBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,126 +55,90 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 21);
+            this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome completo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 21);
+            this.label2.Size = new System.Drawing.Size(152, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Data de nascimento";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(92, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefone";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(110, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 21);
+            this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "E-mail";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(85, 269);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 21);
+            this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Endereço";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(138, 312);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "N°";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(112, 355);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Bairro";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(103, 398);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(103, 313);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 21);
+            this.label8.Size = new System.Drawing.Size(60, 20);
             this.label8.TabIndex = 7;
             this.label8.Text = "Estado";
             // 
             // txtBoxNomeCompleto
             // 
-            this.txtBoxNomeCompleto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNomeCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNomeCompleto.Location = new System.Drawing.Point(186, 52);
             this.txtBoxNomeCompleto.Name = "txtBoxNomeCompleto";
-            this.txtBoxNomeCompleto.Size = new System.Drawing.Size(375, 26);
+            this.txtBoxNomeCompleto.Size = new System.Drawing.Size(375, 24);
             this.txtBoxNomeCompleto.TabIndex = 1;
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(186, 220);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(375, 26);
+            this.txtBoxEmail.Size = new System.Drawing.Size(375, 24);
             this.txtBoxEmail.TabIndex = 5;
             // 
             // txtBoxEndereco
             // 
-            this.txtBoxEndereco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEndereco.Location = new System.Drawing.Point(186, 262);
             this.txtBoxEndereco.Name = "txtBoxEndereco";
-            this.txtBoxEndereco.Size = new System.Drawing.Size(375, 26);
+            this.txtBoxEndereco.Size = new System.Drawing.Size(375, 24);
             this.txtBoxEndereco.TabIndex = 6;
-            // 
-            // txtBoxNumero
-            // 
-            this.txtBoxNumero.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNumero.Location = new System.Drawing.Point(186, 304);
-            this.txtBoxNumero.Name = "txtBoxNumero";
-            this.txtBoxNumero.Size = new System.Drawing.Size(80, 26);
-            this.txtBoxNumero.TabIndex = 7;
-            // 
-            // txtBoxBairro
-            // 
-            this.txtBoxBairro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxBairro.Location = new System.Drawing.Point(186, 346);
-            this.txtBoxBairro.Name = "txtBoxBairro";
-            this.txtBoxBairro.Size = new System.Drawing.Size(176, 26);
-            this.txtBoxBairro.TabIndex = 8;
             // 
             // btnRegistrarCliente
             // 
-            this.btnRegistrarCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarCliente.Location = new System.Drawing.Point(454, 521);
             this.btnRegistrarCliente.Name = "btnRegistrarCliente";
             this.btnRegistrarCliente.Size = new System.Drawing.Size(130, 45);
@@ -189,39 +149,39 @@
             // 
             // mskTxtBoxTelefone
             // 
-            this.mskTxtBoxTelefone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTxtBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTxtBoxTelefone.Location = new System.Drawing.Point(186, 178);
             this.mskTxtBoxTelefone.Mask = "(99) 00000-0000";
             this.mskTxtBoxTelefone.Name = "mskTxtBoxTelefone";
-            this.mskTxtBoxTelefone.Size = new System.Drawing.Size(121, 26);
+            this.mskTxtBoxTelefone.Size = new System.Drawing.Size(121, 24);
             this.mskTxtBoxTelefone.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(104, 441);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(104, 356);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 21);
+            this.label10.Size = new System.Drawing.Size(59, 20);
             this.label10.TabIndex = 19;
             this.label10.Text = "Cidade";
             // 
             // mskdCPF
             // 
-            this.mskdCPF.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskdCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskdCPF.Location = new System.Drawing.Point(186, 94);
             this.mskdCPF.Mask = "999.999.999-99";
             this.mskdCPF.Name = "mskdCPF";
-            this.mskdCPF.Size = new System.Drawing.Size(121, 26);
+            this.mskdCPF.Size = new System.Drawing.Size(121, 24);
             this.mskdCPF.TabIndex = 2;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(123, 97);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 21);
+            this.label11.Size = new System.Drawing.Size(40, 20);
             this.label11.TabIndex = 21;
             this.label11.Text = "CPF";
             // 
@@ -238,20 +198,16 @@
             this.gbCliente.Controls.Add(this.label11);
             this.gbCliente.Controls.Add(this.label10);
             this.gbCliente.Controls.Add(this.mskTxtBoxTelefone);
-            this.gbCliente.Controls.Add(this.txtBoxBairro);
-            this.gbCliente.Controls.Add(this.txtBoxNumero);
             this.gbCliente.Controls.Add(this.txtBoxEndereco);
             this.gbCliente.Controls.Add(this.txtBoxEmail);
             this.gbCliente.Controls.Add(this.txtBoxNomeCompleto);
             this.gbCliente.Controls.Add(this.label4);
             this.gbCliente.Controls.Add(this.label1);
-            this.gbCliente.Controls.Add(this.label6);
             this.gbCliente.Controls.Add(this.label8);
             this.gbCliente.Controls.Add(this.label5);
             this.gbCliente.Controls.Add(this.label2);
             this.gbCliente.Controls.Add(this.label3);
-            this.gbCliente.Controls.Add(this.label7);
-            this.gbCliente.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCliente.Location = new System.Drawing.Point(12, 12);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(1014, 503);
@@ -261,7 +217,7 @@
             // 
             // rtbAdicionalInfo
             // 
-            this.rtbAdicionalInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbAdicionalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbAdicionalInfo.Location = new System.Drawing.Point(611, 75);
             this.rtbAdicionalInfo.Name = "rtbAdicionalInfo";
             this.rtbAdicionalInfo.Size = new System.Drawing.Size(397, 422);
@@ -271,25 +227,25 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(607, 52);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(181, 20);
+            this.label9.Size = new System.Drawing.Size(162, 18);
             this.label9.TabIndex = 24;
             this.label9.Text = "Informações Adicionais";
             // 
             // dtpDataDeNascimento
             // 
-            this.dtpDataDeNascimento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataDeNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataDeNascimento.Location = new System.Drawing.Point(186, 135);
             this.dtpDataDeNascimento.Name = "dtpDataDeNascimento";
-            this.dtpDataDeNascimento.Size = new System.Drawing.Size(200, 26);
+            this.dtpDataDeNascimento.Size = new System.Drawing.Size(200, 24);
             this.dtpDataDeNascimento.TabIndex = 23;
             this.dtpDataDeNascimento.ValueChanged += new System.EventHandler(this.dtpDataDeNascimento_ValueChanged);
             // 
             // btnSelecionarResponsavel
             // 
-            this.btnSelecionarResponsavel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecionarResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelecionarResponsavel.Location = new System.Drawing.Point(392, 138);
             this.btnSelecionarResponsavel.Name = "btnSelecionarResponsavel";
             this.btnSelecionarResponsavel.Size = new System.Drawing.Size(169, 23);
@@ -301,16 +257,16 @@
             // 
             // cbCidadeRegCliente
             // 
-            this.cbCidadeRegCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCidadeRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidadeRegCliente.FormattingEnabled = true;
-            this.cbCidadeRegCliente.Location = new System.Drawing.Point(186, 432);
+            this.cbCidadeRegCliente.Location = new System.Drawing.Point(186, 347);
             this.cbCidadeRegCliente.Name = "cbCidadeRegCliente";
-            this.cbCidadeRegCliente.Size = new System.Drawing.Size(121, 28);
+            this.cbCidadeRegCliente.Size = new System.Drawing.Size(121, 26);
             this.cbCidadeRegCliente.TabIndex = 10;
             // 
             // cbEstadoRegCliente
             // 
-            this.cbEstadoRegCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstadoRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoRegCliente.FormattingEnabled = true;
             this.cbEstadoRegCliente.Items.AddRange(new object[] {
             "Acre",
@@ -340,9 +296,9 @@
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.cbEstadoRegCliente.Location = new System.Drawing.Point(186, 388);
+            this.cbEstadoRegCliente.Location = new System.Drawing.Point(186, 303);
             this.cbEstadoRegCliente.Name = "cbEstadoRegCliente";
-            this.cbEstadoRegCliente.Size = new System.Drawing.Size(121, 28);
+            this.cbEstadoRegCliente.Size = new System.Drawing.Size(121, 26);
             this.cbEstadoRegCliente.TabIndex = 9;
             // 
             // frmRegistraCliente
@@ -370,14 +326,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtBoxNomeCompleto;
         private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.TextBox txtBoxEndereco;
-        private System.Windows.Forms.TextBox txtBoxNumero;
-        private System.Windows.Forms.TextBox txtBoxBairro;
         private System.Windows.Forms.Button btnRegistrarCliente;
         private System.Windows.Forms.MaskedTextBox mskTxtBoxTelefone;
         private System.Windows.Forms.Label label10;
