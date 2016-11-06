@@ -87,5 +87,17 @@ namespace SisClinica.DAO
             }
             return listaDeConsultorios;
         }
+
+        public void Registrar(Consultorio objConsultorio)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "INSERT INTO Consultorio(nome) values(@nome)";
+            comando.Parameters.AddWithValue("@nome",objConsultorio.nomeConsultorio);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+
+        }
     }
 }

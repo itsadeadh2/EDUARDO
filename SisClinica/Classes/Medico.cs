@@ -40,10 +40,16 @@ namespace SisClinica.Classes
             DataTable dt = new DataTable();
             dt.Columns.Add("Nome do Medico", typeof(string));
             dt.Columns.Add("Id Medico", typeof(int));
-
-            foreach (Medico objMedico in listaDeMedicos)
+            if (listaDeMedicos!=null)
             {
-                dt.Rows.Add(objMedico.nome, objMedico.id);
+                foreach (Medico objMedico in listaDeMedicos)
+                {
+                    dt.Rows.Add(objMedico.nome, objMedico.id);
+                }
+            }
+            else
+            {
+                dt = null;
             }
             return dt;
         }

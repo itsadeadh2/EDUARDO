@@ -65,6 +65,10 @@ namespace SisClinica.Classes
         {
             return new SessoesDAO().PesquisarPorData(data.Date);
         }
+        public Sessoes BuscaPorId(int id)
+        {
+            return new SessoesDAO().Pesquisar(id);
+        }
 
         public IList<Sessoes> BuscaPorHoraInicial(DateTime data)
         {
@@ -104,22 +108,27 @@ namespace SisClinica.Classes
                     IList<Sessoes> lista = new Sessoes().BuscaPorMedico(objMedico);
                     if (lista!=null)
                     {
-                        foreach (Sessoes objSessoes in lista)
+                        IList<int> idsListaSessoes = new List<int>();
+                        IList<int> idsLista = new List<int>();
+
+                        foreach (Sessoes objs in listaDeSessoes)
                         {
-                            if (listaDeSessoes.Count!=0)
+                            idsListaSessoes.Add(objs.id);
+                        }
+                        foreach(Sessoes objs in lista)
+                        {
+                            idsLista.Add(objs.id);
+                        }
+                        foreach (int id in idsLista)
+                        {
+                            if (idsListaSessoes.Contains(id))
                             {
-                                foreach (Sessoes s in listaDeSessoes)
-                                {
-                                    if (objSessoes.id != s.id)
-                                    {
-                                        listaDeSessoes.Add(objSessoes);
-                                    }
-                                }
+
                             }
                             else
                             {
-                                listaDeSessoes.Add(objSessoes);
-                            }                            
+                                listaDeSessoes.Add(new Sessoes().BuscaPorId(id));
+                            }
                         }
                     }
                     
@@ -127,21 +136,26 @@ namespace SisClinica.Classes
             }
             if (listaPorData!=null)
             {
+                IList<int> idSessoes = new List<int>();
+                IList<int> idSessoesPorData = new List<int>();
                 foreach (Sessoes s in listaPorData)
                 {
-                    if (listaDeSessoes.Count != 0)
+                    idSessoesPorData.Add(s.id);
+                }
+                foreach (Sessoes s in listaDeSessoes)
+                {
+                    idSessoes.Add(s.id);
+                }
+
+                foreach (int id in idSessoes)
+                {
+                    if (idSessoes.Contains(id))
                     {
-                        foreach (Sessoes ss in listaDeSessoes)
-                        {
-                            if (s.id != ss.id)
-                            {
-                                listaDeSessoes.Add(s);
-                            }
-                        }
+
                     }
                     else
                     {
-                        listaDeSessoes.Add(s);
+                        listaDeSessoes.Add(new Sessoes().BuscaPorId(id));
                     }
                 }
             }
@@ -290,7 +304,7 @@ namespace SisClinica.Classes
         /// <param name="objConsultorio">Consultorio da sessao</param>
         /// <param name="datasource">DataSource que receberá o dataTable</param>
         /// <returns>DataTable de horarios disponiveis</returns>
-        public DataTable GerarListaDeHorarios(DateTime data, Medico objMedico, Consultorio objConsultorio, DateTime datasource)
+        public DataTable GerarListaDeHorariosIniciais(DateTime data, Medico objMedico, Consultorio objConsultorio, string turno)
         {            
             DateTime hi = data.Date;
             DateTime ha = data.Date;
@@ -301,31 +315,37 @@ namespace SisClinica.Classes
             ha = ha.AddMinutes(30);
             hr = hr.AddHours(14);
             fe = fe.AddHours(18);
-            IList<DateTime> listaDeHorarios = new Sessoes().GerarHorarios(hi, ha, hr, fe, data.Date, objMedico, objConsultorio);
+            IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeInicio(hi, ha, hr, fe, data.Date, objMedico, objConsultorio, turno);
 
             DataTable dt = new DataTable();
-            if (datasource == null)
+           
+            dt.Columns.Add("Data", typeof(DateTime));
+            dt.Columns.Add("Hora", typeof(string));
+            foreach (DateTime hora in listaDeHorarios)
             {
-                dt.Columns.Add("Data", typeof(DateTime));
-                dt.Columns.Add("Hora", typeof(string));
-                foreach (DateTime hora in listaDeHorarios)
-                {
-                    dt.Rows.Add(hora, hora.TimeOfDay.ToString());
-                }
+                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
             }
-            else if (datasource != null)
-            {
-                dt.Columns.Add("Data", typeof(DateTime));
-                dt.Columns.Add("Hora", typeof(string));
-                foreach (DateTime hora in listaDeHorarios)
-                {
-                    if (hora > datasource)
-                    {
-                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
-                    }
-                }
-            }
+            return dt;
+        }
+        public DataTable GerarListaDeHorariosFinais(Medico objMedico, Consultorio objConsultorio, DateTime horarioInicialSelecionado, string turno)
+        {
+            DateTime ha = horarioInicialSelecionado.Date;
+            DateTime hr = horarioInicialSelecionado.Date;
+            DateTime fe = horarioInicialSelecionado.Date;
+            ha = ha.AddHours(11);
+            ha = ha.AddMinutes(30);
+            hr = hr.AddHours(14);
+            fe = fe.AddHours(18);
+            IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeTermino(horarioInicialSelecionado, ha, hr, fe, objMedico, objConsultorio, turno);
 
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Data", typeof(DateTime));
+            dt.Columns.Add("Hora", typeof(string));
+            foreach (DateTime hora in listaDeHorarios)
+            {
+                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+            }
+            
             return dt;
         }
 
@@ -340,12 +360,17 @@ namespace SisClinica.Classes
         /// <param name="objMedico">Medico que será responsavel</param>
         /// <param name="objConsultorio">Consultorio onde será feita a sessão</param>
         /// <returns>lista de horarios disponiveis</returns>
-        public IList<DateTime> GerarHorarios(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio)
+        public IList<DateTime> GerarHorariosDeInicio(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno)
         {
             IList<DateTime> listaDeHorarios = new List<DateTime>();
             IList<DateTime> horariosRetornar = new List<DateTime>();
             DateTime dataComparacao = data.Date;
-            for (int i = 0; i < 46; i++)
+            int limite = 23;
+            if (turno=="Tarde")
+            {
+                dataComparacao = horarioDeReentrada.Subtract(Convert.ToDateTime("00:30").TimeOfDay);
+            }
+            for (int i = 0; i < limite; i++)
             {
                 dataComparacao = dataComparacao.AddMinutes(30);
                 if (dataComparacao <= fimDoExpediente && dataComparacao >= horarioDeReentrada)
@@ -364,10 +389,15 @@ namespace SisClinica.Classes
                 Sessoes objSessaoComparar = new Sessoes().BuscaPorData(dt,objMedico, objConsultorio);
                 if (objSessaoComparar==null)
                 {
-                    if (dt>horaFim)
+                    if (dt>=horaFim)
                     {
                         horariosRetornar.Add(dt);
                     }
+                }
+                else if (objSessaoComparar.horaInicio>dt)
+                {
+                    horariosRetornar.Add(dt);
+                    horaFim = objSessaoComparar.horaFim;
                 }
                 else if (objSessaoComparar.horaFim<=dt)
                 {
@@ -377,6 +407,47 @@ namespace SisClinica.Classes
                 else if (objSessaoComparar!=null)
                 {
                     horaFim = objSessaoComparar.horaFim;
+                }
+            }
+            return horariosRetornar;
+        }
+        public IList<DateTime> GerarHorariosDeTermino(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, Medico objMedico, Consultorio objConsultorio, string turno)
+        {
+            IList<DateTime> listaDeHorarios = new List<DateTime>();
+            IList<DateTime> horariosRetornar = new List<DateTime>();
+            DateTime dataComparacao = horarioInicial;
+            int limite = 23;
+            for (int i = 0; i < limite; i++)
+            {
+                dataComparacao = dataComparacao.AddMinutes(30);
+                if (dataComparacao <= fimDoExpediente && dataComparacao >= horarioDeReentrada)
+                {
+                    listaDeHorarios.Add(dataComparacao);
+                }
+                else if (dataComparacao <= horarioDeAlmoco && dataComparacao >= horarioInicial)
+                {
+                    listaDeHorarios.Add(dataComparacao);
+                }
+            }
+            DateTime horaFim = horarioInicial.Date;
+            bool stopAdding = false;
+            foreach (DateTime dt in listaDeHorarios)
+            {
+                Sessoes objSessaoComparar = new Sessoes().BuscaPorData(dt, objMedico, objConsultorio);
+                if (objSessaoComparar == null && stopAdding==false)
+                {
+                    if (dt >= horaFim)
+                    {
+                        horariosRetornar.Add(dt);
+                    }
+                }
+                else if (objSessaoComparar!=null)
+                {
+                    if (dt <= objSessaoComparar.horaInicio)
+                    {
+                        horariosRetornar.Add(dt);
+                        stopAdding = true;
+                    }
                 }
             }
             return horariosRetornar;

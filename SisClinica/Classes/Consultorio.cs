@@ -34,9 +34,16 @@ namespace SisClinica.Classes
             DataTable dt = new DataTable();
             dt.Columns.Add("Nome", typeof(string));
             dt.Columns.Add("id", typeof(int));
-            foreach (Consultorio objConsultorio in listaDeConsultorios)
+            if (listaDeConsultorios!=null)
             {
-                dt.Rows.Add(objConsultorio.nomeConsultorio, objConsultorio.id);
+                foreach (Consultorio objConsultorio in listaDeConsultorios)
+                {
+                    dt.Rows.Add(objConsultorio.nomeConsultorio, objConsultorio.id);
+                }
+            }
+            else
+            {
+                dt = null;
             }
             return dt;
         }
@@ -52,10 +59,16 @@ namespace SisClinica.Classes
             DataTable dt = new DataTable();
             dt.Columns.Add("ID", typeof(int));
             dt.Columns.Add("Nome", typeof(string));
-
-            foreach (Consultorio objCon in listaDeConsultorios)
+            if (listaDeConsultorios!=null)
             {
-                dt.Rows.Add(objCon.id, objCon.nomeConsultorio);
+                foreach (Consultorio objCon in listaDeConsultorios)
+                {
+                    dt.Rows.Add(objCon.id, objCon.nomeConsultorio);
+                }
+            }
+            else
+            {
+                dt = null;
             }
             return dt;
         }
@@ -67,7 +80,7 @@ namespace SisClinica.Classes
 
         public void Registrar()
         {
-
+            new ConsultorioDAO().Registrar(this);
         }
     }
 }

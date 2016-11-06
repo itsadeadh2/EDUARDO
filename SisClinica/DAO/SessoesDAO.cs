@@ -164,6 +164,35 @@ namespace SisClinica.DAO
             return listaDeSessoes;
         }
 
+        public Sessoes Pesquisar(int id)
+        {
+            Sessoes objSessao = new Sessoes();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Sessoes where id=@id";
+            comando.Parameters.AddWithValue("@id", id);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                objSessao.medicoResponsavel = new MedicoDAO().Pesquisar(Convert.ToInt32(dr["id_medico_responsavel"]));
+                objSessao.objCliente = new ClienteDAO().Pesquisar(Convert.ToInt32(dr["id_cliente"]));
+                objSessao.objConsultorio = new ConsultorioDAO().Pesquisar(Convert.ToInt32(dr["id_consultorio"]));
+                objSessao.dataSessao = Convert.ToDateTime(dr["dataSessao"]);
+                objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
+                objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
+                objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                objSessao.id = (int)dr["id"];
+            }
+            else
+            {
+                objSessao = null;
+            }
+            return objSessao;
+        }
 
         public IList<Sessoes> Pesquisar(Cliente objCliente)
         {

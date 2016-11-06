@@ -43,12 +43,14 @@
             this.cbMedicosDisponiveis = new System.Windows.Forms.ComboBox();
             this.lblInfoMedicos = new System.Windows.Forms.Label();
             this.gbVisualizacao = new System.Windows.Forms.GroupBox();
+            this.lblHoraConsulta = new System.Windows.Forms.Label();
             this.lblConsultorio = new System.Windows.Forms.Label();
             this.lblMedicoResponsavel = new System.Windows.Forms.Label();
             this.lblDataConsulta = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnAgendar = new System.Windows.Forms.Button();
-            this.lblHoraConsulta = new System.Windows.Forms.Label();
+            this.rdBtnManha = new System.Windows.Forms.RadioButton();
+            this.rdBtnTarde = new System.Windows.Forms.RadioButton();
             this.gbCliente.SuspendLayout();
             this.gbConsulta.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,12 +110,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdBtnTarde);
+            this.groupBox1.Controls.Add(this.rdBtnManha);
             this.groupBox1.Controls.Add(this.cbHorarioInicial);
             this.groupBox1.Controls.Add(this.cbHorarioFinal);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(114, 120);
+            this.groupBox1.Location = new System.Drawing.Point(53, 109);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 78);
+            this.groupBox1.Size = new System.Drawing.Size(283, 124);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horário";
@@ -123,7 +127,7 @@
             this.cbHorarioInicial.DisplayMember = "Hora";
             this.cbHorarioInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHorarioInicial.FormattingEnabled = true;
-            this.cbHorarioInicial.Location = new System.Drawing.Point(32, 31);
+            this.cbHorarioInicial.Location = new System.Drawing.Point(33, 75);
             this.cbHorarioInicial.Name = "cbHorarioInicial";
             this.cbHorarioInicial.Size = new System.Drawing.Size(81, 21);
             this.cbHorarioInicial.TabIndex = 11;
@@ -135,7 +139,7 @@
             this.cbHorarioFinal.DisplayMember = "Hora";
             this.cbHorarioFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHorarioFinal.FormattingEnabled = true;
-            this.cbHorarioFinal.Location = new System.Drawing.Point(170, 31);
+            this.cbHorarioFinal.Location = new System.Drawing.Point(171, 75);
             this.cbHorarioFinal.Name = "cbHorarioFinal";
             this.cbHorarioFinal.Size = new System.Drawing.Size(81, 21);
             this.cbHorarioFinal.TabIndex = 10;
@@ -146,7 +150,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(132, 39);
+            this.label2.Location = new System.Drawing.Point(133, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 9;
@@ -230,6 +234,16 @@
             this.gbVisualizacao.TabStop = false;
             this.gbVisualizacao.Text = "Visualização";
             // 
+            // lblHoraConsulta
+            // 
+            this.lblHoraConsulta.AutoSize = true;
+            this.lblHoraConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraConsulta.Location = new System.Drawing.Point(246, 56);
+            this.lblHoraConsulta.Name = "lblHoraConsulta";
+            this.lblHoraConsulta.Size = new System.Drawing.Size(53, 16);
+            this.lblHoraConsulta.TabIndex = 8;
+            this.lblHoraConsulta.Text = "Horário";
+            // 
             // lblConsultorio
             // 
             this.lblConsultorio.AutoSize = true;
@@ -281,15 +295,32 @@
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // lblHoraConsulta
+            // rdBtnManha
             // 
-            this.lblHoraConsulta.AutoSize = true;
-            this.lblHoraConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraConsulta.Location = new System.Drawing.Point(246, 56);
-            this.lblHoraConsulta.Name = "lblHoraConsulta";
-            this.lblHoraConsulta.Size = new System.Drawing.Size(53, 16);
-            this.lblHoraConsulta.TabIndex = 8;
-            this.lblHoraConsulta.Text = "Horário";
+            this.rdBtnManha.AutoSize = true;
+            this.rdBtnManha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnManha.Location = new System.Drawing.Point(55, 35);
+            this.rdBtnManha.Name = "rdBtnManha";
+            this.rdBtnManha.Size = new System.Drawing.Size(64, 19);
+            this.rdBtnManha.TabIndex = 12;
+            this.rdBtnManha.TabStop = true;
+            this.rdBtnManha.Text = "Manhã";
+            this.rdBtnManha.UseVisualStyleBackColor = true;
+            this.rdBtnManha.CheckedChanged += new System.EventHandler(this.rdBtnManha_CheckedChanged);
+            // 
+            // rdBtnTarde
+            // 
+            this.rdBtnTarde.AutoSize = true;
+            this.rdBtnTarde.Checked = true;
+            this.rdBtnTarde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnTarde.Location = new System.Drawing.Point(170, 35);
+            this.rdBtnTarde.Name = "rdBtnTarde";
+            this.rdBtnTarde.Size = new System.Drawing.Size(57, 19);
+            this.rdBtnTarde.TabIndex = 13;
+            this.rdBtnTarde.TabStop = true;
+            this.rdBtnTarde.Text = "Tarde";
+            this.rdBtnTarde.UseVisualStyleBackColor = true;
+            this.rdBtnTarde.CheckedChanged += new System.EventHandler(this.rdBtnTarde_CheckedChanged);
             // 
             // frmAgendarConsulta
             // 
@@ -339,5 +370,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbHorarioFinal;
         private System.Windows.Forms.Label lblHoraConsulta;
+        private System.Windows.Forms.RadioButton rdBtnTarde;
+        private System.Windows.Forms.RadioButton rdBtnManha;
     }
 }

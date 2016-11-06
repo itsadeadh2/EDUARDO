@@ -107,5 +107,12 @@ namespace SisClinica.Forms
             frmBuscaSessoes.MdiParent = this;
             frmBuscaSessoes.Show();
         }
+
+        private void consultórioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form regConsult = new frmRegistrarConsultorio();
+            regConsult.MdiParent = this;
+            regConsult.Show();
+        }
     }
 }
