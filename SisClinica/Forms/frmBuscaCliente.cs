@@ -46,7 +46,7 @@ namespace SisClinica.Forms
 
         private void dtgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnExcluir.Enabled = true;
+            
         }
 
         private void dtgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -63,6 +63,11 @@ namespace SisClinica.Forms
             objCliente.Excluir(objCliente.id);
             MessageBox.Show("Cliente excluído!");
             btnExcluir.Enabled = false;
+        }
+
+        private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnExcluir.Enabled = true;
         }
     }
 }

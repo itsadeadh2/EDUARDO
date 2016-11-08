@@ -159,7 +159,7 @@ namespace SisClinica.DAO
                     objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
                     objCliente.adicionalInfo = dr["adicionalInfo"].ToString();
                     objCliente.id = Convert.ToInt32(dr["id"]);
-                    objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf"].ToString());
+                    objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf_responsavel"].ToString());
 
                     listaDeClientes.Add(objCliente);
                 }
