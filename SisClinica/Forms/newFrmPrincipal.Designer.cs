@@ -39,7 +39,7 @@ namespace SisClinica.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.topbar = new System.Windows.Forms.Panel();
-            this.painelDinamico = new System.Windows.Forms.Panel();
+            newFrmPrincipal.painelDinamico = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -153,18 +153,18 @@ namespace SisClinica.Forms
             // 
             // painelDinamico
             // 
-            this.painelDinamico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelDinamico.Location = new System.Drawing.Point(155, 100);
-            this.painelDinamico.Name = "painelDinamico";
-            this.painelDinamico.Size = new System.Drawing.Size(605, 409);
-            this.painelDinamico.TabIndex = 2;
+            newFrmPrincipal.painelDinamico.Dock = System.Windows.Forms.DockStyle.Fill;
+            newFrmPrincipal.painelDinamico.Location = new System.Drawing.Point(155, 100);
+            newFrmPrincipal.painelDinamico.Name = "painelDinamico";
+            newFrmPrincipal.painelDinamico.Size = new System.Drawing.Size(605, 409);
+            newFrmPrincipal.painelDinamico.TabIndex = 2;
             // 
             // newFrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 509);
-            this.Controls.Add(this.painelDinamico);
+            this.Controls.Add(newFrmPrincipal.painelDinamico);
             this.Controls.Add(this.topbar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -188,6 +188,6 @@ namespace SisClinica.Forms
 
         private System.Windows.Forms.Button btnPesquisar;
         private Button btnAlterar;
-        private Panel painelDinamico;
+        public static Panel painelDinamico;
     }
 }

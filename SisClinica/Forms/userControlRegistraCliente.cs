@@ -147,10 +147,10 @@ namespace SisClinica.Forms
 
         private void RetornarAoMenuAnterior()
         {
-            newFrmPrincipal.PainelDinamico.Controls.Clear();
+            newFrmPrincipal.painelDinamico.Controls.Clear();
             userControlMenuNovo menuNovo = new userControlMenuNovo();
             menuNovo.AutoScroll = true;
-            newFrmPrincipal.PainelDinamico.Controls.Add(menuNovo);
+            newFrmPrincipal.painelDinamico.Controls.Add(menuNovo);
             menuNovo.Show();
         }
 
