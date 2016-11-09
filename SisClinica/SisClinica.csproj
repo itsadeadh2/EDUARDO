@@ -312,6 +312,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\btnSalvar21.png" />
+    <None Include="Resources\btnPesquisarResp04.png" />
+    <None Include="Resources\btnPesquisarResp03.png" />
+    <None Include="Resources\btnPesquisarResp02.png" />
     <None Include="Resources\btnPesquisarResp.png" />
     <None Include="Resources\btnSalvar2.png" />
     <None Include="Resources\btnSalvar.png" />

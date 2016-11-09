@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbDadosDoCliente = new System.Windows.Forms.GroupBox();
+            this.lblErros = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.rtbAdicionalInfo = new System.Windows.Forms.RichTextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -49,6 +50,11 @@
             this.txtbNomeCompletoCli = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDadosDoResponsavel = new System.Windows.Forms.GroupBox();
+            this.dtgResponsavel = new System.Windows.Forms.DataGridView();
+            this.txtbNomeRespPesquisa = new System.Windows.Forms.TextBox();
+            this.lblNomePesquisa = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.txtbEmailResp = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.mtbTelefoneResp = new System.Windows.Forms.MaskedTextBox();
@@ -59,13 +65,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtbNomeResp = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.lblErros = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtbNomeRespPesquisa = new System.Windows.Forms.TextBox();
-            this.lblNomePesquisa = new System.Windows.Forms.Label();
-            this.dtgResponsavel = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbDadosDoCliente.SuspendLayout();
             this.gbDadosDoResponsavel.SuspendLayout();
@@ -116,6 +116,17 @@
             this.gbDadosDoCliente.TabIndex = 0;
             this.gbDadosDoCliente.TabStop = false;
             this.gbDadosDoCliente.Text = "Dados do Cliente";
+            // 
+            // lblErros
+            // 
+            this.lblErros.AutoSize = true;
+            this.lblErros.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErros.Location = new System.Drawing.Point(8, 261);
+            this.lblErros.Name = "lblErros";
+            this.lblErros.Size = new System.Drawing.Size(47, 16);
+            this.lblErros.TabIndex = 19;
+            this.lblErros.Text = "label15";
+            this.lblErros.Visible = false;
             // 
             // label9
             // 
@@ -213,7 +224,7 @@
             // 
             this.mtbTelefone.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefone.Location = new System.Drawing.Point(112, 111);
-            this.mtbTelefone.Mask = "+00 (00) 0 00000000";
+            this.mtbTelefone.Mask = "(00) 0 00000000";
             this.mtbTelefone.Name = "mtbTelefone";
             this.mtbTelefone.Size = new System.Drawing.Size(180, 21);
             this.mtbTelefone.TabIndex = 8;
@@ -311,6 +322,54 @@
             this.gbDadosDoResponsavel.TabStop = false;
             this.gbDadosDoResponsavel.Text = "Dados do Responsável";
             // 
+            // dtgResponsavel
+            // 
+            this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgResponsavel.Location = new System.Drawing.Point(24, 218);
+            this.dtgResponsavel.Name = "dtgResponsavel";
+            this.dtgResponsavel.Size = new System.Drawing.Size(246, 68);
+            this.dtgResponsavel.TabIndex = 28;
+            this.dtgResponsavel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResponsavel_CellDoubleClick);
+            // 
+            // txtbNomeRespPesquisa
+            // 
+            this.txtbNomeRespPesquisa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNomeRespPesquisa.Location = new System.Drawing.Point(109, 191);
+            this.txtbNomeRespPesquisa.Name = "txtbNomeRespPesquisa";
+            this.txtbNomeRespPesquisa.Size = new System.Drawing.Size(106, 21);
+            this.txtbNomeRespPesquisa.TabIndex = 27;
+            // 
+            // lblNomePesquisa
+            // 
+            this.lblNomePesquisa.AutoSize = true;
+            this.lblNomePesquisa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomePesquisa.Location = new System.Drawing.Point(5, 194);
+            this.lblNomePesquisa.Name = "lblNomePesquisa";
+            this.lblNomePesquisa.Size = new System.Drawing.Size(98, 16);
+            this.lblNomePesquisa.TabIndex = 26;
+            this.lblNomePesquisa.Text = "Nome completo:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 171);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 16);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Pesquisar";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Image = global::SisClinica.Properties.Resources.btnSalvar21;
+            this.btnSalvar.Location = new System.Drawing.Point(86, 292);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(123, 111);
+            this.btnSalvar.TabIndex = 24;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // txtbEmailResp
             // 
             this.txtbEmailResp.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -333,7 +392,7 @@
             // 
             this.mtbTelefoneResp.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefoneResp.Location = new System.Drawing.Point(110, 111);
-            this.mtbTelefoneResp.Mask = "+00 (00) 0 00000000";
+            this.mtbTelefoneResp.Mask = "(00) 0 00000000";
             this.mtbTelefoneResp.Name = "mtbTelefoneResp";
             this.mtbTelefoneResp.Size = new System.Drawing.Size(177, 21);
             this.mtbTelefoneResp.TabIndex = 21;
@@ -404,74 +463,17 @@
             this.label14.TabIndex = 14;
             this.label14.Text = "Nome completo:";
             // 
-            // lblErros
-            // 
-            this.lblErros.AutoSize = true;
-            this.lblErros.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErros.Location = new System.Drawing.Point(8, 261);
-            this.lblErros.Name = "lblErros";
-            this.lblErros.Size = new System.Drawing.Size(47, 16);
-            this.lblErros.TabIndex = 19;
-            this.lblErros.Text = "label15";
-            this.lblErros.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 171);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 16);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Pesquisar";
-            // 
-            // txtbNomeRespPesquisa
-            // 
-            this.txtbNomeRespPesquisa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNomeRespPesquisa.Location = new System.Drawing.Point(109, 191);
-            this.txtbNomeRespPesquisa.Name = "txtbNomeRespPesquisa";
-            this.txtbNomeRespPesquisa.Size = new System.Drawing.Size(106, 21);
-            this.txtbNomeRespPesquisa.TabIndex = 27;
-            // 
-            // lblNomePesquisa
-            // 
-            this.lblNomePesquisa.AutoSize = true;
-            this.lblNomePesquisa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomePesquisa.Location = new System.Drawing.Point(5, 194);
-            this.lblNomePesquisa.Name = "lblNomePesquisa";
-            this.lblNomePesquisa.Size = new System.Drawing.Size(98, 16);
-            this.lblNomePesquisa.TabIndex = 26;
-            this.lblNomePesquisa.Text = "Nome completo:";
-            // 
-            // dtgResponsavel
-            // 
-            this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgResponsavel.Location = new System.Drawing.Point(24, 218);
-            this.dtgResponsavel.Name = "dtgResponsavel";
-            this.dtgResponsavel.Size = new System.Drawing.Size(246, 68);
-            this.dtgResponsavel.TabIndex = 28;
-            this.dtgResponsavel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResponsavel_CellDoubleClick);
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.Color.Transparent;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisar.Image = global::SisClinica.Properties.Resources.btnPesquisarResp04;
             this.btnPesquisar.Location = new System.Drawing.Point(221, 189);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(34, 26);
             this.btnPesquisar.TabIndex = 29;
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Location = new System.Drawing.Point(86, 292);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(123, 111);
-            this.btnSalvar.TabIndex = 24;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // userControlRegistraCliente
             // 

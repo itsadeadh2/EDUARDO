@@ -118,6 +118,7 @@ namespace SisClinica.Forms
                 objCliente.cidade = cbCidade.Text;
                 objCliente.estado = cbEstado.Text;
                 objCliente.adicionalInfo = rtbAdicionalInfo.Text;
+                objCliente.telefone = mtbTelefone.Text;
                 objCliente.Registrar();
 
                 MessageBox.Show("Cliente Registrado com sucesso!");
@@ -147,10 +148,10 @@ namespace SisClinica.Forms
 
         private void RetornarAoMenuAnterior()
         {
-            new newFrmPrincipal().painelDinamico.Controls.Clear();
+            newFrmPrincipal.painelDinamico.Controls.Clear();
             userControlMenuNovo menuNovo = new userControlMenuNovo();
             menuNovo.AutoScroll = true;
-            new newFrmPrincipal().painelDinamico.Controls.Add(menuNovo);
+            newFrmPrincipal.painelDinamico.Controls.Add(menuNovo);
             menuNovo.Show();
         }
 
