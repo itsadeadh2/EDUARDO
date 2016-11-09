@@ -34,8 +34,8 @@ namespace SisClinica.Forms
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Form alterardata = new frmAlterarData();
-            alterardata.Show();
+            //Form alterardata = new frmAlterarData();
+            //alterardata.Show();
         }
     }
 }

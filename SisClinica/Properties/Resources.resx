@@ -117,5 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LogoFrmMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoFrmMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTNPESQUISA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTNPESQUISA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPesquisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnNovo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnNovo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnAlterar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnAlterar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewtratamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewtratamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewcliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewcliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewmedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewmedico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewconsulta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewconsulta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

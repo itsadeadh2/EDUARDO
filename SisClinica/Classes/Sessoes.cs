@@ -310,11 +310,15 @@ namespace SisClinica.Classes
             DateTime ha = data.Date;
             DateTime hr = data.Date;
             DateTime fe = data.Date;
-            hi = hi.AddHours(8);
-            ha = ha.AddHours(11);
-            ha = ha.AddMinutes(30);
-            hr = hr.AddHours(14);
-            fe = fe.AddHours(18);
+            hi = Convert.ToDateTime("08:00");
+            ha = Convert.ToDateTime("11:30");
+            hr = Convert.ToDateTime("14:00");
+            fe = Convert.ToDateTime("18:00");
+            //hi = hi.AddHours(8);
+            //ha = ha.AddHours(11);
+            //ha = ha.AddMinutes(30);
+            //hr = hr.AddHours(14);
+            //fe = fe.AddHours(18);
             IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeInicio(hi, ha, hr, fe, data.Date, objMedico, objConsultorio, turno);
 
             DataTable dt = new DataTable();
@@ -332,10 +336,15 @@ namespace SisClinica.Classes
             DateTime ha = horarioInicialSelecionado.Date;
             DateTime hr = horarioInicialSelecionado.Date;
             DateTime fe = horarioInicialSelecionado.Date;
-            ha = ha.AddHours(11);
-            ha = ha.AddMinutes(30);
-            hr = hr.AddHours(14);
-            fe = fe.AddHours(18);
+            //hi = Convert.ToDateTime("08:00");
+            ha = Convert.ToDateTime("11:30");
+            hr = Convert.ToDateTime("14:00");
+            fe = Convert.ToDateTime("18:00");
+
+            //ha = ha.AddHours(11);
+            //ha = ha.AddMinutes(30);
+            //hr = hr.AddHours(14);
+            //fe = fe.AddHours(18);
             IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeTermino(horarioInicialSelecionado, ha, hr, fe, objMedico, objConsultorio, turno);
 
             DataTable dt = new DataTable();
@@ -417,6 +426,10 @@ namespace SisClinica.Classes
             IList<DateTime> horariosRetornar = new List<DateTime>();
             DateTime dataComparacao = horarioInicial;
             int limite = 23;
+            if (turno != "Tarde")
+            {
+                fimDoExpediente = horarioDeAlmoco;
+            }
             for (int i = 0; i < limite; i++)
             {
                 dataComparacao = dataComparacao.AddMinutes(30);

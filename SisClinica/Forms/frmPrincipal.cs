@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 using SisClinica.Classes;
 namespace SisClinica.Forms
 {
@@ -26,16 +27,16 @@ namespace SisClinica.Forms
 
         private void semConsultaPréviaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmSemConsultaPrevia = new frmAgendarTratamentoSemConsulta();
-            frmSemConsultaPrevia.MdiParent = this;
-            frmSemConsultaPrevia.Show();
+            //Form frmSemConsultaPrevia = new frmAgendarTratamentoSemConsulta();
+            //frmSemConsultaPrevia.MdiParent = this;
+            //frmSemConsultaPrevia.Show();
         }
 
         private void comConsultaPréviaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmComConsultaPrevia = new frmAgendarTratamentoComConsulta();
-            frmComConsultaPrevia.MdiParent = this;
-            frmComConsultaPrevia.Show();
+            //Form frmComConsultaPrevia = new frmAgendarTratamentoComConsulta();
+            //frmComConsultaPrevia.MdiParent = this;
+            //frmComConsultaPrevia.Show();
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)

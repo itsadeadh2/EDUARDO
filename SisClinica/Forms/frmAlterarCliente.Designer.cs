@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtboxEmailRegCliente = new System.Windows.Forms.TextBox();
-            this.lblEmailRegCliente = new System.Windows.Forms.Label();
-            this.msktxtboxTelefoneRegCliente = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefoneRegCliente = new System.Windows.Forms.Label();
+            this.msktxtboxTelefoneRegCliente = new System.Windows.Forms.MaskedTextBox();
+            this.lblEmailRegCliente = new System.Windows.Forms.Label();
+            this.txtboxEmailRegCliente = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblNomeRegistraCliente = new System.Windows.Forms.Label();
             this.txtBoxNomeRegistraCliente = new System.Windows.Forms.TextBox();
+            this.lblNomeRegistraCliente = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtboxAlterNumCliente = new System.Windows.Forms.TextBox();
-            this.lblAlterBairroCliente = new System.Windows.Forms.Label();
-            this.lblNumeroRegCliente = new System.Windows.Forms.Label();
-            this.cbAlterEstadoCli = new System.Windows.Forms.ComboBox();
-            this.txtboxAlterBairroCliente = new System.Windows.Forms.TextBox();
-            this.lblEstadoRegCliente = new System.Windows.Forms.Label();
-            this.cbAlterCidadeCliente = new System.Windows.Forms.ComboBox();
-            this.lblCidadeAlterCliente = new System.Windows.Forms.Label();
-            this.txtboxAlterEnderecoCliente = new System.Windows.Forms.TextBox();
             this.lblAlterEnderecoCliente = new System.Windows.Forms.Label();
+            this.txtboxAlterEnderecoCliente = new System.Windows.Forms.TextBox();
+            this.lblCidadeAlterCliente = new System.Windows.Forms.Label();
+            this.cbAlterCidadeCliente = new System.Windows.Forms.ComboBox();
+            this.lblEstadoRegCliente = new System.Windows.Forms.Label();
+            this.txtboxAlterBairroCliente = new System.Windows.Forms.TextBox();
+            this.cbAlterEstadoCli = new System.Windows.Forms.ComboBox();
+            this.lblNumeroRegCliente = new System.Windows.Forms.Label();
+            this.lblAlterBairroCliente = new System.Windows.Forms.Label();
+            this.txtboxAlterNumCliente = new System.Windows.Forms.TextBox();
             this.btnPesquisarAlterCli = new System.Windows.Forms.Button();
             this.btnAlterarCliente = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -61,7 +61,7 @@
             this.groupBox1.Controls.Add(this.msktxtboxTelefoneRegCliente);
             this.groupBox1.Controls.Add(this.lblEmailRegCliente);
             this.groupBox1.Controls.Add(this.txtboxEmailRegCliente);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(11, 156);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(429, 104);
@@ -69,50 +69,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contato";
             // 
-            // txtboxEmailRegCliente
+            // lblTelefoneRegCliente
             // 
-            this.txtboxEmailRegCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxEmailRegCliente.Location = new System.Drawing.Point(88, 27);
-            this.txtboxEmailRegCliente.Name = "txtboxEmailRegCliente";
-            this.txtboxEmailRegCliente.Size = new System.Drawing.Size(287, 23);
-            this.txtboxEmailRegCliente.TabIndex = 8;
+            this.lblTelefoneRegCliente.AutoSize = true;
+            this.lblTelefoneRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefoneRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTelefoneRegCliente.Location = new System.Drawing.Point(6, 58);
+            this.lblTelefoneRegCliente.Name = "lblTelefoneRegCliente";
+            this.lblTelefoneRegCliente.Size = new System.Drawing.Size(71, 20);
+            this.lblTelefoneRegCliente.TabIndex = 2;
+            this.lblTelefoneRegCliente.Text = "Telefone";
+            // 
+            // msktxtboxTelefoneRegCliente
+            // 
+            this.msktxtboxTelefoneRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msktxtboxTelefoneRegCliente.Location = new System.Drawing.Point(88, 56);
+            this.msktxtboxTelefoneRegCliente.Mask = "(99) 00000-0000";
+            this.msktxtboxTelefoneRegCliente.Name = "msktxtboxTelefoneRegCliente";
+            this.msktxtboxTelefoneRegCliente.Size = new System.Drawing.Size(121, 22);
+            this.msktxtboxTelefoneRegCliente.TabIndex = 7;
             // 
             // lblEmailRegCliente
             // 
             this.lblEmailRegCliente.AutoSize = true;
-            this.lblEmailRegCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblEmailRegCliente.Location = new System.Drawing.Point(26, 29);
             this.lblEmailRegCliente.Name = "lblEmailRegCliente";
-            this.lblEmailRegCliente.Size = new System.Drawing.Size(56, 21);
+            this.lblEmailRegCliente.Size = new System.Drawing.Size(53, 20);
             this.lblEmailRegCliente.TabIndex = 3;
             this.lblEmailRegCliente.Text = "E-mail";
             // 
-            // msktxtboxTelefoneRegCliente
+            // txtboxEmailRegCliente
             // 
-            this.msktxtboxTelefoneRegCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msktxtboxTelefoneRegCliente.Location = new System.Drawing.Point(88, 56);
-            this.msktxtboxTelefoneRegCliente.Mask = "(99) 00000-0000";
-            this.msktxtboxTelefoneRegCliente.Name = "msktxtboxTelefoneRegCliente";
-            this.msktxtboxTelefoneRegCliente.Size = new System.Drawing.Size(121, 23);
-            this.msktxtboxTelefoneRegCliente.TabIndex = 7;
-            // 
-            // lblTelefoneRegCliente
-            // 
-            this.lblTelefoneRegCliente.AutoSize = true;
-            this.lblTelefoneRegCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefoneRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTelefoneRegCliente.Location = new System.Drawing.Point(6, 58);
-            this.lblTelefoneRegCliente.Name = "lblTelefoneRegCliente";
-            this.lblTelefoneRegCliente.Size = new System.Drawing.Size(76, 21);
-            this.lblTelefoneRegCliente.TabIndex = 2;
-            this.lblTelefoneRegCliente.Text = "Telefone";
+            this.txtboxEmailRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxEmailRegCliente.Location = new System.Drawing.Point(88, 27);
+            this.txtboxEmailRegCliente.Name = "txtboxEmailRegCliente";
+            this.txtboxEmailRegCliente.Size = new System.Drawing.Size(287, 22);
+            this.txtboxEmailRegCliente.TabIndex = 8;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtBoxNomeRegistraCliente);
             this.groupBox3.Controls.Add(this.lblNomeRegistraCliente);
-            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox3.Location = new System.Drawing.Point(11, 82);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(429, 68);
@@ -120,24 +120,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
             // 
+            // txtBoxNomeRegistraCliente
+            // 
+            this.txtBoxNomeRegistraCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNomeRegistraCliente.Location = new System.Drawing.Point(88, 26);
+            this.txtBoxNomeRegistraCliente.Name = "txtBoxNomeRegistraCliente";
+            this.txtBoxNomeRegistraCliente.Size = new System.Drawing.Size(287, 22);
+            this.txtBoxNomeRegistraCliente.TabIndex = 3;
+            // 
             // lblNomeRegistraCliente
             // 
             this.lblNomeRegistraCliente.AutoSize = true;
-            this.lblNomeRegistraCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeRegistraCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeRegistraCliente.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNomeRegistraCliente.Location = new System.Drawing.Point(25, 25);
             this.lblNomeRegistraCliente.Name = "lblNomeRegistraCliente";
-            this.lblNomeRegistraCliente.Size = new System.Drawing.Size(57, 21);
+            this.lblNomeRegistraCliente.Size = new System.Drawing.Size(51, 20);
             this.lblNomeRegistraCliente.TabIndex = 2;
             this.lblNomeRegistraCliente.Text = "Nome";
-            // 
-            // txtBoxNomeRegistraCliente
-            // 
-            this.txtBoxNomeRegistraCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNomeRegistraCliente.Location = new System.Drawing.Point(88, 26);
-            this.txtBoxNomeRegistraCliente.Name = "txtBoxNomeRegistraCliente";
-            this.txtBoxNomeRegistraCliente.Size = new System.Drawing.Size(287, 23);
-            this.txtBoxNomeRegistraCliente.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -151,7 +151,7 @@
             this.groupBox2.Controls.Add(this.lblNumeroRegCliente);
             this.groupBox2.Controls.Add(this.lblAlterBairroCliente);
             this.groupBox2.Controls.Add(this.txtboxAlterNumCliente);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.Location = new System.Drawing.Point(11, 266);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(429, 150);
@@ -159,39 +159,67 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço Pessoal";
             // 
-            // txtboxAlterNumCliente
+            // lblAlterEnderecoCliente
             // 
-            this.txtboxAlterNumCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxAlterNumCliente.Location = new System.Drawing.Point(299, 66);
-            this.txtboxAlterNumCliente.Name = "txtboxAlterNumCliente";
-            this.txtboxAlterNumCliente.Size = new System.Drawing.Size(64, 23);
-            this.txtboxAlterNumCliente.TabIndex = 10;
+            this.lblAlterEnderecoCliente.AutoSize = true;
+            this.lblAlterEnderecoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlterEnderecoCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAlterEnderecoCliente.Location = new System.Drawing.Point(6, 34);
+            this.lblAlterEnderecoCliente.Name = "lblAlterEnderecoCliente";
+            this.lblAlterEnderecoCliente.Size = new System.Drawing.Size(78, 20);
+            this.lblAlterEnderecoCliente.TabIndex = 4;
+            this.lblAlterEnderecoCliente.Text = "Endereço";
             // 
-            // lblAlterBairroCliente
+            // txtboxAlterEnderecoCliente
             // 
-            this.lblAlterBairroCliente.AutoSize = true;
-            this.lblAlterBairroCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlterBairroCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAlterBairroCliente.Location = new System.Drawing.Point(38, 66);
-            this.lblAlterBairroCliente.Name = "lblAlterBairroCliente";
-            this.lblAlterBairroCliente.Size = new System.Drawing.Size(53, 21);
-            this.lblAlterBairroCliente.TabIndex = 6;
-            this.lblAlterBairroCliente.Text = "Bairro";
+            this.txtboxAlterEnderecoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxAlterEnderecoCliente.Location = new System.Drawing.Point(97, 32);
+            this.txtboxAlterEnderecoCliente.Name = "txtboxAlterEnderecoCliente";
+            this.txtboxAlterEnderecoCliente.Size = new System.Drawing.Size(278, 22);
+            this.txtboxAlterEnderecoCliente.TabIndex = 9;
             // 
-            // lblNumeroRegCliente
+            // lblCidadeAlterCliente
             // 
-            this.lblNumeroRegCliente.AutoSize = true;
-            this.lblNumeroRegCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNumeroRegCliente.Location = new System.Drawing.Point(267, 68);
-            this.lblNumeroRegCliente.Name = "lblNumeroRegCliente";
-            this.lblNumeroRegCliente.Size = new System.Drawing.Size(28, 21);
-            this.lblNumeroRegCliente.TabIndex = 5;
-            this.lblNumeroRegCliente.Text = "N°";
+            this.lblCidadeAlterCliente.AutoSize = true;
+            this.lblCidadeAlterCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidadeAlterCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCidadeAlterCliente.Location = new System.Drawing.Point(224, 100);
+            this.lblCidadeAlterCliente.Name = "lblCidadeAlterCliente";
+            this.lblCidadeAlterCliente.Size = new System.Drawing.Size(59, 20);
+            this.lblCidadeAlterCliente.TabIndex = 19;
+            this.lblCidadeAlterCliente.Text = "Cidade";
+            // 
+            // cbAlterCidadeCliente
+            // 
+            this.cbAlterCidadeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlterCidadeCliente.FormattingEnabled = true;
+            this.cbAlterCidadeCliente.Location = new System.Drawing.Point(299, 101);
+            this.cbAlterCidadeCliente.Name = "cbAlterCidadeCliente";
+            this.cbAlterCidadeCliente.Size = new System.Drawing.Size(121, 24);
+            this.cbAlterCidadeCliente.TabIndex = 13;
+            // 
+            // lblEstadoRegCliente
+            // 
+            this.lblEstadoRegCliente.AutoSize = true;
+            this.lblEstadoRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblEstadoRegCliente.Location = new System.Drawing.Point(27, 99);
+            this.lblEstadoRegCliente.Name = "lblEstadoRegCliente";
+            this.lblEstadoRegCliente.Size = new System.Drawing.Size(60, 20);
+            this.lblEstadoRegCliente.TabIndex = 7;
+            this.lblEstadoRegCliente.Text = "Estado";
+            // 
+            // txtboxAlterBairroCliente
+            // 
+            this.txtboxAlterBairroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxAlterBairroCliente.Location = new System.Drawing.Point(97, 64);
+            this.txtboxAlterBairroCliente.Name = "txtboxAlterBairroCliente";
+            this.txtboxAlterBairroCliente.Size = new System.Drawing.Size(142, 22);
+            this.txtboxAlterBairroCliente.TabIndex = 11;
             // 
             // cbAlterEstadoCli
             // 
-            this.cbAlterEstadoCli.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlterEstadoCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAlterEstadoCli.FormattingEnabled = true;
             this.cbAlterEstadoCli.Items.AddRange(new object[] {
             "Acre",
@@ -223,70 +251,42 @@
             "Tocantins"});
             this.cbAlterEstadoCli.Location = new System.Drawing.Point(97, 99);
             this.cbAlterEstadoCli.Name = "cbAlterEstadoCli";
-            this.cbAlterEstadoCli.Size = new System.Drawing.Size(121, 25);
+            this.cbAlterEstadoCli.Size = new System.Drawing.Size(121, 24);
             this.cbAlterEstadoCli.TabIndex = 12;
             // 
-            // txtboxAlterBairroCliente
+            // lblNumeroRegCliente
             // 
-            this.txtboxAlterBairroCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxAlterBairroCliente.Location = new System.Drawing.Point(97, 64);
-            this.txtboxAlterBairroCliente.Name = "txtboxAlterBairroCliente";
-            this.txtboxAlterBairroCliente.Size = new System.Drawing.Size(142, 23);
-            this.txtboxAlterBairroCliente.TabIndex = 11;
+            this.lblNumeroRegCliente.AutoSize = true;
+            this.lblNumeroRegCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNumeroRegCliente.Location = new System.Drawing.Point(267, 68);
+            this.lblNumeroRegCliente.Name = "lblNumeroRegCliente";
+            this.lblNumeroRegCliente.Size = new System.Drawing.Size(25, 20);
+            this.lblNumeroRegCliente.TabIndex = 5;
+            this.lblNumeroRegCliente.Text = "N°";
             // 
-            // lblEstadoRegCliente
+            // lblAlterBairroCliente
             // 
-            this.lblEstadoRegCliente.AutoSize = true;
-            this.lblEstadoRegCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoRegCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEstadoRegCliente.Location = new System.Drawing.Point(27, 99);
-            this.lblEstadoRegCliente.Name = "lblEstadoRegCliente";
-            this.lblEstadoRegCliente.Size = new System.Drawing.Size(64, 21);
-            this.lblEstadoRegCliente.TabIndex = 7;
-            this.lblEstadoRegCliente.Text = "Estado";
+            this.lblAlterBairroCliente.AutoSize = true;
+            this.lblAlterBairroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlterBairroCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAlterBairroCliente.Location = new System.Drawing.Point(38, 66);
+            this.lblAlterBairroCliente.Name = "lblAlterBairroCliente";
+            this.lblAlterBairroCliente.Size = new System.Drawing.Size(51, 20);
+            this.lblAlterBairroCliente.TabIndex = 6;
+            this.lblAlterBairroCliente.Text = "Bairro";
             // 
-            // cbAlterCidadeCliente
+            // txtboxAlterNumCliente
             // 
-            this.cbAlterCidadeCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAlterCidadeCliente.FormattingEnabled = true;
-            this.cbAlterCidadeCliente.Location = new System.Drawing.Point(299, 101);
-            this.cbAlterCidadeCliente.Name = "cbAlterCidadeCliente";
-            this.cbAlterCidadeCliente.Size = new System.Drawing.Size(121, 25);
-            this.cbAlterCidadeCliente.TabIndex = 13;
-            // 
-            // lblCidadeAlterCliente
-            // 
-            this.lblCidadeAlterCliente.AutoSize = true;
-            this.lblCidadeAlterCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidadeAlterCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCidadeAlterCliente.Location = new System.Drawing.Point(224, 100);
-            this.lblCidadeAlterCliente.Name = "lblCidadeAlterCliente";
-            this.lblCidadeAlterCliente.Size = new System.Drawing.Size(69, 21);
-            this.lblCidadeAlterCliente.TabIndex = 19;
-            this.lblCidadeAlterCliente.Text = "Cidade";
-            // 
-            // txtboxAlterEnderecoCliente
-            // 
-            this.txtboxAlterEnderecoCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxAlterEnderecoCliente.Location = new System.Drawing.Point(97, 32);
-            this.txtboxAlterEnderecoCliente.Name = "txtboxAlterEnderecoCliente";
-            this.txtboxAlterEnderecoCliente.Size = new System.Drawing.Size(278, 23);
-            this.txtboxAlterEnderecoCliente.TabIndex = 9;
-            // 
-            // lblAlterEnderecoCliente
-            // 
-            this.lblAlterEnderecoCliente.AutoSize = true;
-            this.lblAlterEnderecoCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlterEnderecoCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAlterEnderecoCliente.Location = new System.Drawing.Point(6, 34);
-            this.lblAlterEnderecoCliente.Name = "lblAlterEnderecoCliente";
-            this.lblAlterEnderecoCliente.Size = new System.Drawing.Size(85, 21);
-            this.lblAlterEnderecoCliente.TabIndex = 4;
-            this.lblAlterEnderecoCliente.Text = "Endereço";
+            this.txtboxAlterNumCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxAlterNumCliente.Location = new System.Drawing.Point(299, 66);
+            this.txtboxAlterNumCliente.Name = "txtboxAlterNumCliente";
+            this.txtboxAlterNumCliente.Size = new System.Drawing.Size(64, 22);
+            this.txtboxAlterNumCliente.TabIndex = 10;
             // 
             // btnPesquisarAlterCli
             // 
-            this.btnPesquisarAlterCli.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnPesquisarAlterCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnPesquisarAlterCli.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPesquisarAlterCli.Location = new System.Drawing.Point(108, 12);
             this.btnPesquisarAlterCli.Name = "btnPesquisarAlterCli";
@@ -297,7 +297,7 @@
             // 
             // btnAlterarCliente
             // 
-            this.btnAlterarCliente.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnAlterarCliente.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAlterarCliente.Location = new System.Drawing.Point(149, 432);
             this.btnAlterarCliente.Name = "btnAlterarCliente";
@@ -308,7 +308,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(2, 58);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(445, 368);

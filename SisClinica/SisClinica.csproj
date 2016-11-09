@@ -48,6 +48,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,12 +91,6 @@
     <Compile Include="Forms\formBuscaMedico.Designer.cs">
       <DependentUpon>formBuscaMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\formInfoMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\formInfoMedico.Designer.cs">
-      <DependentUpon>formInfoMedico.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmAlterarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,24 +114,6 @@
     </Compile>
     <Compile Include="Forms\frmAgendarConsulta.Designer.cs">
       <DependentUpon>frmAgendarConsulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAgendarTratamentoComConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAgendarTratamentoComConsulta.Designer.cs">
-      <DependentUpon>frmAgendarTratamentoComConsulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAgendarTratamentoSemConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAgendarTratamentoSemConsulta.Designer.cs">
-      <DependentUpon>frmAgendarTratamentoSemConsulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAlterarData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAlterarData.Designer.cs">
-      <DependentUpon>frmAlterarData.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmAlterarResponsavel.cs">
       <SubType>Form</SubType>
@@ -199,13 +187,22 @@
     <Compile Include="Forms\frmTratamentoInfo.Designer.cs">
       <DependentUpon>frmTratamentoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\newFrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\newFrmPrincipal.Designer.cs">
+      <DependentUpon>newFrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlMenuNovo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlMenuNovo.Designer.cs">
+      <DependentUpon>userControlMenuNovo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\formBuscaMedico.resx">
       <DependentUpon>formBuscaMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\formInfoMedico.resx">
-      <DependentUpon>formInfoMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAlterarCliente.resx">
       <DependentUpon>frmAlterarCliente.cs</DependentUpon>
@@ -218,15 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAgendarConsulta.resx">
       <DependentUpon>frmAgendarConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAgendarTratamentoComConsulta.resx">
-      <DependentUpon>frmAgendarTratamentoComConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAgendarTratamentoSemConsulta.resx">
-      <DependentUpon>frmAgendarTratamentoSemConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAlterarData.resx">
-      <DependentUpon>frmAlterarData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAlterarResponsavel.resx">
       <DependentUpon>frmAlterarResponsavel.cs</DependentUpon>
@@ -264,20 +252,27 @@
     <EmbeddedResource Include="Forms\frmTratamentoInfo.resx">
       <DependentUpon>frmTratamentoInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\newFrmPrincipal.resx">
+      <DependentUpon>newFrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlMenuNovo.resx">
+      <DependentUpon>userControlMenuNovo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -287,7 +282,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\btnnewconsulta.png" />
+    <None Include="Resources\btnnewtratamentos.png" />
+    <None Include="Resources\btnnewmedico.png" />
+    <None Include="Resources\btnnewcliente.png" />
+    <None Include="Resources\btnAlterar.png" />
+    <None Include="Resources\borda.png" />
+    <None Include="Resources\BTNPESQUISA.png" />
+    <None Include="Resources\btnPesquisar.png" />
+    <None Include="Resources\btnNovo.png" />
+    <None Include="Resources\LogoFrmMain.png" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>

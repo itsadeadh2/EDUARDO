@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace SisClinica.Forms
 {
@@ -19,8 +20,8 @@ namespace SisClinica.Forms
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Form alterarData = new frmAlterarData();
-            alterarData.Show();
+            //MetroForm alterarData = new frmAlterarData();
+            //alterarData.Show();
         }
 
         private void cbTeste_CheckedChanged(object sender, EventArgs e)

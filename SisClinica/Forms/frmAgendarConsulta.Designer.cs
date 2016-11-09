@@ -33,6 +33,8 @@
             this.btnSelecionarCliente = new System.Windows.Forms.Button();
             this.gbConsulta = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdBtnTarde = new System.Windows.Forms.RadioButton();
+            this.rdBtnManha = new System.Windows.Forms.RadioButton();
             this.cbHorarioInicial = new System.Windows.Forms.ComboBox();
             this.cbHorarioFinal = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@
             this.lblDataConsulta = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnAgendar = new System.Windows.Forms.Button();
-            this.rdBtnManha = new System.Windows.Forms.RadioButton();
-            this.rdBtnTarde = new System.Windows.Forms.RadioButton();
             this.gbCliente.SuspendLayout();
             this.gbConsulta.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,6 +121,32 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horário";
+            // 
+            // rdBtnTarde
+            // 
+            this.rdBtnTarde.AutoSize = true;
+            this.rdBtnTarde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnTarde.Location = new System.Drawing.Point(170, 35);
+            this.rdBtnTarde.Name = "rdBtnTarde";
+            this.rdBtnTarde.Size = new System.Drawing.Size(57, 19);
+            this.rdBtnTarde.TabIndex = 13;
+            this.rdBtnTarde.Text = "Tarde";
+            this.rdBtnTarde.UseVisualStyleBackColor = true;
+            this.rdBtnTarde.CheckedChanged += new System.EventHandler(this.rdBtnTarde_CheckedChanged);
+            // 
+            // rdBtnManha
+            // 
+            this.rdBtnManha.AutoSize = true;
+            this.rdBtnManha.Checked = true;
+            this.rdBtnManha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnManha.Location = new System.Drawing.Point(55, 35);
+            this.rdBtnManha.Name = "rdBtnManha";
+            this.rdBtnManha.Size = new System.Drawing.Size(64, 19);
+            this.rdBtnManha.TabIndex = 12;
+            this.rdBtnManha.TabStop = true;
+            this.rdBtnManha.Text = "Manhã";
+            this.rdBtnManha.UseVisualStyleBackColor = true;
+            this.rdBtnManha.CheckedChanged += new System.EventHandler(this.rdBtnManha_CheckedChanged);
             // 
             // cbHorarioInicial
             // 
@@ -294,33 +320,6 @@
             this.btnAgendar.Text = "Agendar";
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // rdBtnManha
-            // 
-            this.rdBtnManha.AutoSize = true;
-            this.rdBtnManha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtnManha.Location = new System.Drawing.Point(55, 35);
-            this.rdBtnManha.Name = "rdBtnManha";
-            this.rdBtnManha.Size = new System.Drawing.Size(64, 19);
-            this.rdBtnManha.TabIndex = 12;
-            this.rdBtnManha.TabStop = true;
-            this.rdBtnManha.Text = "Manhã";
-            this.rdBtnManha.UseVisualStyleBackColor = true;
-            this.rdBtnManha.CheckedChanged += new System.EventHandler(this.rdBtnManha_CheckedChanged);
-            // 
-            // rdBtnTarde
-            // 
-            this.rdBtnTarde.AutoSize = true;
-            this.rdBtnTarde.Checked = true;
-            this.rdBtnTarde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtnTarde.Location = new System.Drawing.Point(170, 35);
-            this.rdBtnTarde.Name = "rdBtnTarde";
-            this.rdBtnTarde.Size = new System.Drawing.Size(57, 19);
-            this.rdBtnTarde.TabIndex = 13;
-            this.rdBtnTarde.TabStop = true;
-            this.rdBtnTarde.Text = "Tarde";
-            this.rdBtnTarde.UseVisualStyleBackColor = true;
-            this.rdBtnTarde.CheckedChanged += new System.EventHandler(this.rdBtnTarde_CheckedChanged);
             // 
             // frmAgendarConsulta
             // 
