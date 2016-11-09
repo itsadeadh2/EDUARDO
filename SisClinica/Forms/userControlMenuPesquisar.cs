@@ -15,8 +15,8 @@ namespace SisClinica.Forms
         public userControlMenuPesquisar()
         {
             InitializeComponent();
-            ConfButtons.SetButtons(btnPessoa);
-            ConfButtons.SetButtons(btnSessoes);
+            HelperFunctions.SetButtons(btnPessoa);
+            HelperFunctions.SetButtons(btnSessoes);
         }
     }
 }

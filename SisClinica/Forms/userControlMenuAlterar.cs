@@ -15,9 +15,9 @@ namespace SisClinica.Forms
         public userControlMenuAlterar()
         {
             InitializeComponent();
-            ConfButtons.SetButtons(btnAlterarCliente);
-            ConfButtons.SetButtons(btnAlterarMedico);
-            ConfButtons.SetButtons(btnAlterarSessoes);
+            HelperFunctions.SetButtons(btnAlterarCliente);
+            HelperFunctions.SetButtons(btnAlterarMedico);
+            HelperFunctions.SetButtons(btnAlterarSessoes);
         }
     }
 }

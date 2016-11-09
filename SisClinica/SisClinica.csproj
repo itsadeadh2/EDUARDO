@@ -85,7 +85,7 @@
     <Compile Include="DAO\MedicoDAO.cs" />
     <Compile Include="DAO\ResponsavelDAO.cs" />
     <Compile Include="DAO\SessoesDAO.cs" />
-    <Compile Include="Forms\ConfButtons.cs" />
+    <Compile Include="Forms\HelperFunctions.cs" />
     <Compile Include="Forms\formBuscaMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\btnPesquisarResp.png" />
+    <None Include="Resources\btnSalvar2.png" />
+    <None Include="Resources\btnSalvar.png" />
     <None Include="Resources\bg.png" />
     <None Include="Resources\background.png" />
     <None Include="Resources\alterarsessoes4.png" />

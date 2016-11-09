@@ -15,11 +15,20 @@ namespace SisClinica.Forms
         public userControlMenuNovo()
         {
             InitializeComponent();
-            ConfButtons.SetButtons(btnConsulta);
-            ConfButtons.SetButtons(btnMedico);
-            ConfButtons.SetButtons(btnNovoCliente);
-            ConfButtons.SetButtons(btnTratamento);
-        }    
+            HelperFunctions.SetButtons(btnConsulta);
+            HelperFunctions.SetButtons(btnMedico);
+            HelperFunctions.SetButtons(btnNovoCliente);
+            HelperFunctions.SetButtons(btnTratamento);
+        }
+
+        private void btnNovoCliente_Click(object sender, EventArgs e)
+        {
+            newFrmPrincipal.PainelDinamico.Controls.Clear();
+            userControlRegistraCliente ucRegCli = new userControlRegistraCliente();
+            ucRegCli.AutoScroll = true;
+            newFrmPrincipal.PainelDinamico.Controls.Add(ucRegCli);
+            ucRegCli.Show();
+        }
     }   
 }
 

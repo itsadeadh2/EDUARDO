@@ -32,14 +32,14 @@ namespace SisClinica.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newFrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.topbar = new System.Windows.Forms.Panel();
-            this.PainelDinamico = new System.Windows.Forms.Panel();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
+            this.topbar = new System.Windows.Forms.Panel();
+            this.painelDinamico = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,49 +57,6 @@ namespace SisClinica.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(155, 509);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(40)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 409);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(155, 100);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
-            this.panel2.Controls.Add(this.btnHome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 100);
-            this.panel2.TabIndex = 1;
-            // 
-            // topbar
-            // 
-            this.topbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
-            this.topbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topbar.Location = new System.Drawing.Point(155, 0);
-            this.topbar.Name = "topbar";
-            this.topbar.Size = new System.Drawing.Size(605, 100);
-            this.topbar.TabIndex = 1;
-            this.topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseDown);
-            this.topbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseMove);
-            this.topbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseUp);
-            // 
-            // PainelDinamico
-            // 
-            this.PainelDinamico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
-            this.PainelDinamico.BackgroundImage = global::SisClinica.Properties.Resources.bg;
-            this.PainelDinamico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PainelDinamico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PainelDinamico.Location = new System.Drawing.Point(155, 100);
-            this.PainelDinamico.Name = "PainelDinamico";
-            this.PainelDinamico.Size = new System.Drawing.Size(605, 409);
-            this.PainelDinamico.TabIndex = 2;
-            this.PainelDinamico.MouseHover += new System.EventHandler(this.panel5_MouseHover);
             // 
             // btnAlterar
             // 
@@ -141,6 +98,25 @@ namespace SisClinica.Forms
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(40)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 409);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(155, 100);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(155, 100);
+            this.panel2.TabIndex = 1;
+            // 
             // btnHome
             // 
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -163,12 +139,32 @@ namespace SisClinica.Forms
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             this.btnHome.MouseHover += new System.EventHandler(this.btnHome_MouseHover);
             // 
+            // topbar
+            // 
+            this.topbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.topbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topbar.Location = new System.Drawing.Point(155, 0);
+            this.topbar.Name = "topbar";
+            this.topbar.Size = new System.Drawing.Size(605, 100);
+            this.topbar.TabIndex = 1;
+            this.topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseDown);
+            this.topbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseMove);
+            this.topbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseUp);
+            // 
+            // painelDinamico
+            // 
+            this.painelDinamico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painelDinamico.Location = new System.Drawing.Point(155, 100);
+            this.painelDinamico.Name = "painelDinamico";
+            this.painelDinamico.Size = new System.Drawing.Size(605, 409);
+            this.painelDinamico.TabIndex = 2;
+            // 
             // newFrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 509);
-            this.Controls.Add(this.PainelDinamico);
+            this.Controls.Add(this.painelDinamico);
             this.Controls.Add(this.topbar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -186,12 +182,12 @@ namespace SisClinica.Forms
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel topbar;
-        private System.Windows.Forms.Panel PainelDinamico;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnNovo;
        
 
         private System.Windows.Forms.Button btnPesquisar;
         private Button btnAlterar;
+        private Panel painelDinamico;
     }
 }

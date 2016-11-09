@@ -100,13 +100,7 @@ namespace SisClinica.Forms
                 MessageBox.Show("Cliente Registrado com sucesso!");
                 Close();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmBuscaCliente fcliente = new frmBuscaCliente();
-            fcliente.Show();
-        }
+        }        
         private void btnSelecionarResponsavel_Click(object sender, EventArgs e)
         {
             using (var form = new frmBuscaResponsavel())
