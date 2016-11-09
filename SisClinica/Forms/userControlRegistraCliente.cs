@@ -34,12 +34,62 @@ namespace SisClinica.Forms
                 txtbEmailResp.Enabled = false;
             }
         }
-        private Responsavel objResponsavel;
+        private Responsavel objResponsavel = new Responsavel();
 
         private void btnSalvar_Click(object sender, EventArgs e)
-        {            
+        {
+            #region
+            Cliente objCliente = new Cliente();
+            objCliente.nome = txtbNomeCompletoCli.Text;
+            objCliente.cpf = mtbCpf.Text;
+            objCliente.dataNascimento = dtpDataNasc.Value;
+            objCliente.email = txtbemail.Text;
+            objCliente.endereco = txtbEndereco.Text;
+            objCliente.cidade = cbCidade.Text;
+            objCliente.estado = cbEstado.Text;
+            objCliente.telefone = mtbTelefone.Text;
+            objCliente.adicionalInfo = rtbAdicionalInfo.Text;
 
-            if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value)&&objResponsavel.cpf == null)
+            if (HelperFunctions.ChecaMenorDeIdade(dtpDataNascResp.Value))
+            {
+                MessageBox.Show("O responsável precisa ser maior de idade!");
+            }
+            objResponsavel.nome = txtbNomeResp.Text;
+            objResponsavel.cpf = mtbCpf.Text;
+            objResponsavel.dataNascimento = dtpDataNascResp.Value;
+            objResponsavel.telefone = mtbTelefoneResp.Text;
+            objResponsavel.email = txtbEmailResp.Text;
+            if (objResponsavel.endereco == null)
+            {
+                objResponsavel.endereco = txtbEndereco.Text;
+            }
+            if (objResponsavel.cidade == null)
+            {
+                objResponsavel.cidade = cbCidade.Text;
+            }
+            if (objResponsavel.estado == null)
+            {
+                objResponsavel.estado = cbEstado.Text;
+            }
+            #endregion
+            if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
+            {
+                if (HelperFunctions.ChecaMenorDeIdade(dtpDataNascResp.Value))
+                {
+                    MessageBox.Show("O responsável precisa ser maior de idade!");
+                }
+                else
+                {
+                    objResponsavel.Registrar();
+                    objResponsavel = new Responsavel().PesquisarPorCPF(objResponsavel.cpf);
+                    objCliente.objResponsavel = objResponsavel;
+                    objCliente.Registrar();
+
+                    MessageBox.Show("Cliente e responsável vinculados e registrados com sucesso!");
+                    RetornarAoMenuAnterior();
+                }               
+            }
+            else if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value)&&objResponsavel.cpf == null)
             {
                 MessageBox.Show("O cliente é menor de idade, selecione um Responsável!");
             }
@@ -49,7 +99,7 @@ namespace SisClinica.Forms
             }
             else if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value) && objResponsavel.id!=0)
             {
-                Cliente objCliente = new Cliente();
+                //Cliente objCliente = new Cliente();
                 objCliente.nome = txtbNomeCompletoCli.Text;
                 objCliente.cpf = mtbCpf.Text;
                 objCliente.dataNascimento = dtpDataNasc.Value;
@@ -63,53 +113,10 @@ namespace SisClinica.Forms
                 objCliente.Registrar();
                 MessageBox.Show("CLiente Registrado e Vinculado ao Reponsável!");
                 RetornarAoMenuAnterior();
-            }
-            else if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
-            {
-                objResponsavel = new Responsavel();
-                Cliente objCliente = new Cliente();
-                objCliente.nome = txtbNomeCompletoCli.Text;
-                objCliente.cpf = mtbCpf.Text;
-                objCliente.dataNascimento = dtpDataNasc.Value;
-                objCliente.email = txtbemail.Text;
-                objCliente.endereco = txtbEndereco.Text;
-                objCliente.cidade = cbCidade.Text;
-                objCliente.estado = cbEstado.Text;
-                objCliente.adicionalInfo = rtbAdicionalInfo.Text;
-
-                if (HelperFunctions.ChecaMenorDeIdade(dtpDataNascResp.Value))
-                {
-                    MessageBox.Show("O responsável precisa ser maior de idade!");
-                }
-                objResponsavel.nome = txtbNomeResp.Text;
-                objResponsavel.cpf = mtbCpf.Text;
-                objResponsavel.dataNascimento = dtpDataNascResp.Value;
-                objResponsavel.telefone = mtbTelefoneResp.Text;
-                objResponsavel.email = txtbEmailResp.Text;
-                if (objResponsavel.endereco == null)
-                {
-                    objResponsavel.endereco = txtbEndereco.Text;
-                }
-                if (objResponsavel.cidade == null)
-                {
-                    objResponsavel.cidade = cbCidade.Text;
-                }
-                if (objResponsavel.estado == null)
-                {
-                    objResponsavel.estado = cbEstado.Text;
-                }
-
-                objResponsavel.Registrar();
-                objResponsavel = new Responsavel().PesquisarPorCPF(objResponsavel.cpf);
-                objCliente.objResponsavel = objResponsavel;
-                objCliente.Registrar();
-
-                MessageBox.Show("Cliente e responsável vinculados e registrados com sucesso!");
-                RetornarAoMenuAnterior();
-            }
+            }            
             else if (!HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
             {
-                Cliente objCliente = new Cliente();
+                //Cliente objCliente = new Cliente();
                 objCliente.nome = txtbNomeCompletoCli.Text;
                 objCliente.cpf = mtbCpf.Text;
                 objCliente.dataNascimento = dtpDataNasc.Value;
