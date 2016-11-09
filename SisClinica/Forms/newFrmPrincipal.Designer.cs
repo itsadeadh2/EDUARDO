@@ -34,7 +34,7 @@ namespace SisClinica.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.topbar = new System.Windows.Forms.Panel();
             this.PainelDinamico = new System.Windows.Forms.Panel();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -77,22 +77,27 @@ namespace SisClinica.Forms
             this.panel2.Size = new System.Drawing.Size(155, 100);
             this.panel2.TabIndex = 1;
             // 
-            // panel4
+            // topbar
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(155, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(685, 100);
-            this.panel4.TabIndex = 1;
+            this.topbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.topbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topbar.Location = new System.Drawing.Point(155, 0);
+            this.topbar.Name = "topbar";
+            this.topbar.Size = new System.Drawing.Size(605, 100);
+            this.topbar.TabIndex = 1;
+            this.topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseDown);
+            this.topbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseMove);
+            this.topbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topbar_MouseUp);
             // 
             // PainelDinamico
             // 
             this.PainelDinamico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
+            this.PainelDinamico.BackgroundImage = global::SisClinica.Properties.Resources.bg;
+            this.PainelDinamico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PainelDinamico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PainelDinamico.Location = new System.Drawing.Point(155, 100);
             this.PainelDinamico.Name = "PainelDinamico";
-            this.PainelDinamico.Size = new System.Drawing.Size(685, 409);
+            this.PainelDinamico.Size = new System.Drawing.Size(605, 409);
             this.PainelDinamico.TabIndex = 2;
             this.PainelDinamico.MouseHover += new System.EventHandler(this.panel5_MouseHover);
             // 
@@ -162,14 +167,13 @@ namespace SisClinica.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 509);
+            this.ClientSize = new System.Drawing.Size(760, 509);
             this.Controls.Add(this.PainelDinamico);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.topbar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "newFrmPrincipal";
             this.Text = "newFrmPrincipal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -181,7 +185,7 @@ namespace SisClinica.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel topbar;
         private System.Windows.Forms.Panel PainelDinamico;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnNovo;

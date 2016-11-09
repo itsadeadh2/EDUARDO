@@ -63,6 +63,36 @@ namespace SisClinica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alterarsessoes4 {
+            get {
+                object obj = ResourceManager.GetObject("alterarsessoes4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg {
+            get {
+                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap borda {
             get {
                 object obj = ResourceManager.GetObject("borda", resourceCulture);
@@ -73,9 +103,49 @@ namespace SisClinica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btbaltermedico {
+            get {
+                object obj = ResourceManager.GetObject("btbaltermedico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnAlterar {
             get {
                 object obj = ResourceManager.GetObject("btnAlterar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnalterarsessoes3 {
+            get {
+                object obj = ResourceManager.GetObject("btnalterarsessoes3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnaltercliente {
+            get {
+                object obj = ResourceManager.GetObject("btnaltercliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnaltersessoes {
+            get {
+                object obj = ResourceManager.GetObject("btnaltersessoes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +196,26 @@ namespace SisClinica.Properties {
         internal static System.Drawing.Bitmap btnNovo {
             get {
                 object obj = ResourceManager.GetObject("btnNovo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnPesqPessoas {
+            get {
+                object obj = ResourceManager.GetObject("btnPesqPessoas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnPesqSessoes {
+            get {
+                object obj = ResourceManager.GetObject("btnPesqSessoes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

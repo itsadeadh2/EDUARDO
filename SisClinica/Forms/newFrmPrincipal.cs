@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace SisClinica.Forms
 {
     public partial class newFrmPrincipal : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect, // x-coordinate of upper-left corner
+            int nTopRect, // y-coordinate of upper-left corner
+            int nRightRect, // x-coordinate of lower-right corner
+            int nBottomRect, // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+         );
         public newFrmPrincipal()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             SetButton(btnNovo);
             SetButton(btnPesquisar);
             SetButton(btnAlterar);
@@ -34,6 +47,7 @@ namespace SisClinica.Forms
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            PainelDinamico.Controls.Clear();
         }
 
         private void btnHome_MouseEnter(object sender, EventArgs e)
@@ -66,11 +80,42 @@ namespace SisClinica.Forms
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             PainelDinamico.Controls.Clear();
+            UserControl menuPesquisar = new userControlMenuPesquisar();
+            menuPesquisar.AutoScroll = true;
+            PainelDinamico.Controls.Add(menuPesquisar);
+            menuPesquisar.Show();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             PainelDinamico.Controls.Clear();
+            UserControl menuAlterar = new userControlMenuAlterar();
+            menuAlterar.AutoScroll = true;
+            PainelDinamico.Controls.Add(menuAlterar);
+            menuAlterar.Show();
+        }
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
+
+        private void topbar_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void topbar_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void topbar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
         }
     }
 }

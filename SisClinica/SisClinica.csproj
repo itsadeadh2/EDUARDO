@@ -85,6 +85,7 @@
     <Compile Include="DAO\MedicoDAO.cs" />
     <Compile Include="DAO\ResponsavelDAO.cs" />
     <Compile Include="DAO\SessoesDAO.cs" />
+    <Compile Include="Forms\ConfButtons.cs" />
     <Compile Include="Forms\formBuscaMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,11 +194,29 @@
     <Compile Include="Forms\newFrmPrincipal.Designer.cs">
       <DependentUpon>newFrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlMenuAlterar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlMenuAlterar.Designer.cs">
+      <DependentUpon>userControlMenuAlterar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlMenuNovo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\userControlMenuNovo.Designer.cs">
       <DependentUpon>userControlMenuNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlMenuPesquisar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlMenuPesquisar.Designer.cs">
+      <DependentUpon>userControlMenuPesquisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlRegistraCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlRegistraCliente.Designer.cs">
+      <DependentUpon>userControlRegistraCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,8 +274,17 @@
     <EmbeddedResource Include="Forms\newFrmPrincipal.resx">
       <DependentUpon>newFrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlMenuAlterar.resx">
+      <DependentUpon>userControlMenuAlterar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlMenuNovo.resx">
       <DependentUpon>userControlMenuNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlMenuPesquisar.resx">
+      <DependentUpon>userControlMenuPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlRegistraCliente.resx">
+      <DependentUpon>userControlRegistraCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -284,6 +312,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\bg.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\alterarsessoes4.png" />
+    <None Include="Resources\btnalterarsessoes3.png" />
+    <None Include="Resources\btnaltersessoes.png" />
+    <None Include="Resources\btbaltermedico.png" />
+    <None Include="Resources\btnaltercliente.png" />
+    <None Include="Resources\btnPesqSessoes.png" />
+    <None Include="Resources\btnPesqPessoas.png" />
     <None Include="Resources\btnnewconsulta.png" />
     <None Include="Resources\btnnewtratamentos.png" />
     <None Include="Resources\btnnewmedico.png" />

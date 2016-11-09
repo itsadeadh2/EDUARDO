@@ -15,6 +15,11 @@ namespace SisClinica.Forms
         public userControlMenuNovo()
         {
             InitializeComponent();
-        }
-    }
+            ConfButtons.SetButtons(btnConsulta);
+            ConfButtons.SetButtons(btnMedico);
+            ConfButtons.SetButtons(btnNovoCliente);
+            ConfButtons.SetButtons(btnTratamento);
+        }    
+    }   
 }
+
