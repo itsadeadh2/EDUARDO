@@ -38,6 +38,14 @@ namespace SisClinica.Forms
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (txtbNomeCompletoCli.TextLength<3)
+            {
+                MessageBox.Show("Nome inválido!");
+            }
+            else if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
+            {
+
+            }
             #region
             Cliente objCliente = new Cliente();
             objCliente.nome = txtbNomeCompletoCli.Text;
@@ -74,11 +82,7 @@ namespace SisClinica.Forms
             #endregion
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
             {
-                if (HelperFunctions.ChecaMenorDeIdade(dtpDataNascResp.Value))
-                {
-                    MessageBox.Show("O responsável precisa ser maior de idade!");
-                }
-                else
+                if (!HelperFunctions.ChecaMenorDeIdade(dtpDataNascResp.Value))
                 {
                     objResponsavel.Registrar();
                     objResponsavel = new Responsavel().PesquisarPorCPF(objResponsavel.cpf);
@@ -87,7 +91,7 @@ namespace SisClinica.Forms
 
                     MessageBox.Show("Cliente e responsável vinculados e registrados com sucesso!");
                     RetornarAoMenuAnterior();
-                }               
+                }              
             }
             else if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value)&&objResponsavel.cpf == null)
             {
