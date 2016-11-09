@@ -47,7 +47,7 @@ namespace SisClinica.Forms
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            newFrmPrincipal.painelDinamico.Controls.Clear();
+            painelDinamico.Controls.Clear();
         }
 
         private void btnHome_MouseEnter(object sender, EventArgs e)
@@ -70,28 +70,28 @@ namespace SisClinica.Forms
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            newFrmPrincipal.painelDinamico.Controls.Clear();
+            painelDinamico.Controls.Clear();
             UserControl menuNovo = new userControlMenuNovo();
             menuNovo.AutoScroll = true;
-            newFrmPrincipal.painelDinamico.Controls.Add(menuNovo);
+            painelDinamico.Controls.Add(menuNovo);
             menuNovo.Show();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            newFrmPrincipal.painelDinamico.Controls.Clear();
+            painelDinamico.Controls.Clear();
             UserControl menuPesquisar = new userControlMenuPesquisar();
             menuPesquisar.AutoScroll = true;
-            newFrmPrincipal.painelDinamico.Controls.Add(menuPesquisar);
+            painelDinamico.Controls.Add(menuPesquisar);
             menuPesquisar.Show();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            newFrmPrincipal.painelDinamico.Controls.Clear();
+            painelDinamico.Controls.Clear();
             UserControl menuAlterar = new userControlMenuAlterar();
             menuAlterar.AutoScroll = true;
-            newFrmPrincipal.painelDinamico.Controls.Add(menuAlterar);
+            painelDinamico.Controls.Add(menuAlterar);
             menuAlterar.Show();
         }
         private bool _dragging = false;
