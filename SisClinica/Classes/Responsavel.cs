@@ -38,10 +38,12 @@ namespace SisClinica.Classes
             dt.Columns.Add("ID", typeof(int));
             dt.Columns.Add("Nome", typeof(string));
             dt.Columns.Add("cpf", typeof(string));
-
-            foreach (Responsavel objResp in lista)
+            if (lista!=null)
             {
-                dt.Rows.Add(objResp.id, objResp.nome, objResp.cpf);
+                foreach (Responsavel objResp in lista)
+                {
+                    dt.Rows.Add(objResp.id, objResp.nome, objResp.cpf);
+                }
             }
             return dt;
         }

@@ -49,7 +49,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 216);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 216);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnAlterarCliente
@@ -59,18 +59,18 @@
             this.btnAlterarCliente.Image = global::SisClinica.Properties.Resources.btnaltercliente;
             this.btnAlterarCliente.Location = new System.Drawing.Point(3, 3);
             this.btnAlterarCliente.Name = "btnAlterarCliente";
-            this.btnAlterarCliente.Size = new System.Drawing.Size(296, 210);
+            this.btnAlterarCliente.Size = new System.Drawing.Size(330, 210);
             this.btnAlterarCliente.TabIndex = 0;
             this.btnAlterarCliente.UseVisualStyleBackColor = true;
             // 
             // btnAlterarMedico
             // 
-            this.btnAlterarMedico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterarMedico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAlterarMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterarMedico.Image = global::SisClinica.Properties.Resources.btbaltermedico;
-            this.btnAlterarMedico.Location = new System.Drawing.Point(305, 3);
+            this.btnAlterarMedico.Location = new System.Drawing.Point(339, 3);
             this.btnAlterarMedico.Name = "btnAlterarMedico";
-            this.btnAlterarMedico.Size = new System.Drawing.Size(297, 210);
+            this.btnAlterarMedico.Size = new System.Drawing.Size(330, 210);
             this.btnAlterarMedico.TabIndex = 1;
             this.btnAlterarMedico.UseVisualStyleBackColor = true;
             // 
@@ -80,19 +80,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 216);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 193);
+            this.panel1.Size = new System.Drawing.Size(672, 193);
             this.panel1.TabIndex = 1;
             // 
             // btnAlterarSessoes
             // 
-            this.btnAlterarSessoes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterarSessoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAlterarSessoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterarSessoes.Image = global::SisClinica.Properties.Resources.alterarsessoes4;
             this.btnAlterarSessoes.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterarSessoes.Location = new System.Drawing.Point(0, 0);
             this.btnAlterarSessoes.Name = "btnAlterarSessoes";
-            this.btnAlterarSessoes.Size = new System.Drawing.Size(605, 193);
+            this.btnAlterarSessoes.Size = new System.Drawing.Size(672, 193);
             this.btnAlterarSessoes.TabIndex = 0;
             this.btnAlterarSessoes.UseVisualStyleBackColor = true;
             // 
@@ -104,7 +103,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "userControlMenuAlterar";
-            this.Size = new System.Drawing.Size(605, 409);
+            this.Size = new System.Drawing.Size(672, 409);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

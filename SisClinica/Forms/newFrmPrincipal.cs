@@ -34,11 +34,10 @@ namespace SisClinica.Forms
             btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(68)))), ((int)(((byte)(43)))));
             btnHome.FlatAppearance.MouseOverBackColor = btnHome.BackColor;
         }
-
         private void panel5_MouseHover(object sender, EventArgs e)
         {
             //btnHome.BackgroundImage.
-        }
+        }       
 
         private void btnHome_MouseHover(object sender, EventArgs e)
         {          
@@ -97,6 +96,7 @@ namespace SisClinica.Forms
         private bool _dragging = false;
         private Point _offset;
         private Point _start_point = new Point(0, 0);
+
 
         private void topbar_MouseDown(object sender, MouseEventArgs e)
         {

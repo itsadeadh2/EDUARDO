@@ -46,7 +46,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 409);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 409);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnPessoa
@@ -56,18 +56,18 @@
             this.btnPessoa.Image = global::SisClinica.Properties.Resources.btnPesqPessoas;
             this.btnPessoa.Location = new System.Drawing.Point(3, 3);
             this.btnPessoa.Name = "btnPessoa";
-            this.btnPessoa.Size = new System.Drawing.Size(296, 403);
+            this.btnPessoa.Size = new System.Drawing.Size(330, 403);
             this.btnPessoa.TabIndex = 0;
             this.btnPessoa.UseVisualStyleBackColor = true;
             // 
             // btnSessoes
             // 
-            this.btnSessoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSessoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSessoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSessoes.Image = global::SisClinica.Properties.Resources.btnPesqSessoes;
-            this.btnSessoes.Location = new System.Drawing.Point(305, 3);
+            this.btnSessoes.Location = new System.Drawing.Point(339, 3);
             this.btnSessoes.Name = "btnSessoes";
-            this.btnSessoes.Size = new System.Drawing.Size(297, 403);
+            this.btnSessoes.Size = new System.Drawing.Size(330, 403);
             this.btnSessoes.TabIndex = 1;
             this.btnSessoes.UseVisualStyleBackColor = true;
             // 
@@ -78,7 +78,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "userControlMenuPesquisar";
-            this.Size = new System.Drawing.Size(605, 409);
+            this.Size = new System.Drawing.Size(672, 409);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

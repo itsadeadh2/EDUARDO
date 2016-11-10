@@ -85,7 +85,7 @@
     <Compile Include="DAO\MedicoDAO.cs" />
     <Compile Include="DAO\ResponsavelDAO.cs" />
     <Compile Include="DAO\SessoesDAO.cs" />
-    <Compile Include="Forms\HelperFunctions.cs" />
+    <Compile Include="Classes\HelperFunctions.cs" />
     <Compile Include="Forms\formBuscaMedico.cs">
       <SubType>Form</SubType>
     </Compile>

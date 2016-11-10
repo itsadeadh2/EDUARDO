@@ -50,6 +50,8 @@
             this.txtbNomeCompletoCli = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDadosDoResponsavel = new System.Windows.Forms.GroupBox();
+            this.btnClearPesquisa = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.dtgResponsavel = new System.Windows.Forms.DataGridView();
             this.txtbNomeRespPesquisa = new System.Windows.Forms.TextBox();
             this.lblNomePesquisa = new System.Windows.Forms.Label();
@@ -65,7 +67,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtbNomeResp = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbDadosDoCliente.SuspendLayout();
             this.gbDadosDoResponsavel.SuspendLayout();
@@ -140,6 +141,7 @@
             // 
             // rtbAdicionalInfo
             // 
+            this.rtbAdicionalInfo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbAdicionalInfo.Location = new System.Drawing.Point(11, 305);
             this.rtbAdicionalInfo.Name = "rtbAdicionalInfo";
             this.rtbAdicionalInfo.Size = new System.Drawing.Size(314, 92);
@@ -267,6 +269,7 @@
             this.mtbCpf.Name = "mtbCpf";
             this.mtbCpf.Size = new System.Drawing.Size(180, 21);
             this.mtbCpf.TabIndex = 4;
+            this.mtbCpf.Leave += new System.EventHandler(this.mtbCpf_Leave);
             // 
             // label2
             // 
@@ -285,6 +288,7 @@
             this.txtbNomeCompletoCli.Name = "txtbNomeCompletoCli";
             this.txtbNomeCompletoCli.Size = new System.Drawing.Size(180, 21);
             this.txtbNomeCompletoCli.TabIndex = 2;
+            this.txtbNomeCompletoCli.Leave += new System.EventHandler(this.txtbNomeCompletoCli_Leave);
             // 
             // label1
             // 
@@ -298,6 +302,7 @@
             // 
             // gbDadosDoResponsavel
             // 
+            this.gbDadosDoResponsavel.Controls.Add(this.btnClearPesquisa);
             this.gbDadosDoResponsavel.Controls.Add(this.btnPesquisar);
             this.gbDadosDoResponsavel.Controls.Add(this.dtgResponsavel);
             this.gbDadosDoResponsavel.Controls.Add(this.txtbNomeRespPesquisa);
@@ -322,6 +327,32 @@
             this.gbDadosDoResponsavel.TabStop = false;
             this.gbDadosDoResponsavel.Text = "Dados do Responsável";
             // 
+            // btnClearPesquisa
+            // 
+            this.btnClearPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClearPesquisa.Image = global::SisClinica.Properties.Resources.btnPesquisarResp04;
+            this.btnClearPesquisa.Location = new System.Drawing.Point(261, 189);
+            this.btnClearPesquisa.Name = "btnClearPesquisa";
+            this.btnClearPesquisa.Size = new System.Drawing.Size(34, 26);
+            this.btnClearPesquisa.TabIndex = 30;
+            this.btnClearPesquisa.UseVisualStyleBackColor = false;
+            this.btnClearPesquisa.Visible = false;
+            this.btnClearPesquisa.Click += new System.EventHandler(this.btnClearPesquisa_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPesquisar.Enabled = false;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisar.Image = global::SisClinica.Properties.Resources.btnPesquisarResp04;
+            this.btnPesquisar.Location = new System.Drawing.Point(221, 189);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(34, 26);
+            this.btnPesquisar.TabIndex = 29;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // dtgResponsavel
             // 
             this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -338,6 +369,8 @@
             this.txtbNomeRespPesquisa.Name = "txtbNomeRespPesquisa";
             this.txtbNomeRespPesquisa.Size = new System.Drawing.Size(106, 21);
             this.txtbNomeRespPesquisa.TabIndex = 27;
+            this.txtbNomeRespPesquisa.TextChanged += new System.EventHandler(this.txtbNomeRespPesquisa_TextChanged);
+            this.txtbNomeRespPesquisa.Leave += new System.EventHandler(this.txtbNomeRespPesquisa_Leave);
             // 
             // lblNomePesquisa
             // 
@@ -415,6 +448,7 @@
             this.dtpDataNascResp.Name = "dtpDataNascResp";
             this.dtpDataNascResp.Size = new System.Drawing.Size(161, 21);
             this.dtpDataNascResp.TabIndex = 19;
+            this.dtpDataNascResp.Leave += new System.EventHandler(this.dtpDataNascResp_Leave);
             // 
             // label12
             // 
@@ -434,6 +468,7 @@
             this.mtbCpfResp.Name = "mtbCpfResp";
             this.mtbCpfResp.Size = new System.Drawing.Size(177, 21);
             this.mtbCpfResp.TabIndex = 17;
+            this.mtbCpfResp.Leave += new System.EventHandler(this.mtbCpfResp_Leave);
             // 
             // label13
             // 
@@ -452,6 +487,7 @@
             this.txtbNomeResp.Name = "txtbNomeResp";
             this.txtbNomeResp.Size = new System.Drawing.Size(177, 21);
             this.txtbNomeResp.TabIndex = 15;
+            this.txtbNomeResp.Leave += new System.EventHandler(this.txtbNomeResp_Leave);
             // 
             // label14
             // 
@@ -462,18 +498,6 @@
             this.label14.Size = new System.Drawing.Size(98, 16);
             this.label14.TabIndex = 14;
             this.label14.Text = "Nome completo:";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPesquisar.Image = global::SisClinica.Properties.Resources.btnPesquisarResp04;
-            this.btnPesquisar.Location = new System.Drawing.Point(221, 189);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(34, 26);
-            this.btnPesquisar.TabIndex = 29;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // userControlRegistraCliente
             // 
@@ -533,5 +557,6 @@
         private System.Windows.Forms.TextBox txtbNomeRespPesquisa;
         private System.Windows.Forms.Label lblNomePesquisa;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnClearPesquisa;
     }
 }

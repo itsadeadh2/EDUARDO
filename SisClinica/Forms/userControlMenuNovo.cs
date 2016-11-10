@@ -23,11 +23,10 @@ namespace SisClinica.Forms
 
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
-            newFrmPrincipal.painelDinamico.Controls.Clear();
-            userControlRegistraCliente ucRegCli = new userControlRegistraCliente();
-            ucRegCli.AutoScroll = true;
-            newFrmPrincipal.painelDinamico.Controls.Add(ucRegCli);
-            ucRegCli.Show();
+            Controls.Clear();
+            userControlRegistraCliente regCli = new userControlRegistraCliente();
+            Controls.Add(regCli);
+            regCli.Show();
         }
     }   
 }
