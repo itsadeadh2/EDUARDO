@@ -118,82 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnPesquisarResp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPesquisarResp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnalterarsessoes3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnalterarsessoes3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BTNPESQUISA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTNPESQUISA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnPesqSessoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPesqSessoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnnewtratamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnnewtratamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnaltersessoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnaltersessoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnNovo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnNovo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alterarsessoes4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alterarsessoes4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btnnewcliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnnewcliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnPesquisarResp02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPesquisarResp02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnnewconsulta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnnewconsulta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnSalvar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnSalvar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoFrmMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoFrmMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnPesquisarResp04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPesquisarResp04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnPesquisarResp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisarResp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnPesquisarResp03" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnPesquisarResp03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnPesqPessoas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPesqPessoas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnSave1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnSalvar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnSalvar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnPesquisarResp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisarResp2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnaltercliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnaltercliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnSalvar21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSalvar21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnnewmedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnnewmedico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnPesquisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPesquisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnRefresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnRefresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="borda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\borda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnSalvar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSalvar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btbaltermedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btbaltermedico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnPesquisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnAlterar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnAlterar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnSalvar21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnSalvar21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnPesquisarResp04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisarResp04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPesquisarResp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisarResp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnNovo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnNovo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTNPESQUISA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTNPESQUISA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnaltercliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnaltercliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoFrmMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoFrmMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPesquisarResp02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesquisarResp02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alterarsessoes4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alterarsessoes4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exclamation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPesqPessoas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesqPessoas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPesqSessoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPesqSessoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnaltersessoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnaltersessoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewconsulta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewconsulta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnSalvar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSalvar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewtratamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewtratamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btbaltermedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btbaltermedico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnalterarsessoes3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnalterarsessoes3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnnewmedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnnewmedico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

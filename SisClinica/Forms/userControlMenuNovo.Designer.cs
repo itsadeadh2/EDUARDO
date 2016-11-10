@@ -76,6 +76,7 @@
             this.btnMedico.Size = new System.Drawing.Size(330, 198);
             this.btnMedico.TabIndex = 3;
             this.btnMedico.UseVisualStyleBackColor = true;
+            this.btnMedico.Click += new System.EventHandler(this.btnMedico_Click);
             // 
             // btnTratamento
             // 

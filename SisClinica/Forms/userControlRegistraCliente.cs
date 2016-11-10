@@ -17,6 +17,8 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             HelperFunctions.SetButtons(btnSalvar);
+            HelperFunctions.SetButtons(btnClearPesquisa);
+            HelperFunctions.SetButtons(btnPesquisar);
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
             {
                 AtivaResponsavel();
@@ -70,6 +72,12 @@ namespace SisClinica.Forms
                 MessageBox.Show("O sistema já possui um cliente com este cpf!" + "\n Nome do cliente: " + objCliente.nome);
                 value = true;
             }
+            else if (new Medico().PesquisarPorCpf(cpfPessoa)!=null)
+            {
+                Medico objMedico = new Medico().PesquisarPorCpf(cpfPessoa);
+                MessageBox.Show("O sistema já possui um Medico com este cpf!" + "\n Nome do cliente: " + objMedico.nome);
+                value = true;
+            }
             return value;
         }
 
@@ -91,6 +99,16 @@ namespace SisClinica.Forms
             {
                 MessageBox.Show("Nome inválido!");
                 value = false;
+            }
+            return value;
+        }
+
+        private bool ChecaNomeSemAviso(string nome)
+        {
+            bool value = false;
+            if (nome.Length < 3)
+            {
+                value = true;
             }
             return value;
         }
@@ -223,39 +241,23 @@ namespace SisClinica.Forms
 
         private void dtpDataNascResp_Leave(object sender, EventArgs e)
         {
-            if (HelperFunctions.ChecaMenorDeIdade(dtpDataNascResp.Value))
-            {
-                MessageBox.Show("O responsável não pode ser menor de idade!");
-            }
+
         }
 
         private void mtbCpf_Leave(object sender, EventArgs e)
         {
-            if (ChecaCPF(mtbCpf.Text))
-            {
-                mtbCpf.Focus();
-            }
-            else if(ChecaCPF(mtbCpfResp.Text, mtbCpf.Text))
-            {
-                mtbCpf.Focus();
-            }
+
         }
 
         private void mtbCpfResp_Leave(object sender, EventArgs e)
         {
-            if (ChecaCPF(mtbCpf.Text))
-            {
-                mtbCpfResp.Focus();
-            }
-            else if(ChecaCPF(mtbCpfResp.Text, mtbCpf.Text))
-            {                
-                mtbCpfResp.Focus();
-            }
+
         }
-        
+
         private void txtbNomeCompletoCli_Leave(object sender, EventArgs e)
         {
-            ChecaNome(txtbNomeCompletoCli.Text);
+            ptErrorNomeCli.Visible = ChecaNomeSemAviso(txtbNomeCompletoCli.Text);
+           
         }
 
         private void txtbNomeResp_Leave(object sender, EventArgs e)

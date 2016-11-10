@@ -29,6 +29,37 @@ namespace SisClinica.DAO
             Conexao con = new Conexao();
             con.ExecutarCru(comando);
         }
+        public Medico PesquisarPorCpf(string cpf)
+        {
+            Medico objMedico = new Medico();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Medico where cpf = @cpf";
+            comando.Parameters.AddWithValue("@cpf", cpf);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                objMedico.id = Convert.ToInt32(dr["id"]);
+                objMedico.cpf = dr["cpf"].ToString();
+                objMedico.email = dr["email"].ToString();
+                objMedico.endereco = dr["endereco"].ToString();
+                objMedico.cidade = dr["cidade"].ToString();
+                objMedico.estado = dr["estado"].ToString();
+                objMedico.nome = dr["nome"].ToString();
+                objMedico.telefone = dr["telefone"].ToString();
+                objMedico.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
+                objMedico.crm = dr["crm"].ToString();
+            }
+            else
+            {
+                objMedico = null;
+            }
+            return objMedico;
+        }
         public Medico Pesquisar(int id)
         {
             Medico objMedico = new Medico();
@@ -93,6 +124,38 @@ namespace SisClinica.DAO
                 listaDemedicos = null;
             }
             return listaDemedicos;
+        }
+
+        public Medico PesquisarPorCrm(string crm)
+        {
+            Medico objMedico = new Medico();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Medico where crm = @crm";
+            comando.Parameters.AddWithValue("@crm", crm);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                objMedico.id = Convert.ToInt32(dr["id"]);
+                objMedico.cpf = dr["cpf"].ToString();
+                objMedico.email = dr["email"].ToString();
+                objMedico.endereco = dr["endereco"].ToString();
+                objMedico.cidade = dr["cidade"].ToString();
+                objMedico.estado = dr["estado"].ToString();
+                objMedico.nome = dr["nome"].ToString();
+                objMedico.telefone = dr["telefone"].ToString();
+                objMedico.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
+                objMedico.crm = dr["crm"].ToString();
+            }
+            else
+            {
+                objMedico = null;
+            }
+            return objMedico;
         }
 
         public void Alterar(Medico objMedico)

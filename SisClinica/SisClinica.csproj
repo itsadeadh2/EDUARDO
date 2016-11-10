@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
@@ -224,6 +227,12 @@
     <Compile Include="Forms\userControlRegistraCliente.Designer.cs">
       <DependentUpon>userControlRegistraCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlRegistraMedico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlRegistraMedico.Designer.cs">
+      <DependentUpon>userControlRegistraMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\formBuscaMedico.resx">
@@ -295,6 +304,9 @@
     <EmbeddedResource Include="Forms\userControlRegistraCliente.resx">
       <DependentUpon>userControlRegistraCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlRegistraMedico.resx">
+      <DependentUpon>userControlRegistraMedico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -320,7 +332,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icone.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\bg3.png" />
+    <None Include="Resources\exclamation.png" />
+    <None Include="Resources\btnPesquisarResp2.png" />
+    <None Include="Resources\btnRefresh.png" />
+    <None Include="Resources\btnPesquisarResp1.png" />
+    <None Include="Resources\btnSave.png" />
     <None Include="Resources\btnSalvar21.png" />
     <None Include="Resources\btnPesquisarResp04.png" />
     <None Include="Resources\btnPesquisarResp03.png" />

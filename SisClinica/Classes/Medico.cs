@@ -30,6 +30,11 @@ namespace SisClinica.Classes
            return new MedicoDAO().Pesquisar(id);
         }
 
+        public Medico PesquisarPorCRM(string crm)
+        {
+            return new MedicoDAO().PesquisarPorCrm(crm);
+        }
+
         /// <summary>
         /// Retorna todos os medicos
         /// </summary>
@@ -84,6 +89,10 @@ namespace SisClinica.Classes
         public IList<Medico> iListPesquisar(string nome)
         {
             return new MedicoDAO().Pesquisar(nome);
+        }
+        public Medico PesquisarPorCpf(string cpf)
+        {
+            return new MedicoDAO().PesquisarPorCpf(cpf);
         }
 
         public void Alterar()

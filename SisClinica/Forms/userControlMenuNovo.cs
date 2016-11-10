@@ -28,6 +28,14 @@ namespace SisClinica.Forms
             Controls.Add(regCli);
             regCli.Show();
         }
+
+        private void btnMedico_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            userControlRegistraMedico regMed = new userControlRegistraMedico();
+            Controls.Add(regMed);
+            regMed.Show();
+        }
     }   
 }
 
