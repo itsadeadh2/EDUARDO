@@ -329,7 +329,29 @@ namespace SisClinica.Classes
             dt.Columns.Add("Hora", typeof(string));
             foreach (DateTime hora in listaDeHorarios)
             {
-                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                if (turno=="Manhã")
+                {
+                    if (hora == ha)
+                    {
+
+                    }
+                    else
+                    {
+                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                    }
+                }
+                else
+                {
+                    if (hora==fe)
+                    {
+
+                    }
+                    else
+                    {
+                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                    }
+                }
+                     
             }
             return dt;
         }

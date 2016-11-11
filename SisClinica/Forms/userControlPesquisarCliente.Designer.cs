@@ -28,67 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAlter = new System.Windows.Forms.Button();
-            this.btnFullInfo = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbDadosCliente = new System.Windows.Forms.GroupBox();
             this.dtgResultados = new System.Windows.Forms.DataGridView();
             this.btnPesq = new System.Windows.Forms.Button();
             this.txtbNomePesquisa = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.btnFullInfo = new System.Windows.Forms.Button();
+            this.btnAlter = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.gbDadosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultados)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnAlter);
-            this.panel1.Controls.Add(this.btnFullInfo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 299);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 110);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(457, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 107);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnAlter
-            // 
-            this.btnAlter.Enabled = false;
-            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
-            this.btnAlter.Location = new System.Drawing.Point(75, 2);
-            this.btnAlter.Name = "btnAlter";
-            this.btnAlter.Size = new System.Drawing.Size(140, 107);
-            this.btnAlter.TabIndex = 3;
-            this.btnAlter.UseVisualStyleBackColor = true;
-            // 
-            // btnFullInfo
-            // 
-            this.btnFullInfo.Enabled = false;
-            this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
-            this.btnFullInfo.Location = new System.Drawing.Point(266, 2);
-            this.btnFullInfo.Name = "btnFullInfo";
-            this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
-            this.btnFullInfo.TabIndex = 2;
-            this.btnFullInfo.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -119,9 +74,9 @@
             this.dtgResultados.AllowUserToAddRows = false;
             this.dtgResultados.AllowUserToDeleteRows = false;
             this.dtgResultados.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgResultados.Location = new System.Drawing.Point(9, 84);
@@ -161,6 +116,53 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome:";
             // 
+            // btnFullInfo
+            // 
+            this.btnFullInfo.Enabled = false;
+            this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
+            this.btnFullInfo.Location = new System.Drawing.Point(266, 2);
+            this.btnFullInfo.Name = "btnFullInfo";
+            this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
+            this.btnFullInfo.TabIndex = 2;
+            this.btnFullInfo.UseVisualStyleBackColor = true;
+            this.btnFullInfo.Click += new System.EventHandler(this.btnFullInfo_Click);
+            // 
+            // btnAlter
+            // 
+            this.btnAlter.Enabled = false;
+            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
+            this.btnAlter.Location = new System.Drawing.Point(75, 2);
+            this.btnAlter.Name = "btnAlter";
+            this.btnAlter.Size = new System.Drawing.Size(140, 107);
+            this.btnAlter.TabIndex = 3;
+            this.btnAlter.UseVisualStyleBackColor = true;
+            this.btnAlter.Click += new System.EventHandler(this.btnAlter_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
+            this.btnDelete.Location = new System.Drawing.Point(457, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(140, 107);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnAlter);
+            this.panel1.Controls.Add(this.btnFullInfo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 299);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(672, 110);
+            this.panel1.TabIndex = 1;
+            // 
             // userControlPesquisarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,25 +172,25 @@
             this.Controls.Add(this.panel1);
             this.Name = "userControlPesquisarCliente";
             this.Size = new System.Drawing.Size(672, 409);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.gbDadosCliente.ResumeLayout(false);
             this.gbDadosCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultados)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnFullInfo;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAlter;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gbDadosCliente;
         private System.Windows.Forms.DataGridView dtgResultados;
         private System.Windows.Forms.Button btnPesq;
         private System.Windows.Forms.TextBox txtbNomePesquisa;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Button btnFullInfo;
+        private System.Windows.Forms.Button btnAlter;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Panel panel1;
     }
 }

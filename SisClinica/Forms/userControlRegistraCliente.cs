@@ -203,6 +203,7 @@ namespace SisClinica.Forms
             else
             {                
                 objCliente.Registrar();
+                MessageBox.Show("Cliente registrado com sucesso!");
                 RetornarAoMenuAnterior();
             }
         }

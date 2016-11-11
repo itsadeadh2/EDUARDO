@@ -108,9 +108,16 @@ namespace SisClinica.Forms
                 objSessao.qtdeSessoes = 1;
                 objSessao.dataSessao = Convert.ToDateTime(cbHorarioInicial.SelectedValue);
 
-                objSessao.RegistrarSessao();
+                if (cbHorarioInicial.SelectedValue==null)
+                {
+                    MessageBox.Show("Não há horários disponíveis, tente um turno ou data diferente!");
+                }
+                else
+                {
+                    objSessao.RegistrarSessao();
+                    MessageBox.Show("Consulta cadastrada!");
+                }
 
-                MessageBox.Show("Consulta cadastrada!");
             }
             catch (Exception erro)
             {

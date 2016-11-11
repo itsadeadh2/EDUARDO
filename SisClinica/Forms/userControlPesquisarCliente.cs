@@ -46,7 +46,7 @@ namespace SisClinica.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (new Sessoes().BuscaPorCliente(objCliente)==null)
+            if (new Sessoes().BuscaPorCliente(objCliente)!=null)
             {
                 DialogResult result = MessageBox.Show("O cliente selecionado possui sessões agendadas, gostaria de deletá-lo mesmo assim?", "Aviso", MessageBoxButtons.YesNo);
                 if (result==DialogResult.Yes)
@@ -60,6 +60,21 @@ namespace SisClinica.Forms
                 objCliente.Excluir(objCliente.id);
                 MessageBox.Show("Cliente deletado com sucesso!");
             }
+        }
+
+        private void btnFullInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlter_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("nigger");
         }
     }
 }
