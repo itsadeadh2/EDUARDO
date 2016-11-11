@@ -26,8 +26,11 @@ namespace SisClinica.Forms
         public newFrmPrincipal()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            if (WindowState!=FormWindowState.Maximized)
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
+            }            
             SetButton(btnNovo);
             SetButton(btnPesquisar);
             SetButton(btnAlterar);

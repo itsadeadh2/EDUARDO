@@ -1,6 +1,6 @@
 ﻿namespace SisClinica.Forms
 {
-    partial class userControlMenuPesquisar
+    partial class userControlPesquisaPessoas
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnPessoa = new System.Windows.Forms.Button();
-            this.btnSessoes = new System.Windows.Forms.Button();
+            this.btnPesqCliente = new System.Windows.Forms.Button();
+            this.btnPesqMed = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,8 +39,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btnPessoa, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSessoes, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnPesqCliente, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnPesqMed, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -49,36 +49,36 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 409);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnPessoa
+            // btnPesqCliente
             // 
-            this.btnPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPessoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPessoa.Image = global::SisClinica.Properties.Resources.btnPesqPessoas;
-            this.btnPessoa.Location = new System.Drawing.Point(3, 3);
-            this.btnPessoa.Name = "btnPessoa";
-            this.btnPessoa.Size = new System.Drawing.Size(330, 403);
-            this.btnPessoa.TabIndex = 0;
-            this.btnPessoa.UseVisualStyleBackColor = true;
-            this.btnPessoa.Click += new System.EventHandler(this.btnPessoa_Click);
+            this.btnPesqCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPesqCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesqCliente.Image = global::SisClinica.Properties.Resources.btnnewcliente;
+            this.btnPesqCliente.Location = new System.Drawing.Point(3, 3);
+            this.btnPesqCliente.Name = "btnPesqCliente";
+            this.btnPesqCliente.Size = new System.Drawing.Size(330, 403);
+            this.btnPesqCliente.TabIndex = 0;
+            this.btnPesqCliente.UseVisualStyleBackColor = true;
+            this.btnPesqCliente.Click += new System.EventHandler(this.btnPesqCliente_Click);
             // 
-            // btnSessoes
+            // btnPesqMed
             // 
-            this.btnSessoes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSessoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSessoes.Image = global::SisClinica.Properties.Resources.btnPesqSessoes;
-            this.btnSessoes.Location = new System.Drawing.Point(339, 3);
-            this.btnSessoes.Name = "btnSessoes";
-            this.btnSessoes.Size = new System.Drawing.Size(330, 403);
-            this.btnSessoes.TabIndex = 1;
-            this.btnSessoes.UseVisualStyleBackColor = true;
+            this.btnPesqMed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPesqMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesqMed.Image = global::SisClinica.Properties.Resources.btnnewmedico;
+            this.btnPesqMed.Location = new System.Drawing.Point(339, 3);
+            this.btnPesqMed.Name = "btnPesqMed";
+            this.btnPesqMed.Size = new System.Drawing.Size(330, 403);
+            this.btnPesqMed.TabIndex = 1;
+            this.btnPesqMed.UseVisualStyleBackColor = true;
             // 
-            // userControlMenuPesquisar
+            // userControlPesquisaPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "userControlMenuPesquisar";
+            this.Name = "userControlPesquisaPessoas";
             this.Size = new System.Drawing.Size(672, 409);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -88,7 +88,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnPessoa;
-        private System.Windows.Forms.Button btnSessoes;
+        private System.Windows.Forms.Button btnPesqCliente;
+        private System.Windows.Forms.Button btnPesqMed;
     }
 }

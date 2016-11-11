@@ -163,6 +163,26 @@ namespace SisClinica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnDelete {
+            get {
+                object obj = ResourceManager.GetObject("btnDelete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnFullInfo {
+            get {
+                object obj = ResourceManager.GetObject("btnFullInfo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnnewcliente {
             get {
                 object obj = ResourceManager.GetObject("btnnewcliente", resourceCulture);
@@ -206,6 +226,16 @@ namespace SisClinica.Properties {
         internal static System.Drawing.Bitmap btnNovo {
             get {
                 object obj = ResourceManager.GetObject("btnNovo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnPencil {
+            get {
+                object obj = ResourceManager.GetObject("btnPencil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

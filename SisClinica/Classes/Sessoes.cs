@@ -18,6 +18,7 @@ namespace SisClinica.Classes
         public DateTime horaInicio  { get; set; }
         public DateTime horaFim { get; set; }
         public string tipoDeSessao { get; set; }
+        public TipoDeTratamento tipoDeTratamento { get; set; }
         public int qtdeSessoes { get; set; }
         public int id { get; set; }
 

@@ -82,6 +82,7 @@
     <Compile Include="Classes\Pessoa.cs" />
     <Compile Include="Classes\Responsavel.cs" />
     <Compile Include="Classes\Sessoes.cs" />
+    <Compile Include="Classes\TipoDeTratamento.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
     <Compile Include="DAO\ConsultorioDAO.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="DAO\ResponsavelDAO.cs" />
     <Compile Include="DAO\SessoesDAO.cs" />
     <Compile Include="Classes\HelperFunctions.cs" />
+    <Compile Include="DAO\TipoDeTratamentoDAO.cs" />
     <Compile Include="Forms\formBuscaMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +229,18 @@
     <Compile Include="Forms\userControlMenuPesquisar.Designer.cs">
       <DependentUpon>userControlMenuPesquisar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlPesquisaPessoas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlPesquisaPessoas.Designer.cs">
+      <DependentUpon>userControlPesquisaPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlPesquisarCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlPesquisarCliente.Designer.cs">
+      <DependentUpon>userControlPesquisarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlRegistraCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -310,6 +324,12 @@
     <EmbeddedResource Include="Forms\userControlMenuPesquisar.resx">
       <DependentUpon>userControlMenuPesquisar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlPesquisaPessoas.resx">
+      <DependentUpon>userControlPesquisaPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlPesquisarCliente.resx">
+      <DependentUpon>userControlPesquisarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlRegistraCliente.resx">
       <DependentUpon>userControlRegistraCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +363,9 @@
   <ItemGroup>
     <Content Include="icone.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\btnDelete.png" />
+    <None Include="Resources\btnPencil.png" />
+    <None Include="Resources\btnFullInfo1.png" />
     <None Include="Resources\bg3.png" />
     <None Include="Resources\exclamation.png" />
     <None Include="Resources\btnPesquisarResp2.png" />

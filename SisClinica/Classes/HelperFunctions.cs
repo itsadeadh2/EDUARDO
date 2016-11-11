@@ -31,6 +31,12 @@ namespace SisClinica.Forms
             {
                 return false;
             }
-        }        
+        }
+        public static void SetUserControl(UserControl uc)
+        {
+            uc.BackColor = Color.FromArgb(164, 217, 212);
+            uc.Width = 672;
+            uc.Height = 409;
+        }     
     }
 }
