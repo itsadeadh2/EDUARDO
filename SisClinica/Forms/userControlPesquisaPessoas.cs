@@ -26,5 +26,13 @@ namespace SisClinica.Forms
             Controls.Add(pesqCli);
             pesqCli.Show();
         }
+
+        private void btnPesqMed_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            UserControl pesqMedic = new userControlPesquisaMedico();
+            Controls.Add(pesqMedic);
+            pesqMedic.Show();
+        }
     }
 }

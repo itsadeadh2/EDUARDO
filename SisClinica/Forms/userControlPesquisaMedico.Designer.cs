@@ -1,6 +1,6 @@
 ﻿namespace SisClinica.Forms
 {
-    partial class userControlPesquisarCliente
+    partial class userControlPesquisaMedico
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,89 +29,36 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAlter = new System.Windows.Forms.Button();
-            this.btnFullInfo = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.gbDadosCliente = new System.Windows.Forms.GroupBox();
+            this.gbDadosMedico = new System.Windows.Forms.GroupBox();
             this.dtgResultados = new System.Windows.Forms.DataGridView();
             this.btnPesq = new System.Windows.Forms.Button();
             this.txtbNomePesquisa = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.gbDadosCliente.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAlter = new System.Windows.Forms.Button();
+            this.btnFullInfo = new System.Windows.Forms.Button();
+            this.gbDadosMedico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultados)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // gbDadosMedico
             // 
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnAlter);
-            this.panel1.Controls.Add(this.btnFullInfo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 299);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 110);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(457, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 107);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnAlter
-            // 
-            this.btnAlter.Enabled = false;
-            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
-            this.btnAlter.Location = new System.Drawing.Point(75, 2);
-            this.btnAlter.Name = "btnAlter";
-            this.btnAlter.Size = new System.Drawing.Size(140, 107);
-            this.btnAlter.TabIndex = 3;
-            this.btnAlter.UseVisualStyleBackColor = true;
-            // 
-            // btnFullInfo
-            // 
-            this.btnFullInfo.Enabled = false;
-            this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
-            this.btnFullInfo.Location = new System.Drawing.Point(266, 2);
-            this.btnFullInfo.Name = "btnFullInfo";
-            this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
-            this.btnFullInfo.TabIndex = 2;
-            this.btnFullInfo.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.gbDadosCliente);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(672, 299);
-            this.panel2.TabIndex = 2;
-            // 
-            // gbDadosCliente
-            // 
-            this.gbDadosCliente.Controls.Add(this.dtgResultados);
-            this.gbDadosCliente.Controls.Add(this.btnPesq);
-            this.gbDadosCliente.Controls.Add(this.txtbNomePesquisa);
-            this.gbDadosCliente.Controls.Add(this.lblNome);
-            this.gbDadosCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbDadosCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDadosCliente.Location = new System.Drawing.Point(0, 0);
-            this.gbDadosCliente.Name = "gbDadosCliente";
-            this.gbDadosCliente.Size = new System.Drawing.Size(672, 299);
-            this.gbDadosCliente.TabIndex = 2;
-            this.gbDadosCliente.TabStop = false;
-            this.gbDadosCliente.Text = "Dados da pesquisa";
+            this.gbDadosMedico.Controls.Add(this.dtgResultados);
+            this.gbDadosMedico.Controls.Add(this.btnPesq);
+            this.gbDadosMedico.Controls.Add(this.txtbNomePesquisa);
+            this.gbDadosMedico.Controls.Add(this.lblNome);
+            this.gbDadosMedico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbDadosMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosMedico.Location = new System.Drawing.Point(0, 0);
+            this.gbDadosMedico.Name = "gbDadosMedico";
+            this.gbDadosMedico.Size = new System.Drawing.Size(672, 299);
+            this.gbDadosMedico.TabIndex = 2;
+            this.gbDadosMedico.TabStop = false;
+            this.gbDadosMedico.Text = "Dados da pesquisa";
             // 
             // dtgResultados
             // 
@@ -160,34 +107,88 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome:";
             // 
-            // userControlPesquisarCliente
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.gbDadosMedico);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(672, 299);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnAlter);
+            this.panel1.Controls.Add(this.btnFullInfo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 299);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(672, 110);
+            this.panel1.TabIndex = 3;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
+            this.btnDelete.Location = new System.Drawing.Point(457, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(140, 107);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnAlter
+            // 
+            this.btnAlter.Enabled = false;
+            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
+            this.btnAlter.Location = new System.Drawing.Point(75, 2);
+            this.btnAlter.Name = "btnAlter";
+            this.btnAlter.Size = new System.Drawing.Size(140, 107);
+            this.btnAlter.TabIndex = 3;
+            this.btnAlter.UseVisualStyleBackColor = true;
+            // 
+            // btnFullInfo
+            // 
+            this.btnFullInfo.Enabled = false;
+            this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
+            this.btnFullInfo.Location = new System.Drawing.Point(266, 2);
+            this.btnFullInfo.Name = "btnFullInfo";
+            this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
+            this.btnFullInfo.TabIndex = 2;
+            this.btnFullInfo.UseVisualStyleBackColor = true;
+            // 
+            // userControlPesquisaMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "userControlPesquisarCliente";
+            this.Name = "userControlPesquisaMedico";
             this.Size = new System.Drawing.Size(672, 409);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.gbDadosCliente.ResumeLayout(false);
-            this.gbDadosCliente.PerformLayout();
+            this.gbDadosMedico.ResumeLayout(false);
+            this.gbDadosMedico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultados)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnFullInfo;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAlter;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox gbDadosCliente;
+
+        private System.Windows.Forms.GroupBox gbDadosMedico;
         private System.Windows.Forms.DataGridView dtgResultados;
         private System.Windows.Forms.Button btnPesq;
         private System.Windows.Forms.TextBox txtbNomePesquisa;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAlter;
+        private System.Windows.Forms.Button btnFullInfo;
     }
 }

@@ -229,6 +229,12 @@
     <Compile Include="Forms\userControlMenuPesquisar.Designer.cs">
       <DependentUpon>userControlMenuPesquisar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlPesquisaMedico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlPesquisaMedico.Designer.cs">
+      <DependentUpon>userControlPesquisaMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlPesquisaPessoas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlMenuPesquisar.resx">
       <DependentUpon>userControlMenuPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlPesquisaMedico.resx">
+      <DependentUpon>userControlPesquisaMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlPesquisaPessoas.resx">
       <DependentUpon>userControlPesquisaPessoas.cs</DependentUpon>

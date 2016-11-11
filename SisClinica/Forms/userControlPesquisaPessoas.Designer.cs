@@ -71,6 +71,7 @@
             this.btnPesqMed.Size = new System.Drawing.Size(330, 403);
             this.btnPesqMed.TabIndex = 1;
             this.btnPesqMed.UseVisualStyleBackColor = true;
+            this.btnPesqMed.Click += new System.EventHandler(this.btnPesqMed_Click);
             // 
             // userControlPesquisaPessoas
             // 

@@ -85,11 +85,11 @@ namespace SisClinica.Classes
             listadeClientes = new ClienteDAO().PesquisarPorNome(nome);
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("Id", typeof(int));
             dt.Columns.Add("Nome", typeof(string));
             dt.Columns.Add("CPF", typeof(string));
             dt.Columns.Add("Nome Responsavel", typeof(string));
             dt.Columns.Add("CPF Responsavel", typeof(string));
+            dt.Columns.Add("Id", typeof(int));
             if (listadeClientes!=null)
             {
 
@@ -97,7 +97,7 @@ namespace SisClinica.Classes
                 {
                     if (objCliente.objResponsavel != null)
                     {
-                        dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, objCliente.objResponsavel.nome, objCliente.objResponsavel.cpf);
+                        dt.Rows.Add(objCliente.nome, objCliente.cpf, objCliente.objResponsavel.nome, objCliente.objResponsavel.cpf, objCliente.id);
                     }
                     else
                     {

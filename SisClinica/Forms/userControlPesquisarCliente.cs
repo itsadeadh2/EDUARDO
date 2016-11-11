@@ -28,16 +28,20 @@ namespace SisClinica.Forms
             dtgResultados.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
         }
 
-        private void dtgResultados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
-
-            lblNomeCliente.Text ="Nome: "+ objCliente.nome;
-            lblCPF.Text = "CPF: " + objCliente.cpf;
-            lblResponsavel.Text = "Responsável: " + objCliente.objResponsavel.nome;
+            if (objCliente != null)
+            {
+                btnAlter.Enabled = true;
+                btnDelete.Enabled = true;
+                btnFullInfo.Enabled = true;
+            }
+            //lblNomeCliente.Text = "Nome: " + objCliente.nome;
+            //lblCPF.Text = "CPF: " + objCliente.cpf;
+            //lblResponsavel.Text = "Responsável: " + objCliente.objResponsavel.nome;
             //implementacao da situacao
             //implementãção do lblsituacao
-
         }
     }
 }

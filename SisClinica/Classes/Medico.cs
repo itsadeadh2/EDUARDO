@@ -69,15 +69,15 @@ namespace SisClinica.Classes
             IList < Medico > listaDeMedicos = new MedicoDAO().Pesquisar(nome);
             DataTable dt = new DataTable();
             dt.Columns.Add("Nome", typeof(string));
-            dt.Columns.Add("id", typeof(int));
             dt.Columns.Add("cpf", typeof(string));
             dt.Columns.Add("crm", typeof(string));
+            dt.Columns.Add("id", typeof(int));
 
             if (listaDeMedicos!=null)
             {
                 foreach (Medico objMedico in listaDeMedicos)
                 {
-                    dt.Rows.Add(objMedico.nome, objMedico.id, objMedico.cpf, objMedico.crm);
+                    dt.Rows.Add(objMedico.nome, objMedico.cpf, objMedico.crm, objMedico.id);
                 }
             }
             else
