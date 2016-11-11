@@ -184,7 +184,7 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "exec p2 @id";
+            comando.CommandText = "delete from Sessoes where id_cliente = @id delete from Cliente where id = @id";
             comando.Parameters.AddWithValue("@id", objCliente.id);
 
             Conexao con = new Conexao();

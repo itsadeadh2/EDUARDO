@@ -26,5 +26,13 @@ namespace SisClinica.Forms
             Controls.Add(pesqPessoas);
             pesqPessoas.Show();
         }
+
+        private void btnSessoes_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            UserControl pesqSessoes = new userControlPesquisarSessoes();
+            Controls.Add(pesqSessoes);
+            pesqSessoes.Show();
+        }
     }
 }

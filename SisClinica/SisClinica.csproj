@@ -247,6 +247,12 @@
     <Compile Include="Forms\userControlPesquisarCliente.Designer.cs">
       <DependentUpon>userControlPesquisarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlPesquisarSessoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlPesquisarSessoes.Designer.cs">
+      <DependentUpon>userControlPesquisarSessoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlRegistraCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlPesquisarCliente.resx">
       <DependentUpon>userControlPesquisarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlPesquisarSessoes.resx">
+      <DependentUpon>userControlPesquisarSessoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlRegistraCliente.resx">
       <DependentUpon>userControlRegistraCliente.cs</DependentUpon>

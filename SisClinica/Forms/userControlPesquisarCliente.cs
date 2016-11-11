@@ -43,5 +43,23 @@ namespace SisClinica.Forms
             //implementacao da situacao
             //implementãção do lblsituacao
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (new Sessoes().BuscaPorCliente(objCliente)==null)
+            {
+                DialogResult result = MessageBox.Show("O cliente selecionado possui sessões agendadas, gostaria de deletá-lo mesmo assim?", "Aviso", MessageBoxButtons.YesNo);
+                if (result==DialogResult.Yes)
+                {
+                    objCliente.Excluir(objCliente.id);
+                    MessageBox.Show("Cliente deletado com sucesso!");
+                }
+            }
+            else
+            {
+                objCliente.Excluir(objCliente.id);
+                MessageBox.Show("Cliente deletado com sucesso!");
+            }
+        }
     }
 }

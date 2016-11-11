@@ -71,6 +71,7 @@
             this.btnSessoes.Size = new System.Drawing.Size(330, 403);
             this.btnSessoes.TabIndex = 1;
             this.btnSessoes.UseVisualStyleBackColor = true;
+            this.btnSessoes.Click += new System.EventHandler(this.btnSessoes_Click);
             // 
             // userControlMenuPesquisar
             // 

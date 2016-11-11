@@ -101,7 +101,7 @@ namespace SisClinica.Classes
                     }
                     else
                     {
-                        dt.Rows.Add(objCliente.id, objCliente.nome, objCliente.cpf, "-", "-");
+                        dt.Rows.Add(objCliente.nome, objCliente.cpf, "-", "-", objCliente.id);
                     }
                 }
             }
