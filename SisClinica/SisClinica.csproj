@@ -197,6 +197,12 @@
     <Compile Include="Forms\newFrmPrincipal.Designer.cs">
       <DependentUpon>newFrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlAgendarConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlAgendarConsulta.Designer.cs">
+      <DependentUpon>userControlAgendarConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlHomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\newFrmPrincipal.resx">
       <DependentUpon>newFrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlAgendarConsulta.resx">
+      <DependentUpon>userControlAgendarConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlHomePage.resx">
       <DependentUpon>userControlHomePage.cs</DependentUpon>

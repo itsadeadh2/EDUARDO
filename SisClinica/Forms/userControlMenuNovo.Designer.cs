@@ -99,6 +99,7 @@
             this.btnConsulta.Size = new System.Drawing.Size(330, 199);
             this.btnConsulta.TabIndex = 5;
             this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // userControlMenuNovo
             // 

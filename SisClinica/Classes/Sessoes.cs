@@ -310,15 +310,15 @@ namespace SisClinica.Classes
             DateTime ha = data.Date;
             DateTime hr = data.Date;
             DateTime fe = data.Date;
-            hi = Convert.ToDateTime("08:00");
-            ha = Convert.ToDateTime("11:30");
-            hr = Convert.ToDateTime("14:00");
-            fe = Convert.ToDateTime("18:00");
-            //hi = hi.AddHours(8);
-            //ha = ha.AddHours(11);
-            //ha = ha.AddMinutes(30);
-            //hr = hr.AddHours(14);
-            //fe = fe.AddHours(18);
+            //hi = Convert.ToDateTime("08:00");
+            //ha = Convert.ToDateTime("11:30");
+            //hr = Convert.ToDateTime("14:00");
+            //fe = Convert.ToDateTime("18:00");
+            hi = hi.AddHours(8);
+            ha = ha.AddHours(11);
+            ha = ha.AddMinutes(30);
+            hr = hr.AddHours(14);
+            fe = fe.AddHours(18);
             IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeInicio(hi, ha, hr, fe, data.Date, objMedico, objConsultorio, turno);
 
             DataTable dt = new DataTable();
@@ -369,7 +369,7 @@ namespace SisClinica.Classes
         /// <param name="objMedico">Medico que será responsavel</param>
         /// <param name="objConsultorio">Consultorio onde será feita a sessão</param>
         /// <returns>lista de horarios disponiveis</returns>
-        public IList<DateTime> GerarHorariosDeInicio(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno)
+        private IList<DateTime> GerarHorariosDeInicio(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno)
         {
             IList<DateTime> listaDeHorarios = new List<DateTime>();
             IList<DateTime> horariosRetornar = new List<DateTime>();
@@ -420,7 +420,7 @@ namespace SisClinica.Classes
             }
             return horariosRetornar;
         }
-        public IList<DateTime> GerarHorariosDeTermino(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, Medico objMedico, Consultorio objConsultorio, string turno)
+        private IList<DateTime> GerarHorariosDeTermino(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, Medico objMedico, Consultorio objConsultorio, string turno)
         {
             IList<DateTime> listaDeHorarios = new List<DateTime>();
             IList<DateTime> horariosRetornar = new List<DateTime>();

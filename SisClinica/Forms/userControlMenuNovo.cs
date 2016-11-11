@@ -36,6 +36,15 @@ namespace SisClinica.Forms
             Controls.Add(regMed);
             regMed.Show();
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            UserControl agenCons = new userControlAgendarConsulta();
+            Controls.Add(agenCons);
+            agenCons.Show();
+
+        }
     }   
 }
 
