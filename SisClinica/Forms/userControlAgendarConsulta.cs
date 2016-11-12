@@ -206,7 +206,5 @@ namespace SisClinica.Forms
             Controls.Add(menuAnt);
             menuAnt.Show();
         }
-
-        
     }
 }

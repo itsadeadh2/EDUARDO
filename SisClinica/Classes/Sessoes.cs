@@ -457,11 +457,11 @@ namespace SisClinica.Classes
             for (int i = 0; i < limite; i++)
             {
                 dataComparacao = dataComparacao.AddMinutes(30);
-                if (dataComparacao <= fimDoExpediente && dataComparacao >= horarioDeReentrada)
+                if (dataComparacao.TimeOfDay <= fimDoExpediente.TimeOfDay && dataComparacao.TimeOfDay >= horarioDeReentrada.TimeOfDay)
                 {
                     listaDeHorarios.Add(dataComparacao);
                 }
-                else if (dataComparacao <= horarioDeAlmoco && dataComparacao >= horarioInicial)
+                else if (dataComparacao.TimeOfDay <= horarioDeAlmoco.TimeOfDay && dataComparacao.TimeOfDay >= horarioInicial.TimeOfDay)
                 {
                     listaDeHorarios.Add(dataComparacao);
                 }
