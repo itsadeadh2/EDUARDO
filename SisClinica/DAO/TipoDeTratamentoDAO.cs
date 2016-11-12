@@ -38,6 +38,7 @@ namespace SisClinica.DAO
                     TipoDeTratamento objTipo = new TipoDeTratamento();
                     objTipo.nome = dr["nome"].ToString();
                     objTipo.id = (int)dr["id"];
+                    objTipo.valor = (decimal)dr["valor"];
                     listaDeTipos.Add(objTipo);
                 }
             }
@@ -59,6 +60,7 @@ namespace SisClinica.DAO
                 dr.Read();
                 objTipo.nome = dr["nome"].ToString();
                 objTipo.id = (int)dr["id"];
+                objTipo.valor = (decimal)dr["valor"];
             }
             return objTipo;
         }

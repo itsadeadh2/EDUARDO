@@ -33,7 +33,6 @@
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.btnCadastrarCli = new System.Windows.Forms.Button();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtbNomeCli = new System.Windows.Forms.TextBox();
             this.lblNomePesq = new System.Windows.Forms.Label();
             this.gbConsulta = new System.Windows.Forms.GroupBox();
@@ -59,6 +58,7 @@
             this.lblVisData = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
@@ -123,17 +123,6 @@
             this.dtgClientes.TabIndex = 3;
             this.ttHelp.SetToolTip(this.dtgClientes, "Duplo clique para selecionar o cliente.");
             this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellDoubleClick);
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
-            this.btnPesquisar.Location = new System.Drawing.Point(294, 26);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(30, 30);
-            this.btnPesquisar.TabIndex = 2;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtbNomeCli
             // 
@@ -386,6 +375,17 @@
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
+            this.btnPesquisar.Location = new System.Drawing.Point(294, 26);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(30, 30);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // userControlAgendarConsulta
             // 

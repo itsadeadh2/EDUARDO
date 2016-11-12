@@ -19,7 +19,12 @@ namespace SisClinica.Classes
         public DateTime horaFim { get; set; }
         public string tipoDeSessao { get; set; }
         public TipoDeTratamento tipoDeTratamento { get; set; }
+        public string situacao { get; set; }
+        public int nroSessao { get; set; }
         public int qtdeSessoes { get; set; }
+        public decimal valorSessao { get; set; }    
+        public bool quitada { get; set; }
+        public bool sessaoCompleta { get; set; }
         public int id { get; set; }
 
         //-Propriedades que planejo utilizar no futuro para configurar os horarios.
@@ -42,7 +47,15 @@ namespace SisClinica.Classes
         }
         public void RegistrarSessao()
         {
-             new SessoesDAO().Registrar(this);
+            if (this.tipoDeSessao=="Tratamento")
+            {
+                new SessoesDAO().RegistrarTratamento(this);
+            }
+            else
+            {
+                new SessoesDAO().RegistrarConsulta(this);
+            }
+             
         }
 
         /// <summary>

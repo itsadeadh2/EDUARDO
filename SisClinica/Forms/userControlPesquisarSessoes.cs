@@ -93,10 +93,18 @@ namespace SisClinica.Forms
                 {
                     tipoDeRetorno = tdr.tratamento;
                 }
-                else
+                else if (cbConsultas.Checked && cbTratamentos.Checked)
                 {
                     tipoDeRetorno = tdr.consultaETratamento;
                 }
+            }
+            if (cbTratamentos.Checked&&cbConsultas.Checked)
+            {
+                tipoDeRetorno = tdr.consultaETratamento;
+            }
+            if (cbConsultas.Checked==false&&cbTratamentos.Checked==false)
+            {
+                tipoDeRetorno = tdr.consultaETratamento;
             }
         }
 

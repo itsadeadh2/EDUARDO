@@ -13,6 +13,7 @@ namespace SisClinica.Classes
         //-Propriedades
         public string adicionalInfo { get; set; }
         public Responsavel objResponsavel { get; set; }
+        public string situacao { get; set; }
         //-Métodos
 
         public void Excluir(int id)

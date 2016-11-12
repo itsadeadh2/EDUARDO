@@ -11,6 +11,7 @@ namespace SisClinica.Classes
     public class TipoDeTratamento
     {
         public string nome { get; set; }
+        public decimal valor { get; set; }
         public int id { get; set; }
 
         public void CadastrarNovoTipo()

@@ -45,6 +45,14 @@ namespace SisClinica.Forms
             agenCons.Show();
 
         }
+
+        private void btnTratamento_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            UserControl agenTrat = new userControlAgendarTratamento();
+            Controls.Add(agenTrat);
+            agenTrat.Show();
+        }
     }   
 }
 

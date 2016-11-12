@@ -88,6 +88,7 @@
             this.btnTratamento.Size = new System.Drawing.Size(330, 199);
             this.btnTratamento.TabIndex = 4;
             this.btnTratamento.UseVisualStyleBackColor = true;
+            this.btnTratamento.Click += new System.EventHandler(this.btnTratamento_Click);
             // 
             // btnConsulta
             // 

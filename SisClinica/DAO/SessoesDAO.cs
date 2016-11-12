@@ -11,7 +11,7 @@ namespace SisClinica.DAO
 {
     class SessoesDAO
     {
-        public void Registrar(Sessoes objSessao)
+        public void RegistrarConsulta(Sessoes objSessao)
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
@@ -24,6 +24,28 @@ namespace SisClinica.DAO
             comando.Parameters.AddWithValue("@id_medico_responsavel", objSessao.medicoResponsavel.id);
             comando.Parameters.AddWithValue("@id_cliente", objSessao.objCliente.id);
             comando.Parameters.AddWithValue("@id_consultorio", objSessao.objConsultorio.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
+        public void RegistrarTratamento(Sessoes objSessao)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "INSERT INTO Sessoes (datasessao, horainicio, horafim, tipodesessao, id_medico_responsavel, id_cliente, sessaoCompleta, id_consultorio, id_tipodetratamento, valorSessao,qtdeSessoes, nroSessao) " +
+                                  "values (@datasessao, @horainicio, @horafim, @tipodesessao, @id_medico_responsavel, @id_cliente, @sessaocompleta,@id_consultorio, @id_tipoDeTratamento, @valorSessao, @qtdeSessoes, @nroSessao)";
+            comando.Parameters.AddWithValue("@datasessao", objSessao.dataSessao);
+            comando.Parameters.AddWithValue("@horainicio",objSessao.horaInicio);
+            comando.Parameters.AddWithValue("@horafim", objSessao.horaFim);
+            comando.Parameters.AddWithValue("@tipodesessao", objSessao.tipoDeSessao);
+            comando.Parameters.AddWithValue("@id_medico_responsavel",objSessao.medicoResponsavel.id);
+            comando.Parameters.AddWithValue("@id_cliente", objSessao.objCliente.id);
+            comando.Parameters.AddWithValue("@sessaocompleta",Convert.ToInt32(objSessao.sessaoCompleta));
+            comando.Parameters.AddWithValue("@id_consultorio", objSessao.objConsultorio.id);
+            comando.Parameters.AddWithValue("@id_tipoDeTratamento", objSessao.tipoDeTratamento.id);
+            comando.Parameters.AddWithValue("@valorSessao", objSessao.valorSessao);
+            comando.Parameters.AddWithValue("@qtdeSessoes", objSessao.qtdeSessoes);
+            comando.Parameters.AddWithValue("@nroSessao", objSessao.nroSessao);
 
             Conexao con = new Conexao();
             con.ExecutarCru(comando);
