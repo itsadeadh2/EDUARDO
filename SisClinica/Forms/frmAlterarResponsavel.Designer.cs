@@ -28,293 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSelecResp = new System.Windows.Forms.Button();
-            this.gbInfoResponsavel = new System.Windows.Forms.GroupBox();
-            this.gpResponsavel = new System.Windows.Forms.GroupBox();
-            this.txtBoxNomeRegistraResponsavel = new System.Windows.Forms.TextBox();
-            this.lblNomeRegistraMedico = new System.Windows.Forms.Label();
-            this.gbResponsavel = new System.Windows.Forms.GroupBox();
-            this.lblTelefoneRegResponsavel = new System.Windows.Forms.Label();
-            this.msktxtboxTelefoneRegResponsavel = new System.Windows.Forms.MaskedTextBox();
-            this.lblEmailRegResponsavel = new System.Windows.Forms.Label();
-            this.txtboxEmailRegResponsavel = new System.Windows.Forms.TextBox();
-            this.gbEndereçoPessoalResponsavel = new System.Windows.Forms.GroupBox();
-            this.lblEnderecoRegEnderecoResponsavel = new System.Windows.Forms.Label();
-            this.txtboxEnderecoRegResponsavel = new System.Windows.Forms.TextBox();
-            this.lblCidadeRegResponsavel = new System.Windows.Forms.Label();
-            this.cbCidadeRegResponsavel = new System.Windows.Forms.ComboBox();
-            this.lblEstadoRegResponsavel = new System.Windows.Forms.Label();
-            this.cbEstadoRegResponsavel = new System.Windows.Forms.ComboBox();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.gbInfoResponsavel.SuspendLayout();
-            this.gpResponsavel.SuspendLayout();
-            this.gbResponsavel.SuspendLayout();
-            this.gbEndereçoPessoalResponsavel.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtbEmailResp = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.mtbTelefoneResp = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbNomeResp = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSelecResp
+            // panel2
             // 
-            this.btnSelecResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelecResp.Location = new System.Drawing.Point(141, 12);
-            this.btnSelecResp.Name = "btnSelecResp";
-            this.btnSelecResp.Size = new System.Drawing.Size(170, 42);
-            this.btnSelecResp.TabIndex = 0;
-            this.btnSelecResp.Text = "Selecionar Responsável";
-            this.btnSelecResp.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.panel2.Controls.Add(this.btnSalvar);
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.txtbEmailResp);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.mtbTelefoneResp);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.txtbNomeResp);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(345, 167);
+            this.panel2.TabIndex = 1;
             // 
-            // gbInfoResponsavel
+            // txtbEmailResp
             // 
-            this.gbInfoResponsavel.Controls.Add(this.gpResponsavel);
-            this.gbInfoResponsavel.Controls.Add(this.gbResponsavel);
-            this.gbInfoResponsavel.Controls.Add(this.gbEndereçoPessoalResponsavel);
-            this.gbInfoResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbInfoResponsavel.Location = new System.Drawing.Point(12, 60);
-            this.gbInfoResponsavel.Name = "gbInfoResponsavel";
-            this.gbInfoResponsavel.Size = new System.Drawing.Size(446, 371);
-            this.gbInfoResponsavel.TabIndex = 34;
-            this.gbInfoResponsavel.TabStop = false;
-            this.gbInfoResponsavel.Text = "Informações";
+            this.txtbEmailResp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbEmailResp.Location = new System.Drawing.Point(141, 67);
+            this.txtbEmailResp.Name = "txtbEmailResp";
+            this.txtbEmailResp.Size = new System.Drawing.Size(177, 23);
+            this.txtbEmailResp.TabIndex = 45;
             // 
-            // gpResponsavel
+            // label10
             // 
-            this.gpResponsavel.Controls.Add(this.txtBoxNomeRegistraResponsavel);
-            this.gpResponsavel.Controls.Add(this.lblNomeRegistraMedico);
-            this.gpResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gpResponsavel.Location = new System.Drawing.Point(6, 26);
-            this.gpResponsavel.Name = "gpResponsavel";
-            this.gpResponsavel.Size = new System.Drawing.Size(429, 68);
-            this.gpResponsavel.TabIndex = 32;
-            this.gpResponsavel.TabStop = false;
-            this.gpResponsavel.Text = "Responsavel";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(88, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 17);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Email:";
             // 
-            // txtBoxNomeRegistraResponsavel
+            // mtbTelefoneResp
             // 
-            this.txtBoxNomeRegistraResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNomeRegistraResponsavel.Location = new System.Drawing.Point(88, 36);
-            this.txtBoxNomeRegistraResponsavel.Name = "txtBoxNomeRegistraResponsavel";
-            this.txtBoxNomeRegistraResponsavel.Size = new System.Drawing.Size(287, 22);
-            this.txtBoxNomeRegistraResponsavel.TabIndex = 3;
+            this.mtbTelefoneResp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefoneResp.Location = new System.Drawing.Point(141, 40);
+            this.mtbTelefoneResp.Mask = "(00) 0 00000000";
+            this.mtbTelefoneResp.Name = "mtbTelefoneResp";
+            this.mtbTelefoneResp.Size = new System.Drawing.Size(177, 23);
+            this.mtbTelefoneResp.TabIndex = 43;
             // 
-            // lblNomeRegistraMedico
+            // label11
             // 
-            this.lblNomeRegistraMedico.AutoSize = true;
-            this.lblNomeRegistraMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeRegistraMedico.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNomeRegistraMedico.Location = new System.Drawing.Point(25, 36);
-            this.lblNomeRegistraMedico.Name = "lblNomeRegistraMedico";
-            this.lblNomeRegistraMedico.Size = new System.Drawing.Size(51, 20);
-            this.lblNomeRegistraMedico.TabIndex = 2;
-            this.lblNomeRegistraMedico.Text = "Nome";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(70, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 17);
+            this.label11.TabIndex = 42;
+            this.label11.Text = "Telefone:";
             // 
-            // gbResponsavel
+            // txtbNomeResp
             // 
-            this.gbResponsavel.Controls.Add(this.lblTelefoneRegResponsavel);
-            this.gbResponsavel.Controls.Add(this.msktxtboxTelefoneRegResponsavel);
-            this.gbResponsavel.Controls.Add(this.lblEmailRegResponsavel);
-            this.gbResponsavel.Controls.Add(this.txtboxEmailRegResponsavel);
-            this.gbResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gbResponsavel.Location = new System.Drawing.Point(6, 100);
-            this.gbResponsavel.Name = "gbResponsavel";
-            this.gbResponsavel.Size = new System.Drawing.Size(429, 104);
-            this.gbResponsavel.TabIndex = 30;
-            this.gbResponsavel.TabStop = false;
-            this.gbResponsavel.Text = "Contato";
+            this.txtbNomeResp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNomeResp.Location = new System.Drawing.Point(142, 12);
+            this.txtbNomeResp.Name = "txtbNomeResp";
+            this.txtbNomeResp.Size = new System.Drawing.Size(177, 23);
+            this.txtbNomeResp.TabIndex = 41;
             // 
-            // lblTelefoneRegResponsavel
+            // label14
             // 
-            this.lblTelefoneRegResponsavel.AutoSize = true;
-            this.lblTelefoneRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefoneRegResponsavel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTelefoneRegResponsavel.Location = new System.Drawing.Point(6, 53);
-            this.lblTelefoneRegResponsavel.Name = "lblTelefoneRegResponsavel";
-            this.lblTelefoneRegResponsavel.Size = new System.Drawing.Size(71, 20);
-            this.lblTelefoneRegResponsavel.TabIndex = 2;
-            this.lblTelefoneRegResponsavel.Text = "Telefone";
-            this.lblTelefoneRegResponsavel.Click += new System.EventHandler(this.lblTelefoneRegResponsavel_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(15, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 17);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Nome completo:";
             // 
-            // msktxtboxTelefoneRegResponsavel
+            // btnCancelar
             // 
-            this.msktxtboxTelefoneRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msktxtboxTelefoneRegResponsavel.Location = new System.Drawing.Point(88, 56);
-            this.msktxtboxTelefoneRegResponsavel.Mask = "(99) 00000-0000";
-            this.msktxtboxTelefoneRegResponsavel.Name = "msktxtboxTelefoneRegResponsavel";
-            this.msktxtboxTelefoneRegResponsavel.Size = new System.Drawing.Size(121, 22);
-            this.msktxtboxTelefoneRegResponsavel.TabIndex = 7;
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(175, 112);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(131, 43);
+            this.btnCancelar.TabIndex = 46;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // lblEmailRegResponsavel
+            // btnSalvar
             // 
-            this.lblEmailRegResponsavel.AutoSize = true;
-            this.lblEmailRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailRegResponsavel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEmailRegResponsavel.Location = new System.Drawing.Point(26, 29);
-            this.lblEmailRegResponsavel.Name = "lblEmailRegResponsavel";
-            this.lblEmailRegResponsavel.Size = new System.Drawing.Size(53, 20);
-            this.lblEmailRegResponsavel.TabIndex = 3;
-            this.lblEmailRegResponsavel.Text = "E-mail";
-            // 
-            // txtboxEmailRegResponsavel
-            // 
-            this.txtboxEmailRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxEmailRegResponsavel.Location = new System.Drawing.Point(88, 27);
-            this.txtboxEmailRegResponsavel.Name = "txtboxEmailRegResponsavel";
-            this.txtboxEmailRegResponsavel.Size = new System.Drawing.Size(287, 22);
-            this.txtboxEmailRegResponsavel.TabIndex = 8;
-            // 
-            // gbEndereçoPessoalResponsavel
-            // 
-            this.gbEndereçoPessoalResponsavel.Controls.Add(this.lblEnderecoRegEnderecoResponsavel);
-            this.gbEndereçoPessoalResponsavel.Controls.Add(this.txtboxEnderecoRegResponsavel);
-            this.gbEndereçoPessoalResponsavel.Controls.Add(this.lblCidadeRegResponsavel);
-            this.gbEndereçoPessoalResponsavel.Controls.Add(this.cbCidadeRegResponsavel);
-            this.gbEndereçoPessoalResponsavel.Controls.Add(this.lblEstadoRegResponsavel);
-            this.gbEndereçoPessoalResponsavel.Controls.Add(this.cbEstadoRegResponsavel);
-            this.gbEndereçoPessoalResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gbEndereçoPessoalResponsavel.Location = new System.Drawing.Point(6, 200);
-            this.gbEndereçoPessoalResponsavel.Name = "gbEndereçoPessoalResponsavel";
-            this.gbEndereçoPessoalResponsavel.Size = new System.Drawing.Size(429, 165);
-            this.gbEndereçoPessoalResponsavel.TabIndex = 31;
-            this.gbEndereçoPessoalResponsavel.TabStop = false;
-            this.gbEndereçoPessoalResponsavel.Text = "Endereço Pessoal";
-            // 
-            // lblEnderecoRegEnderecoResponsavel
-            // 
-            this.lblEnderecoRegEnderecoResponsavel.AutoSize = true;
-            this.lblEnderecoRegEnderecoResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnderecoRegEnderecoResponsavel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEnderecoRegEnderecoResponsavel.Location = new System.Drawing.Point(6, 34);
-            this.lblEnderecoRegEnderecoResponsavel.Name = "lblEnderecoRegEnderecoResponsavel";
-            this.lblEnderecoRegEnderecoResponsavel.Size = new System.Drawing.Size(78, 20);
-            this.lblEnderecoRegEnderecoResponsavel.TabIndex = 4;
-            this.lblEnderecoRegEnderecoResponsavel.Text = "Endereço";
-            // 
-            // txtboxEnderecoRegResponsavel
-            // 
-            this.txtboxEnderecoRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxEnderecoRegResponsavel.Location = new System.Drawing.Point(97, 32);
-            this.txtboxEnderecoRegResponsavel.Name = "txtboxEnderecoRegResponsavel";
-            this.txtboxEnderecoRegResponsavel.Size = new System.Drawing.Size(287, 22);
-            this.txtboxEnderecoRegResponsavel.TabIndex = 9;
-            // 
-            // lblCidadeRegResponsavel
-            // 
-            this.lblCidadeRegResponsavel.AutoSize = true;
-            this.lblCidadeRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidadeRegResponsavel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCidadeRegResponsavel.Location = new System.Drawing.Point(224, 61);
-            this.lblCidadeRegResponsavel.Name = "lblCidadeRegResponsavel";
-            this.lblCidadeRegResponsavel.Size = new System.Drawing.Size(59, 20);
-            this.lblCidadeRegResponsavel.TabIndex = 19;
-            this.lblCidadeRegResponsavel.Text = "Cidade";
-            // 
-            // cbCidadeRegResponsavel
-            // 
-            this.cbCidadeRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCidadeRegResponsavel.FormattingEnabled = true;
-            this.cbCidadeRegResponsavel.Location = new System.Drawing.Point(299, 62);
-            this.cbCidadeRegResponsavel.Name = "cbCidadeRegResponsavel";
-            this.cbCidadeRegResponsavel.Size = new System.Drawing.Size(121, 24);
-            this.cbCidadeRegResponsavel.TabIndex = 13;
-            // 
-            // lblEstadoRegResponsavel
-            // 
-            this.lblEstadoRegResponsavel.AutoSize = true;
-            this.lblEstadoRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoRegResponsavel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEstadoRegResponsavel.Location = new System.Drawing.Point(27, 60);
-            this.lblEstadoRegResponsavel.Name = "lblEstadoRegResponsavel";
-            this.lblEstadoRegResponsavel.Size = new System.Drawing.Size(60, 20);
-            this.lblEstadoRegResponsavel.TabIndex = 7;
-            this.lblEstadoRegResponsavel.Text = "Estado";
-            // 
-            // cbEstadoRegResponsavel
-            // 
-            this.cbEstadoRegResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstadoRegResponsavel.FormattingEnabled = true;
-            this.cbEstadoRegResponsavel.Items.AddRange(new object[] {
-            "Acre",
-            "Alagoas",
-            "Amapá",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo",
-            "Sergipe",
-            "Tocantins"});
-            this.cbEstadoRegResponsavel.Location = new System.Drawing.Point(97, 60);
-            this.cbEstadoRegResponsavel.Name = "cbEstadoRegResponsavel";
-            this.cbEstadoRegResponsavel.Size = new System.Drawing.Size(121, 24);
-            this.cbEstadoRegResponsavel.TabIndex = 12;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAlterar.Location = new System.Drawing.Point(168, 437);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(131, 55);
-            this.btnAlterar.TabIndex = 35;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Location = new System.Drawing.Point(38, 112);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(131, 43);
+            this.btnSalvar.TabIndex = 47;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // frmAlterarResponsavel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 496);
-            this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.gbInfoResponsavel);
-            this.Controls.Add(this.btnSelecResp);
+            this.ClientSize = new System.Drawing.Size(345, 167);
+            this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAlterarResponsavel";
             this.Text = "Alterar Responsavel";
             this.Load += new System.EventHandler(this.frmAlterarResponsavel_Load);
-            this.gbInfoResponsavel.ResumeLayout(false);
-            this.gpResponsavel.ResumeLayout(false);
-            this.gpResponsavel.PerformLayout();
-            this.gbResponsavel.ResumeLayout(false);
-            this.gbResponsavel.PerformLayout();
-            this.gbEndereçoPessoalResponsavel.ResumeLayout(false);
-            this.gbEndereçoPessoalResponsavel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSelecResp;
-        private System.Windows.Forms.GroupBox gbInfoResponsavel;
-        private System.Windows.Forms.GroupBox gpResponsavel;
-        private System.Windows.Forms.TextBox txtBoxNomeRegistraResponsavel;
-        private System.Windows.Forms.Label lblNomeRegistraMedico;
-        private System.Windows.Forms.GroupBox gbEndereçoPessoalResponsavel;
-        private System.Windows.Forms.Label lblEnderecoRegEnderecoResponsavel;
-        private System.Windows.Forms.TextBox txtboxEnderecoRegResponsavel;
-        private System.Windows.Forms.Label lblCidadeRegResponsavel;
-        private System.Windows.Forms.ComboBox cbCidadeRegResponsavel;
-        private System.Windows.Forms.Label lblEstadoRegResponsavel;
-        private System.Windows.Forms.ComboBox cbEstadoRegResponsavel;
-        private System.Windows.Forms.GroupBox gbResponsavel;
-        private System.Windows.Forms.Label lblTelefoneRegResponsavel;
-        private System.Windows.Forms.MaskedTextBox msktxtboxTelefoneRegResponsavel;
-        private System.Windows.Forms.Label lblEmailRegResponsavel;
-        private System.Windows.Forms.TextBox txtboxEmailRegResponsavel;
-        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtbEmailResp;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox mtbTelefoneResp;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbNomeResp;
+        private System.Windows.Forms.Label label14;
     }
 }

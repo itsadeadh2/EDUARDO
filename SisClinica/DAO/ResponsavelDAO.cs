@@ -11,6 +11,20 @@ namespace SisClinica.DAO
 {
     public class ResponsavelDAO
     {
+        public void Alterar(Responsavel objResponsavel)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE Responsavel SET email=@email, nome=@nome, telefone=@telefone, dataNascimento=@data where id=@id";
+            comando.Parameters.AddWithValue("@email", objResponsavel.email);
+            comando.Parameters.AddWithValue("@nome", objResponsavel.nome);
+            comando.Parameters.AddWithValue("@telefone", objResponsavel.telefone);
+            comando.Parameters.AddWithValue("@data", objResponsavel.dataNascimento);
+            comando.Parameters.AddWithValue("@id", objResponsavel.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
         public void Registrar(Responsavel objResponsvavel)
         {
             SqlCommand comando = new SqlCommand();

@@ -100,17 +100,16 @@ namespace SisClinica.Classes
             new MedicoDAO().Alterar(this);
         }
 
-        public bool Excluir()
+        public void Excluir()
         {
             IList < Sessoes > lista = new Sessoes().BuscaPorMedico(this);
             if (lista==null)
             {
                 new MedicoDAO().Excluir(this);
-                return true;
             }
             else
             {
-                return false;
+                new MedicoDAO().ExcluirComSessoes(this);
             }
         }
     }

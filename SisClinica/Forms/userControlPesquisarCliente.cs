@@ -64,12 +64,18 @@ namespace SisClinica.Forms
 
         private void btnFullInfo_Click(object sender, EventArgs e)
         {
-
+            Controls.Clear();
+            UserControl cliInfo = new userControlClienteInfo().PreencheFormulario(objCliente);
+            Controls.Add(cliInfo);
+            cliInfo.Show();
         }
 
         private void btnAlter_Click(object sender, EventArgs e)
         {
-            
+            Controls.Clear();
+            userControlAlterarCliente ucAlterCli = new userControlAlterarCliente().Preencher(objCliente);
+            Controls.Add(ucAlterCli);
+            ucAlterCli.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

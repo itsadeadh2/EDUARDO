@@ -33,19 +33,20 @@ namespace SisClinica.Forms
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            Medico objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgMedicos.CurrentRow.Cells["id"].Value));
-            bool foiDeletado = objMedico.Excluir();
-            btnExcluir.Enabled = !foiDeletado;
-            if (foiDeletado)
-            {
-                MessageBox.Show("Médico deletado!");
-            }
-            else
-            {
-                MessageBox.Show("O médico possui sessões e como as procedures para exclusão com sessões ainda\n estão sendo elaboradas, não foi deletado!");
-            }
-            Close();
+        { 
+        //{
+        //    Medico objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgMedicos.CurrentRow.Cells["id"].Value));
+        //    bool foiDeletado = objMedico.Excluir();
+        //    btnExcluir.Enabled = !foiDeletado;
+        //    if (foiDeletado)
+        //    {
+        //        MessageBox.Show("Médico deletado!");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("O médico possui sessões e como as procedures para exclusão com sessões ainda\n estão sendo elaboradas, não foi deletado!");
+        //    }
+        //    Close();
         }
 
         private void dtgMedicos_CellClick(object sender, DataGridViewCellEventArgs e)

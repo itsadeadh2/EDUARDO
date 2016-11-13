@@ -37,22 +37,30 @@
             this.lblSelecConsult = new System.Windows.Forms.Label();
             this.lblMedico = new System.Windows.Forms.Label();
             this.gbTratamento = new System.Windows.Forms.GroupBox();
-            this.btnCadastrarCli = new System.Windows.Forms.Button();
-            this.txtbNomeCli = new System.Windows.Forms.TextBox();
-            this.lblNomePesq = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.lblSelecData = new System.Windows.Forms.Label();
-            this.cbTipoDeTratamento = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.checkPago = new System.Windows.Forms.CheckBox();
+            this.mtbQtdeSessoes = new System.Windows.Forms.MaskedTextBox();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.gbHorário = new System.Windows.Forms.GroupBox();
             this.cbHorarioFinal = new System.Windows.Forms.ComboBox();
             this.lblAs = new System.Windows.Forms.Label();
             this.cbHorarioInicial = new System.Windows.Forms.ComboBox();
             this.rdbTarde = new System.Windows.Forms.RadioButton();
             this.rdbManha = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbTipoDeTratamento = new System.Windows.Forms.ComboBox();
+            this.lblSelecData = new System.Windows.Forms.Label();
+            this.btnCadastrarCli = new System.Windows.Forms.Button();
+            this.txtbNomeCli = new System.Windows.Forms.TextBox();
+            this.lblNomePesq = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.gbCliente = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bgVisualizacao = new System.Windows.Forms.GroupBox();
+            this.lblValorPorSessao = new System.Windows.Forms.Label();
+            this.lblValortotal = new System.Windows.Forms.Label();
+            this.lblVisQtde = new System.Windows.Forms.Label();
+            this.lblVisTipo = new System.Windows.Forms.Label();
             this.lblVisMedic = new System.Windows.Forms.Label();
             this.lblVisHora = new System.Windows.Forms.Label();
             this.lblVisConsult = new System.Windows.Forms.Label();
@@ -60,19 +68,11 @@
             this.lblVisData = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.lblVisTipo = new System.Windows.Forms.Label();
-            this.lblVisQtde = new System.Windows.Forms.Label();
-            this.mtbQtdeSessoes = new System.Windows.Forms.MaskedTextBox();
-            this.lblValortotal = new System.Windows.Forms.Label();
-            this.lblValorPorSessao = new System.Windows.Forms.Label();
-            this.checkPago = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             this.gbTratamento.SuspendLayout();
+            this.gbHorário.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbCliente.SuspendLayout();
-            this.gbHorário.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bgVisualizacao.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,7 +101,7 @@
             this.dtgClientes.Size = new System.Drawing.Size(315, 108);
             this.dtgClientes.TabIndex = 3;
             this.ttHelp.SetToolTip(this.dtgClientes, "Duplo clique para selecionar o cliente.");
-            this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellDoubleClick);
+            this.dtgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellClick);
             // 
             // cbMedicos
             // 
@@ -166,89 +166,42 @@
             this.gbTratamento.TabStop = false;
             this.gbTratamento.Text = "Tratamento";
             // 
-            // btnCadastrarCli
+            // checkPago
             // 
-            this.btnCadastrarCli.Location = new System.Drawing.Point(108, 192);
-            this.btnCadastrarCli.Name = "btnCadastrarCli";
-            this.btnCadastrarCli.Size = new System.Drawing.Size(110, 23);
-            this.btnCadastrarCli.TabIndex = 4;
-            this.btnCadastrarCli.Text = "Cadastrar Novo";
-            this.btnCadastrarCli.UseVisualStyleBackColor = true;
-            this.btnCadastrarCli.Click += new System.EventHandler(this.btnCadastrarCli_Click);
+            this.checkPago.AutoSize = true;
+            this.checkPago.Location = new System.Drawing.Point(194, 145);
+            this.checkPago.Name = "checkPago";
+            this.checkPago.Size = new System.Drawing.Size(130, 20);
+            this.checkPago.TabIndex = 14;
+            this.checkPago.Text = "Pago previamente";
+            this.checkPago.UseVisualStyleBackColor = true;
             // 
-            // txtbNomeCli
+            // mtbQtdeSessoes
             // 
-            this.txtbNomeCli.Location = new System.Drawing.Point(55, 35);
-            this.txtbNomeCli.Name = "txtbNomeCli";
-            this.txtbNomeCli.Size = new System.Drawing.Size(233, 21);
-            this.txtbNomeCli.TabIndex = 1;
+            this.mtbQtdeSessoes.Location = new System.Drawing.Point(148, 117);
+            this.mtbQtdeSessoes.Mask = "00";
+            this.mtbQtdeSessoes.Name = "mtbQtdeSessoes";
+            this.mtbQtdeSessoes.Size = new System.Drawing.Size(22, 21);
+            this.mtbQtdeSessoes.TabIndex = 13;
+            this.mtbQtdeSessoes.Leave += new System.EventHandler(this.mtbQtdeSessoes_Leave);
             // 
-            // lblNomePesq
+            // dtpData
             // 
-            this.lblNomePesq.AutoSize = true;
-            this.lblNomePesq.Location = new System.Drawing.Point(6, 38);
-            this.lblNomePesq.Name = "lblNomePesq";
-            this.lblNomePesq.Size = new System.Drawing.Size(43, 16);
-            this.lblNomePesq.TabIndex = 0;
-            this.lblNomePesq.Text = "Nome:";
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpData.Location = new System.Drawing.Point(48, 145);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(96, 21);
+            this.dtpData.TabIndex = 12;
+            this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
-            // tableLayoutPanel1
+            // label2
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.gbCliente, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbTratamento, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 258);
-            this.tableLayoutPanel1.TabIndex = 3;
-            // 
-            // gbCliente
-            // 
-            this.gbCliente.Controls.Add(this.btnCadastrarCli);
-            this.gbCliente.Controls.Add(this.dtgClientes);
-            this.gbCliente.Controls.Add(this.btnPesquisar);
-            this.gbCliente.Controls.Add(this.txtbNomeCli);
-            this.gbCliente.Controls.Add(this.lblNomePesq);
-            this.gbCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCliente.Location = new System.Drawing.Point(3, 3);
-            this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(330, 252);
-            this.gbCliente.TabIndex = 0;
-            this.gbCliente.TabStop = false;
-            this.gbCliente.Text = "Cliente";
-            // 
-            // lblSelecData
-            // 
-            this.lblSelecData.AutoSize = true;
-            this.lblSelecData.Location = new System.Drawing.Point(6, 90);
-            this.lblSelecData.Name = "lblSelecData";
-            this.lblSelecData.Size = new System.Drawing.Size(116, 16);
-            this.lblSelecData.TabIndex = 0;
-            this.lblSelecData.Text = "Tipo de tratamento:";
-            // 
-            // cbTipoDeTratamento
-            // 
-            this.cbTipoDeTratamento.FormattingEnabled = true;
-            this.cbTipoDeTratamento.Location = new System.Drawing.Point(124, 86);
-            this.cbTipoDeTratamento.Name = "cbTipoDeTratamento";
-            this.cbTipoDeTratamento.Size = new System.Drawing.Size(200, 24);
-            this.cbTipoDeTratamento.TabIndex = 7;
-            this.cbTipoDeTratamento.SelectedIndexChanged += new System.EventHandler(this.cbTipoDeTratamento_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Quantidade de sessões:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Data:";
             // 
             // gbHorário
             // 
@@ -320,6 +273,90 @@
             this.rdbManha.UseVisualStyleBackColor = true;
             this.rdbManha.CheckedChanged += new System.EventHandler(this.rdbManha_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Quantidade de sessões:";
+            // 
+            // cbTipoDeTratamento
+            // 
+            this.cbTipoDeTratamento.FormattingEnabled = true;
+            this.cbTipoDeTratamento.Location = new System.Drawing.Point(124, 86);
+            this.cbTipoDeTratamento.Name = "cbTipoDeTratamento";
+            this.cbTipoDeTratamento.Size = new System.Drawing.Size(200, 24);
+            this.cbTipoDeTratamento.TabIndex = 7;
+            this.cbTipoDeTratamento.SelectedIndexChanged += new System.EventHandler(this.cbTipoDeTratamento_SelectedIndexChanged);
+            // 
+            // lblSelecData
+            // 
+            this.lblSelecData.AutoSize = true;
+            this.lblSelecData.Location = new System.Drawing.Point(6, 90);
+            this.lblSelecData.Name = "lblSelecData";
+            this.lblSelecData.Size = new System.Drawing.Size(116, 16);
+            this.lblSelecData.TabIndex = 0;
+            this.lblSelecData.Text = "Tipo de tratamento:";
+            // 
+            // btnCadastrarCli
+            // 
+            this.btnCadastrarCli.Location = new System.Drawing.Point(108, 192);
+            this.btnCadastrarCli.Name = "btnCadastrarCli";
+            this.btnCadastrarCli.Size = new System.Drawing.Size(110, 23);
+            this.btnCadastrarCli.TabIndex = 4;
+            this.btnCadastrarCli.Text = "Cadastrar Novo";
+            this.btnCadastrarCli.UseVisualStyleBackColor = true;
+            this.btnCadastrarCli.Click += new System.EventHandler(this.btnCadastrarCli_Click);
+            // 
+            // txtbNomeCli
+            // 
+            this.txtbNomeCli.Location = new System.Drawing.Point(55, 35);
+            this.txtbNomeCli.Name = "txtbNomeCli";
+            this.txtbNomeCli.Size = new System.Drawing.Size(233, 21);
+            this.txtbNomeCli.TabIndex = 1;
+            // 
+            // lblNomePesq
+            // 
+            this.lblNomePesq.AutoSize = true;
+            this.lblNomePesq.Location = new System.Drawing.Point(6, 38);
+            this.lblNomePesq.Name = "lblNomePesq";
+            this.lblNomePesq.Size = new System.Drawing.Size(43, 16);
+            this.lblNomePesq.TabIndex = 0;
+            this.lblNomePesq.Text = "Nome:";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.gbCliente, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbTratamento, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 258);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // gbCliente
+            // 
+            this.gbCliente.Controls.Add(this.btnCadastrarCli);
+            this.gbCliente.Controls.Add(this.dtgClientes);
+            this.gbCliente.Controls.Add(this.btnPesquisar);
+            this.gbCliente.Controls.Add(this.txtbNomeCli);
+            this.gbCliente.Controls.Add(this.lblNomePesq);
+            this.gbCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCliente.Location = new System.Drawing.Point(3, 3);
+            this.gbCliente.Name = "gbCliente";
+            this.gbCliente.Size = new System.Drawing.Size(330, 252);
+            this.gbCliente.TabIndex = 0;
+            this.gbCliente.TabStop = false;
+            this.gbCliente.Text = "Cliente";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.bgVisualizacao);
@@ -348,6 +385,42 @@
             this.bgVisualizacao.TabIndex = 2;
             this.bgVisualizacao.TabStop = false;
             this.bgVisualizacao.Text = "Visualização";
+            // 
+            // lblValorPorSessao
+            // 
+            this.lblValorPorSessao.AutoSize = true;
+            this.lblValorPorSessao.Location = new System.Drawing.Point(319, 35);
+            this.lblValorPorSessao.Name = "lblValorPorSessao";
+            this.lblValorPorSessao.Size = new System.Drawing.Size(96, 16);
+            this.lblValorPorSessao.TabIndex = 8;
+            this.lblValorPorSessao.Text = "Valor por sessão:";
+            // 
+            // lblValortotal
+            // 
+            this.lblValortotal.AutoSize = true;
+            this.lblValortotal.Location = new System.Drawing.Point(349, 19);
+            this.lblValortotal.Name = "lblValortotal";
+            this.lblValortotal.Size = new System.Drawing.Size(66, 16);
+            this.lblValortotal.TabIndex = 7;
+            this.lblValortotal.Text = "Valor total:";
+            // 
+            // lblVisQtde
+            // 
+            this.lblVisQtde.AutoSize = true;
+            this.lblVisQtde.Location = new System.Drawing.Point(9, 115);
+            this.lblVisQtde.Name = "lblVisQtde";
+            this.lblVisQtde.Size = new System.Drawing.Size(138, 16);
+            this.lblVisQtde.TabIndex = 6;
+            this.lblVisQtde.Text = "Quantidade de sessôes:";
+            // 
+            // lblVisTipo
+            // 
+            this.lblVisTipo.AutoSize = true;
+            this.lblVisTipo.Location = new System.Drawing.Point(9, 51);
+            this.lblVisTipo.Name = "lblVisTipo";
+            this.lblVisTipo.Size = new System.Drawing.Size(116, 16);
+            this.lblVisTipo.TabIndex = 5;
+            this.lblVisTipo.Text = "Tipo de tratamento:";
             // 
             // lblVisMedic
             // 
@@ -414,79 +487,6 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Data:";
-            // 
-            // dtpData
-            // 
-            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(48, 145);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(96, 21);
-            this.dtpData.TabIndex = 12;
-            this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
-            // 
-            // lblVisTipo
-            // 
-            this.lblVisTipo.AutoSize = true;
-            this.lblVisTipo.Location = new System.Drawing.Point(9, 51);
-            this.lblVisTipo.Name = "lblVisTipo";
-            this.lblVisTipo.Size = new System.Drawing.Size(116, 16);
-            this.lblVisTipo.TabIndex = 5;
-            this.lblVisTipo.Text = "Tipo de tratamento:";
-            // 
-            // lblVisQtde
-            // 
-            this.lblVisQtde.AutoSize = true;
-            this.lblVisQtde.Location = new System.Drawing.Point(9, 115);
-            this.lblVisQtde.Name = "lblVisQtde";
-            this.lblVisQtde.Size = new System.Drawing.Size(138, 16);
-            this.lblVisQtde.TabIndex = 6;
-            this.lblVisQtde.Text = "Quantidade de sessôes:";
-            // 
-            // mtbQtdeSessoes
-            // 
-            this.mtbQtdeSessoes.Location = new System.Drawing.Point(148, 117);
-            this.mtbQtdeSessoes.Mask = "00";
-            this.mtbQtdeSessoes.Name = "mtbQtdeSessoes";
-            this.mtbQtdeSessoes.Size = new System.Drawing.Size(22, 21);
-            this.mtbQtdeSessoes.TabIndex = 13;
-            this.mtbQtdeSessoes.Leave += new System.EventHandler(this.mtbQtdeSessoes_Leave);
-            // 
-            // lblValortotal
-            // 
-            this.lblValortotal.AutoSize = true;
-            this.lblValortotal.Location = new System.Drawing.Point(349, 19);
-            this.lblValortotal.Name = "lblValortotal";
-            this.lblValortotal.Size = new System.Drawing.Size(66, 16);
-            this.lblValortotal.TabIndex = 7;
-            this.lblValortotal.Text = "Valor total:";
-            // 
-            // lblValorPorSessao
-            // 
-            this.lblValorPorSessao.AutoSize = true;
-            this.lblValorPorSessao.Location = new System.Drawing.Point(319, 35);
-            this.lblValorPorSessao.Name = "lblValorPorSessao";
-            this.lblValorPorSessao.Size = new System.Drawing.Size(96, 16);
-            this.lblValorPorSessao.TabIndex = 8;
-            this.lblValorPorSessao.Text = "Valor por sessão:";
-            // 
-            // checkPago
-            // 
-            this.checkPago.AutoSize = true;
-            this.checkPago.Location = new System.Drawing.Point(194, 145);
-            this.checkPago.Name = "checkPago";
-            this.checkPago.Size = new System.Drawing.Size(130, 20);
-            this.checkPago.TabIndex = 14;
-            this.checkPago.Text = "Pago previamente";
-            this.checkPago.UseVisualStyleBackColor = true;
-            // 
             // userControlAgendarTratamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,11 +500,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
             this.gbTratamento.ResumeLayout(false);
             this.gbTratamento.PerformLayout();
+            this.gbHorário.ResumeLayout(false);
+            this.gbHorário.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
-            this.gbHorário.ResumeLayout(false);
-            this.gbHorário.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.bgVisualizacao.ResumeLayout(false);
             this.bgVisualizacao.PerformLayout();

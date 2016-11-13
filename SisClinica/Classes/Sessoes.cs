@@ -89,6 +89,50 @@ namespace SisClinica.Classes
             return new SessoesDAO().PesquisarPorHorarioInicial(data);
         }
 
+        public DataTable DataTableBuscaPorMedico(Medico objMedico)
+        {
+            IList<Sessoes> lst = new SessoesDAO().Pesquisar(objMedico);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Médico Responsável", typeof(string));
+            dt.Columns.Add("Cliente", typeof(string));
+            dt.Columns.Add("Tipo de sessão", typeof(string));
+            dt.Columns.Add("Data da Sessão", typeof(DateTime));
+            dt.Columns.Add("Horario de início", typeof(TimeSpan));
+            dt.Columns.Add("Horario de término", typeof(TimeSpan));
+            dt.Columns.Add("Situação", typeof(string));
+            dt.Columns.Add("id", typeof(int));
+
+            if (lst != null)
+            {
+                foreach (Sessoes objSessoes in lst)
+                {
+                    dt.Rows.Add(objSessoes.medicoResponsavel.nome, objSessoes.objCliente.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.id);
+                }
+            }
+            return dt;
+        }
+        public DataTable DataTableBuscaPorCliente(Cliente objCliente)
+        {
+            IList<Sessoes> lst = new SessoesDAO().Pesquisar(objCliente);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Cliente", typeof(string));
+            dt.Columns.Add("Médico Responsável", typeof(string));
+            dt.Columns.Add("Tipo de sessão", typeof(string));
+            dt.Columns.Add("Data da Sessão", typeof(DateTime));
+            dt.Columns.Add("Horario de início", typeof(TimeSpan));
+            dt.Columns.Add("Horario de término", typeof(TimeSpan));
+            dt.Columns.Add("Situação", typeof(string));
+            dt.Columns.Add("id", typeof(int));
+
+            if (lst!=null)
+            {
+                foreach (Sessoes objSessoes in lst)
+                {
+                    dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.id);
+                }                
+            }
+            return dt;
+        }
         public IList<Sessoes> BuscaPorCliente(Cliente objCliente)
         {
             return new SessoesDAO().Pesquisar(objCliente);
@@ -282,11 +326,12 @@ namespace SisClinica.Classes
             dt.Columns.Add("Data da Sessão", typeof(DateTime));
             dt.Columns.Add("Horario de início", typeof(TimeSpan));
             dt.Columns.Add("Horario de término", typeof(TimeSpan));
+            dt.Columns.Add("Situação", typeof(string));
             dt.Columns.Add("id", typeof(int));
 
             foreach (Sessoes objSessoes in lst)
             {
-                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.id);
+                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay,objSessoes.situacao, objSessoes.id);
             }
             return dt;
         }

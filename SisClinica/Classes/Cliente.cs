@@ -39,6 +39,10 @@ namespace SisClinica.Classes
             return new ClienteDAO().Pesquisar(cpf);
            
         }
+        public Cliente PesquisarPorResponsavel(Responsavel objResponsavel)
+        {
+            return new ClienteDAO().PesquisarPorResponsavel(objResponsavel);
+        }
 
         /// <summary>
         /// Encontra um objeto do tipo cliente.
@@ -67,7 +71,7 @@ namespace SisClinica.Classes
 
         public void Alterar()
         {
-
+            new ClienteDAO().Alterar(this);
         }
 
         /// <summary>

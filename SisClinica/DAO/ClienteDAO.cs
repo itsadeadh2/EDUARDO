@@ -83,7 +83,7 @@ namespace SisClinica.DAO
                 objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
                 objCliente.adicionalInfo = dr["adicionalInfo"].ToString();
                 objCliente.id = Convert.ToInt32(dr["id"]);
-                objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf"].ToString());
+                objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf_responsavel"].ToString());
             }
             else
             {
@@ -120,7 +120,40 @@ namespace SisClinica.DAO
                 objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
                 objCliente.adicionalInfo = dr["adicionalInfo"].ToString();
                 objCliente.id = Convert.ToInt32(dr["id"]);
-                objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf"].ToString());
+                objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf_responsavel"].ToString());
+            }
+            else
+            {
+                objCliente = null;
+            }
+            return objCliente;
+        }
+
+        public Cliente PesquisarPorResponsavel(Responsavel objResponsavel)
+        {
+            Cliente objCliente = new Cliente();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Cliente WHERE cpf_responsavel LIKE @cpf";
+            comando.Parameters.AddWithValue("@cpf", objResponsavel.cpf);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                objCliente.nome = dr["nome"].ToString();
+                objCliente.cpf = dr["cpf"].ToString();
+                objCliente.endereco = dr["endereco"].ToString();
+                objCliente.cidade = dr["cidade"].ToString();
+                objCliente.estado = dr["estado"].ToString();
+                objCliente.email = dr["email"].ToString();
+                objCliente.telefone = dr["telefone"].ToString();
+                objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
+                objCliente.adicionalInfo = dr["adicionalInfo"].ToString();
+                objCliente.id = Convert.ToInt32(dr["id"]);
+                objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf_responsavel"].ToString());
             }
             else
             {
@@ -194,8 +227,7 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "UPDATE Cliente SET cpf=@cpf email=@email endereco=@endereco cidade=@cidade, estado=@estado nome=@nome telefone=@telefone dataNascimento=@dtNasc adicionalInfo = @ainfo cpf_responsavel = @cpfresp";
-            comando.Parameters.AddWithValue("@cpf", objCliente.cpf);
+            comando.CommandText = "UPDATE Cliente SET email=@email, endereco=@endereco, cidade=@cidade, estado=@estado, nome=@nome, telefone=@telefone, dataNascimento=@dtNasc, adicionalInfo = @ainfo where id=@id";
             comando.Parameters.AddWithValue("@email", objCliente.email);
             comando.Parameters.AddWithValue("@endereco", objCliente.endereco);
             comando.Parameters.AddWithValue("@cidade", objCliente.cidade);
@@ -204,8 +236,7 @@ namespace SisClinica.DAO
             comando.Parameters.AddWithValue("@telefone", objCliente.telefone);
             comando.Parameters.AddWithValue("@dtNasc", objCliente.dataNascimento);
             comando.Parameters.AddWithValue("@ainfo", objCliente.adicionalInfo);
-            comando.Parameters.AddWithValue("@cpfresp", objCliente.objResponsavel.cpf);
-
+            comando.Parameters.AddWithValue("@id", objCliente.id);
             Conexao con = new Conexao();
             con.ExecutarCru(comando);
         }

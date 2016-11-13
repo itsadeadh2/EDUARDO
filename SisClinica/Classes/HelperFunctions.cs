@@ -37,6 +37,19 @@ namespace SisClinica.Forms
             uc.BackColor = Color.FromArgb(164, 217, 212);
             uc.Width = 672;
             uc.Height = 409;
-        }     
+        }
+        public static bool ChecaNome(string nome)
+        {
+            bool value;
+            if (nome.Length<3)
+            {
+                value = true;
+            }
+            else
+            {
+                value = false;
+            }
+            return value;
+        }
     }
 }

@@ -16,7 +16,6 @@ namespace SisClinica.Forms
         public userControlPesquisaMedico()
         {
             InitializeComponent();
-            HelperFunctions.SetButtons(btnAlter);
             HelperFunctions.SetButtons(btnFullInfo);
             HelperFunctions.SetButtons(btnPesq);
             HelperFunctions.SetButtons(btnDelete);
@@ -32,11 +31,33 @@ namespace SisClinica.Forms
         private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
-            MessageBox.Show(objMedico.nome);
-            btnAlter.Enabled = true;
             btnFullInfo.Enabled = true;
             btnPesq.Enabled = true;
             btnDelete.Enabled = true;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (new Sessoes().BuscaPorMedico(objMedico)!=null)
+            {
+                DialogResult resultado = MessageBox.Show("O médico possui sessões ativas, gostaria de excluí-lo mesmo assim?", "Aviso", MessageBoxButtons.YesNo);
+                if (resultado==DialogResult.Yes)
+                {
+                    objMedico.Excluir();
+                }                
+            }
+            else
+            {
+                objMedico.Excluir();
+            }
+        }
+
+        private void btnFullInfo_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            userControlMedicoInfo medicoInfo = new userControlMedicoInfo().Preencher(objMedico);
+            Controls.Add(medicoInfo);
+            medicoInfo.Show();
         }
     }
 }

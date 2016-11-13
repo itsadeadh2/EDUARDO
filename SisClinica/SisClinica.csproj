@@ -211,11 +211,35 @@
     <Compile Include="Forms\userControlAgendarTratamento.Designer.cs">
       <DependentUpon>userControlAgendarTratamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlAlterarCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlAlterarCliente.Designer.cs">
+      <DependentUpon>userControlAlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlClienteInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlClienteInfo.Designer.cs">
+      <DependentUpon>userControlClienteInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlHomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\userControlHomePage.Designer.cs">
       <DependentUpon>userControlHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlMedicoInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlMedicoInfo.Designer.cs">
+      <DependentUpon>userControlMedicoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlResponsavelInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlResponsavelInfo.Designer.cs">
+      <DependentUpon>userControlResponsavelInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\userControlMenuAlterar.cs">
       <SubType>UserControl</SubType>
@@ -333,8 +357,20 @@
     <EmbeddedResource Include="Forms\userControlAgendarTratamento.resx">
       <DependentUpon>userControlAgendarTratamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlAlterarCliente.resx">
+      <DependentUpon>userControlAlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlClienteInfo.resx">
+      <DependentUpon>userControlClienteInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlHomePage.resx">
       <DependentUpon>userControlHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlMedicoInfo.resx">
+      <DependentUpon>userControlMedicoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlResponsavelInfo.resx">
+      <DependentUpon>userControlResponsavelInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlMenuAlterar.resx">
       <DependentUpon>userControlMenuAlterar.cs</DependentUpon>

@@ -162,9 +162,8 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "UPDATE MEDICO set cpf=@cpf, email=@email, endereco=@endereco, cidade=@cidade. estado=@estado, nome=@nome, telefone=@telefone";
+            comando.CommandText = "UPDATE MEDICO set email=@email, endereco=@endereco, cidade=@cidade, estado=@estado, nome=@nome, telefone=@telefone";
             comando.Parameters.AddWithValue("@email", objMedico.email);
-            comando.Parameters.AddWithValue("@cpf", objMedico.cpf);
             comando.Parameters.AddWithValue("@endereco", objMedico.endereco);
             comando.Parameters.AddWithValue("@cidade", objMedico.cidade);
             comando.Parameters.AddWithValue("@estado", objMedico.estado);
@@ -215,6 +214,16 @@ namespace SisClinica.DAO
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
             comando.CommandText = "DELETE FROM Medico where id=@id";
+            comando.Parameters.AddWithValue("@id", objMedico.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
+        public void ExcluirComSessoes(Medico objMedico)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "DELETE FROM sessoes where id_medico_responsavel=@id DELETE FROM Medico where id=@id";
             comando.Parameters.AddWithValue("@id", objMedico.id);
 
             Conexao con = new Conexao();

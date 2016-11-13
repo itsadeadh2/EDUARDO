@@ -133,7 +133,7 @@ namespace SisClinica.Forms
             objCliente.cidade = cbCidade.Text;
             objCliente.estado = cbEstado.Text;
             objCliente.telefone = mtbTelefone.Text;
-            objCliente.adicionalInfo = rtbAdicionalInfo.Text;
+            objCliente.adicionalInfo = rtbAdicionalInfo.Text;            
             if (HelperFunctions.ChecaMenorDeIdade(objCliente.dataNascimento))
             {
                 if (foiPesquisado)
@@ -144,7 +144,7 @@ namespace SisClinica.Forms
                 {
                     objResponsavel = new Responsavel();
                     objResponsavel.nome = txtbNomeResp.Text;
-                    objResponsavel.cpf = mtbCpf.Text;
+                    objResponsavel.cpf = mtbCpfResp.Text;
                     objResponsavel.dataNascimento = dtpDataNascResp.Value;
                     objResponsavel.telefone = mtbTelefoneResp.Text;
                     objResponsavel.email = txtbEmailResp.Text;

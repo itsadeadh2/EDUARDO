@@ -42,9 +42,6 @@
             this.cbMedico = new System.Windows.Forms.CheckBox();
             this.cbCliente = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAlter = new System.Windows.Forms.Button();
-            this.btnFullInfo = new System.Windows.Forms.Button();
             this.dtgSessoes = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbDados.SuspendLayout();
@@ -206,9 +203,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnAlter);
-            this.panel1.Controls.Add(this.btnFullInfo);
             this.panel1.Controls.Add(this.dtgSessoes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -217,39 +211,6 @@
             this.panel1.Size = new System.Drawing.Size(672, 223);
             this.panel1.TabIndex = 1;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(463, 113);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 107);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnAlter
-            // 
-            this.btnAlter.Enabled = false;
-            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
-            this.btnAlter.Location = new System.Drawing.Point(81, 113);
-            this.btnAlter.Name = "btnAlter";
-            this.btnAlter.Size = new System.Drawing.Size(140, 107);
-            this.btnAlter.TabIndex = 6;
-            this.btnAlter.UseVisualStyleBackColor = true;
-            // 
-            // btnFullInfo
-            // 
-            this.btnFullInfo.Enabled = false;
-            this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
-            this.btnFullInfo.Location = new System.Drawing.Point(272, 113);
-            this.btnFullInfo.Name = "btnFullInfo";
-            this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
-            this.btnFullInfo.TabIndex = 5;
-            this.btnFullInfo.UseVisualStyleBackColor = true;
-            // 
             // dtgSessoes
             // 
             this.dtgSessoes.AllowUserToAddRows = false;
@@ -257,11 +218,11 @@
             this.dtgSessoes.AllowUserToOrderColumns = true;
             this.dtgSessoes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgSessoes.Location = new System.Drawing.Point(0, 0);
             this.dtgSessoes.Name = "dtgSessoes";
             this.dtgSessoes.ReadOnly = true;
-            this.dtgSessoes.Size = new System.Drawing.Size(672, 107);
+            this.dtgSessoes.Size = new System.Drawing.Size(672, 223);
             this.dtgSessoes.TabIndex = 0;
             this.dtgSessoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellClick);
             // 
@@ -302,8 +263,5 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgSessoes;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAlter;
-        private System.Windows.Forms.Button btnFullInfo;
     }
 }

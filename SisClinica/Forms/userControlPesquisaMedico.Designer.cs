@@ -37,7 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAlter = new System.Windows.Forms.Button();
             this.btnFullInfo = new System.Windows.Forms.Button();
             this.gbDadosMedico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultados)).BeginInit();
@@ -119,7 +118,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnAlter);
             this.panel1.Controls.Add(this.btnFullInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 299);
@@ -132,33 +130,24 @@
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(457, 2);
+            this.btnDelete.Location = new System.Drawing.Point(362, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 107);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnAlter
-            // 
-            this.btnAlter.Enabled = false;
-            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
-            this.btnAlter.Location = new System.Drawing.Point(75, 2);
-            this.btnAlter.Name = "btnAlter";
-            this.btnAlter.Size = new System.Drawing.Size(140, 107);
-            this.btnAlter.TabIndex = 3;
-            this.btnAlter.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnFullInfo
             // 
             this.btnFullInfo.Enabled = false;
             this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
-            this.btnFullInfo.Location = new System.Drawing.Point(266, 2);
+            this.btnFullInfo.Location = new System.Drawing.Point(171, 2);
             this.btnFullInfo.Name = "btnFullInfo";
             this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
             this.btnFullInfo.TabIndex = 2;
             this.btnFullInfo.UseVisualStyleBackColor = true;
+            this.btnFullInfo.Click += new System.EventHandler(this.btnFullInfo_Click);
             // 
             // userControlPesquisaMedico
             // 
@@ -188,7 +177,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAlter;
         private System.Windows.Forms.Button btnFullInfo;
     }
 }

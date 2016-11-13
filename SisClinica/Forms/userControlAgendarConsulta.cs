@@ -52,8 +52,8 @@ namespace SisClinica.Forms
         private Medico objMedico;
         private string turno;
 
-
-        private void dtgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //- Eventos
+        private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
             lblVisCli.Text = lblVisCli.Text + " " + objCliente.nome;
@@ -107,6 +107,7 @@ namespace SisClinica.Forms
                 objSessao.tipoDeSessao = "Consulta";
                 objSessao.qtdeSessoes = 1;
                 objSessao.dataSessao = Convert.ToDateTime(cbHorarioInicial.SelectedValue);
+                objSessao.sessaoCompleta = false;
 
                 if (cbHorarioInicial.SelectedValue==null)
                 {
@@ -139,7 +140,6 @@ namespace SisClinica.Forms
         }
         
         //- metodos
-
         private void ChecaTurno()
         {
             if (rdbManha.Checked)
@@ -205,6 +205,6 @@ namespace SisClinica.Forms
             UserControl menuAnt = new userControlMenuNovo();
             Controls.Add(menuAnt);
             menuAnt.Show();
-        }
+        }        
     }
 }
