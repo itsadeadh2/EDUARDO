@@ -79,6 +79,12 @@ namespace SisClinica.Classes
         {
             return new SessoesDAO().PesquisarPorData(data.Date);
         }
+
+        public Sessoes BuscaPorData(DateTime data, Medico objMedico, Consultorio objConsultorio, Sessoes sessaoAIgnorar)
+        {
+            return new SessoesDAO().Pesquisar(data, objMedico, objConsultorio, sessaoAIgnorar);
+        }
+
         public Sessoes BuscaPorId(int id)
         {
             return new SessoesDAO().Pesquisar(id);
@@ -440,6 +446,82 @@ namespace SisClinica.Classes
             return dt;
         }
 
+        public DataTable GerarListaDeHorariosIniciais(DateTime data, Medico objMedico, Consultorio objConsultorio, string turno, Sessoes sessaoAIgnorar)
+        {
+            DateTime hi = data.Date;
+            DateTime ha = data.Date;
+            DateTime hr = data.Date;
+            DateTime fe = data.Date;
+            //hi = Convert.ToDateTime("08:00");
+            //ha = Convert.ToDateTime("11:30");
+            //hr = Convert.ToDateTime("14:00");
+            //fe = Convert.ToDateTime("18:00");
+            hi = hi.AddHours(8);
+            ha = ha.AddHours(11);
+            ha = ha.AddMinutes(30);
+            hr = hr.AddHours(14);
+            fe = fe.AddHours(18);
+            IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeInicio(hi, ha, hr, fe, data.Date, objMedico, objConsultorio, turno, sessaoAIgnorar);
+
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Data", typeof(DateTime));
+            dt.Columns.Add("Hora", typeof(string));
+            foreach (DateTime hora in listaDeHorarios)
+            {
+                if (turno == "Manhã")
+                {
+                    if (hora == ha)
+                    {
+
+                    }
+                    else
+                    {
+                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                    }
+                }
+                else
+                {
+                    if (hora == fe)
+                    {
+
+                    }
+                    else
+                    {
+                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                    }
+                }
+
+            }
+            return dt;
+        }
+        public DataTable GerarListaDeHorariosFinais(Medico objMedico, Consultorio objConsultorio, DateTime horarioInicialSelecionado, string turno, Sessoes sessaoAIgnorar)
+        {
+            DateTime ha = horarioInicialSelecionado.Date;
+            DateTime hr = horarioInicialSelecionado.Date;
+            DateTime fe = horarioInicialSelecionado.Date;
+            //hi = Convert.ToDateTime("08:00");
+            ha = Convert.ToDateTime("11:30");
+            hr = Convert.ToDateTime("14:00");
+            fe = Convert.ToDateTime("18:00");
+
+            //ha = ha.AddHours(11);
+            //ha = ha.AddMinutes(30);
+            //hr = hr.AddHours(14);
+            //fe = fe.AddHours(18);
+            IList<DateTime> listaDeHorarios = new Sessoes().GerarHorariosDeTermino(horarioInicialSelecionado, ha, hr, fe, objMedico, objConsultorio, turno,sessaoAIgnorar);
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Data", typeof(DateTime));
+            dt.Columns.Add("Hora", typeof(string));
+            foreach (DateTime hora in listaDeHorarios)
+            {
+                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+            }
+
+            return dt;
+        }
+
         /// <summary>
         /// Implementa o algoritmo para geração dos horários disponíveis.
         /// </summary>
@@ -548,9 +630,114 @@ namespace SisClinica.Classes
             return horariosRetornar;
         }
 
+        private IList<DateTime> GerarHorariosDeInicio(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno, Sessoes sessaoAIgnorar)
+        {
+            IList<DateTime> listaDeHorarios = new List<DateTime>();
+            IList<DateTime> horariosRetornar = new List<DateTime>();
+            DateTime dataComparacao = data.Date;
+            int limite = 23;
+            if (turno == "Tarde")
+            {
+                dataComparacao = horarioDeReentrada.Subtract(Convert.ToDateTime("00:30").TimeOfDay);
+            }
+            for (int i = 0; i < limite; i++)
+            {
+                dataComparacao = dataComparacao.AddMinutes(30);
+                if (dataComparacao <= fimDoExpediente && dataComparacao >= horarioDeReentrada)
+                {
+                    listaDeHorarios.Add(dataComparacao);
+                }
+                else if (dataComparacao <= horarioDeAlmoco && dataComparacao >= horarioInicial)
+                {
+                    listaDeHorarios.Add(dataComparacao);
+                }
+            }
+            DateTime horaFim = data.Date;
+            foreach (DateTime dt in listaDeHorarios)
+            {
+
+                Sessoes objSessaoComparar = new Sessoes().BuscaPorData(dt, objMedico, objConsultorio, sessaoAIgnorar);
+                if (objSessaoComparar == null)
+                {
+                    if (dt >= horaFim)
+                    {
+                        horariosRetornar.Add(dt);
+                    }
+                }
+                else if (objSessaoComparar.horaInicio > dt)
+                {
+                    horariosRetornar.Add(dt);
+                    horaFim = objSessaoComparar.horaFim;
+                }
+                else if (objSessaoComparar.horaFim <= dt)
+                {
+                    horariosRetornar.Add(dt);
+                    horaFim = objSessaoComparar.horaFim;
+                }
+                else if (objSessaoComparar != null)
+                {
+                    horaFim = objSessaoComparar.horaFim;
+                }
+            }
+            return horariosRetornar;
+        }
+        private IList<DateTime> GerarHorariosDeTermino(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, Medico objMedico, Consultorio objConsultorio, string turno, Sessoes sessaoAIgnorar)
+        {
+            IList<DateTime> listaDeHorarios = new List<DateTime>();
+            IList<DateTime> horariosRetornar = new List<DateTime>();
+            DateTime dataComparacao = horarioInicial;
+            int limite = 23;
+            if (turno != "Tarde")
+            {
+                fimDoExpediente = horarioDeAlmoco;
+            }
+            for (int i = 0; i < limite; i++)
+            {
+                dataComparacao = dataComparacao.AddMinutes(30);
+                if (dataComparacao.TimeOfDay <= fimDoExpediente.TimeOfDay && dataComparacao.TimeOfDay >= horarioDeReentrada.TimeOfDay)
+                {
+                    listaDeHorarios.Add(dataComparacao);
+                }
+                else if (dataComparacao.TimeOfDay <= horarioDeAlmoco.TimeOfDay && dataComparacao.TimeOfDay >= horarioInicial.TimeOfDay)
+                {
+                    listaDeHorarios.Add(dataComparacao);
+                }
+            }
+            DateTime horaFim = horarioInicial.Date;
+            bool stopAdding = false;
+            foreach (DateTime dt in listaDeHorarios)
+            {
+                Sessoes objSessaoComparar = new Sessoes().BuscaPorData(dt, objMedico, objConsultorio,sessaoAIgnorar);
+                if (objSessaoComparar == null && stopAdding == false)
+                {
+                    if (dt >= horaFim)
+                    {
+                        horariosRetornar.Add(dt);
+                    }
+                }
+                else if (objSessaoComparar != null)
+                {
+                    if (dt <= objSessaoComparar.horaInicio)
+                    {
+                        horariosRetornar.Add(dt);
+                        stopAdding = true;
+                    }
+                }
+            }
+            return horariosRetornar;
+        }
+
+        public void AlterarSessao()
+        {
+            if (tipoDeSessao=="Consulta")
+            {
+                new SessoesDAO().AlterarConsulta(this);
+            }
+        }
+
         public void Excluir()
         {
-
+            new SessoesDAO().Deletar(this);
         }
     }
 }

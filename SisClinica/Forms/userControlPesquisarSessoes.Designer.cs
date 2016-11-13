@@ -218,13 +218,14 @@
             this.dtgSessoes.AllowUserToOrderColumns = true;
             this.dtgSessoes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgSessoes.Location = new System.Drawing.Point(0, 0);
             this.dtgSessoes.Name = "dtgSessoes";
             this.dtgSessoes.ReadOnly = true;
             this.dtgSessoes.Size = new System.Drawing.Size(672, 223);
             this.dtgSessoes.TabIndex = 0;
             this.dtgSessoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellClick);
+            this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
             // 
             // userControlPesquisarSessoes
             // 

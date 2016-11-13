@@ -52,7 +52,6 @@ namespace SisClinica.DAO
             Conexao con = new Conexao();
             con.ExecutarCru(comando);
         }
-
         public IList<Sessoes> PesquisarPorHorarioInicial(DateTime data)
         {
             IList<Sessoes> listadeSessoes = new List<Sessoes>();
@@ -204,7 +203,62 @@ namespace SisClinica.DAO
             }
             return objSessao;
         }
+        public Sessoes Pesquisar(DateTime data, Medico objMedico, Consultorio objConsultorio, Sessoes sessaoAIgnorar)
+        {
+            Sessoes objSessao = new Sessoes();
 
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Sessoes where horaInicio = @data and id_medico_responsavel = @id and id_consultorio=@idcons";
+            comando.Parameters.AddWithValue("@data", data);
+            comando.Parameters.AddWithValue("@id", objMedico.id);
+            comando.Parameters.AddWithValue("@idcons", objConsultorio.id);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                if (sessaoAIgnorar.id==(int)dr["id"])
+                {
+
+                }
+                else
+                {
+                    objSessao.medicoResponsavel = new MedicoDAO().Pesquisar(Convert.ToInt32(dr["id_medico_responsavel"]));
+                    objSessao.objCliente = new ClienteDAO().Pesquisar(Convert.ToInt32(dr["id_cliente"]));
+                    objSessao.objConsultorio = new ConsultorioDAO().Pesquisar(Convert.ToInt32(dr["id_consultorio"]));
+                    objSessao.dataSessao = Convert.ToDateTime(dr["dataSessao"]);
+                    objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
+                    objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
+                    objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    if (objSessao.tipoDeSessao == "Tratamento")
+                    {
+                        objSessao.tipoDeTratamento = new TipoDeTratamento().Pesquisar(Convert.ToInt32(dr["id_tipodetratamento"]));
+                        objSessao.quitada = Convert.ToBoolean(dr["sessaoQuitada"]);
+                        objSessao.valorSessao = Convert.ToDecimal(dr["valorsessao"]);
+                        objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
+                        objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
+                    }
+                    objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
+                    objSessao.id = (int)dr["id"];
+                    if (objSessao.sessaoCompleta == true)
+                    {
+                        objSessao.situacao = "Finalizada";
+                    }
+                    else
+                    {
+                        objSessao.situacao = "Agendada";
+                    }
+                }                
+            }
+            else
+            {
+                objSessao = null;
+            }
+            return objSessao;
+        }
         public IList<Sessoes> Pesquisar(Medico objMedico)
         {
             IList<Sessoes> listaDeSessoes = new List<Sessoes>();
@@ -255,7 +309,6 @@ namespace SisClinica.DAO
             }
             return listaDeSessoes;
         }
-
         public Sessoes Pesquisar(int id)
         {
             Sessoes objSessao = new Sessoes();
@@ -302,7 +355,6 @@ namespace SisClinica.DAO
             }
             return objSessao;
         }
-
         public IList<Sessoes> Pesquisar(Cliente objCliente)
         {
             IList<Sessoes> listaDeSessoes = new List<Sessoes>();
@@ -353,7 +405,6 @@ namespace SisClinica.DAO
             }
             return listaDeSessoes;
         }
-
         public IList<Sessoes> Pesquisar(Consultorio objConsultorio)
         {
             IList<Sessoes> listaDeSessoes = new List<Sessoes>();
@@ -400,6 +451,31 @@ namespace SisClinica.DAO
                 listaDeSessoes = null;
             }
             return listaDeSessoes;
+        }
+        public void AlterarConsulta(Sessoes objSessao)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE sessoes SET id_cliente=@idcli, dataSessao=@data, id_medico_responsavel=@idmedico, id_consultorio=@idconsultorio, horaInicio=@horainicio, horaFim=@horafim where id=@id";
+            comando.Parameters.AddWithValue("@idcli", objSessao.objCliente.id);
+            comando.Parameters.AddWithValue("@data",objSessao.dataSessao);
+            comando.Parameters.AddWithValue("@idmedico",objSessao.medicoResponsavel.id);
+            comando.Parameters.AddWithValue("@idconsultorio",objSessao.objConsultorio.id);
+            comando.Parameters.AddWithValue("@horainicio",objSessao.horaInicio);
+            comando.Parameters.AddWithValue("@horafim",objSessao.horaFim);
+            comando.Parameters.AddWithValue("@id", objSessao.id);
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
+        public void Deletar(Sessoes objSessao)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "DELETE FROM Sessoes where id=@id";
+            comando.Parameters.AddWithValue("@id", objSessao.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
         }
     }
 }
