@@ -176,6 +176,7 @@
             this.dtgSessoes.ReadOnly = true;
             this.dtgSessoes.Size = new System.Drawing.Size(672, 136);
             this.dtgSessoes.TabIndex = 25;
+            this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
             // 
             // label2
             // 

@@ -224,7 +224,6 @@
             this.dtgSessoes.ReadOnly = true;
             this.dtgSessoes.Size = new System.Drawing.Size(672, 223);
             this.dtgSessoes.TabIndex = 0;
-            this.dtgSessoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellClick);
             this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
             // 
             // userControlPesquisarSessoes

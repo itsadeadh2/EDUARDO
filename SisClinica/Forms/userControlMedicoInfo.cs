@@ -88,5 +88,20 @@ namespace SisClinica.Forms
             btnCancelar.Visible = false;
             btnAlterar.Enabled = true;
         }
+
+        private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)).tipoDeSessao == "Consulta")
+            {
+                Controls.Clear();
+                userControlAlterarConsulta alterCon = new userControlAlterarConsulta().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+                Controls.Add(alterCon);
+                alterCon.Show();
+            }
+            else
+            {
+
+            }
+        }
     }
 }

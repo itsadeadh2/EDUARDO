@@ -194,11 +194,13 @@
             this.dtgSessoes.AllowUserToDeleteRows = false;
             this.dtgSessoes.AllowUserToOrderColumns = true;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgSessoes.Location = new System.Drawing.Point(15, 278);
+            this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgSessoes.Location = new System.Drawing.Point(0, 281);
             this.dtgSessoes.Name = "dtgSessoes";
             this.dtgSessoes.ReadOnly = true;
-            this.dtgSessoes.Size = new System.Drawing.Size(639, 128);
+            this.dtgSessoes.Size = new System.Drawing.Size(672, 128);
             this.dtgSessoes.TabIndex = 13;
+            this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
             // 
             // label1
             // 

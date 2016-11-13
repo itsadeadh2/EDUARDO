@@ -130,21 +130,19 @@ namespace SisClinica.Forms
             DeterminaAtivacao();
         }
 
-        private void dtgSessoes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
-            if (objSessao!=null)
-            {
-                btnPesquisar.Enabled = true;
-            }
-        }
-
         private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Controls.Clear();
-            userControlAlterarConsulta alterCon = new userControlAlterarConsulta().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
-            Controls.Add(alterCon);
-            alterCon.Show();
+            if (new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)).tipoDeSessao=="Consulta")
+            {
+                Controls.Clear();
+                userControlAlterarConsulta alterCon = new userControlAlterarConsulta().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+                Controls.Add(alterCon);
+                alterCon.Show();
+            }
+            else
+            {
+
+            }            
         }
     }
 }
