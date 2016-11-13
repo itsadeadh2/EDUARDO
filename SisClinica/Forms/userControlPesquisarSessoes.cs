@@ -17,9 +17,6 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             HelperFunctions.SetButtons(btnPesquisar);
-            HelperFunctions.SetButtons(btnAlter);
-            HelperFunctions.SetButtons(btnDelete);
-            HelperFunctions.SetButtons(btnFullInfo);
         }
 
         private Sessoes objSessao;
@@ -138,9 +135,6 @@ namespace SisClinica.Forms
             objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
             if (objSessao!=null)
             {
-                btnAlter.Enabled = true;
-                btnDelete.Enabled = true;
-                btnFullInfo.Enabled = true;
                 btnPesquisar.Enabled = true;
             }
         }
