@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icone.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -103,6 +103,12 @@
     <Compile Include="Forms\userControlAgendarConsulta.Designer.cs">
       <DependentUpon>userControlAgendarConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlAgendarProximoTratamento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlAgendarProximoTratamento.Designer.cs">
+      <DependentUpon>userControlAgendarProximoTratamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlAgendarTratamento.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,17 +121,23 @@
     <Compile Include="Forms\userControlAlterarCliente.Designer.cs">
       <DependentUpon>userControlAlterarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\userControlAlterarConsulta.cs">
+    <Compile Include="Forms\userControlAlterarSessoes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\userControlAlterarConsulta.Designer.cs">
-      <DependentUpon>userControlAlterarConsulta.cs</DependentUpon>
+    <Compile Include="Forms\userControlAlterarSessoes.Designer.cs">
+      <DependentUpon>userControlAlterarSessoes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\userControlClienteInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\userControlClienteInfo.Designer.cs">
       <DependentUpon>userControlClienteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlConfirmarSessoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlConfirmarSessoes.Designer.cs">
+      <DependentUpon>userControlConfirmarSessoes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\userControlHomePage.cs">
       <SubType>UserControl</SubType>
@@ -144,12 +156,6 @@
     </Compile>
     <Compile Include="Forms\userControlResponsavelInfo.Designer.cs">
       <DependentUpon>userControlResponsavelInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\userControlMenuAlterar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\userControlMenuAlterar.Designer.cs">
-      <DependentUpon>userControlMenuAlterar.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\userControlMenuNovo.cs">
       <SubType>UserControl</SubType>
@@ -207,17 +213,23 @@
     <EmbeddedResource Include="Forms\userControlAgendarConsulta.resx">
       <DependentUpon>userControlAgendarConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlAgendarProximoTratamento.resx">
+      <DependentUpon>userControlAgendarProximoTratamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlAgendarTratamento.resx">
       <DependentUpon>userControlAgendarTratamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlAlterarCliente.resx">
       <DependentUpon>userControlAlterarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\userControlAlterarConsulta.resx">
-      <DependentUpon>userControlAlterarConsulta.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\userControlAlterarSessoes.resx">
+      <DependentUpon>userControlAlterarSessoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlClienteInfo.resx">
       <DependentUpon>userControlClienteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlConfirmarSessoes.resx">
+      <DependentUpon>userControlConfirmarSessoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlHomePage.resx">
       <DependentUpon>userControlHomePage.cs</DependentUpon>
@@ -227,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlResponsavelInfo.resx">
       <DependentUpon>userControlResponsavelInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\userControlMenuAlterar.resx">
-      <DependentUpon>userControlMenuAlterar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlMenuNovo.resx">
       <DependentUpon>userControlMenuNovo.cs</DependentUpon>
@@ -280,8 +289,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon.ico" />
     <Content Include="icone.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\btnMinimizar2.png" />
+    <None Include="Resources\btnClose2.png" />
+    <None Include="Resources\btnClose1.png" />
+    <None Include="Resources\btnClose.png" />
+    <None Include="Resources\btnConfirmar.png" />
+    <None Include="Resources\btnConfig1.png" />
+    <None Include="Resources\btnConfig.png" />
+    <None Include="Resources\btnConfigurar2.png" />
+    <None Include="Resources\btnConfigurar.png" />
     <None Include="Resources\btnDelete.png" />
     <None Include="Resources\btnPencil.png" />
     <None Include="Resources\btnFullInfo1.png" />

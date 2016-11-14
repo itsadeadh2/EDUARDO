@@ -51,5 +51,31 @@ namespace SisClinica.Forms
             }
             return value;
         }
+        public static bool ChecaDataSessao(DateTime data)
+        {
+            bool value;
+            if (data.Date<DateTime.Now.Date)
+            {
+                value = true;
+            }
+            else
+            {
+                value = false;
+            }
+            return value;
+        }
+        public static bool ChecaHorarioSessao(TimeSpan horario)
+        {
+            bool value;
+            if (horario<DateTime.Now.TimeOfDay)
+            {
+                value = true;
+            }
+            else
+            {
+                value = false;
+            }
+            return value;
+        }
     }
 }

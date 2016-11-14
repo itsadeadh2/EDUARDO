@@ -71,11 +71,19 @@ namespace SisClinica.Forms
         }
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
-            ChecaTurno();
-            SetHora();
-            SetFields();
-            cbHorarioInicial.ValueMember = "Data";
-            cbHorarioInicial.DisplayMember = "Hora";
+            if (HelperFunctions.ChecaDataSessao(dtpData.Value)!=true)
+            {
+                ChecaTurno();
+                SetHora();
+                SetFields();
+                cbHorarioInicial.ValueMember = "Data";
+                cbHorarioInicial.DisplayMember = "Hora";
+            }
+            else
+            {
+                MessageBox.Show("O sistema não permite agendar sessões no passado!");
+                dtpData.Value = DateTime.Now;
+            }            
         }
         private void cbHorarioInicial_SelectedIndexChanged(object sender, EventArgs e)
         {

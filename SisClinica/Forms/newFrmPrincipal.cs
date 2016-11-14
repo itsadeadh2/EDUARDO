@@ -33,7 +33,10 @@ namespace SisClinica.Forms
             }            
             SetButton(btnNovo);
             SetButton(btnPesquisar);
-            SetButton(btnAlterar);
+            SetButton(btnConfirmar);
+            SetButton(btnConfigurar);
+            HelperFunctions.SetButtons(btnClose);
+            HelperFunctions.SetButtons(btnMinimize);
             btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(68)))), ((int)(((byte)(43)))));
             btnHome.FlatAppearance.MouseOverBackColor = btnHome.BackColor;
         }
@@ -87,15 +90,6 @@ namespace SisClinica.Forms
             painelDinamico.Controls.Add(menuPesquisar);
             menuPesquisar.Show();
         }
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            painelDinamico.Controls.Clear();
-            UserControl menuAlterar = new userControlMenuAlterar();
-            menuAlterar.AutoScroll = true;
-            painelDinamico.Controls.Add(menuAlterar);
-            menuAlterar.Show();
-        }
         private bool _dragging = false;
         private Point _offset;
         private Point _start_point = new Point(0, 0);
@@ -119,6 +113,24 @@ namespace SisClinica.Forms
                 Point p = PointToScreen(e.Location);
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            painelDinamico.Controls.Clear();
+            userControlConfirmarSessoes conSess = new userControlConfirmarSessoes();
+            painelDinamico.Controls.Add(conSess);
+            conSess.Show();
         }
     }
 }

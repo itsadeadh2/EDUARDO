@@ -21,13 +21,11 @@ namespace SisClinica.Forms
 
         private Sessoes objSessao;
         private tdp tipoDePesquisa;
-        private tdr tipoDeRetorno = tdr.consultaETratamento;
-
+        private tdr tipoDeRetorno = tdr.consultaETratamento;        
         private void cbCliente_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();
         }
-
         private void cbMedico_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();
@@ -104,45 +102,32 @@ namespace SisClinica.Forms
                 tipoDeRetorno = tdr.consultaETratamento;
             }
         }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgSessoes.DataSource = new Sessoes().BuscaPorClienteMedicoData(txtbxNomePesquisa.Text, tipoDePesquisa, dtpData.Value, tipoDeRetorno);
         }
-
         private void cbConsultas_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
-
         private void cbTratamentos_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();
         }
-
         private void cbData_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();
         }
-
         private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)).tipoDeSessao=="Consulta")
-            {
-                Controls.Clear();
-                userControlAlterarConsulta alterCon = new userControlAlterarConsulta().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
-                Controls.Add(alterCon);
-                alterCon.Show();
-            }
-            else
-            {
-
-            }            
+            Controls.Clear();
+            userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+            Controls.Add(alterCon);
+            alterCon.Show();
         }
     }
 }

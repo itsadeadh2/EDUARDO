@@ -1,6 +1,6 @@
 ﻿namespace SisClinica.Forms
 {
-    partial class userControlAlterarConsulta
+    partial class userControlAlterarSessoes
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbPesquisa = new System.Windows.Forms.GroupBox();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
-            this.btnDtgPesq = new System.Windows.Forms.Button();
             this.txtbNomePesquisa = new System.Windows.Forms.TextBox();
             this.lblNomePesq = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@
             this.lblTipoSessao = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.lblSituacao = new System.Windows.Forms.Label();
+            this.btnDtgPesq = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gbPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
@@ -121,19 +121,6 @@
             this.dtgClientes.TabIndex = 19;
             this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
             // 
-            // btnDtgPesq
-            // 
-            this.btnDtgPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDtgPesq.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDtgPesq.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
-            this.btnDtgPesq.Location = new System.Drawing.Point(332, 17);
-            this.btnDtgPesq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDtgPesq.Name = "btnDtgPesq";
-            this.btnDtgPesq.Size = new System.Drawing.Size(44, 37);
-            this.btnDtgPesq.TabIndex = 18;
-            this.btnDtgPesq.UseVisualStyleBackColor = true;
-            this.btnDtgPesq.Click += new System.EventHandler(this.btnDtgPesq_Click);
-            // 
             // txtbNomePesquisa
             // 
             this.txtbNomePesquisa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +184,7 @@
             this.dtpData.Enabled = false;
             this.dtpData.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(120, 252);
+            this.dtpData.Location = new System.Drawing.Point(120, 247);
             this.dtpData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(146, 22);
@@ -290,12 +277,12 @@
             // 
             this.lblSelecData.AutoSize = true;
             this.lblSelecData.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelecData.Location = new System.Drawing.Point(4, 252);
+            this.lblSelecData.Location = new System.Drawing.Point(69, 252);
             this.lblSelecData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelecData.Name = "lblSelecData";
-            this.lblSelecData.Size = new System.Drawing.Size(107, 17);
+            this.lblSelecData.Size = new System.Drawing.Size(41, 17);
             this.lblSelecData.TabIndex = 0;
-            this.lblSelecData.Text = "Selecionar data:";
+            this.lblSelecData.Text = "Data:";
             // 
             // rdbTarde
             // 
@@ -433,14 +420,27 @@
             this.lblSituacao.TabIndex = 18;
             this.lblSituacao.Text = "situação";
             // 
-            // userControlAlterarConsulta
+            // btnDtgPesq
+            // 
+            this.btnDtgPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDtgPesq.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDtgPesq.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
+            this.btnDtgPesq.Location = new System.Drawing.Point(332, 17);
+            this.btnDtgPesq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDtgPesq.Name = "btnDtgPesq";
+            this.btnDtgPesq.Size = new System.Drawing.Size(44, 37);
+            this.btnDtgPesq.TabIndex = 18;
+            this.btnDtgPesq.UseVisualStyleBackColor = true;
+            this.btnDtgPesq.Click += new System.EventHandler(this.btnDtgPesq_Click);
+            // 
+            // userControlAlterarSessoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Name = "userControlAlterarConsulta";
+            this.Name = "userControlAlterarSessoes";
             this.Size = new System.Drawing.Size(672, 409);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

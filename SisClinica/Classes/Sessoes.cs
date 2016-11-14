@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using SisClinica.DAO;
+using SisClinica.Forms;
 
 namespace SisClinica.Classes
 {
@@ -78,6 +79,28 @@ namespace SisClinica.Classes
         public IList<Sessoes> BuscaPorData(DateTime data)
         {
             return new SessoesDAO().PesquisarPorData(data.Date);
+        }
+        public DataTable DataTableBuscaPorData(DateTime data)
+        {
+            IList<Sessoes> lst = new Sessoes().BuscaPorData(DateTime.Now.Date);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Tipo de Sessao", typeof(string));
+            dt.Columns.Add("Cliente", typeof(string));
+            dt.Columns.Add("CPF Cliente", typeof(string));
+            dt.Columns.Add("Médico", typeof(string));
+            dt.Columns.Add("Data", typeof(DateTime));
+            dt.Columns.Add("Hora de início", typeof(TimeSpan));
+            dt.Columns.Add("Hora de fim", typeof(TimeSpan));
+            dt.Columns.Add("Andamento", typeof(string));
+            dt.Columns.Add("id", typeof(int));
+            if (lst!=null)
+            {
+                foreach (Sessoes objSessao in lst)
+                {
+                    dt.Rows.Add(objSessao.tipoDeSessao, objSessao.objCliente.nome, objSessao.objCliente.cpf, objSessao.medicoResponsavel.nome, objSessao.dataSessao, objSessao.horaInicio.TimeOfDay, objSessao.horaFim.TimeOfDay,objSessao.nroSessao +"/"+objSessao.qtdeSessoes , objSessao.id);
+                }
+            }
+            return dt;
         }
 
         public Sessoes BuscaPorData(DateTime data, Medico objMedico, Consultorio objConsultorio, Sessoes sessaoAIgnorar)
@@ -393,29 +416,63 @@ namespace SisClinica.Classes
             dt.Columns.Add("Hora", typeof(string));
             foreach (DateTime hora in listaDeHorarios)
             {
-                if (turno=="Manhã")
+                if (hora.Date==DateTime.Now.Date)
                 {
-                    if (hora == ha)
+                    if (HelperFunctions.ChecaHorarioSessao(hora.TimeOfDay)!=true)
                     {
+                        if (turno == "Manhã")
+                        {
+                            if (hora == ha)
+                            {
 
+                            }
+                            else
+                            {
+                                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                            }
+                        }
+                        else
+                        {
+                            if (hora == fe)
+                            {
+
+                            }
+                            else
+                            {
+                                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                            }
+                        }
                     }
                     else
                     {
-                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+
                     }
                 }
                 else
                 {
-                    if (hora==fe)
+                    if (turno == "Manhã")
                     {
+                        if (hora == ha)
+                        {
 
+                        }
+                        else
+                        {
+                            dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                        }
                     }
                     else
                     {
-                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                        if (hora == fe)
+                        {
+
+                        }
+                        else
+                        {
+                            dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                        }
                     }
-                }
-                     
+                }        
             }
             return dt;
         }
@@ -469,29 +526,63 @@ namespace SisClinica.Classes
             dt.Columns.Add("Hora", typeof(string));
             foreach (DateTime hora in listaDeHorarios)
             {
-                if (turno == "Manhã")
+                if (hora.Date == DateTime.Now.Date)
                 {
-                    if (hora == ha)
+                    if (HelperFunctions.ChecaHorarioSessao(hora.TimeOfDay) != true)
                     {
+                        if (turno == "Manhã")
+                        {
+                            if (hora == ha)
+                            {
 
+                            }
+                            else
+                            {
+                                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                            }
+                        }
+                        else
+                        {
+                            if (hora == fe)
+                            {
+
+                            }
+                            else
+                            {
+                                dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                            }
+                        }
                     }
                     else
                     {
-                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+
                     }
                 }
                 else
                 {
-                    if (hora == fe)
+                    if (turno == "Manhã")
                     {
+                        if (hora == ha)
+                        {
 
+                        }
+                        else
+                        {
+                            dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                        }
                     }
                     else
                     {
-                        dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                        if (hora == fe)
+                        {
+
+                        }
+                        else
+                        {
+                            dt.Rows.Add(hora, hora.TimeOfDay.ToString());
+                        }
                     }
                 }
-
             }
             return dt;
         }
@@ -729,10 +820,12 @@ namespace SisClinica.Classes
 
         public void AlterarSessao()
         {
-            if (tipoDeSessao=="Consulta")
-            {
-                new SessoesDAO().AlterarConsulta(this);
-            }
+            new SessoesDAO().AlterarSessao(this);
+         
+        }
+        public void CompletarSessao()
+        {
+            new SessoesDAO().CompletarSessao(this);
         }
 
         public void Excluir()

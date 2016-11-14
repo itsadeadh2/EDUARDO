@@ -59,6 +59,10 @@ namespace SisClinica.Forms
             {
                 objCliente.Excluir(objCliente.id);
                 MessageBox.Show("Cliente deletado com sucesso!");
+                Controls.Clear();
+                userControlPesquisarCliente uc = new userControlPesquisarCliente();
+                Controls.Add(uc);
+                uc.Show();
             }
         }
 

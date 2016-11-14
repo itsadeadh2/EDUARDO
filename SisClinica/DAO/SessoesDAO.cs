@@ -452,7 +452,18 @@ namespace SisClinica.DAO
             }
             return listaDeSessoes;
         }
-        public void AlterarConsulta(Sessoes objSessao)
+        public void CompletarSessao(Sessoes objSessao)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE sessoes SET sessaoCompleta = @sesscom where id = @id";
+            comando.Parameters.AddWithValue("@sesscom", Convert.ToInt32(objSessao.sessaoCompleta));
+            comando.Parameters.AddWithValue("@id", objSessao.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
+        public void AlterarSessao(Sessoes objSessao)
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;

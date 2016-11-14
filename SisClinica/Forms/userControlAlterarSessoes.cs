@@ -11,9 +11,9 @@ using SisClinica.Classes;
 
 namespace SisClinica.Forms
 {
-    public partial class userControlAlterarConsulta : UserControl
+    public partial class userControlAlterarSessoes : UserControl
     {
-        public userControlAlterarConsulta()
+        public userControlAlterarSessoes()
         {
             InitializeComponent();
         }
@@ -41,9 +41,13 @@ namespace SisClinica.Forms
             cbHorarioInicial.Enabled = !cbHorarioInicial.Enabled;
             btnExcluir.Visible = !btnExcluir.Visible;
         }        
-        public userControlAlterarConsulta Preencher(Sessoes objSess)
+        public userControlAlterarSessoes Preencher(Sessoes objSess)
         {
-            userControlAlterarConsulta uc = new userControlAlterarConsulta();
+            userControlAlterarSessoes uc = new userControlAlterarSessoes();
+            if (objSess.sessaoCompleta==true)
+            {
+                uc.btnAlterar.Enabled = false;
+            }
             uc.lblTipoSessao.Text = objSess.tipoDeSessao;
             uc.lblSituacao.Text = objSess.situacao;
             uc.txtbNomeCliente.Text = objSess.objCliente.nome;
@@ -149,16 +153,23 @@ namespace SisClinica.Forms
         {
             if (editable==true)
             {
-                ChecaTurno();
-                objSessaoSalvar.dataSessao = dtpData.Value;
-                objSessaoSalvar.medicoResponsavel = new Medico().Pesquisar(Convert.ToInt32(cbMedicos.SelectedValue));
-                objSessaoSalvar.objConsultorio = new Consultorio().Pesquisar(Convert.ToInt32(cbConsultorios.SelectedValue));
-                objSessaoSalvar.horaFim = Convert.ToDateTime(cbHorarioFinal.SelectedValue);
-                objSessaoSalvar.horaInicio = Convert.ToDateTime(cbHorarioInicial.SelectedValue);
-                objSessao = objSessaoSalvar;
-                objSessao.AlterarSessao();
-                MessageBox.Show("Sessão alterada!");
-                AtivaDesativaControles();
+                if (cbHorarioInicial.SelectedValue == null)
+                {
+                    MessageBox.Show("Não há horários disponíveis, tente um turno ou data diferente!");
+                }
+                else
+                {
+                    ChecaTurno();
+                    objSessaoSalvar.dataSessao = dtpData.Value;
+                    objSessaoSalvar.medicoResponsavel = new Medico().Pesquisar(Convert.ToInt32(cbMedicos.SelectedValue));
+                    objSessaoSalvar.objConsultorio = new Consultorio().Pesquisar(Convert.ToInt32(cbConsultorios.SelectedValue));
+                    objSessaoSalvar.horaFim = Convert.ToDateTime(cbHorarioFinal.SelectedValue);
+                    objSessaoSalvar.horaInicio = Convert.ToDateTime(cbHorarioInicial.SelectedValue);
+                    objSessao = objSessaoSalvar;
+                    objSessao.AlterarSessao();
+                    MessageBox.Show("Sessão alterada!");
+                    AtivaDesativaControles();
+                }                
             }                        
         }
 
@@ -166,8 +177,16 @@ namespace SisClinica.Forms
         {
             if (editable==true)
             {
-                ChecaTurno();
-                SetHora();
+                if (HelperFunctions.ChecaDataSessao(dtpData.Value)!=true)
+                {
+                    ChecaTurno();
+                    SetHora();
+                }
+                else
+                {
+                    MessageBox.Show("O sistema não permite agendar sessões no passado!");
+                    dtpData.Value = DateTime.Now;
+                }                
             }
         }
 
@@ -207,7 +226,7 @@ namespace SisClinica.Forms
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            userControlAlterarConsulta alterCon = new userControlAlterarConsulta().Preencher(objSessao);
+            userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(objSessao);
             Controls.Clear();
             Controls.Add(alterCon);            
             alterCon.Show();

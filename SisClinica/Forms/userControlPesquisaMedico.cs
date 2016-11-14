@@ -49,6 +49,11 @@ namespace SisClinica.Forms
             else
             {
                 objMedico.Excluir();
+                MessageBox.Show("Médico excluído com sucesso!");
+                Controls.Clear();
+                userControlPesquisaMedico uc = new userControlPesquisaMedico();
+                Controls.Add(uc);
+                uc.Show();                
             }
         }
 
