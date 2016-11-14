@@ -98,7 +98,7 @@ namespace SisClinica.Forms
             if (nome.Length < 3)
             {
                 MessageBox.Show("Nome inválido!");
-                value = false;
+                value = true;
             }
             return value;
         }
@@ -164,7 +164,7 @@ namespace SisClinica.Forms
             }
             #endregion
             if (ChecaNome(objCliente.nome))
-            {                
+            {             
             }
             else if (ChecaCPF(objCliente.cpf)|| ChecaCPF(objResponsavel.cpf, objCliente.cpf))
             {

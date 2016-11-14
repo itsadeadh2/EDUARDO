@@ -62,6 +62,15 @@ namespace SisClinica.Forms
             {
                 rdbTarde.Checked = true;
             }
+            if (objSess.tipoDeSessao=="Tratamento")
+            {
+                uc.lblvalortotal.Visible = true;
+                uc.lblTotal.Visible = true;
+                uc.lblTotalSessao.Visible = true;
+                uc.lblValorSessao.Visible = true;
+                uc.lblTotal.Text = "R$" + objSess.tipoDeTratamento.valor.ToString();
+                uc.lblTotalSessao.Text = "R$" + objSess.valorSessao.ToString();
+            }
             uc.cbHorarioInicial.Text = objSess.horaInicio.TimeOfDay.ToString(); 
             uc.cbHorarioFinal.Text = objSess.horaFim.TimeOfDay.ToString();
             uc.objSessao = objSess;
@@ -169,7 +178,8 @@ namespace SisClinica.Forms
                     objSessao.AlterarSessao();
                     MessageBox.Show("Sessão alterada!");
                     AtivaDesativaControles();
-                }                
+                }
+                
             }                        
         }
 

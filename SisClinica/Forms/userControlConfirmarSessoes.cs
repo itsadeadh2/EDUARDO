@@ -27,6 +27,10 @@ namespace SisClinica.Forms
             {
                 btnSalvar.Enabled = false;
             }
+            else
+            {
+                btnSalvar.Enabled = true;
+            }
             PreencherCampos();
         }
         private void PreencherCampos()
@@ -37,6 +41,10 @@ namespace SisClinica.Forms
             if (objSessao.tipoDeSessao=="Tratamento")
             {
                 lblTipoTrat.Text = objSessao.tipoDeTratamento.nome;
+            }
+            else
+            {
+                lblTipoTrat.Text = "-";
             }
             lblValor.Text = "R$"+objSessao.valorSessao.ToString();
             lblCPF.Text = objSessao.objCliente.cpf;

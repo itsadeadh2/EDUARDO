@@ -63,6 +63,7 @@ namespace SisClinica.Forms
                 objCliente.endereco = txtbEndereco.Text;
                 objCliente.cidade = cbCidade.Text;
                 objCliente.estado = cbEstado.Text;
+                objCliente.adicionalInfo = rtbAdicionalInfo.Text;
                 objCliente.Alterar();
                 MessageBox.Show("Cliente alterado!");
             }

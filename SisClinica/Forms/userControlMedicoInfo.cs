@@ -62,6 +62,7 @@ namespace SisClinica.Forms
                 objMedico.cidade = cbCidade.Text;
                 objMedico.telefone = mtbTelefone.Text;
                 objMedico.endereco = txtbEndereco.Text;
+                objMedico.email = txtbEmail.Text;
                 objMedico.Alterar();
                 MessageBox.Show("Médico alterado!");
                 txtbnome.Enabled = false;

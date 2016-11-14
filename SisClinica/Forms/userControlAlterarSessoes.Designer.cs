@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbPesquisa = new System.Windows.Forms.GroupBox();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
+            this.btnDtgPesq = new System.Windows.Forms.Button();
             this.txtbNomePesquisa = new System.Windows.Forms.TextBox();
             this.lblNomePesq = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -56,7 +57,10 @@
             this.lblTipoSessao = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.lblSituacao = new System.Windows.Forms.Label();
-            this.btnDtgPesq = new System.Windows.Forms.Button();
+            this.lblvalortotal = new System.Windows.Forms.Label();
+            this.lblValorSessao = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalSessao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
@@ -64,6 +68,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblTotalSessao);
+            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Controls.Add(this.lblValorSessao);
+            this.panel1.Controls.Add(this.lblvalortotal);
             this.panel1.Controls.Add(this.gbPesquisa);
             this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.cbConsultorios);
@@ -120,6 +128,19 @@
             this.dtgClientes.Size = new System.Drawing.Size(315, 89);
             this.dtgClientes.TabIndex = 19;
             this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
+            // 
+            // btnDtgPesq
+            // 
+            this.btnDtgPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDtgPesq.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDtgPesq.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
+            this.btnDtgPesq.Location = new System.Drawing.Point(332, 17);
+            this.btnDtgPesq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDtgPesq.Name = "btnDtgPesq";
+            this.btnDtgPesq.Size = new System.Drawing.Size(44, 37);
+            this.btnDtgPesq.TabIndex = 18;
+            this.btnDtgPesq.UseVisualStyleBackColor = true;
+            this.btnDtgPesq.Click += new System.EventHandler(this.btnDtgPesq_Click);
             // 
             // txtbNomePesquisa
             // 
@@ -420,18 +441,53 @@
             this.lblSituacao.TabIndex = 18;
             this.lblSituacao.Text = "situação";
             // 
-            // btnDtgPesq
+            // lblvalortotal
             // 
-            this.btnDtgPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDtgPesq.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDtgPesq.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
-            this.btnDtgPesq.Location = new System.Drawing.Point(332, 17);
-            this.btnDtgPesq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDtgPesq.Name = "btnDtgPesq";
-            this.btnDtgPesq.Size = new System.Drawing.Size(44, 37);
-            this.btnDtgPesq.TabIndex = 18;
-            this.btnDtgPesq.UseVisualStyleBackColor = true;
-            this.btnDtgPesq.Click += new System.EventHandler(this.btnDtgPesq_Click);
+            this.lblvalortotal.AutoSize = true;
+            this.lblvalortotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvalortotal.Location = new System.Drawing.Point(289, 166);
+            this.lblvalortotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblvalortotal.Name = "lblvalortotal";
+            this.lblvalortotal.Size = new System.Drawing.Size(75, 17);
+            this.lblvalortotal.TabIndex = 31;
+            this.lblvalortotal.Text = "Valor total:";
+            this.lblvalortotal.Visible = false;
+            // 
+            // lblValorSessao
+            // 
+            this.lblValorSessao.AutoSize = true;
+            this.lblValorSessao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorSessao.Location = new System.Drawing.Point(256, 195);
+            this.lblValorSessao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValorSessao.Name = "lblValorSessao";
+            this.lblValorSessao.Size = new System.Drawing.Size(108, 17);
+            this.lblValorSessao.TabIndex = 32;
+            this.lblValorSessao.Text = "Valor por sessão:";
+            this.lblValorSessao.Visible = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(369, 166);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(37, 17);
+            this.lblTotal.TabIndex = 33;
+            this.lblTotal.Text = "total";
+            this.lblTotal.Visible = false;
+            // 
+            // lblTotalSessao
+            // 
+            this.lblTotalSessao.AutoSize = true;
+            this.lblTotalSessao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSessao.Location = new System.Drawing.Point(369, 195);
+            this.lblTotalSessao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalSessao.Name = "lblTotalSessao";
+            this.lblTotalSessao.Size = new System.Drawing.Size(78, 17);
+            this.lblTotalSessao.TabIndex = 34;
+            this.lblTotalSessao.Text = "valorsessao";
+            this.lblTotalSessao.Visible = false;
             // 
             // userControlAlterarSessoes
             // 
@@ -482,5 +538,9 @@
         private System.Windows.Forms.Label lblTipoSessao;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Label lblSituacao;
+        private System.Windows.Forms.Label lblTotalSessao;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblValorSessao;
+        private System.Windows.Forms.Label lblvalortotal;
     }
 }
