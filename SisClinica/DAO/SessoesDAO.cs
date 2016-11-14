@@ -33,15 +33,74 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
+            if (objSessao.tratamentoPosterior!=null)
+            {
+                comando.CommandText = "INSERT INTO Sessoes (datasessao, horainicio, horafim, tipodesessao, id_medico_responsavel, id_cliente, sessaoCompleta, id_consultorio, id_tipodetratamento, valorSessao,qtdeSessoes, nroSessao, sessaoQuitada, id_tratamento_posterior) " +
+                                  "values (@datasessao, @horainicio, @horafim, @tipodesessao, @id_medico_responsavel, @id_cliente, @sessaocompleta,@id_consultorio, @id_tipoDeTratamento, @valorSessao, @qtdeSessoes, @nroSessao, @sessaoQuitada, @id_tratPost)";
+                comando.Parameters.AddWithValue("@datasessao", objSessao.dataSessao);
+                comando.Parameters.AddWithValue("@horainicio", objSessao.horaInicio);
+                comando.Parameters.AddWithValue("@horafim", objSessao.horaFim);
+                comando.Parameters.AddWithValue("@tipodesessao", objSessao.tipoDeSessao);
+                comando.Parameters.AddWithValue("@id_medico_responsavel", objSessao.medicoResponsavel.id);
+                comando.Parameters.AddWithValue("@id_cliente", objSessao.objCliente.id);
+                comando.Parameters.AddWithValue("@sessaocompleta", Convert.ToInt32(objSessao.sessaoCompleta));
+                comando.Parameters.AddWithValue("@id_consultorio", objSessao.objConsultorio.id);
+                comando.Parameters.AddWithValue("@id_tipoDeTratamento", objSessao.tipoDeTratamento.id);
+                comando.Parameters.AddWithValue("@valorSessao", objSessao.valorSessao);
+                comando.Parameters.AddWithValue("@qtdeSessoes", objSessao.qtdeSessoes);
+                comando.Parameters.AddWithValue("@nroSessao", objSessao.nroSessao);
+                comando.Parameters.AddWithValue("@sessaoQuitada", objSessao.quitada);
+                comando.Parameters.AddWithValue("@id_tratPost", objSessao.tratamentoPosterior.id);
+            }
+            else
+            {
+                comando.CommandText = "INSERT INTO Sessoes (datasessao, horainicio, horafim, tipodesessao, id_medico_responsavel, id_cliente, sessaoCompleta, id_consultorio, id_tipodetratamento, valorSessao,qtdeSessoes, nroSessao, sessaoQuitada) " +
+                                  "values (@datasessao, @horainicio, @horafim, @tipodesessao, @id_medico_responsavel, @id_cliente, @sessaocompleta,@id_consultorio, @id_tipoDeTratamento, @valorSessao, @qtdeSessoes, @nroSessao, @sessaoQuitada)";
+                comando.Parameters.AddWithValue("@datasessao", objSessao.dataSessao);
+                comando.Parameters.AddWithValue("@horainicio", objSessao.horaInicio);
+                comando.Parameters.AddWithValue("@horafim", objSessao.horaFim);
+                comando.Parameters.AddWithValue("@tipodesessao", objSessao.tipoDeSessao);
+                comando.Parameters.AddWithValue("@id_medico_responsavel", objSessao.medicoResponsavel.id);
+                comando.Parameters.AddWithValue("@id_cliente", objSessao.objCliente.id);
+                comando.Parameters.AddWithValue("@sessaocompleta", Convert.ToInt32(objSessao.sessaoCompleta));
+                comando.Parameters.AddWithValue("@id_consultorio", objSessao.objConsultorio.id);
+                comando.Parameters.AddWithValue("@id_tipoDeTratamento", objSessao.tipoDeTratamento.id);
+                comando.Parameters.AddWithValue("@valorSessao", objSessao.valorSessao);
+                comando.Parameters.AddWithValue("@qtdeSessoes", objSessao.qtdeSessoes);
+                comando.Parameters.AddWithValue("@nroSessao", objSessao.nroSessao);
+                comando.Parameters.AddWithValue("@sessaoQuitada", objSessao.quitada);
+            }
+            
+            
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
+        public void AdicionarTratamentoPosterior(Sessoes objSessao)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE Sessoes set id_tratamento_posterior = @idtrat where id=@id";
+            comando.Parameters.AddWithValue("@idtrat", objSessao.tratamentoPosterior.id);
+            comando.Parameters.AddWithValue("@id", objSessao.id);
+
+            Conexao con = new Conexao();
+            con.ExecutarCru(comando);
+        }
+        public int RegistraTratamentoPosterior(Sessoes objSessao)
+        {
+            int id;
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
             comando.CommandText = "INSERT INTO Sessoes (datasessao, horainicio, horafim, tipodesessao, id_medico_responsavel, id_cliente, sessaoCompleta, id_consultorio, id_tipodetratamento, valorSessao,qtdeSessoes, nroSessao, sessaoQuitada) " +
                                   "values (@datasessao, @horainicio, @horafim, @tipodesessao, @id_medico_responsavel, @id_cliente, @sessaocompleta,@id_consultorio, @id_tipoDeTratamento, @valorSessao, @qtdeSessoes, @nroSessao, @sessaoQuitada)";
             comando.Parameters.AddWithValue("@datasessao", objSessao.dataSessao);
-            comando.Parameters.AddWithValue("@horainicio",objSessao.horaInicio);
+            comando.Parameters.AddWithValue("@horainicio", objSessao.horaInicio);
             comando.Parameters.AddWithValue("@horafim", objSessao.horaFim);
             comando.Parameters.AddWithValue("@tipodesessao", objSessao.tipoDeSessao);
-            comando.Parameters.AddWithValue("@id_medico_responsavel",objSessao.medicoResponsavel.id);
+            comando.Parameters.AddWithValue("@id_medico_responsavel", objSessao.medicoResponsavel.id);
             comando.Parameters.AddWithValue("@id_cliente", objSessao.objCliente.id);
-            comando.Parameters.AddWithValue("@sessaocompleta",Convert.ToInt32(objSessao.sessaoCompleta));
+            comando.Parameters.AddWithValue("@sessaocompleta", Convert.ToInt32(objSessao.sessaoCompleta));
             comando.Parameters.AddWithValue("@id_consultorio", objSessao.objConsultorio.id);
             comando.Parameters.AddWithValue("@id_tipoDeTratamento", objSessao.tipoDeTratamento.id);
             comando.Parameters.AddWithValue("@valorSessao", objSessao.valorSessao);
@@ -50,7 +109,18 @@ namespace SisClinica.DAO
             comando.Parameters.AddWithValue("@sessaoQuitada", objSessao.quitada);
 
             Conexao con = new Conexao();
-            con.ExecutarCru(comando);
+            SqlDataReader dr = con.ExecutarSelect(comando);
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                id = (int)dr["id"];
+            }
+            else
+            {
+                id = -1;
+            }
+            return id;
         }
         public IList<Sessoes> PesquisarPorHorarioInicial(DateTime data)
         {
@@ -135,6 +205,10 @@ namespace SisClinica.DAO
                         objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                         objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
                     }
+                    if (objSessao.tratamentoPosterior!=null)
+                    {
+                        objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
+                    }
                     objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                     objSessao.id = (int)dr["id"];
                     if (objSessao.sessaoCompleta == true)
@@ -185,6 +259,10 @@ namespace SisClinica.DAO
                     objSessao.valorSessao = Convert.ToDecimal(dr["valorsessao"]);
                     objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                     objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
+                }
+                if (objSessao.tratamentoPosterior != null)
+                {
+                    objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
                 }
                 objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                 objSessao.id = (int)dr["id"];
@@ -241,6 +319,10 @@ namespace SisClinica.DAO
                         objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                         objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
                     }
+                    if (objSessao.tratamentoPosterior != null)
+                    {
+                        objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
+                    }
                     objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                     objSessao.id = (int)dr["id"];
                     if (objSessao.sessaoCompleta == true)
@@ -290,6 +372,10 @@ namespace SisClinica.DAO
                         objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                         objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
                     }
+                    if (objSessao.tratamentoPosterior != null)
+                    {
+                        objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
+                    }
                     objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                     objSessao.id = (int)dr["id"];
                     if (objSessao.sessaoCompleta == true)
@@ -337,6 +423,10 @@ namespace SisClinica.DAO
                     objSessao.valorSessao = Convert.ToDecimal(dr["valorsessao"]);
                     objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                     objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
+                }
+                if (objSessao.tratamentoPosterior != null)
+                {
+                    objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
                 }
                 objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                 objSessao.id = (int)dr["id"];
@@ -386,6 +476,10 @@ namespace SisClinica.DAO
                         objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                         objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
                     }
+                    if (objSessao.tratamentoPosterior != null)
+                    {
+                        objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
+                    }
                     objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                     objSessao.id = (int)dr["id"];
                     if (objSessao.sessaoCompleta == true)
@@ -428,12 +522,19 @@ namespace SisClinica.DAO
                     objSessao.horaFim = Convert.ToDateTime(dr["horaFim"]);
                     objSessao.horaInicio = Convert.ToDateTime(dr["horaInicio"]);
                     objSessao.tipoDeSessao = dr["tipoDeSessao"].ToString();
+                    if (objSessao.tipoDeSessao == "Tratamento")
+                    {
+                        objSessao.tipoDeTratamento = new TipoDeTratamento().Pesquisar(Convert.ToInt32(dr["id_tipodetratamento"]));
+                        objSessao.quitada = Convert.ToBoolean(dr["sessaoQuitada"]);
+                        objSessao.valorSessao = Convert.ToDecimal(dr["valorsessao"]);
+                        objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
+                        objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
+                    }
+                    if (objSessao.tratamentoPosterior != null)
+                    {
+                        objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
+                    }
                     objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
-                    objSessao.tipoDeTratamento = new TipoDeTratamento().Pesquisar(Convert.ToInt32(dr["id_tipodetratamento"]));
-                    objSessao.valorSessao = Convert.ToDecimal(dr["valorsessao"]);
-                    objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
-                    objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
-                    objSessao.quitada = Convert.ToBoolean(dr["sessaoQuitada"]);
                     objSessao.id = (int)dr["id"];
                     if (objSessao.sessaoCompleta == true)
                     {

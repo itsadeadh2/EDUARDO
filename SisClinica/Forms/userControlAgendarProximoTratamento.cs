@@ -103,7 +103,11 @@ namespace SisClinica.Forms
                 objSessao.dataSessao = dtpData.Value;
                 objSessao.horaInicio = Convert.ToDateTime(cbHorarioInicial.SelectedValue);
                 objSessao.horaFim = Convert.ToDateTime(cbHorarioFinal.SelectedValue);
-                objSessao.RegistrarSessao();
+                Sessoes s = new Sessoes().BuscaPorId(objSessao.id);
+                objSessao.id = objSessao.RegistrarSessaoPosterior();
+                s.tratamentoPosterior = objSessao;
+                s.AdicionarTratamentoPosterior();
+
                 MessageBox.Show("Sessão agendada!");
                 Controls.Clear();
             }            

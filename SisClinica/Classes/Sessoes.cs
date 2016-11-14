@@ -20,6 +20,7 @@ namespace SisClinica.Classes
         public DateTime horaFim { get; set; }
         public string tipoDeSessao { get; set; }
         public TipoDeTratamento tipoDeTratamento { get; set; }
+        public Sessoes tratamentoPosterior { get; set; }
         public string situacao { get; set; }
         public int nroSessao { get; set; }
         public int qtdeSessoes { get; set; }
@@ -45,6 +46,14 @@ namespace SisClinica.Classes
         public void AlterarMedico(Medico novoMedico)
         {
 
+        }
+        public void AdicionarTratamentoPosterior()
+        {
+            new SessoesDAO().AdicionarTratamentoPosterior(this);
+        }
+        public int RegistrarSessaoPosterior()
+        {
+            return new SessoesDAO().RegistraTratamentoPosterior(this);
         }
         public void RegistrarSessao()
         {
@@ -82,7 +91,7 @@ namespace SisClinica.Classes
         }
         public DataTable DataTableBuscaPorData(DateTime data)
         {
-            IList<Sessoes> lst = new Sessoes().BuscaPorData(DateTime.Now.Date);
+            IList<Sessoes> lst = new Sessoes().BuscaPorData(data.Date);
             DataTable dt = new DataTable();
             dt.Columns.Add("Tipo de Sessao", typeof(string));
             dt.Columns.Add("Cliente", typeof(string));

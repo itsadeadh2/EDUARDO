@@ -16,7 +16,9 @@ namespace SisClinica.Forms
         public userControlConfirmarSessoes()
         {
             InitializeComponent();
-            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(DateTime.Now.Date);          
+            DateTime data = DateTime.Now.Date;
+            data = data.AddDays(1);
+            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data.Date);          
         }
         Sessoes objSessao;
         private void dtgSessoes_CellClick(object sender, DataGridViewCellEventArgs e)
