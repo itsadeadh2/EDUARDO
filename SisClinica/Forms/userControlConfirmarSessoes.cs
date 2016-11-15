@@ -16,6 +16,7 @@ namespace SisClinica.Forms
         public userControlConfirmarSessoes()
         {
             InitializeComponent();
+            HelperFunctions.SetButtonsText(btnConfirmar);
             DateTime data = DateTime.Now.Date;
             data = data.AddDays(1);
             dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(DateTime.Now.Date);          

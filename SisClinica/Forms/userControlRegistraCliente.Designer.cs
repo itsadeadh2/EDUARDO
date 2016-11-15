@@ -32,43 +32,42 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbDadosDoCliente = new System.Windows.Forms.GroupBox();
             this.ptErrorNomeCli = new System.Windows.Forms.PictureBox();
-            this.lblErros = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbInfoAdicional = new System.Windows.Forms.Label();
             this.rtbAdicionalInfo = new System.Windows.Forms.RichTextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.txtbEndereco = new System.Windows.Forms.TextBox();
             this.txtbemail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbEstado = new System.Windows.Forms.Label();
+            this.lbCidade = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbEmailCliente = new System.Windows.Forms.Label();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTelefoneCliente = new System.Windows.Forms.Label();
             this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbDataNascimentoCliente = new System.Windows.Forms.Label();
             this.mtbCpf = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbCpfCliente = new System.Windows.Forms.Label();
             this.txtbNomeCompletoCli = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbNomeCliente = new System.Windows.Forms.Label();
             this.gbDadosDoResponsavel = new System.Windows.Forms.GroupBox();
             this.btnClearPesquisa = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dtgResponsavel = new System.Windows.Forms.DataGridView();
             this.txtbNomeRespPesquisa = new System.Windows.Forms.TextBox();
             this.lblNomePesquisa = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbPesquisa = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtbEmailResp = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbEmailResponsavel = new System.Windows.Forms.Label();
             this.mtbTelefoneResp = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbTelefoneResponsavel = new System.Windows.Forms.Label();
             this.dtpDataNascResp = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbDataNascimentoResponsavel = new System.Windows.Forms.Label();
             this.mtbCpfResp = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbCpfResponsavel = new System.Windows.Forms.Label();
             this.txtbNomeResp = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbNomeResponsavel = new System.Windows.Forms.Label();
             this.ttpErrors = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.gbDadosDoCliente.SuspendLayout();
@@ -95,27 +94,27 @@
             // gbDadosDoCliente
             // 
             this.gbDadosDoCliente.Controls.Add(this.ptErrorNomeCli);
-            this.gbDadosDoCliente.Controls.Add(this.lblErros);
-            this.gbDadosDoCliente.Controls.Add(this.label9);
+            this.gbDadosDoCliente.Controls.Add(this.lbInfoAdicional);
             this.gbDadosDoCliente.Controls.Add(this.rtbAdicionalInfo);
             this.gbDadosDoCliente.Controls.Add(this.cbEstado);
             this.gbDadosDoCliente.Controls.Add(this.cbCidade);
             this.gbDadosDoCliente.Controls.Add(this.txtbEndereco);
             this.gbDadosDoCliente.Controls.Add(this.txtbemail);
-            this.gbDadosDoCliente.Controls.Add(this.label8);
-            this.gbDadosDoCliente.Controls.Add(this.label7);
+            this.gbDadosDoCliente.Controls.Add(this.lbEstado);
+            this.gbDadosDoCliente.Controls.Add(this.lbCidade);
             this.gbDadosDoCliente.Controls.Add(this.label6);
-            this.gbDadosDoCliente.Controls.Add(this.label5);
+            this.gbDadosDoCliente.Controls.Add(this.lbEmailCliente);
             this.gbDadosDoCliente.Controls.Add(this.mtbTelefone);
-            this.gbDadosDoCliente.Controls.Add(this.label4);
+            this.gbDadosDoCliente.Controls.Add(this.lbTelefoneCliente);
             this.gbDadosDoCliente.Controls.Add(this.dtpDataNasc);
-            this.gbDadosDoCliente.Controls.Add(this.label3);
+            this.gbDadosDoCliente.Controls.Add(this.lbDataNascimentoCliente);
             this.gbDadosDoCliente.Controls.Add(this.mtbCpf);
-            this.gbDadosDoCliente.Controls.Add(this.label2);
+            this.gbDadosDoCliente.Controls.Add(this.lbCpfCliente);
             this.gbDadosDoCliente.Controls.Add(this.txtbNomeCompletoCli);
-            this.gbDadosDoCliente.Controls.Add(this.label1);
+            this.gbDadosDoCliente.Controls.Add(this.lbNomeCliente);
             this.gbDadosDoCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDadosDoCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosDoCliente.ForeColor = System.Drawing.Color.White;
             this.gbDadosDoCliente.Location = new System.Drawing.Point(3, 3);
             this.gbDadosDoCliente.Name = "gbDadosDoCliente";
             this.gbDadosDoCliente.Size = new System.Drawing.Size(333, 403);
@@ -134,26 +133,15 @@
             this.ttpErrors.SetToolTip(this.ptErrorNomeCli, "Nome inválido, o nome precisa ser maior do que três caracteres.");
             this.ptErrorNomeCli.Visible = false;
             // 
-            // lblErros
+            // lbInfoAdicional
             // 
-            this.lblErros.AutoSize = true;
-            this.lblErros.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErros.Location = new System.Drawing.Point(8, 261);
-            this.lblErros.Name = "lblErros";
-            this.lblErros.Size = new System.Drawing.Size(47, 16);
-            this.lblErros.TabIndex = 19;
-            this.lblErros.Text = "label15";
-            this.lblErros.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 286);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 16);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Informações Adicionais:";
+            this.lbInfoAdicional.AutoSize = true;
+            this.lbInfoAdicional.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfoAdicional.Location = new System.Drawing.Point(8, 286);
+            this.lbInfoAdicional.Name = "lbInfoAdicional";
+            this.lbInfoAdicional.Size = new System.Drawing.Size(134, 16);
+            this.lbInfoAdicional.TabIndex = 18;
+            this.lbInfoAdicional.Text = "Informações Adicionais:";
             // 
             // rtbAdicionalInfo
             // 
@@ -166,8 +154,37 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
             this.cbEstado.Location = new System.Drawing.Point(112, 223);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(59, 24);
@@ -175,6 +192,7 @@
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
             this.cbCidade.Location = new System.Drawing.Point(112, 193);
@@ -198,25 +216,25 @@
             this.txtbemail.Size = new System.Drawing.Size(180, 21);
             this.txtbemail.TabIndex = 13;
             // 
-            // label8
+            // lbEstado
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(55, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Estado:";
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEstado.Location = new System.Drawing.Point(55, 231);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(48, 16);
+            this.lbEstado.TabIndex = 12;
+            this.lbEstado.Text = "Estado:";
             // 
-            // label7
+            // lbCidade
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(50, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Cidade:";
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCidade.Location = new System.Drawing.Point(50, 201);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(53, 16);
+            this.lbCidade.TabIndex = 11;
+            this.lbCidade.Text = "Cidade:";
             // 
             // label6
             // 
@@ -228,15 +246,15 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Endereço:";
             // 
-            // label5
+            // lbEmailCliente
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 142);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Email:";
+            this.lbEmailCliente.AutoSize = true;
+            this.lbEmailCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailCliente.Location = new System.Drawing.Point(67, 142);
+            this.lbEmailCliente.Name = "lbEmailCliente";
+            this.lbEmailCliente.Size = new System.Drawing.Size(39, 16);
+            this.lbEmailCliente.TabIndex = 9;
+            this.lbEmailCliente.Text = "Email:";
             // 
             // mtbTelefone
             // 
@@ -247,15 +265,15 @@
             this.mtbTelefone.Size = new System.Drawing.Size(180, 21);
             this.mtbTelefone.TabIndex = 8;
             // 
-            // label4
+            // lbTelefoneCliente
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Telefone:";
+            this.lbTelefoneCliente.AutoSize = true;
+            this.lbTelefoneCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefoneCliente.Location = new System.Drawing.Point(50, 115);
+            this.lbTelefoneCliente.Name = "lbTelefoneCliente";
+            this.lbTelefoneCliente.Size = new System.Drawing.Size(56, 16);
+            this.lbTelefoneCliente.TabIndex = 7;
+            this.lbTelefoneCliente.Text = "Telefone:";
             // 
             // dtpDataNasc
             // 
@@ -267,15 +285,15 @@
             this.dtpDataNasc.TabIndex = 6;
             this.dtpDataNasc.ValueChanged += new System.EventHandler(this.dtpDataNasc_ValueChanged);
             // 
-            // label3
+            // lbDataNascimentoCliente
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Data de nascimento:";
+            this.lbDataNascimentoCliente.AutoSize = true;
+            this.lbDataNascimentoCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataNascimentoCliente.Location = new System.Drawing.Point(6, 88);
+            this.lbDataNascimentoCliente.Name = "lbDataNascimentoCliente";
+            this.lbDataNascimentoCliente.Size = new System.Drawing.Size(123, 16);
+            this.lbDataNascimentoCliente.TabIndex = 5;
+            this.lbDataNascimentoCliente.Text = "Data de nascimento:";
             // 
             // mtbCpf
             // 
@@ -286,15 +304,15 @@
             this.mtbCpf.Size = new System.Drawing.Size(180, 21);
             this.mtbCpf.TabIndex = 4;
             // 
-            // label2
+            // lbCpfCliente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "CPF:";
+            this.lbCpfCliente.AutoSize = true;
+            this.lbCpfCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfCliente.Location = new System.Drawing.Point(74, 61);
+            this.lbCpfCliente.Name = "lbCpfCliente";
+            this.lbCpfCliente.Size = new System.Drawing.Size(32, 16);
+            this.lbCpfCliente.TabIndex = 3;
+            this.lbCpfCliente.Text = "CPF:";
             // 
             // txtbNomeCompletoCli
             // 
@@ -305,15 +323,15 @@
             this.txtbNomeCompletoCli.TabIndex = 2;
             this.txtbNomeCompletoCli.Leave += new System.EventHandler(this.txtbNomeCompletoCli_Leave);
             // 
-            // label1
+            // lbNomeCliente
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome completo:";
+            this.lbNomeCliente.AutoSize = true;
+            this.lbNomeCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeCliente.Location = new System.Drawing.Point(8, 34);
+            this.lbNomeCliente.Name = "lbNomeCliente";
+            this.lbNomeCliente.Size = new System.Drawing.Size(98, 16);
+            this.lbNomeCliente.TabIndex = 1;
+            this.lbNomeCliente.Text = "Nome completo:";
             // 
             // gbDadosDoResponsavel
             // 
@@ -322,20 +340,21 @@
             this.gbDadosDoResponsavel.Controls.Add(this.dtgResponsavel);
             this.gbDadosDoResponsavel.Controls.Add(this.txtbNomeRespPesquisa);
             this.gbDadosDoResponsavel.Controls.Add(this.lblNomePesquisa);
-            this.gbDadosDoResponsavel.Controls.Add(this.label15);
+            this.gbDadosDoResponsavel.Controls.Add(this.lbPesquisa);
             this.gbDadosDoResponsavel.Controls.Add(this.btnSalvar);
             this.gbDadosDoResponsavel.Controls.Add(this.txtbEmailResp);
-            this.gbDadosDoResponsavel.Controls.Add(this.label10);
+            this.gbDadosDoResponsavel.Controls.Add(this.lbEmailResponsavel);
             this.gbDadosDoResponsavel.Controls.Add(this.mtbTelefoneResp);
-            this.gbDadosDoResponsavel.Controls.Add(this.label11);
+            this.gbDadosDoResponsavel.Controls.Add(this.lbTelefoneResponsavel);
             this.gbDadosDoResponsavel.Controls.Add(this.dtpDataNascResp);
-            this.gbDadosDoResponsavel.Controls.Add(this.label12);
+            this.gbDadosDoResponsavel.Controls.Add(this.lbDataNascimentoResponsavel);
             this.gbDadosDoResponsavel.Controls.Add(this.mtbCpfResp);
-            this.gbDadosDoResponsavel.Controls.Add(this.label13);
+            this.gbDadosDoResponsavel.Controls.Add(this.lbCpfResponsavel);
             this.gbDadosDoResponsavel.Controls.Add(this.txtbNomeResp);
-            this.gbDadosDoResponsavel.Controls.Add(this.label14);
+            this.gbDadosDoResponsavel.Controls.Add(this.lbNomeResponsavel);
             this.gbDadosDoResponsavel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDadosDoResponsavel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosDoResponsavel.ForeColor = System.Drawing.Color.White;
             this.gbDadosDoResponsavel.Location = new System.Drawing.Point(342, 3);
             this.gbDadosDoResponsavel.Name = "gbDadosDoResponsavel";
             this.gbDadosDoResponsavel.Size = new System.Drawing.Size(327, 403);
@@ -371,6 +390,7 @@
             // 
             // dtgResponsavel
             // 
+            this.dtgResponsavel.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgResponsavel.Location = new System.Drawing.Point(40, 218);
             this.dtgResponsavel.Name = "dtgResponsavel";
@@ -398,15 +418,15 @@
             this.lblNomePesquisa.TabIndex = 26;
             this.lblNomePesquisa.Text = "Nome completo:";
             // 
-            // label15
+            // lbPesquisa
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(20, 171);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 16);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Pesquisar";
+            this.lbPesquisa.AutoSize = true;
+            this.lbPesquisa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPesquisa.Location = new System.Drawing.Point(20, 171);
+            this.lbPesquisa.Name = "lbPesquisa";
+            this.lbPesquisa.Size = new System.Drawing.Size(58, 16);
+            this.lbPesquisa.TabIndex = 25;
+            this.lbPesquisa.Text = "Pesquisar";
             // 
             // btnSalvar
             // 
@@ -427,15 +447,15 @@
             this.txtbEmailResp.Size = new System.Drawing.Size(177, 21);
             this.txtbEmailResp.TabIndex = 23;
             // 
-            // label10
+            // lbEmailResponsavel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(79, 142);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 16);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Email:";
+            this.lbEmailResponsavel.AutoSize = true;
+            this.lbEmailResponsavel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailResponsavel.Location = new System.Drawing.Point(79, 142);
+            this.lbEmailResponsavel.Name = "lbEmailResponsavel";
+            this.lbEmailResponsavel.Size = new System.Drawing.Size(39, 16);
+            this.lbEmailResponsavel.TabIndex = 22;
+            this.lbEmailResponsavel.Text = "Email:";
             // 
             // mtbTelefoneResp
             // 
@@ -446,15 +466,15 @@
             this.mtbTelefoneResp.Size = new System.Drawing.Size(177, 21);
             this.mtbTelefoneResp.TabIndex = 21;
             // 
-            // label11
+            // lbTelefoneResponsavel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(62, 115);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 16);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Telefone:";
+            this.lbTelefoneResponsavel.AutoSize = true;
+            this.lbTelefoneResponsavel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefoneResponsavel.Location = new System.Drawing.Point(62, 115);
+            this.lbTelefoneResponsavel.Name = "lbTelefoneResponsavel";
+            this.lbTelefoneResponsavel.Size = new System.Drawing.Size(56, 16);
+            this.lbTelefoneResponsavel.TabIndex = 20;
+            this.lbTelefoneResponsavel.Text = "Telefone:";
             // 
             // dtpDataNascResp
             // 
@@ -465,15 +485,15 @@
             this.dtpDataNascResp.Size = new System.Drawing.Size(161, 21);
             this.dtpDataNascResp.TabIndex = 19;
             // 
-            // label12
+            // lbDataNascimentoResponsavel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 88);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 16);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Data de nascimento:";
+            this.lbDataNascimentoResponsavel.AutoSize = true;
+            this.lbDataNascimentoResponsavel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataNascimentoResponsavel.Location = new System.Drawing.Point(18, 88);
+            this.lbDataNascimentoResponsavel.Name = "lbDataNascimentoResponsavel";
+            this.lbDataNascimentoResponsavel.Size = new System.Drawing.Size(123, 16);
+            this.lbDataNascimentoResponsavel.TabIndex = 18;
+            this.lbDataNascimentoResponsavel.Text = "Data de nascimento:";
             // 
             // mtbCpfResp
             // 
@@ -484,15 +504,15 @@
             this.mtbCpfResp.Size = new System.Drawing.Size(177, 21);
             this.mtbCpfResp.TabIndex = 17;
             // 
-            // label13
+            // lbCpfResponsavel
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(86, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 16);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "CPF:";
+            this.lbCpfResponsavel.AutoSize = true;
+            this.lbCpfResponsavel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfResponsavel.Location = new System.Drawing.Point(86, 61);
+            this.lbCpfResponsavel.Name = "lbCpfResponsavel";
+            this.lbCpfResponsavel.Size = new System.Drawing.Size(32, 16);
+            this.lbCpfResponsavel.TabIndex = 16;
+            this.lbCpfResponsavel.Text = "CPF:";
             // 
             // txtbNomeResp
             // 
@@ -503,15 +523,15 @@
             this.txtbNomeResp.TabIndex = 15;
             this.txtbNomeResp.Leave += new System.EventHandler(this.txtbNomeResp_Leave);
             // 
-            // label14
+            // lbNomeResponsavel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(20, 34);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 16);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Nome completo:";
+            this.lbNomeResponsavel.AutoSize = true;
+            this.lbNomeResponsavel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeResponsavel.Location = new System.Drawing.Point(20, 34);
+            this.lbNomeResponsavel.Name = "lbNomeResponsavel";
+            this.lbNomeResponsavel.Size = new System.Drawing.Size(98, 16);
+            this.lbNomeResponsavel.TabIndex = 14;
+            this.lbNomeResponsavel.Text = "Nome completo:";
             // 
             // userControlRegistraCliente
             // 
@@ -538,40 +558,39 @@
         private System.Windows.Forms.GroupBox gbDadosDoCliente;
         private System.Windows.Forms.GroupBox gbDadosDoResponsavel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbEmailCliente;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTelefoneCliente;
         private System.Windows.Forms.DateTimePicker dtpDataNasc;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbDataNascimentoCliente;
         private System.Windows.Forms.MaskedTextBox mtbCpf;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbCpfCliente;
         private System.Windows.Forms.TextBox txtbNomeCompletoCli;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbNomeCliente;
+        private System.Windows.Forms.Label lbInfoAdicional;
         private System.Windows.Forms.RichTextBox rtbAdicionalInfo;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.ComboBox cbCidade;
         private System.Windows.Forms.TextBox txtbEndereco;
         private System.Windows.Forms.TextBox txtbemail;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.Label lbCidade;
         private System.Windows.Forms.TextBox txtbEmailResp;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbEmailResponsavel;
         private System.Windows.Forms.MaskedTextBox mtbTelefoneResp;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbTelefoneResponsavel;
         private System.Windows.Forms.DateTimePicker dtpDataNascResp;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbDataNascimentoResponsavel;
         private System.Windows.Forms.MaskedTextBox mtbCpfResp;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbCpfResponsavel;
         private System.Windows.Forms.TextBox txtbNomeResp;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblErros;
+        private System.Windows.Forms.Label lbNomeResponsavel;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dtgResponsavel;
         private System.Windows.Forms.TextBox txtbNomeRespPesquisa;
         private System.Windows.Forms.Label lblNomePesquisa;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbPesquisa;
         private System.Windows.Forms.Button btnClearPesquisa;
         private System.Windows.Forms.PictureBox ptErrorNomeCli;
         private System.Windows.Forms.ToolTip ttpErrors;

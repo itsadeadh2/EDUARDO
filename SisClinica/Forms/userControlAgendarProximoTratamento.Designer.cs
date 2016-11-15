@@ -40,7 +40,7 @@
             this.lblVisData = new System.Windows.Forms.Label();
             this.gbTratamento = new System.Windows.Forms.GroupBox();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbData = new System.Windows.Forms.Label();
             this.gbHorário = new System.Windows.Forms.GroupBox();
             this.cbHorarioFinal = new System.Windows.Forms.ComboBox();
             this.lblAs = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.lblSelecConsult = new System.Windows.Forms.Label();
             this.lblMedico = new System.Windows.Forms.Label();
             this.lblSelecData = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.bgVisualizacao.SuspendLayout();
             this.gbTratamento.SuspendLayout();
             this.gbHorário.SuspendLayout();
@@ -71,9 +71,10 @@
             this.bgVisualizacao.Controls.Add(this.lblVisCli);
             this.bgVisualizacao.Controls.Add(this.lblVisData);
             this.bgVisualizacao.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bgVisualizacao.Location = new System.Drawing.Point(3, 258);
+            this.bgVisualizacao.ForeColor = System.Drawing.Color.White;
+            this.bgVisualizacao.Location = new System.Drawing.Point(15, 258);
             this.bgVisualizacao.Name = "bgVisualizacao";
-            this.bgVisualizacao.Size = new System.Drawing.Size(483, 151);
+            this.bgVisualizacao.Size = new System.Drawing.Size(471, 151);
             this.bgVisualizacao.TabIndex = 4;
             this.bgVisualizacao.TabStop = false;
             this.bgVisualizacao.Text = "Visualização";
@@ -162,7 +163,7 @@
             // gbTratamento
             // 
             this.gbTratamento.Controls.Add(this.dtpData);
-            this.gbTratamento.Controls.Add(this.label2);
+            this.gbTratamento.Controls.Add(this.lbData);
             this.gbTratamento.Controls.Add(this.gbHorário);
             this.gbTratamento.Controls.Add(this.cbTipoDeTratamento);
             this.gbTratamento.Controls.Add(this.cbMedicos);
@@ -171,6 +172,7 @@
             this.gbTratamento.Controls.Add(this.lblMedico);
             this.gbTratamento.Controls.Add(this.lblSelecData);
             this.gbTratamento.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTratamento.ForeColor = System.Drawing.Color.White;
             this.gbTratamento.Location = new System.Drawing.Point(15, 3);
             this.gbTratamento.Name = "gbTratamento";
             this.gbTratamento.Size = new System.Drawing.Size(471, 252);
@@ -187,14 +189,14 @@
             this.dtpData.TabIndex = 12;
             this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
-            // label2
+            // lbData
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Data:";
+            this.lbData.AutoSize = true;
+            this.lbData.Location = new System.Drawing.Point(6, 120);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(39, 16);
+            this.lbData.TabIndex = 11;
+            this.lbData.Text = "Data:";
             // 
             // gbHorário
             // 
@@ -204,6 +206,7 @@
             this.gbHorário.Controls.Add(this.rdbTarde);
             this.gbHorário.Controls.Add(this.rdbManha);
             this.gbHorário.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbHorário.ForeColor = System.Drawing.Color.White;
             this.gbHorário.Location = new System.Drawing.Point(3, 143);
             this.gbHorário.Name = "gbHorário";
             this.gbHorário.Size = new System.Drawing.Size(465, 106);
@@ -323,27 +326,28 @@
             this.lblSelecData.TabIndex = 0;
             this.lblSelecData.Text = "Tipo de tratamento:";
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(489, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 65);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(489, 172);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(177, 65);
+            this.btnSalvar.TabIndex = 5;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
             // 
             // userControlAgendarProximoTratamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.bgVisualizacao);
             this.Controls.Add(this.gbTratamento);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "userControlAgendarProximoTratamento";
             this.Size = new System.Drawing.Size(672, 409);
             this.bgVisualizacao.ResumeLayout(false);
@@ -370,7 +374,7 @@
         private System.Windows.Forms.Label lblVisData;
         private System.Windows.Forms.GroupBox gbTratamento;
         private System.Windows.Forms.DateTimePicker dtpData;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbData;
         private System.Windows.Forms.GroupBox gbHorário;
         private System.Windows.Forms.ComboBox cbHorarioFinal;
         private System.Windows.Forms.Label lblAs;
@@ -383,6 +387,6 @@
         private System.Windows.Forms.Label lblSelecConsult;
         private System.Windows.Forms.Label lblMedico;
         private System.Windows.Forms.Label lblSelecData;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

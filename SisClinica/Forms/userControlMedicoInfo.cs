@@ -16,6 +16,9 @@ namespace SisClinica.Forms
         public userControlMedicoInfo()
         {
             InitializeComponent();
+            HelperFunctions.SetButtonsText(btnSalvar);
+            HelperFunctions.SetButtonsText(btnCancelar);
+            HelperFunctions.SetButtonsText(btnAlterar);
         }
 
         Medico objMedico;

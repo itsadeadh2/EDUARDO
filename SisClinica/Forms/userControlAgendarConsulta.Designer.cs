@@ -93,6 +93,7 @@
             this.gbCliente.Controls.Add(this.lblNomePesq);
             this.gbCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbCliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCliente.ForeColor = System.Drawing.Color.White;
             this.gbCliente.Location = new System.Drawing.Point(3, 3);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(330, 231);
@@ -102,6 +103,7 @@
             // 
             // btnCadastrarCli
             // 
+            this.btnCadastrarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarCli.Location = new System.Drawing.Point(108, 192);
             this.btnCadastrarCli.Name = "btnCadastrarCli";
             this.btnCadastrarCli.Size = new System.Drawing.Size(110, 23);
@@ -114,12 +116,13 @@
             // 
             this.dtgClientes.AllowUserToAddRows = false;
             this.dtgClientes.AllowUserToDeleteRows = false;
+            this.dtgClientes.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Cursor = System.Windows.Forms.Cursors.Help;
-            this.dtgClientes.Location = new System.Drawing.Point(9, 57);
+            this.dtgClientes.Location = new System.Drawing.Point(9, 63);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
-            this.dtgClientes.Size = new System.Drawing.Size(315, 108);
+            this.dtgClientes.Size = new System.Drawing.Size(315, 102);
             this.dtgClientes.TabIndex = 3;
             this.ttHelp.SetToolTip(this.dtgClientes, "Duplo clique para selecionar o cliente.");
             this.dtgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellClick);
@@ -145,6 +148,7 @@
             // lblNomePesq
             // 
             this.lblNomePesq.AutoSize = true;
+            this.lblNomePesq.ForeColor = System.Drawing.Color.White;
             this.lblNomePesq.Location = new System.Drawing.Point(6, 38);
             this.lblNomePesq.Name = "lblNomePesq";
             this.lblNomePesq.Size = new System.Drawing.Size(43, 16);
@@ -162,6 +166,7 @@
             this.gbConsulta.Controls.Add(this.lblSelecData);
             this.gbConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbConsulta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbConsulta.ForeColor = System.Drawing.Color.White;
             this.gbConsulta.Location = new System.Drawing.Point(339, 3);
             this.gbConsulta.Name = "gbConsulta";
             this.gbConsulta.Size = new System.Drawing.Size(330, 231);
@@ -177,6 +182,7 @@
             this.gbHorário.Controls.Add(this.rdbTarde);
             this.gbHorário.Controls.Add(this.rdbManha);
             this.gbHorário.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbHorário.ForeColor = System.Drawing.Color.White;
             this.gbHorário.Location = new System.Drawing.Point(3, 128);
             this.gbHorário.Name = "gbHorário";
             this.gbHorário.Size = new System.Drawing.Size(324, 100);
@@ -273,6 +279,7 @@
             // lblSelecConsult
             // 
             this.lblSelecConsult.AutoSize = true;
+            this.lblSelecConsult.ForeColor = System.Drawing.Color.White;
             this.lblSelecConsult.Location = new System.Drawing.Point(34, 97);
             this.lblSelecConsult.Name = "lblSelecConsult";
             this.lblSelecConsult.Size = new System.Drawing.Size(70, 16);
@@ -282,6 +289,7 @@
             // lblMedico
             // 
             this.lblMedico.AutoSize = true;
+            this.lblMedico.ForeColor = System.Drawing.Color.White;
             this.lblMedico.Location = new System.Drawing.Point(51, 67);
             this.lblMedico.Name = "lblMedico";
             this.lblMedico.Size = new System.Drawing.Size(53, 16);
@@ -291,6 +299,7 @@
             // lblSelecData
             // 
             this.lblSelecData.AutoSize = true;
+            this.lblSelecData.ForeColor = System.Drawing.Color.White;
             this.lblSelecData.Location = new System.Drawing.Point(6, 38);
             this.lblSelecData.Name = "lblSelecData";
             this.lblSelecData.Size = new System.Drawing.Size(98, 16);
@@ -315,6 +324,7 @@
             this.bgVisualizacao.Controls.Add(this.lblVisData);
             this.bgVisualizacao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bgVisualizacao.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bgVisualizacao.ForeColor = System.Drawing.Color.White;
             this.bgVisualizacao.Location = new System.Drawing.Point(0, 0);
             this.bgVisualizacao.Name = "bgVisualizacao";
             this.bgVisualizacao.Size = new System.Drawing.Size(333, 172);
@@ -325,6 +335,7 @@
             // lblVisMedic
             // 
             this.lblVisMedic.AutoSize = true;
+            this.lblVisMedic.ForeColor = System.Drawing.Color.White;
             this.lblVisMedic.Location = new System.Drawing.Point(8, 88);
             this.lblVisMedic.Name = "lblVisMedic";
             this.lblVisMedic.Size = new System.Drawing.Size(125, 16);
@@ -334,6 +345,7 @@
             // lblVisHora
             // 
             this.lblVisHora.AutoSize = true;
+            this.lblVisHora.ForeColor = System.Drawing.Color.White;
             this.lblVisHora.Location = new System.Drawing.Point(8, 115);
             this.lblVisHora.Name = "lblVisHora";
             this.lblVisHora.Size = new System.Drawing.Size(49, 16);
@@ -343,6 +355,7 @@
             // lblVisConsult
             // 
             this.lblVisConsult.AutoSize = true;
+            this.lblVisConsult.ForeColor = System.Drawing.Color.White;
             this.lblVisConsult.Location = new System.Drawing.Point(8, 142);
             this.lblVisConsult.Name = "lblVisConsult";
             this.lblVisConsult.Size = new System.Drawing.Size(70, 16);
@@ -352,6 +365,7 @@
             // lblVisCli
             // 
             this.lblVisCli.AutoSize = true;
+            this.lblVisCli.ForeColor = System.Drawing.Color.White;
             this.lblVisCli.Location = new System.Drawing.Point(8, 34);
             this.lblVisCli.Name = "lblVisCli";
             this.lblVisCli.Size = new System.Drawing.Size(49, 16);
@@ -361,6 +375,7 @@
             // lblVisData
             // 
             this.lblVisData.AutoSize = true;
+            this.lblVisData.ForeColor = System.Drawing.Color.White;
             this.lblVisData.Location = new System.Drawing.Point(8, 61);
             this.lblVisData.Name = "lblVisData";
             this.lblVisData.Size = new System.Drawing.Size(109, 16);
@@ -379,11 +394,14 @@
             // btnSalvar
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Image = global::SisClinica.Properties.Resources.btnSave;
-            this.btnSalvar.Location = new System.Drawing.Point(97, 24);
+            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(97, 43);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(144, 124);
+            this.btnSalvar.Size = new System.Drawing.Size(144, 69);
             this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TabStop = false;
+            this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -391,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);

@@ -16,6 +16,10 @@ namespace SisClinica.Forms
         public userControlResponsavelInfo()
         {
             InitializeComponent();
+            HelperFunctions.SetButtonsText(btnSalvar);
+            HelperFunctions.SetButtonsText(btnAlterar);
+            HelperFunctions.SetButtonsText(btnCancelar);
+            HelperFunctions.SetButtonsText(btnVoltar);
         }
         Responsavel objResponsavel;
         public userControlResponsavelInfo Preencher(Responsavel objResp)

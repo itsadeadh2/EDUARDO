@@ -16,10 +16,10 @@ namespace SisClinica.Forms
         public userControlPesquisarCliente()
         {
             InitializeComponent();
-            HelperFunctions.SetButtons(btnPesq);
-            HelperFunctions.SetButtons(btnFullInfo);
-            HelperFunctions.SetButtons(btnAlter);
-            HelperFunctions.SetButtons(btnDelete);
+            HelperFunctions.SetButtonsText(btnPesq);
+            HelperFunctions.SetButtonsText(btnFullInfo);
+            HelperFunctions.SetButtonsText(btnAlter);
+            HelperFunctions.SetButtonsText(btnDelete);
         }
         private Cliente objCliente;
 

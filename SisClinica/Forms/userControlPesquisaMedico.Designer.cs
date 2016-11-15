@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbDadosMedico = new System.Windows.Forms.GroupBox();
             this.dtgResultados = new System.Windows.Forms.DataGridView();
             this.btnPesq = new System.Windows.Forms.Button();
@@ -52,6 +52,7 @@
             this.gbDadosMedico.Controls.Add(this.lblNome);
             this.gbDadosMedico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDadosMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosMedico.ForeColor = System.Drawing.Color.White;
             this.gbDadosMedico.Location = new System.Drawing.Point(0, 0);
             this.gbDadosMedico.Name = "gbDadosMedico";
             this.gbDadosMedico.Size = new System.Drawing.Size(672, 299);
@@ -64,10 +65,11 @@
             this.dtgResultados.AllowUserToAddRows = false;
             this.dtgResultados.AllowUserToDeleteRows = false;
             this.dtgResultados.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgResultados.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgResultados.Location = new System.Drawing.Point(9, 84);
             this.dtgResultados.Name = "dtgResultados";
@@ -80,11 +82,11 @@
             // 
             this.btnPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesq.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesq.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
-            this.btnPesq.Location = new System.Drawing.Point(412, 39);
+            this.btnPesq.Location = new System.Drawing.Point(412, 55);
             this.btnPesq.Name = "btnPesq";
-            this.btnPesq.Size = new System.Drawing.Size(49, 39);
+            this.btnPesq.Size = new System.Drawing.Size(90, 23);
             this.btnPesq.TabIndex = 2;
+            this.btnPesq.Text = "Pesquisar";
             this.btnPesq.UseVisualStyleBackColor = true;
             this.btnPesq.Click += new System.EventHandler(this.btnPesq_Click);
             // 
@@ -129,11 +131,11 @@
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
             this.btnDelete.Location = new System.Drawing.Point(362, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 107);
             this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -141,11 +143,11 @@
             // 
             this.btnFullInfo.Enabled = false;
             this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
             this.btnFullInfo.Location = new System.Drawing.Point(171, 2);
             this.btnFullInfo.Name = "btnFullInfo";
             this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
             this.btnFullInfo.TabIndex = 2;
+            this.btnFullInfo.Text = "Detalhes";
             this.btnFullInfo.UseVisualStyleBackColor = true;
             this.btnFullInfo.Click += new System.EventHandler(this.btnFullInfo_Click);
             // 
@@ -153,9 +155,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "userControlPesquisaMedico";
             this.Size = new System.Drawing.Size(672, 409);
             this.gbDadosMedico.ResumeLayout(false);

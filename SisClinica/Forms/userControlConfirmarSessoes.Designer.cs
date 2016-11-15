@@ -69,6 +69,7 @@
             this.dtgSessoes.AllowUserToAddRows = false;
             this.dtgSessoes.AllowUserToDeleteRows = false;
             this.dtgSessoes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgSessoes.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSessoes.Location = new System.Drawing.Point(6, 42);
             this.dtgSessoes.Name = "dtgSessoes";
@@ -100,6 +101,7 @@
             this.gbConfirmar.Controls.Add(this.label2);
             this.gbConfirmar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.gbConfirmar.ForeColor = System.Drawing.Color.White;
             this.gbConfirmar.Location = new System.Drawing.Point(0, 216);
             this.gbConfirmar.Name = "gbConfirmar";
             this.gbConfirmar.Size = new System.Drawing.Size(672, 193);
@@ -110,10 +112,11 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.White;
+            this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(506, 137);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(528, 134);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(138, 53);
             this.btnConfirmar.TabIndex = 39;
@@ -126,7 +129,7 @@
             this.lblHorario.AutoSize = true;
             this.lblHorario.BackColor = System.Drawing.Color.Transparent;
             this.lblHorario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblHorario.ForeColor = System.Drawing.Color.White;
             this.lblHorario.Location = new System.Drawing.Point(387, 116);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(55, 17);
@@ -138,7 +141,7 @@
             this.lblConsultorio.AutoSize = true;
             this.lblConsultorio.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblConsultorio.ForeColor = System.Drawing.Color.White;
             this.lblConsultorio.Location = new System.Drawing.Point(387, 84);
             this.lblConsultorio.Name = "lblConsultorio";
             this.lblConsultorio.Size = new System.Drawing.Size(82, 17);
@@ -150,7 +153,7 @@
             this.lblValor.AutoSize = true;
             this.lblValor.BackColor = System.Drawing.Color.Transparent;
             this.lblValor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblValor.ForeColor = System.Drawing.Color.White;
             this.lblValor.Location = new System.Drawing.Point(151, 156);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(42, 17);
@@ -162,7 +165,7 @@
             this.lblTipoTrat.AutoSize = true;
             this.lblTipoTrat.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoTrat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoTrat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblTipoTrat.ForeColor = System.Drawing.Color.White;
             this.lblTipoTrat.Location = new System.Drawing.Point(151, 116);
             this.lblTipoTrat.Name = "lblTipoTrat";
             this.lblTipoTrat.Size = new System.Drawing.Size(12, 17);
@@ -174,7 +177,7 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.BackColor = System.Drawing.Color.Transparent;
             this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblTipo.ForeColor = System.Drawing.Color.White;
             this.lblTipo.Location = new System.Drawing.Point(151, 84);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(34, 17);
@@ -186,7 +189,7 @@
             this.lblMedico.AutoSize = true;
             this.lblMedico.BackColor = System.Drawing.Color.Transparent;
             this.lblMedico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblMedico.ForeColor = System.Drawing.Color.White;
             this.lblMedico.Location = new System.Drawing.Point(151, 52);
             this.lblMedico.Name = "lblMedico";
             this.lblMedico.Size = new System.Drawing.Size(56, 17);
@@ -198,7 +201,7 @@
             this.lblCRM.AutoSize = true;
             this.lblCRM.BackColor = System.Drawing.Color.Transparent;
             this.lblCRM.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCRM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblCRM.ForeColor = System.Drawing.Color.White;
             this.lblCRM.Location = new System.Drawing.Point(387, 52);
             this.lblCRM.Name = "lblCRM";
             this.lblCRM.Size = new System.Drawing.Size(38, 17);
@@ -210,7 +213,7 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.BackColor = System.Drawing.Color.Transparent;
             this.lblCPF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblCPF.ForeColor = System.Drawing.Color.White;
             this.lblCPF.Location = new System.Drawing.Point(387, 20);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(33, 17);
@@ -222,7 +225,7 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.lblCliente.ForeColor = System.Drawing.Color.White;
             this.lblCliente.Location = new System.Drawing.Point(151, 20);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(54, 17);

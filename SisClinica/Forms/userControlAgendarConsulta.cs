@@ -16,8 +16,12 @@ namespace SisClinica.Forms
         public userControlAgendarConsulta()
         {
             InitializeComponent();
+            HelperFunctions.SetButtonsText(btnSalvar);
+            HelperFunctions.SetButtonsText(btnCadastrarCli);
+            
             HelperFunctions.SetButtons(btnPesquisar);
-            HelperFunctions.SetButtons(btnSalvar);
+           
+            
 
             ChecaTurno();
             cbConsultorios.DataSource = new Consultorio().Pesquisar();

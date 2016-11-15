@@ -34,14 +34,14 @@
             this.txtbEndereco = new System.Windows.Forms.TextBox();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtbnome = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbEstado = new System.Windows.Forms.Label();
+            this.lbEndereco = new System.Windows.Forms.Label();
+            this.lbTelefone = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbCidade = new System.Windows.Forms.Label();
             this.dtgSessoes = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbSessoes = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -59,9 +59,38 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Enabled = false;
             this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
             this.cbEstado.Location = new System.Drawing.Point(155, 92);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(62, 28);
@@ -69,6 +98,7 @@
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Enabled = false;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
@@ -105,45 +135,45 @@
             this.txtbnome.Size = new System.Drawing.Size(290, 26);
             this.txtbnome.TabIndex = 13;
             // 
-            // label8
+            // lbEstado
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(87, 95);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 20);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Estado:";
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEstado.Location = new System.Drawing.Point(87, 95);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(62, 20);
+            this.lbEstado.TabIndex = 20;
+            this.lbEstado.Text = "Estado:";
             // 
-            // label6
+            // lbEndereco
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(64, 206);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Endereco:";
+            this.lbEndereco.AutoSize = true;
+            this.lbEndereco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEndereco.Location = new System.Drawing.Point(64, 206);
+            this.lbEndereco.Name = "lbEndereco";
+            this.lbEndereco.Size = new System.Drawing.Size(85, 20);
+            this.lbEndereco.TabIndex = 17;
+            this.lbEndereco.Text = "Endereco:";
             // 
-            // label5
+            // lbTelefone
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(74, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Telefone:";
+            this.lbTelefone.AutoSize = true;
+            this.lbTelefone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefone.Location = new System.Drawing.Point(74, 169);
+            this.lbTelefone.Name = "lbTelefone";
+            this.lbTelefone.Size = new System.Drawing.Size(75, 20);
+            this.lbTelefone.TabIndex = 16;
+            this.lbTelefone.Text = "Telefone:";
             // 
-            // label4
+            // lbEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(94, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "E-mail:";
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(94, 132);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(55, 20);
+            this.lbEmail.TabIndex = 15;
+            this.lbEmail.Text = "E-mail:";
             // 
             // lblNome
             // 
@@ -155,20 +185,21 @@
             this.lblNome.TabIndex = 14;
             this.lblNome.Text = "Nome completo:";
             // 
-            // label1
+            // lbCidade
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(257, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Cidade:";
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCidade.Location = new System.Drawing.Point(257, 95);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(68, 20);
+            this.lbCidade.TabIndex = 24;
+            this.lbCidade.Text = "Cidade:";
             // 
             // dtgSessoes
             // 
             this.dtgSessoes.AllowUserToAddRows = false;
             this.dtgSessoes.AllowUserToDeleteRows = false;
+            this.dtgSessoes.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgSessoes.Location = new System.Drawing.Point(0, 273);
@@ -178,22 +209,22 @@
             this.dtgSessoes.TabIndex = 25;
             this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
             // 
-            // label2
+            // lbSessoes
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(304, 250);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Sessões";
+            this.lbSessoes.AutoSize = true;
+            this.lbSessoes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSessoes.Location = new System.Drawing.Point(304, 250);
+            this.lbSessoes.Name = "lbSessoes";
+            this.lbSessoes.Size = new System.Drawing.Size(64, 20);
+            this.lbSessoes.TabIndex = 26;
+            this.lbSessoes.Text = "Sessões";
             // 
             // btnAlterar
             // 
-            this.btnAlterar.BackColor = System.Drawing.Color.White;
+            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnAlterar.ForeColor = System.Drawing.Color.White;
             this.btnAlterar.Location = new System.Drawing.Point(516, 55);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(130, 48);
@@ -204,10 +235,10 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(516, 109);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(130, 48);
@@ -219,10 +250,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(516, 163);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 48);
@@ -236,24 +267,25 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbSessoes);
             this.Controls.Add(this.dtgSessoes);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbCidade);
             this.Controls.Add(this.txtbEmail);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.cbCidade);
             this.Controls.Add(this.txtbEndereco);
             this.Controls.Add(this.mtbTelefone);
             this.Controls.Add(this.txtbnome);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbEstado);
+            this.Controls.Add(this.lbEndereco);
+            this.Controls.Add(this.lbTelefone);
+            this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.lblNome);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "userControlMedicoInfo";
             this.Size = new System.Drawing.Size(672, 409);
             ((System.ComponentModel.ISupportInitialize)(this.dtgSessoes)).EndInit();
@@ -270,14 +302,14 @@
         private System.Windows.Forms.TextBox txtbEndereco;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.TextBox txtbnome;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.Label lbEndereco;
+        private System.Windows.Forms.Label lbTelefone;
+        private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCidade;
         private System.Windows.Forms.DataGridView dtgSessoes;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbSessoes;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;

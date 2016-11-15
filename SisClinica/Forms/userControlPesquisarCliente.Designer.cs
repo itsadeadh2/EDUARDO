@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbDadosCliente = new System.Windows.Forms.GroupBox();
             this.dtgResultados = new System.Windows.Forms.DataGridView();
@@ -62,6 +62,7 @@
             this.gbDadosCliente.Controls.Add(this.lblNome);
             this.gbDadosCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDadosCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosCliente.ForeColor = System.Drawing.Color.White;
             this.gbDadosCliente.Location = new System.Drawing.Point(0, 0);
             this.gbDadosCliente.Name = "gbDadosCliente";
             this.gbDadosCliente.Size = new System.Drawing.Size(672, 299);
@@ -74,10 +75,11 @@
             this.dtgResultados.AllowUserToAddRows = false;
             this.dtgResultados.AllowUserToDeleteRows = false;
             this.dtgResultados.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgResultados.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgResultados.Location = new System.Drawing.Point(9, 84);
             this.dtgResultados.Name = "dtgResultados";
@@ -90,11 +92,12 @@
             // 
             this.btnPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesq.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesq.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
-            this.btnPesq.Location = new System.Drawing.Point(412, 39);
+            this.btnPesq.ForeColor = System.Drawing.Color.White;
+            this.btnPesq.Location = new System.Drawing.Point(412, 55);
             this.btnPesq.Name = "btnPesq";
-            this.btnPesq.Size = new System.Drawing.Size(49, 39);
+            this.btnPesq.Size = new System.Drawing.Size(88, 23);
             this.btnPesq.TabIndex = 2;
+            this.btnPesq.Text = "Pesquisar";
             this.btnPesq.UseVisualStyleBackColor = true;
             this.btnPesq.Click += new System.EventHandler(this.btnPesq_Click);
             // 
@@ -120,11 +123,12 @@
             // 
             this.btnFullInfo.Enabled = false;
             this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullInfo.Image = global::SisClinica.Properties.Resources.btnFullInfo;
+            this.btnFullInfo.ForeColor = System.Drawing.Color.White;
             this.btnFullInfo.Location = new System.Drawing.Point(266, 2);
             this.btnFullInfo.Name = "btnFullInfo";
             this.btnFullInfo.Size = new System.Drawing.Size(140, 107);
             this.btnFullInfo.TabIndex = 2;
+            this.btnFullInfo.Text = "Detalhes";
             this.btnFullInfo.UseVisualStyleBackColor = true;
             this.btnFullInfo.Click += new System.EventHandler(this.btnFullInfo_Click);
             // 
@@ -132,11 +136,12 @@
             // 
             this.btnAlter.Enabled = false;
             this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlter.Image = global::SisClinica.Properties.Resources.btnPencil;
+            this.btnAlter.ForeColor = System.Drawing.Color.White;
             this.btnAlter.Location = new System.Drawing.Point(75, 2);
             this.btnAlter.Name = "btnAlter";
             this.btnAlter.Size = new System.Drawing.Size(140, 107);
             this.btnAlter.TabIndex = 3;
+            this.btnAlter.Text = "Alterar";
             this.btnAlter.UseVisualStyleBackColor = true;
             this.btnAlter.Click += new System.EventHandler(this.btnAlter_Click);
             // 
@@ -144,11 +149,12 @@
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::SisClinica.Properties.Resources.btnDelete;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(457, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 107);
             this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -167,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "userControlPesquisarCliente";

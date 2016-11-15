@@ -41,23 +41,23 @@
             this.lblNomePesq = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.cbConsultorios = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbHorario = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTurno = new System.Windows.Forms.Label();
             this.lblSelecConsult = new System.Windows.Forms.Label();
             this.cbHorarioFinal = new System.Windows.Forms.ComboBox();
             this.lblMedico = new System.Windows.Forms.Label();
             this.lblAs = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbCliente = new System.Windows.Forms.Label();
             this.cbHorarioInicial = new System.Windows.Forms.ComboBox();
             this.lblSelecData = new System.Windows.Forms.Label();
             this.rdbTarde = new System.Windows.Forms.RadioButton();
             this.cbMedicos = new System.Windows.Forms.ComboBox();
             this.rdbManha = new System.Windows.Forms.RadioButton();
             this.txtbNomeCliente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbTipo = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbSituacao = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblTipoSessao = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -77,23 +77,23 @@
             this.panel1.Controls.Add(this.gbPesquisa);
             this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.cbConsultorios);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lbHorario);
             this.panel1.Controls.Add(this.dtpData);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbTurno);
             this.panel1.Controls.Add(this.lblSelecConsult);
             this.panel1.Controls.Add(this.cbHorarioFinal);
             this.panel1.Controls.Add(this.lblMedico);
             this.panel1.Controls.Add(this.lblAs);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbCliente);
             this.panel1.Controls.Add(this.cbHorarioInicial);
             this.panel1.Controls.Add(this.lblSelecData);
             this.panel1.Controls.Add(this.rdbTarde);
             this.panel1.Controls.Add(this.cbMedicos);
             this.panel1.Controls.Add(this.rdbManha);
             this.panel1.Controls.Add(this.txtbNomeCliente);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbTipo);
             this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbSituacao);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.lblTipoSessao);
             this.panel1.Controls.Add(this.btnAlterar);
@@ -106,7 +106,7 @@
             // 
             // btnAgendarProxima
             // 
-            this.btnAgendarProxima.BackColor = System.Drawing.Color.White;
+            this.btnAgendarProxima.BackColor = System.Drawing.Color.Transparent;
             this.btnAgendarProxima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgendarProxima.Location = new System.Drawing.Point(519, 58);
             this.btnAgendarProxima.Name = "btnAgendarProxima";
@@ -172,6 +172,7 @@
             this.gbPesquisa.Controls.Add(this.txtbNomePesquisa);
             this.gbPesquisa.Controls.Add(this.lblNomePesq);
             this.gbPesquisa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPesquisa.ForeColor = System.Drawing.Color.White;
             this.gbPesquisa.Location = new System.Drawing.Point(40, 12);
             this.gbPesquisa.Name = "gbPesquisa";
             this.gbPesquisa.Size = new System.Drawing.Size(406, 151);
@@ -184,6 +185,7 @@
             // 
             this.dtgClientes.AllowUserToAddRows = false;
             this.dtgClientes.AllowUserToDeleteRows = false;
+            this.dtgClientes.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Location = new System.Drawing.Point(62, 55);
             this.dtgClientes.Name = "dtgClientes";
@@ -227,7 +229,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.BackColor = System.Drawing.Color.White;
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Location = new System.Drawing.Point(519, 252);
             this.btnExcluir.Name = "btnExcluir";
@@ -252,16 +254,16 @@
             this.cbConsultorios.ValueMember = "id";
             this.cbConsultorios.SelectedIndexChanged += new System.EventHandler(this.cbConsultorios_SelectedIndexChanged);
             // 
-            // label5
+            // lbHorario
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 372);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Horário:";
+            this.lbHorario.AutoSize = true;
+            this.lbHorario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHorario.Location = new System.Drawing.Point(56, 372);
+            this.lbHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbHorario.Name = "lbHorario";
+            this.lbHorario.Size = new System.Drawing.Size(54, 17);
+            this.lbHorario.TabIndex = 29;
+            this.lbHorario.Text = "Horário:";
             // 
             // dtpData
             // 
@@ -275,16 +277,16 @@
             this.dtpData.TabIndex = 3;
             this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
-            // label4
+            // lbTurno
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 342);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Turno:";
+            this.lbTurno.AutoSize = true;
+            this.lbTurno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTurno.Location = new System.Drawing.Point(70, 342);
+            this.lbTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTurno.Name = "lbTurno";
+            this.lbTurno.Size = new System.Drawing.Size(42, 17);
+            this.lbTurno.TabIndex = 28;
+            this.lbTurno.Text = "Turno:";
             // 
             // lblSelecConsult
             // 
@@ -332,16 +334,16 @@
             this.lblAs.TabIndex = 26;
             this.lblAs.Text = "as";
             // 
-            // label1
+            // lbCliente
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 222);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Cliente:";
+            this.lbCliente.AutoSize = true;
+            this.lbCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCliente.Location = new System.Drawing.Point(58, 222);
+            this.lbCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCliente.Name = "lbCliente";
+            this.lbCliente.Size = new System.Drawing.Size(54, 17);
+            this.lbCliente.TabIndex = 7;
+            this.lbCliente.Text = "Cliente:";
             // 
             // cbHorarioInicial
             // 
@@ -422,20 +424,20 @@
             this.txtbNomeCliente.Size = new System.Drawing.Size(298, 22);
             this.txtbNomeCliente.TabIndex = 13;
             // 
-            // label2
+            // lbTipo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 168);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 17);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Tipo:";
+            this.lbTipo.AutoSize = true;
+            this.lbTipo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTipo.Location = new System.Drawing.Point(76, 168);
+            this.lbTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTipo.Name = "lbTipo";
+            this.lbTipo.Size = new System.Drawing.Size(35, 17);
+            this.lbTipo.TabIndex = 15;
+            this.lbTipo.Text = "Tipo:";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Location = new System.Drawing.Point(519, 318);
             this.btnCancelar.Name = "btnCancelar";
@@ -446,20 +448,20 @@
             this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label3
+            // lbSituacao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 195);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Situação:";
+            this.lbSituacao.AutoSize = true;
+            this.lbSituacao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSituacao.Location = new System.Drawing.Point(46, 195);
+            this.lbSituacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSituacao.Name = "lbSituacao";
+            this.lbSituacao.Size = new System.Drawing.Size(65, 17);
+            this.lbSituacao.TabIndex = 16;
+            this.lbSituacao.Text = "Situação:";
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Location = new System.Drawing.Point(519, 188);
             this.btnSalvar.Name = "btnSalvar";
@@ -483,7 +485,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.BackColor = System.Drawing.Color.White;
+            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Location = new System.Drawing.Point(519, 122);
             this.btnAlterar.Name = "btnAlterar";
@@ -508,9 +510,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "userControlAlterarSessoes";
             this.Size = new System.Drawing.Size(672, 409);
             this.panel1.ResumeLayout(false);
@@ -532,23 +535,23 @@
         private System.Windows.Forms.Label lblNomePesq;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ComboBox cbConsultorios;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbHorario;
         private System.Windows.Forms.DateTimePicker dtpData;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTurno;
         private System.Windows.Forms.Label lblSelecConsult;
         private System.Windows.Forms.ComboBox cbHorarioFinal;
         private System.Windows.Forms.Label lblMedico;
         private System.Windows.Forms.Label lblAs;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCliente;
         private System.Windows.Forms.ComboBox cbHorarioInicial;
         private System.Windows.Forms.Label lblSelecData;
         private System.Windows.Forms.RadioButton rdbTarde;
         private System.Windows.Forms.ComboBox cbMedicos;
         private System.Windows.Forms.RadioButton rdbManha;
         private System.Windows.Forms.TextBox txtbNomeCliente;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTipo;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbSituacao;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblTipoSessao;
         private System.Windows.Forms.Button btnAlterar;

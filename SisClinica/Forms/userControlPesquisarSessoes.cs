@@ -16,7 +16,7 @@ namespace SisClinica.Forms
         public userControlPesquisarSessoes()
         {
             InitializeComponent();
-            HelperFunctions.SetButtons(btnPesquisar);
+            HelperFunctions.SetButtonsText(btnPesquisar);
         }
 
         private Sessoes objSessao;

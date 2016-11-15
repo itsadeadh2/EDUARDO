@@ -16,7 +16,7 @@ namespace SisClinica.Forms
         public userControlRegistraMedico()
         {
             InitializeComponent();
-            HelperFunctions.SetButtons(btnSalvar);
+            HelperFunctions.SetButtonsText(btnSalvar);
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

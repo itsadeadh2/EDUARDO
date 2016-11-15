@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblNome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbCpf = new System.Windows.Forms.Label();
+            this.lbCrm = new System.Windows.Forms.Label();
+            this.lbDataNascimento = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbTelefone = new System.Windows.Forms.Label();
+            this.lbEndereco = new System.Windows.Forms.Label();
+            this.lbCidade = new System.Windows.Forms.Label();
+            this.lbEstado = new System.Windows.Forms.Label();
             this.txtbnome = new System.Windows.Forms.TextBox();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
@@ -69,85 +69,85 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome completo:";
             // 
-            // label1
+            // lbCpf
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "CPF:";
+            this.lbCpf.AutoSize = true;
+            this.lbCpf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpf.Location = new System.Drawing.Point(89, 158);
+            this.lbCpf.Name = "lbCpf";
+            this.lbCpf.Size = new System.Drawing.Size(37, 17);
+            this.lbCpf.TabIndex = 1;
+            this.lbCpf.Text = "CPF:";
             // 
-            // label2
+            // lbCrm
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CRM:";
+            this.lbCrm.AutoSize = true;
+            this.lbCrm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCrm.Location = new System.Drawing.Point(84, 127);
+            this.lbCrm.Name = "lbCrm";
+            this.lbCrm.Size = new System.Drawing.Size(42, 17);
+            this.lbCrm.TabIndex = 2;
+            this.lbCrm.Text = "CRM:";
             // 
-            // label3
+            // lbDataNascimento
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(358, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Data de Nascimento:";
+            this.lbDataNascimento.AutoSize = true;
+            this.lbDataNascimento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataNascimento.Location = new System.Drawing.Point(358, 126);
+            this.lbDataNascimento.Name = "lbDataNascimento";
+            this.lbDataNascimento.Size = new System.Drawing.Size(148, 17);
+            this.lbDataNascimento.TabIndex = 3;
+            this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
-            // label4
+            // lbEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 218);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "E-mail:";
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(75, 218);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(51, 17);
+            this.lbEmail.TabIndex = 4;
+            this.lbEmail.Text = "E-mail:";
             // 
-            // label5
+            // lbTelefone
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 247);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Telefone:";
+            this.lbTelefone.AutoSize = true;
+            this.lbTelefone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefone.Location = new System.Drawing.Point(61, 247);
+            this.lbTelefone.Name = "lbTelefone";
+            this.lbTelefone.Size = new System.Drawing.Size(65, 17);
+            this.lbTelefone.TabIndex = 5;
+            this.lbTelefone.Text = "Telefone:";
             // 
-            // label6
+            // lbEndereco
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(53, 276);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 17);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Endereco:";
+            this.lbEndereco.AutoSize = true;
+            this.lbEndereco.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEndereco.Location = new System.Drawing.Point(53, 276);
+            this.lbEndereco.Name = "lbEndereco";
+            this.lbEndereco.Size = new System.Drawing.Size(73, 17);
+            this.lbEndereco.TabIndex = 6;
+            this.lbEndereco.Text = "Endereco:";
             // 
-            // label7
+            // lbCidade
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(200, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 17);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Cidade:";
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCidade.Location = new System.Drawing.Point(200, 188);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(61, 17);
+            this.lbCidade.TabIndex = 7;
+            this.lbCidade.Text = "Cidade:";
             // 
-            // label8
+            // lbEstado
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(70, 188);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Estado:";
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEstado.Location = new System.Drawing.Point(70, 188);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(56, 17);
+            this.lbEstado.TabIndex = 8;
+            this.lbEstado.Text = "Estado:";
             // 
             // txtbnome
             // 
@@ -223,6 +223,7 @@
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
             this.cbCidade.Location = new System.Drawing.Point(267, 184);
@@ -232,8 +233,37 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
             this.cbEstado.Location = new System.Drawing.Point(132, 184);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(62, 25);
@@ -283,11 +313,11 @@
             // btnSalvar
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Image = global::SisClinica.Properties.Resources.btnSave;
             this.btnSalvar.Location = new System.Drawing.Point(512, 276);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(157, 130);
             this.btnSalvar.TabIndex = 20;
+            this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -295,7 +325,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.ptbCPFError);
             this.Controls.Add(this.ptbDtNascError);
             this.Controls.Add(this.ptbNomeError);
@@ -311,15 +341,16 @@
             this.Controls.Add(this.mtbCRM);
             this.Controls.Add(this.mtbCPF);
             this.Controls.Add(this.txtbnome);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbEstado);
+            this.Controls.Add(this.lbCidade);
+            this.Controls.Add(this.lbEndereco);
+            this.Controls.Add(this.lbTelefone);
+            this.Controls.Add(this.lbEmail);
+            this.Controls.Add(this.lbDataNascimento);
+            this.Controls.Add(this.lbCrm);
+            this.Controls.Add(this.lbCpf);
             this.Controls.Add(this.lblNome);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "userControlRegistraMedico";
             this.Size = new System.Drawing.Size(672, 409);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCPFError)).EndInit();
@@ -333,14 +364,14 @@
         #endregion
 
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbCpf;
+        private System.Windows.Forms.Label lbCrm;
+        private System.Windows.Forms.Label lbDataNascimento;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Label lbTelefone;
+        private System.Windows.Forms.Label lbEndereco;
+        private System.Windows.Forms.Label lbCidade;
+        private System.Windows.Forms.Label lbEstado;
         private System.Windows.Forms.TextBox txtbnome;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
         private System.Windows.Forms.DateTimePicker dtpDataNasc;

@@ -16,6 +16,7 @@ namespace SisClinica.Forms
         public userControlHorarios()
         {
             InitializeComponent();
+            HelperFunctions.SetButtonsText(btnSalvar);
             GerarHorarios();
         }
         public void GerarHorarios()

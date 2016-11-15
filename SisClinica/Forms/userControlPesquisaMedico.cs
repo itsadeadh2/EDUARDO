@@ -16,9 +16,9 @@ namespace SisClinica.Forms
         public userControlPesquisaMedico()
         {
             InitializeComponent();
-            HelperFunctions.SetButtons(btnFullInfo);
-            HelperFunctions.SetButtons(btnPesq);
-            HelperFunctions.SetButtons(btnDelete);
+            HelperFunctions.SetButtonsText(btnFullInfo);
+            HelperFunctions.SetButtonsText(btnPesq);
+            HelperFunctions.SetButtonsText(btnDelete);
         }
 
         Medico objMedico;

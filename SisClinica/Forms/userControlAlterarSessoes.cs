@@ -16,6 +16,12 @@ namespace SisClinica.Forms
         public userControlAlterarSessoes()
         {
             InitializeComponent();
+            HelperFunctions.SetButtonsText(btnSalvar);
+            HelperFunctions.SetButtonsText(btnAlterar);
+            HelperFunctions.SetButtonsText(btnExcluir);
+            HelperFunctions.SetButtonsText(btnAgendarProxima);
+            HelperFunctions.SetButtonsText(btnCancelar);
+
         }
 
         private Cliente objCliente;
