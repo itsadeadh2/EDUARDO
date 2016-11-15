@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbDadosCliente = new System.Windows.Forms.GroupBox();
             this.dtgResultados = new System.Windows.Forms.DataGridView();
@@ -75,9 +75,9 @@
             this.dtgResultados.AllowUserToAddRows = false;
             this.dtgResultados.AllowUserToDeleteRows = false;
             this.dtgResultados.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgResultados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgResultados.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -123,10 +123,11 @@
             // 
             this.btnFullInfo.Enabled = false;
             this.btnFullInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFullInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.btnFullInfo.ForeColor = System.Drawing.Color.White;
-            this.btnFullInfo.Location = new System.Drawing.Point(284, 20);
+            this.btnFullInfo.Location = new System.Drawing.Point(283, 20);
             this.btnFullInfo.Name = "btnFullInfo";
-            this.btnFullInfo.Size = new System.Drawing.Size(73, 61);
+            this.btnFullInfo.Size = new System.Drawing.Size(86, 61);
             this.btnFullInfo.TabIndex = 2;
             this.btnFullInfo.Text = "Detalhes";
             this.btnFullInfo.UseVisualStyleBackColor = true;
@@ -136,6 +137,7 @@
             // 
             this.btnAlter.Enabled = false;
             this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlter.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.btnAlter.ForeColor = System.Drawing.Color.White;
             this.btnAlter.Location = new System.Drawing.Point(93, 20);
             this.btnAlter.Name = "btnAlter";
@@ -149,6 +151,7 @@
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(475, 20);
             this.btnDelete.Name = "btnDelete";
