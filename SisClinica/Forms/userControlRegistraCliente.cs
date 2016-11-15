@@ -170,6 +170,10 @@ namespace SisClinica.Forms
             {
                 mtbCpf.Focus();
             }
+            else if (ChecaCPF(objResponsavel.cpf))
+            {
+                mtbCpfResp.Focus();
+            }
             else if (HelperFunctions.ChecaMenorDeIdade(objCliente.dataNascimento))
             {
                 if (!foiPesquisado)
