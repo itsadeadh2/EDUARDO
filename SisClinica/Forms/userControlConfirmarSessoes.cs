@@ -19,7 +19,7 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnConfirmar);
             DateTime data = DateTime.Now.Date;
             data = data.AddDays(1);
-            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(DateTime.Now.Date);          
+            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);          
         }
         Sessoes objSessao;
         private void dtgSessoes_CellClick(object sender, DataGridViewCellEventArgs e)

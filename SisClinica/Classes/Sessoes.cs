@@ -106,7 +106,17 @@ namespace SisClinica.Classes
             {
                 foreach (Sessoes objSessao in lst)
                 {
-                    dt.Rows.Add(objSessao.tipoDeSessao, objSessao.objCliente.nome, objSessao.objCliente.cpf, objSessao.medicoResponsavel.nome, objSessao.dataSessao, objSessao.horaInicio.TimeOfDay, objSessao.horaFim.TimeOfDay,objSessao.nroSessao +"/"+objSessao.qtdeSessoes , objSessao.id);
+                    if (objSessao.sessaoCompleta==false)
+                    {
+                        if (objSessao.tipoDeSessao!="Tratamento")
+                        {
+                            dt.Rows.Add(objSessao.tipoDeSessao, objSessao.objCliente.nome, objSessao.objCliente.cpf, objSessao.medicoResponsavel.nome, objSessao.dataSessao, objSessao.horaInicio.TimeOfDay, objSessao.horaFim.TimeOfDay,"-", objSessao.id);
+                        }
+                        else
+                        {
+                            dt.Rows.Add(objSessao.tipoDeSessao, objSessao.objCliente.nome, objSessao.objCliente.cpf, objSessao.medicoResponsavel.nome, objSessao.dataSessao, objSessao.horaInicio.TimeOfDay, objSessao.horaFim.TimeOfDay, objSessao.nroSessao + "/" + objSessao.qtdeSessoes, objSessao.id);
+                        }
+                    }                    
                 }
             }
             return dt;
@@ -176,7 +186,7 @@ namespace SisClinica.Classes
             return new SessoesDAO().Pesquisar(objCliente);
         }
 
-        public DataTable BuscaPorClienteMedicoData(string nome,tdp tipoDePesquisa, DateTime data, tdr tipoDeRetorno)
+        public DataTable BuscaPorClienteMedicoData(string nome,tdp tipoDePesquisa, DateTime data, tdr tipoDeRetorno, bool sessaoCompleta)
         {
             IList<Sessoes> listaPorData = new Sessoes().BuscaPorData(data);
             IList<Cliente> listaDeClientes = new Cliente().iListPesquisarPorNome(nome);
@@ -192,6 +202,10 @@ namespace SisClinica.Classes
                     {
                         foreach (Sessoes objSessoes in lista)
                         {
+                            if (true)
+                            {
+
+                            }
                             listaDeSessoes.Add(objSessoes);
                         }
                     }                    
@@ -370,7 +384,37 @@ namespace SisClinica.Classes
 
             foreach (Sessoes objSessoes in lst)
             {
-                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay,objSessoes.situacao,objSessoes.nroSessao +"/"+objSessoes.qtdeSessoes, objSessoes.id);
+                if (sessaoCompleta)
+                {
+                    if (objSessoes.sessaoCompleta)
+                    {
+                        if (objSessoes.tipoDeSessao!="Tratamento")
+                        {
+                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, "-", objSessoes.id);
+                        }
+                        else
+                        {
+                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.nroSessao + "/" + objSessoes.qtdeSessoes, objSessoes.id);
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    if (!objSessoes.sessaoCompleta)
+                    {
+                        if (objSessoes.tipoDeSessao!="Tratamento")
+                        {
+                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, "-", objSessoes.id);
+                        }
+                        else
+                        {
+                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.nroSessao + "/" + objSessoes.qtdeSessoes, objSessoes.id);
+                        }
+                    }  
+                                      
+                }
+                
             }
             return dt;
         }
