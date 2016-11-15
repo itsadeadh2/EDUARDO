@@ -32,6 +32,7 @@ namespace SisClinica.Forms
         }
         private void DeterminaAtivacao()
         {
+            
             if (cbCliente.Checked || cbMedico.Checked || cbData.Checked)
             {
                 btnPesquisar.Enabled = true;
@@ -44,16 +45,33 @@ namespace SisClinica.Forms
                 else if (cbCliente.Checked && cbMedico.Checked)
                 {
                     tipoDePesquisa = tdp.clienteEMedico;
+                    dtpData.Enabled = false;
                 }
-
+                else if (cbCliente.Checked && cbData.Checked)
+                {
+                    tipoDePesquisa = tdp.clienteData;
+                    dtpData.Enabled = true;
+                }
                 else if (cbCliente.Checked)
                 {
                     tipoDePesquisa = tdp.cliente;
+                    dtpData.Enabled = false;
                 }
                 else if (cbMedico.Checked)
                 {
                     tipoDePesquisa = tdp.medico;
+                    dtpData.Enabled = false;
                 }
+                else if (cbData.Checked)
+                {
+                    dtpData.Enabled = true;
+                    txtbxNomePesquisa.Enabled = false;              
+                    tipoDePesquisa = tdp.data;
+
+                }
+                
+                
+
                 else if (cbData.Checked && (cbCliente.Checked || cbMedico.Checked))
                 {
 
@@ -77,6 +95,7 @@ namespace SisClinica.Forms
             {
                 btnPesquisar.Enabled = false;
                 txtbxNomePesquisa.Enabled = false;
+                dtpData.Enabled = false;
             }
             if (cbConsultas.Checked || cbTratamentos.Checked)
             {

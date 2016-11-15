@@ -96,9 +96,10 @@
             // dtpData
             // 
             this.dtpData.Enabled = false;
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpData.Location = new System.Drawing.Point(155, 145);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(200, 27);
+            this.dtpData.Size = new System.Drawing.Size(113, 27);
             this.dtpData.TabIndex = 15;
             // 
             // btnPesquisar
@@ -116,6 +117,7 @@
             // 
             // txtbxNomePesquisa
             // 
+            this.txtbxNomePesquisa.Enabled = false;
             this.txtbxNomePesquisa.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxNomePesquisa.Location = new System.Drawing.Point(155, 116);
             this.txtbxNomePesquisa.Name = "txtbxNomePesquisa";
