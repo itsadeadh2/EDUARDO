@@ -18,7 +18,7 @@ namespace SisClinica.Forms
             InitializeComponent();
             DateTime data = DateTime.Now.Date;
             data = data.AddDays(1);
-            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data.Date);          
+            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(DateTime.Now.Date);          
         }
         Sessoes objSessao;
         private void dtgSessoes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -27,11 +27,11 @@ namespace SisClinica.Forms
             objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
             if (objSessao.sessaoCompleta==true)
             {
-                btnSalvar.Enabled = false;
+                btnConfirmar.Enabled = false;
             }
             else
             {
-                btnSalvar.Enabled = true;
+                btnConfirmar.Enabled = true;
             }
             PreencherCampos();
         }
@@ -54,17 +54,15 @@ namespace SisClinica.Forms
             lblConsultorio.Text = objSessao.objConsultorio.nomeConsultorio;
             lblHorario.Text = objSessao.horaInicio.TimeOfDay.ToString() + " as " + objSessao.horaFim.TimeOfDay.ToString();
         }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
             objSessao.sessaoCompleta = true;
             objSessao.CompletarSessao();
-            if (objSessao.nroSessao<objSessao.qtdeSessoes)
+            if (objSessao.nroSessao < objSessao.qtdeSessoes)
             {
                 DialogResult resultado = MessageBox.Show("A " + objSessao.nroSessao + "° sessão do tratamento foi confirmada, gostaria de marcar a " + (objSessao.nroSessao + 1) + "° sessão agora?", "Aviso", MessageBoxButtons.YesNo);
-                if (resultado==DialogResult.Yes)
+                if (resultado == DialogResult.Yes)
                 {
-                    objSessao.nroSessao++;
                     userControlAgendarProximoTratamento agenProx = new userControlAgendarProximoTratamento().Preencher(objSessao);
                     Controls.Clear();
                     Controls.Add(agenProx);
@@ -74,6 +72,7 @@ namespace SisClinica.Forms
             else
             {
                 MessageBox.Show("Última sessão confirmada, tratamento finalizado!");
+                btnConfirmar.Enabled = false;
             }
         }
     }

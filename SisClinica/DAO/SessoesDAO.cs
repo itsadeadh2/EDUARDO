@@ -424,10 +424,11 @@ namespace SisClinica.DAO
                     objSessao.qtdeSessoes = Convert.ToInt32(dr["qtdesessoes"]);
                     objSessao.nroSessao = Convert.ToInt32(dr["nroSessao"]);
                 }
-                if (objSessao.tratamentoPosterior != null)
+                if (!Convert.IsDBNull(dr["id_tratamento_posterior"]))
                 {
-                    objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_anterior"]);
+                    objSessao.tratamentoPosterior = new Sessoes().BuscaPorId((int)dr["id_tratamento_posterior"]);
                 }
+
                 objSessao.sessaoCompleta = Convert.ToBoolean(dr["sessaocompleta"]);
                 objSessao.id = (int)dr["id"];
                 if (objSessao.sessaoCompleta == true)

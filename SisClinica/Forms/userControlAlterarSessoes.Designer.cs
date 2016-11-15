@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAgendarProxima = new System.Windows.Forms.Button();
+            this.lblTotalSessao = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblValorSessao = new System.Windows.Forms.Label();
+            this.lblvalortotal = new System.Windows.Forms.Label();
             this.gbPesquisa = new System.Windows.Forms.GroupBox();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.btnDtgPesq = new System.Windows.Forms.Button();
@@ -57,10 +62,6 @@
             this.lblTipoSessao = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.lblSituacao = new System.Windows.Forms.Label();
-            this.lblvalortotal = new System.Windows.Forms.Label();
-            this.lblValorSessao = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTotalSessao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
@@ -68,6 +69,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAgendarProxima);
             this.panel1.Controls.Add(this.lblTotalSessao);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.lblValorSessao);
@@ -101,6 +103,67 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 409);
             this.panel1.TabIndex = 32;
+            // 
+            // btnAgendarProxima
+            // 
+            this.btnAgendarProxima.BackColor = System.Drawing.Color.White;
+            this.btnAgendarProxima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendarProxima.Location = new System.Drawing.Point(519, 58);
+            this.btnAgendarProxima.Name = "btnAgendarProxima";
+            this.btnAgendarProxima.Size = new System.Drawing.Size(120, 58);
+            this.btnAgendarProxima.TabIndex = 35;
+            this.btnAgendarProxima.Text = "Agendar próxima sessão";
+            this.btnAgendarProxima.UseVisualStyleBackColor = false;
+            this.btnAgendarProxima.Visible = false;
+            this.btnAgendarProxima.Click += new System.EventHandler(this.btnAgendarProxima_Click);
+            // 
+            // lblTotalSessao
+            // 
+            this.lblTotalSessao.AutoSize = true;
+            this.lblTotalSessao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSessao.Location = new System.Drawing.Point(369, 195);
+            this.lblTotalSessao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalSessao.Name = "lblTotalSessao";
+            this.lblTotalSessao.Size = new System.Drawing.Size(78, 17);
+            this.lblTotalSessao.TabIndex = 34;
+            this.lblTotalSessao.Text = "valorsessao";
+            this.lblTotalSessao.Visible = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(369, 166);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(37, 17);
+            this.lblTotal.TabIndex = 33;
+            this.lblTotal.Text = "total";
+            this.lblTotal.Visible = false;
+            // 
+            // lblValorSessao
+            // 
+            this.lblValorSessao.AutoSize = true;
+            this.lblValorSessao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorSessao.Location = new System.Drawing.Point(256, 195);
+            this.lblValorSessao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValorSessao.Name = "lblValorSessao";
+            this.lblValorSessao.Size = new System.Drawing.Size(108, 17);
+            this.lblValorSessao.TabIndex = 32;
+            this.lblValorSessao.Text = "Valor por sessão:";
+            this.lblValorSessao.Visible = false;
+            // 
+            // lblvalortotal
+            // 
+            this.lblvalortotal.AutoSize = true;
+            this.lblvalortotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvalortotal.Location = new System.Drawing.Point(289, 166);
+            this.lblvalortotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblvalortotal.Name = "lblvalortotal";
+            this.lblvalortotal.Size = new System.Drawing.Size(75, 17);
+            this.lblvalortotal.TabIndex = 31;
+            this.lblvalortotal.Text = "Valor total:";
+            this.lblvalortotal.Visible = false;
             // 
             // gbPesquisa
             // 
@@ -441,54 +504,6 @@
             this.lblSituacao.TabIndex = 18;
             this.lblSituacao.Text = "situação";
             // 
-            // lblvalortotal
-            // 
-            this.lblvalortotal.AutoSize = true;
-            this.lblvalortotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvalortotal.Location = new System.Drawing.Point(289, 166);
-            this.lblvalortotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblvalortotal.Name = "lblvalortotal";
-            this.lblvalortotal.Size = new System.Drawing.Size(75, 17);
-            this.lblvalortotal.TabIndex = 31;
-            this.lblvalortotal.Text = "Valor total:";
-            this.lblvalortotal.Visible = false;
-            // 
-            // lblValorSessao
-            // 
-            this.lblValorSessao.AutoSize = true;
-            this.lblValorSessao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorSessao.Location = new System.Drawing.Point(256, 195);
-            this.lblValorSessao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblValorSessao.Name = "lblValorSessao";
-            this.lblValorSessao.Size = new System.Drawing.Size(108, 17);
-            this.lblValorSessao.TabIndex = 32;
-            this.lblValorSessao.Text = "Valor por sessão:";
-            this.lblValorSessao.Visible = false;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(369, 166);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(37, 17);
-            this.lblTotal.TabIndex = 33;
-            this.lblTotal.Text = "total";
-            this.lblTotal.Visible = false;
-            // 
-            // lblTotalSessao
-            // 
-            this.lblTotalSessao.AutoSize = true;
-            this.lblTotalSessao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSessao.Location = new System.Drawing.Point(369, 195);
-            this.lblTotalSessao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalSessao.Name = "lblTotalSessao";
-            this.lblTotalSessao.Size = new System.Drawing.Size(78, 17);
-            this.lblTotalSessao.TabIndex = 34;
-            this.lblTotalSessao.Text = "valorsessao";
-            this.lblTotalSessao.Visible = false;
-            // 
             // userControlAlterarSessoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,5 +557,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblValorSessao;
         private System.Windows.Forms.Label lblvalortotal;
+        private System.Windows.Forms.Button btnAgendarProxima;
     }
 }

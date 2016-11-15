@@ -70,6 +70,10 @@ namespace SisClinica.Forms
                 uc.lblValorSessao.Visible = true;
                 uc.lblTotal.Text = "R$" + objSess.tipoDeTratamento.valor.ToString();
                 uc.lblTotalSessao.Text = "R$" + objSess.valorSessao.ToString();
+                if (objSess.tratamentoPosterior==null&&objSess.nroSessao<objSess.qtdeSessoes)
+                {
+                    uc.btnAgendarProxima.Visible = true;
+                }
             }
             uc.cbHorarioInicial.Text = objSess.horaInicio.TimeOfDay.ToString(); 
             uc.cbHorarioFinal.Text = objSess.horaFim.TimeOfDay.ToString();
@@ -255,6 +259,14 @@ namespace SisClinica.Forms
             //userControlPesquisarSessoes pesqSess = new userControlPesquisarSessoes();
             //Controls.Add(pesqSess);
             //pesqSess.Show();
+        }
+
+        private void btnAgendarProxima_Click(object sender, EventArgs e)
+        {
+            userControlAgendarProximoTratamento agenProx = new userControlAgendarProximoTratamento().Preencher(objSessao);
+            Controls.Clear();
+            Controls.Add(agenProx);
+            agenProx.Show();
         }
     }
 }

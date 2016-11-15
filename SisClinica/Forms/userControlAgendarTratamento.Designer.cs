@@ -175,6 +175,7 @@
             this.checkPago.TabIndex = 14;
             this.checkPago.Text = "Pago previamente";
             this.checkPago.UseVisualStyleBackColor = true;
+            this.checkPago.CheckedChanged += new System.EventHandler(this.checkPago_CheckedChanged);
             // 
             // mtbQtdeSessoes
             // 

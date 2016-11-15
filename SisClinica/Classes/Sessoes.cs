@@ -365,11 +365,12 @@ namespace SisClinica.Classes
             dt.Columns.Add("Horario de início", typeof(TimeSpan));
             dt.Columns.Add("Horario de término", typeof(TimeSpan));
             dt.Columns.Add("Situação", typeof(string));
+            dt.Columns.Add("Andamento", typeof(string));
             dt.Columns.Add("id", typeof(int));
 
             foreach (Sessoes objSessoes in lst)
             {
-                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay,objSessoes.situacao, objSessoes.id);
+                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay,objSessoes.situacao,objSessoes.nroSessao +"/"+objSessoes.qtdeSessoes, objSessoes.id);
             }
             return dt;
         }

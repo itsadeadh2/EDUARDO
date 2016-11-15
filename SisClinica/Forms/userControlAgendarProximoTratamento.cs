@@ -63,7 +63,7 @@ namespace SisClinica.Forms
         }
         private void SetHora()
         {
-            cbHorarioInicial.DataSource = new Sessoes().GerarListaDeHorariosIniciais(dtpData.Value, objSessao.medicoResponsavel, objSessao.objConsultorio, turno, objSessao);
+            cbHorarioInicial.DataSource = new Sessoes().GerarListaDeHorariosIniciais(dtpData.Value, objSessao.medicoResponsavel, objSessao.objConsultorio, turno);
         }
         private void SetConsultorio()
         {
@@ -100,6 +100,7 @@ namespace SisClinica.Forms
             {
                 objSessao.situacao = "Agendada";
                 objSessao.sessaoCompleta = false;
+                objSessao.nroSessao++;
                 objSessao.dataSessao = dtpData.Value;
                 objSessao.horaInicio = Convert.ToDateTime(cbHorarioInicial.SelectedValue);
                 objSessao.horaFim = Convert.ToDateTime(cbHorarioFinal.SelectedValue);

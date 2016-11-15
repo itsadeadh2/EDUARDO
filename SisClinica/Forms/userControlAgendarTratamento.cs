@@ -259,5 +259,10 @@ namespace SisClinica.Forms
             lblVisData.Text = "Data da consulta: " + objSessao.horaInicio.Date.ToString("dd/MM/yyyy");
             lblVisHora.Text = "Horário: " + objSessao.horaInicio.TimeOfDay.ToString() + " as " + objSessao.horaFim.TimeOfDay.ToString();
         }
+
+        private void checkPago_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

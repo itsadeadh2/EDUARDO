@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtgSessoes = new System.Windows.Forms.DataGridView();
             this.gbConfirmar = new System.Windows.Forms.GroupBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblConsultorio = new System.Windows.Forms.Label();
             this.lblValor = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // 
             // gbConfirmar
             // 
-            this.gbConfirmar.Controls.Add(this.btnSalvar);
+            this.gbConfirmar.Controls.Add(this.btnConfirmar);
             this.gbConfirmar.Controls.Add(this.lblHorario);
             this.gbConfirmar.Controls.Add(this.lblConsultorio);
             this.gbConfirmar.Controls.Add(this.lblValor);
@@ -108,18 +108,18 @@
             this.gbConfirmar.Text = "Confirmar Sessão";
             this.gbConfirmar.Visible = false;
             // 
-            // btnSalvar
+            // btnConfirmar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(506, 137);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(138, 53);
-            this.btnSalvar.TabIndex = 39;
-            this.btnSalvar.Text = "Confirmar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnConfirmar.BackColor = System.Drawing.Color.White;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(506, 137);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(138, 53);
+            this.btnConfirmar.TabIndex = 39;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lblHorario
             // 
@@ -342,7 +342,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgSessoes;
         private System.Windows.Forms.GroupBox gbConfirmar;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblConsultorio;
         private System.Windows.Forms.Label lblValor;

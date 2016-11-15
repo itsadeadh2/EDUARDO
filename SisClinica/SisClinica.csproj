@@ -151,6 +151,12 @@
     <Compile Include="Forms\userControlMedicoInfo.Designer.cs">
       <DependentUpon>userControlMedicoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userControlMenuConfiguracoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlMenuConfiguracoes.Designer.cs">
+      <DependentUpon>userControlMenuConfiguracoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\userControlResponsavelInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlMedicoInfo.resx">
       <DependentUpon>userControlMedicoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlMenuConfiguracoes.resx">
+      <DependentUpon>userControlMenuConfiguracoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlResponsavelInfo.resx">
       <DependentUpon>userControlResponsavelInfo.cs</DependentUpon>
