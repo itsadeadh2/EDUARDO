@@ -16,7 +16,7 @@ namespace SisClinica.Forms
         public userControlRegistraCliente()
         {
             InitializeComponent();
-            HelperFunctions.SetButtons(btnSalvar);
+            HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtons(btnClearPesquisa);
             HelperFunctions.SetButtons(btnPesquisar);
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))

@@ -13,8 +13,22 @@ namespace SisClinica.Forms
         public static void SetButtons(Button btn)
         {
             btn.FlatAppearance.BorderSize = 0;
-            btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(138, 195, 189);
-            btn.FlatAppearance.MouseOverBackColor = btn.BackColor;
+            btn.FlatAppearance.MouseDownBackColor = Color.White;
+            btn.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+        public static void SetButtonsText(Button btn)
+        {
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.BackColor = Color.FromArgb(238, 238, 238);
+            btn.FlatAppearance.BorderSize = 0;
+            btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 51, 51);
+            btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(102, 102, 102);
+        }
+        public static void SetButtons(Button btn, Color mouseOver, Color mouseClick)
+        {
+            btn.FlatAppearance.BorderSize = 0;
+            btn.FlatAppearance.MouseDownBackColor = mouseClick;
+            btn.FlatAppearance.MouseOverBackColor = mouseOver;
         }
         /// <summary>
         /// Checa se a data informada corresponde a um maior de idade
@@ -76,6 +90,6 @@ namespace SisClinica.Forms
                 value = false;
             }
             return value;
-        }
+        }        
     }
 }

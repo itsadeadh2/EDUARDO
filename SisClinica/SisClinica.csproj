@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Consultorio.cs" />
+    <Compile Include="Classes\Horarios.cs" />
     <Compile Include="Classes\Medico.cs" />
     <Compile Include="Classes\Pessoa.cs" />
     <Compile Include="Classes\Responsavel.cs" />
@@ -144,6 +145,12 @@
     </Compile>
     <Compile Include="Forms\userControlHomePage.Designer.cs">
       <DependentUpon>userControlHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userControlHorarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\userControlHorarios.Designer.cs">
+      <DependentUpon>userControlHorarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\userControlMedicoInfo.cs">
       <SubType>UserControl</SubType>
@@ -239,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlHomePage.resx">
       <DependentUpon>userControlHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userControlHorarios.resx">
+      <DependentUpon>userControlHorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlMedicoInfo.resx">
       <DependentUpon>userControlMedicoInfo.cs</DependentUpon>

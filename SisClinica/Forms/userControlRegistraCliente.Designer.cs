@@ -411,11 +411,11 @@
             // btnSalvar
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Image = global::SisClinica.Properties.Resources.btnSave1;
-            this.btnSalvar.Location = new System.Drawing.Point(101, 280);
+            this.btnSalvar.Location = new System.Drawing.Point(65, 305);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(141, 131);
+            this.btnSalvar.Size = new System.Drawing.Size(213, 79);
             this.btnSalvar.TabIndex = 24;
+            this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -517,7 +517,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "userControlRegistraCliente";
             this.Size = new System.Drawing.Size(672, 409);

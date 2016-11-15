@@ -323,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.gbConfirmar);
             this.Controls.Add(this.dtgSessoes);
             this.Controls.Add(this.label1);
