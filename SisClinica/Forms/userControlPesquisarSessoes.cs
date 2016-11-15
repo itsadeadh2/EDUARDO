@@ -37,36 +37,50 @@ namespace SisClinica.Forms
             {
                 btnPesquisar.Enabled = true;
                 txtbxNomePesquisa.Enabled = true;
+                
                 if (cbCliente.Checked && cbMedico.Checked && cbData.Checked)
                 {
                     dtpData.Enabled = true;
                     tipoDePesquisa = tdp.clienteMedicoEData;
+                    cbNaoConcluido.Enabled = false;
                 }
                 else if (cbCliente.Checked && cbMedico.Checked)
                 {
                     tipoDePesquisa = tdp.clienteEMedico;
                     dtpData.Enabled = false;
+                    cbNaoConcluido.Enabled = false;
                 }
                 else if (cbCliente.Checked && cbData.Checked)
                 {
                     tipoDePesquisa = tdp.clienteData;
                     dtpData.Enabled = true;
+                    cbNaoConcluido.Enabled = false;
+                }
+                else if (cbMedico.Checked && cbData.Checked)
+                {
+                    tipoDePesquisa = tdp.clienteMedicoEData;
+                    dtpData.Enabled = true;
+                    cbNaoConcluido.Enabled = false;
                 }
                 else if (cbCliente.Checked)
                 {
                     tipoDePesquisa = tdp.cliente;
                     dtpData.Enabled = false;
+                    cbNaoConcluido.Enabled = false;
+
                 }
                 else if (cbMedico.Checked)
                 {
                     tipoDePesquisa = tdp.medico;
                     dtpData.Enabled = false;
+                    cbNaoConcluido.Enabled = false;
                 }
                 else if (cbData.Checked)
                 {
                     dtpData.Enabled = true;
                     txtbxNomePesquisa.Enabled = false;              
                     tipoDePesquisa = tdp.data;
+                    cbNaoConcluido.Enabled = true;
 
                 }
                 
@@ -96,20 +110,24 @@ namespace SisClinica.Forms
                 btnPesquisar.Enabled = false;
                 txtbxNomePesquisa.Enabled = false;
                 dtpData.Enabled = false;
+                cbNaoConcluido.Enabled = false;
             }
             if (cbConsultas.Checked || cbTratamentos.Checked)
             {
                 if (cbConsultas.Checked)
                 {
                     tipoDeRetorno = tdr.consulta;
+                    cbNaoConcluido.Enabled = true;
                 }
                 else if (cbTratamentos.Checked)
                 {
                     tipoDeRetorno = tdr.tratamento;
+                    cbNaoConcluido.Enabled = true;
                 }
                 else if (cbConsultas.Checked && cbTratamentos.Checked)
                 {
                     tipoDeRetorno = tdr.consultaETratamento;
+                    cbNaoConcluido.Enabled = false;
                 }
             }
             if (cbTratamentos.Checked&&cbConsultas.Checked)
@@ -147,6 +165,11 @@ namespace SisClinica.Forms
             userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
             Controls.Add(alterCon);
             alterCon.Show();
+        }
+
+        private void cbNaoConcluido_CheckedChanged(object sender, EventArgs e)
+        {
+            DeterminaAtivacao();
         }
     }
 }

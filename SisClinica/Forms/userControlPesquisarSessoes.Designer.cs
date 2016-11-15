@@ -43,6 +43,7 @@
             this.cbCliente = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgSessoes = new System.Windows.Forms.DataGridView();
+            this.cbNaoConcluido = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbDados.SuspendLayout();
             this.gbFiltro.SuspendLayout();
@@ -135,6 +136,7 @@
             // 
             // gbFiltro
             // 
+            this.gbFiltro.Controls.Add(this.cbNaoConcluido);
             this.gbFiltro.Controls.Add(this.cbData);
             this.gbFiltro.Controls.Add(this.cbTratamentos);
             this.gbFiltro.Controls.Add(this.cbConsultas);
@@ -151,7 +153,7 @@
             // cbData
             // 
             this.cbData.AutoSize = true;
-            this.cbData.Location = new System.Drawing.Point(570, 38);
+            this.cbData.Location = new System.Drawing.Point(494, 51);
             this.cbData.Name = "cbData";
             this.cbData.Size = new System.Drawing.Size(70, 25);
             this.cbData.TabIndex = 11;
@@ -228,6 +230,18 @@
             this.dtgSessoes.TabIndex = 0;
             this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
             // 
+            // cbNaoConcluido
+            // 
+            this.cbNaoConcluido.AutoSize = true;
+            this.cbNaoConcluido.Enabled = false;
+            this.cbNaoConcluido.Location = new System.Drawing.Point(494, 24);
+            this.cbNaoConcluido.Name = "cbNaoConcluido";
+            this.cbNaoConcluido.Size = new System.Drawing.Size(153, 25);
+            this.cbNaoConcluido.TabIndex = 12;
+            this.cbNaoConcluido.Text = "Não Concluidas";
+            this.cbNaoConcluido.UseVisualStyleBackColor = true;
+            this.cbNaoConcluido.CheckedChanged += new System.EventHandler(this.cbNaoConcluido_CheckedChanged);
+            // 
             // userControlPesquisarSessoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +279,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgSessoes;
+        private System.Windows.Forms.CheckBox cbNaoConcluido;
     }
 }
