@@ -72,7 +72,14 @@ namespace SisClinica.Forms
             }
             else
             {
-                MessageBox.Show("Última sessão confirmada, tratamento finalizado!");
+                if (objSessao.tipoDeSessao=="Tratamento")
+                {
+                    MessageBox.Show("Última sessão confirmada, tratamento finalizado!");
+                }
+                else
+                {
+                    MessageBox.Show("Consulta confirmada!");
+                }
                 btnConfirmar.Enabled = false;
             }
         }

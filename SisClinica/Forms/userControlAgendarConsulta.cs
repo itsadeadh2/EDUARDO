@@ -18,7 +18,6 @@ namespace SisClinica.Forms
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtonsText(btnCadastrarCli);
-            set
             HelperFunctions.SetButtons(btnPesquisar);
            
             

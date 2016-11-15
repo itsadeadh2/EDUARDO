@@ -31,7 +31,10 @@ namespace SisClinica.Forms
             {
                 this.FormBorderStyle = FormBorderStyle.None;
                 Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
-            }            
+            }
+            userControlHome home = new userControlHome();
+            painelDinamico.Controls.Add(home);
+            home.Show();
             SetButton(btnNovo);
             SetButton(btnPesquisar);
             SetButton(btnConfirmar);
@@ -53,7 +56,10 @@ namespace SisClinica.Forms
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            userControlHome uc = new userControlHome();
             painelDinamico.Controls.Clear();
+            painelDinamico.Controls.Add(uc);
+            uc.Show();
         }
 
         private void btnHome_MouseEnter(object sender, EventArgs e)
@@ -158,19 +164,18 @@ namespace SisClinica.Forms
                     //HelperFunctions.SetButtons(btnNovo);
                     //HelperFunctions.SetButtons(btnPesquisar);
                     break;
-                case skin.vermelha:
-                    painelDinamico.BackColor = Color.FromArgb(0,0,0);
-                    painelBGSubButtons.BackColor = Color.FromArgb(255,0,0);
-                    painelBGBtnHome.BackColor = Color.FromArgb(255,0,0);
-                    painelButtons.BackColor = Color.FromArgb(255,0,0);
-                    painelTopBar.BackColor = Color.FromArgb(255,0,0);
-                    break;
                 case skin.verde:
                     painelDinamico.BackColor = Color.FromArgb(63,136,72);
                     painelBGSubButtons.BackColor = Color.FromArgb(17,16,16);
                     painelBGBtnHome.BackColor = Color.FromArgb(0,0,0);
                     painelButtons.BackColor = Color.FromArgb(17,16,16);
                     painelTopBar.BackColor = Color.FromArgb(0,0,0);
+                    HelperFunctions.SetButtons(btnNovo, Color.FromArgb(79, 66, 66), Color.FromArgb(0,53,45));
+                    HelperFunctions.SetButtons(btnMinimize, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
+                    HelperFunctions.SetButtons(btnConfigurar, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
+                    HelperFunctions.SetButtons(btnPesquisar, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
+                    HelperFunctions.SetButtons(btnConfirmar, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
+                    HelperFunctions.SetButtons(btnHome, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
                     break;
                 case skin.roxa:
                     painelDinamico.BackColor = Color.FromArgb(114, 21, 106);
@@ -178,6 +183,12 @@ namespace SisClinica.Forms
                     painelBGBtnHome.BackColor = Color.FromArgb(50,6,46);
                     painelButtons.BackColor = Color.FromArgb(95,18,88);
                     painelTopBar.BackColor = Color.FromArgb(50,6,46);
+                    HelperFunctions.SetButtons(btnNovo, Color.FromArgb(159, 44, 125), Color.FromArgb(81,15,50));
+                    HelperFunctions.SetButtons(btnMinimize, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
+                    HelperFunctions.SetButtons(btnConfirmar, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
+                    HelperFunctions.SetButtons(btnPesquisar, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
+                    HelperFunctions.SetButtons(btnConfigurar, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
+                    HelperFunctions.SetButtons(btnHome, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
                     break;
                 case skin.dark:
                     painelDinamico.BackColor = Color.FromArgb(8,6,8);
@@ -186,6 +197,7 @@ namespace SisClinica.Forms
                     painelButtons.BackColor = Color.FromArgb(19,14,19);
                     painelTopBar.BackColor = Color.FromArgb(0,0,0);
                     HelperFunctions.SetButtons(btnClose, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 179, 170));
+                    HelperFunctions.SetButtons(btnMinimize, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 179, 170));
                     HelperFunctions.SetButtons(btnNovo, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 179, 170));
                     HelperFunctions.SetButtons(btnConfigurar, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 179, 170));
                     HelperFunctions.SetButtons(btnPesquisar, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 179, 170));

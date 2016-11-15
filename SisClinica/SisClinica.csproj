@@ -140,11 +140,11 @@
     <Compile Include="Forms\userControlConfirmarSessoes.Designer.cs">
       <DependentUpon>userControlConfirmarSessoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\userControlHomePage.cs">
+    <Compile Include="Forms\userControlHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\userControlHomePage.Designer.cs">
-      <DependentUpon>userControlHomePage.cs</DependentUpon>
+    <Compile Include="Forms\userControlHome.Designer.cs">
+      <DependentUpon>userControlHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\userControlHorarios.cs">
       <SubType>UserControl</SubType>
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="Forms\userControlConfirmarSessoes.resx">
       <DependentUpon>userControlConfirmarSessoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\userControlHomePage.resx">
-      <DependentUpon>userControlHomePage.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\userControlHome.resx">
+      <DependentUpon>userControlHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\userControlHorarios.resx">
       <DependentUpon>userControlHorarios.cs</DependentUpon>

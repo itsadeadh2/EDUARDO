@@ -20,7 +20,6 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(button1);
             HelperFunctions.SetButtonsText(button2);
             HelperFunctions.SetButtonsText(button3);
-            HelperFunctions.SetButtonsText(button4);
             formprin = frmPrin;
         }
 

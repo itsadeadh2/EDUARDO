@@ -21,6 +21,7 @@ namespace SisClinica.Forms
             btn.FlatStyle = FlatStyle.Flat;
             btn.BackColor = Color.FromArgb(238, 238, 238);
             btn.FlatAppearance.BorderSize = 0;
+            btn.ForeColor = Color.Black;
             btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 51, 51);
             btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(102, 102, 102);
         }
