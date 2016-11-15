@@ -36,6 +36,7 @@
             this.txtbxNomePesquisa = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.gbFiltro = new System.Windows.Forms.GroupBox();
+            this.cbNaoConcluido = new System.Windows.Forms.CheckBox();
             this.cbData = new System.Windows.Forms.CheckBox();
             this.cbTratamentos = new System.Windows.Forms.CheckBox();
             this.cbConsultas = new System.Windows.Forms.CheckBox();
@@ -43,7 +44,6 @@
             this.cbCliente = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgSessoes = new System.Windows.Forms.DataGridView();
-            this.cbNaoConcluido = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbDados.SuspendLayout();
             this.gbFiltro.SuspendLayout();
@@ -150,6 +150,18 @@
             this.gbFiltro.TabStop = false;
             this.gbFiltro.Text = "Filtros:";
             // 
+            // cbNaoConcluido
+            // 
+            this.cbNaoConcluido.AutoSize = true;
+            this.cbNaoConcluido.Enabled = false;
+            this.cbNaoConcluido.Location = new System.Drawing.Point(494, 24);
+            this.cbNaoConcluido.Name = "cbNaoConcluido";
+            this.cbNaoConcluido.Size = new System.Drawing.Size(116, 25);
+            this.cbNaoConcluido.TabIndex = 12;
+            this.cbNaoConcluido.Text = "Concluídas";
+            this.cbNaoConcluido.UseVisualStyleBackColor = true;
+            this.cbNaoConcluido.CheckedChanged += new System.EventHandler(this.cbNaoConcluido_CheckedChanged);
+            // 
             // cbData
             // 
             this.cbData.AutoSize = true;
@@ -229,18 +241,6 @@
             this.dtgSessoes.Size = new System.Drawing.Size(672, 223);
             this.dtgSessoes.TabIndex = 0;
             this.dtgSessoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellDoubleClick);
-            // 
-            // cbNaoConcluido
-            // 
-            this.cbNaoConcluido.AutoSize = true;
-            this.cbNaoConcluido.Enabled = false;
-            this.cbNaoConcluido.Location = new System.Drawing.Point(494, 24);
-            this.cbNaoConcluido.Name = "cbNaoConcluido";
-            this.cbNaoConcluido.Size = new System.Drawing.Size(153, 25);
-            this.cbNaoConcluido.TabIndex = 12;
-            this.cbNaoConcluido.Text = "Não Concluidas";
-            this.cbNaoConcluido.UseVisualStyleBackColor = true;
-            this.cbNaoConcluido.CheckedChanged += new System.EventHandler(this.cbNaoConcluido_CheckedChanged);
             // 
             // userControlPesquisarSessoes
             // 
