@@ -21,6 +21,7 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnExcluir);
             HelperFunctions.SetButtonsText(btnAgendarProxima);
             HelperFunctions.SetButtonsText(btnCancelar);
+            HelperFunctions.SetButtons(btnDtgPesq);
 
         }
 

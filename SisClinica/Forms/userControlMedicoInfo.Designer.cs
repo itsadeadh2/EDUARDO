@@ -200,6 +200,7 @@
             this.dtgSessoes.AllowUserToAddRows = false;
             this.dtgSessoes.AllowUserToDeleteRows = false;
             this.dtgSessoes.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dtgSessoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgSessoes.Location = new System.Drawing.Point(0, 273);

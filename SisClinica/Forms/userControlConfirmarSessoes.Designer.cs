@@ -57,10 +57,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.75F);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 17);
+            this.label1.Size = new System.Drawing.Size(286, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione uma sessão para confirmar:";
             // 
@@ -70,11 +71,12 @@
             this.dtgSessoes.AllowUserToDeleteRows = false;
             this.dtgSessoes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSessoes.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dtgSessoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgSessoes.Location = new System.Drawing.Point(6, 42);
+            this.dtgSessoes.Location = new System.Drawing.Point(0, 42);
             this.dtgSessoes.Name = "dtgSessoes";
             this.dtgSessoes.ReadOnly = true;
-            this.dtgSessoes.Size = new System.Drawing.Size(663, 168);
+            this.dtgSessoes.Size = new System.Drawing.Size(672, 168);
             this.dtgSessoes.TabIndex = 1;
             this.dtgSessoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSessoes_CellClick);
             // 

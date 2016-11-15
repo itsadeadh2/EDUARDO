@@ -186,6 +186,7 @@
             this.dtgClientes.AllowUserToAddRows = false;
             this.dtgClientes.AllowUserToDeleteRows = false;
             this.dtgClientes.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dtgClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Location = new System.Drawing.Point(62, 55);
             this.dtgClientes.Name = "dtgClientes";

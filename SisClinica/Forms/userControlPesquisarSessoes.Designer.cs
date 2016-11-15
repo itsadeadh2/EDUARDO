@@ -77,6 +77,7 @@
             this.gbDados.Controls.Add(this.gbFiltro);
             this.gbDados.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbDados.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDados.ForeColor = System.Drawing.Color.White;
             this.gbDados.Location = new System.Drawing.Point(3, 3);
             this.gbDados.Name = "gbDados";
             this.gbDados.Size = new System.Drawing.Size(666, 179);
@@ -108,11 +109,11 @@
             this.btnPesquisar.Enabled = false;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Image = global::SisClinica.Properties.Resources.btnPesquisarResp1;
-            this.btnPesquisar.Location = new System.Drawing.Point(497, 118);
+            this.btnPesquisar.Location = new System.Drawing.Point(497, 116);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(72, 54);
+            this.btnPesquisar.Size = new System.Drawing.Size(94, 56);
             this.btnPesquisar.TabIndex = 14;
+            this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
@@ -143,6 +144,7 @@
             this.gbFiltro.Controls.Add(this.cbMedico);
             this.gbFiltro.Controls.Add(this.cbCliente);
             this.gbFiltro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbFiltro.ForeColor = System.Drawing.Color.White;
             this.gbFiltro.Location = new System.Drawing.Point(3, 23);
             this.gbFiltro.Name = "gbFiltro";
             this.gbFiltro.Size = new System.Drawing.Size(660, 84);
@@ -233,6 +235,8 @@
             this.dtgSessoes.AllowUserToDeleteRows = false;
             this.dtgSessoes.AllowUserToOrderColumns = true;
             this.dtgSessoes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgSessoes.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dtgSessoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgSessoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSessoes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgSessoes.Location = new System.Drawing.Point(0, 0);
@@ -246,9 +250,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(217)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "userControlPesquisarSessoes";
             this.Size = new System.Drawing.Size(672, 409);
             this.tableLayoutPanel1.ResumeLayout(false);

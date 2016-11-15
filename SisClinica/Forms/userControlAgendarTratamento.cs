@@ -18,6 +18,7 @@ namespace SisClinica.Forms
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtonsText(btnCadastrarCli);
+            HelperFunctions.SetButtons(btnPesquisar);
             ChecaTurno();
             cbConsultorios.DataSource = new Consultorio().Pesquisar();
             cbMedicos.DataSource = new Medico().Pesquisar();
