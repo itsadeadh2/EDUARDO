@@ -174,6 +174,10 @@ namespace SisClinica.Forms
             {
                 mtbCpfResp.Focus();
             }
+            else if (HelperFunctions.ChecaMenorDeIdade(objResponsavel.dataNascimento))
+            {
+                MessageBox.Show("O responsável não pode ser menor de idade!");
+            }
             else if (HelperFunctions.ChecaMenorDeIdade(objCliente.dataNascimento))
             {
                 if (!foiPesquisado)
@@ -192,7 +196,7 @@ namespace SisClinica.Forms
                     MessageBox.Show("Cliente e Responsável registrados e vinculados com sucesso!");
 
                     RetornarAoMenuAnterior();
-                }
+                }                
                 else
                 {
                     objResponsavel.Registrar();

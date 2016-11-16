@@ -43,6 +43,9 @@ namespace SisClinica.Forms
         private void dtgSessoesDoDia_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             userControlAlterarSessoes uc = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoesDoDia.CurrentRow.Cells["id"].Value)));
+            Controls.Clear();
+            Controls.Add(uc);
+            uc.Show();
         }
     }
 }
