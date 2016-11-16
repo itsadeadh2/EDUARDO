@@ -17,9 +17,9 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnCadastrar);
-            HelperFunctions.SetButtonsText(button1);
-            HelperFunctions.SetButtonsText(button2);
-            HelperFunctions.SetButtonsText(button3);
+            HelperFunctions.SetButtonsText(btnDark);
+            HelperFunctions.SetButtonsText(btnDasNeves);
+            HelperFunctions.SetButtonsText(btnBizantino);
             formprin = frmPrin;
         }
 
@@ -33,22 +33,21 @@ namespace SisClinica.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formprin.SetSkin(newFrmPrincipal.skin.dark);
+            formprin.SetSkin(newFrmPrincipal.skin.darkTrevosoSombrioDasTrevas);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            formprin.SetSkin(newFrmPrincipal.skin.roxa);
+            formprin.SetSkin(newFrmPrincipal.skin.macacoDasNeves);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            formprin.SetSkin(newFrmPrincipal.skin.verde);
+            formprin.SetSkin(newFrmPrincipal.skin.macacoBizantino);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            formprin.SetSkin(newFrmPrincipal.skin.vermelha);
         }
     }
 }

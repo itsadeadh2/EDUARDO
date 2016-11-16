@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBizantino = new System.Windows.Forms.Button();
+            this.btnDasNeves = new System.Windows.Forms.Button();
+            this.btnDark = new System.Windows.Forms.Button();
             this.lblSkins = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gpCadastrarConsultorio = new System.Windows.Forms.GroupBox();
@@ -39,6 +40,7 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.lblConsultorio = new System.Windows.Forms.Label();
+            this.ttHistoria = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gpCadastrarConsultorio.SuspendLayout();
@@ -46,9 +48,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnBizantino);
+            this.panel1.Controls.Add(this.btnDasNeves);
+            this.panel1.Controls.Add(this.btnDark);
             this.panel1.Controls.Add(this.lblSkins);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -57,47 +59,50 @@
             this.panel1.Size = new System.Drawing.Size(672, 409);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // btnBizantino
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(461, 248);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 52);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBizantino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBizantino.ForeColor = System.Drawing.Color.White;
+            this.btnBizantino.Location = new System.Drawing.Point(431, 269);
+            this.btnBizantino.Name = "btnBizantino";
+            this.btnBizantino.Size = new System.Drawing.Size(180, 111);
+            this.btnBizantino.TabIndex = 4;
+            this.btnBizantino.Text = "Macaco Bizantino";
+            this.btnBizantino.UseVisualStyleBackColor = true;
+            this.btnBizantino.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnDasNeves
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(461, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 52);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDasNeves.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDasNeves.ForeColor = System.Drawing.Color.White;
+            this.btnDasNeves.Location = new System.Drawing.Point(431, 35);
+            this.btnDasNeves.Name = "btnDasNeves";
+            this.btnDasNeves.Size = new System.Drawing.Size(180, 111);
+            this.btnDasNeves.TabIndex = 3;
+            this.btnDasNeves.Text = "Macaco das Neves";
+            this.ttHistoria.SetToolTip(this.btnDasNeves, "Macaco das neves: Assim como um macaco, que por nao ser preto o suficiente se iso" +
+        "la de seu bando e vai morar no himalaia onde neva muito, esta skin possui o topo" +
+        " não muito preto.");
+            this.btnDasNeves.UseVisualStyleBackColor = true;
+            this.btnDasNeves.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnDark
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(461, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDark.ForeColor = System.Drawing.Color.White;
+            this.btnDark.Location = new System.Drawing.Point(431, 152);
+            this.btnDark.Name = "btnDark";
+            this.btnDark.Size = new System.Drawing.Size(180, 111);
+            this.btnDark.TabIndex = 2;
+            this.btnDark.Text = "Dark trevoso sombrio das trevas";
+            this.btnDark.UseVisualStyleBackColor = true;
+            this.btnDark.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblSkins
             // 
             this.lblSkins.AutoSize = true;
             this.lblSkins.ForeColor = System.Drawing.Color.White;
-            this.lblSkins.Location = new System.Drawing.Point(485, 76);
+            this.lblSkins.Location = new System.Drawing.Point(355, 202);
             this.lblSkins.Name = "lblSkins";
             this.lblSkins.Size = new System.Drawing.Size(45, 21);
             this.lblSkins.TabIndex = 1;
@@ -192,8 +197,9 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lblConsultorio;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBizantino;
+        private System.Windows.Forms.Button btnDasNeves;
+        private System.Windows.Forms.Button btnDark;
+        private System.Windows.Forms.ToolTip ttHistoria;
     }
 }

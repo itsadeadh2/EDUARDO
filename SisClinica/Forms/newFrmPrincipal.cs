@@ -13,7 +13,7 @@ namespace SisClinica.Forms
 {
     public partial class newFrmPrincipal : Form
     {
-        public enum skin { padrao, vermelha, verde, roxa, dark }
+        public enum skin { padrao, macacoBizantino, macacoDasNeves, darkTrevosoSombrioDasTrevas}
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -164,7 +164,7 @@ namespace SisClinica.Forms
                     //HelperFunctions.SetButtons(btnNovo);
                     //HelperFunctions.SetButtons(btnPesquisar);
                     break;
-                case skin.verde:
+                case skin.macacoBizantino:
                     painelDinamico.BackColor = Color.FromArgb(63,136,72);
                     painelBGSubButtons.BackColor = Color.FromArgb(17,16,16);
                     painelBGBtnHome.BackColor = Color.FromArgb(0,0,0);
@@ -177,7 +177,7 @@ namespace SisClinica.Forms
                     HelperFunctions.SetButtons(btnConfirmar, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
                     HelperFunctions.SetButtons(btnHome, Color.FromArgb(79, 66, 66), Color.FromArgb(0, 53, 45));
                     break;
-                case skin.roxa:
+                case skin.macacoDasNeves:
                     painelDinamico.BackColor = Color.FromArgb(114, 21, 106);
                     painelBGSubButtons.BackColor = Color.FromArgb(95,18,88);
                     painelBGBtnHome.BackColor = Color.FromArgb(50,6,46);
@@ -190,7 +190,7 @@ namespace SisClinica.Forms
                     HelperFunctions.SetButtons(btnConfigurar, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
                     HelperFunctions.SetButtons(btnHome, Color.FromArgb(159, 44, 125), Color.FromArgb(81, 15, 50));
                     break;
-                case skin.dark:
+                case skin.darkTrevosoSombrioDasTrevas:
                     painelDinamico.BackColor = Color.FromArgb(8,6,8);
                     painelBGSubButtons.BackColor = Color.FromArgb(19,14,19);
                     painelBGBtnHome.BackColor = Color.FromArgb(0,0,0);
