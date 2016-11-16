@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SisClinica.Classes;
 
 namespace SisClinica.Forms
 {
@@ -48,6 +49,21 @@ namespace SisClinica.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Consultorio objConsultorio = new Consultorio();
+            objConsultorio.nomeConsultorio = mtbNomeConsult.Text;
+            objConsultorio.Registrar();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            TipoDeTratamento objTipo = new TipoDeTratamento();
+            objTipo.nome = mtbNomeTratamento.Text;
+            objTipo.valor = Convert.ToDecimal(mtbValorTratamento.Text);
+            objTipo.CadastrarNovoTipo();
         }
     }
 }

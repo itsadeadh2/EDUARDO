@@ -63,11 +63,11 @@ namespace SisClinica.Forms
             uc.cbConsultorios.Text = objSess.objConsultorio.nomeConsultorio;
             if (objSess.horaFim.TimeOfDay<=Convert.ToDateTime("12:00").TimeOfDay)
             {
-                rdbManha.Checked = true;
+                uc.rdbManha.Checked = true;
             }
             else
             {
-                rdbTarde.Checked = true;
+                uc.rdbTarde.Checked = true;
             }
             if (objSess.tipoDeSessao=="Tratamento")
             {

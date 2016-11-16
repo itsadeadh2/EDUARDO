@@ -37,13 +37,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gpCadastrarConsultorio = new System.Windows.Forms.GroupBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNomeConsult = new System.Windows.Forms.MaskedTextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.lblConsultorio = new System.Windows.Forms.Label();
             this.ttHistoria = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mtbNomeTratamento = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mtbValorTratamento = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gpCadastrarConsultorio.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +117,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.gpCadastrarConsultorio);
             this.panel2.Controls.Add(this.lblConsultorio);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -122,10 +130,10 @@
             // gpCadastrarConsultorio
             // 
             this.gpCadastrarConsultorio.Controls.Add(this.btnCadastrar);
-            this.gpCadastrarConsultorio.Controls.Add(this.maskedTextBox1);
+            this.gpCadastrarConsultorio.Controls.Add(this.mtbNomeConsult);
             this.gpCadastrarConsultorio.Controls.Add(this.lbNome);
             this.gpCadastrarConsultorio.ForeColor = System.Drawing.Color.White;
-            this.gpCadastrarConsultorio.Location = new System.Drawing.Point(3, 152);
+            this.gpCadastrarConsultorio.Location = new System.Drawing.Point(3, 30);
             this.gpCadastrarConsultorio.Name = "gpCadastrarConsultorio";
             this.gpCadastrarConsultorio.Size = new System.Drawing.Size(325, 129);
             this.gpCadastrarConsultorio.TabIndex = 1;
@@ -141,13 +149,14 @@
             this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // maskedTextBox1
+            // mtbNomeConsult
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(79, 50);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(166, 27);
-            this.maskedTextBox1.TabIndex = 2;
+            this.mtbNomeConsult.Location = new System.Drawing.Point(79, 50);
+            this.mtbNomeConsult.Name = "mtbNomeConsult";
+            this.mtbNomeConsult.Size = new System.Drawing.Size(166, 27);
+            this.mtbNomeConsult.TabIndex = 2;
             // 
             // lbNome
             // 
@@ -162,11 +171,69 @@
             // 
             this.lblConsultorio.AutoSize = true;
             this.lblConsultorio.ForeColor = System.Drawing.Color.White;
-            this.lblConsultorio.Location = new System.Drawing.Point(114, 128);
+            this.lblConsultorio.Location = new System.Drawing.Point(114, 6);
             this.lblConsultorio.Name = "lblConsultorio";
             this.lblConsultorio.Size = new System.Drawing.Size(103, 21);
             this.lblConsultorio.TabIndex = 0;
             this.lblConsultorio.Text = "Consultórios";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.mtbValorTratamento);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.mtbNomeTratamento);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(6, 216);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(325, 179);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cadastrar novo";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(107, 133);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // mtbNomeTratamento
+            // 
+            this.mtbNomeTratamento.Location = new System.Drawing.Point(79, 50);
+            this.mtbNomeTratamento.Name = "mtbNomeTratamento";
+            this.mtbNomeTratamento.Size = new System.Drawing.Size(166, 27);
+            this.mtbNomeTratamento.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nome:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Valor:";
+            // 
+            // mtbValorTratamento
+            // 
+            this.mtbValorTratamento.Location = new System.Drawing.Point(79, 92);
+            this.mtbValorTratamento.Name = "mtbValorTratamento";
+            this.mtbValorTratamento.Size = new System.Drawing.Size(100, 27);
+            this.mtbValorTratamento.TabIndex = 5;
             // 
             // userControlMenuConfiguracoes
             // 
@@ -183,6 +250,8 @@
             this.panel2.PerformLayout();
             this.gpCadastrarConsultorio.ResumeLayout(false);
             this.gpCadastrarConsultorio.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,12 +263,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gpCadastrarConsultorio;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbNomeConsult;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lblConsultorio;
         private System.Windows.Forms.Button btnBizantino;
         private System.Windows.Forms.Button btnDasNeves;
         private System.Windows.Forms.Button btnDark;
         private System.Windows.Forms.ToolTip ttHistoria;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MaskedTextBox mtbValorTratamento;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox mtbNomeTratamento;
+        private System.Windows.Forms.Label label1;
     }
 }

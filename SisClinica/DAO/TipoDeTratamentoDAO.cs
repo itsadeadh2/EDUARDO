@@ -15,8 +15,9 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "INSERT INTO tipodetratamento VALUES (@nome)";
+            comando.CommandText = "INSERT INTO tipodetratamento(nome, valor) VALUES (@nome,@valor)";
             comando.Parameters.AddWithValue("@nome", tipo.nome);
+            comando.Parameters.AddWithValue("@valor", tipo.valor);
 
             Conexao con = new Conexao();
             con.ExecutarCru(comando);
