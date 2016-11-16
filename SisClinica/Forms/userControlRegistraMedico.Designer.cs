@@ -133,7 +133,7 @@
             // 
             this.lbCidade.AutoSize = true;
             this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.Location = new System.Drawing.Point(200, 188);
+            this.lbCidade.Location = new System.Drawing.Point(267, 188);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(61, 17);
             this.lbCidade.TabIndex = 7;
@@ -197,11 +197,40 @@
             // 
             // cbEstadoCRM
             // 
+            this.cbEstadoCRM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoCRM.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoCRM.FormattingEnabled = true;
+            this.cbEstadoCRM.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
             this.cbEstadoCRM.Location = new System.Drawing.Point(280, 123);
             this.cbEstadoCRM.Name = "cbEstadoCRM";
-            this.cbEstadoCRM.Size = new System.Drawing.Size(31, 25);
+            this.cbEstadoCRM.Size = new System.Drawing.Size(49, 25);
             this.cbEstadoCRM.TabIndex = 4;
             // 
             // mtbTelefone
@@ -226,7 +255,7 @@
             this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
-            this.cbCidade.Location = new System.Drawing.Point(267, 184);
+            this.cbCidade.Location = new System.Drawing.Point(334, 184);
             this.cbCidade.Name = "cbCidade";
             this.cbCidade.Size = new System.Drawing.Size(62, 25);
             this.cbCidade.TabIndex = 8;
@@ -266,7 +295,7 @@
             "Tocantins"});
             this.cbEstado.Location = new System.Drawing.Point(132, 184);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(62, 25);
+            this.cbEstado.Size = new System.Drawing.Size(129, 25);
             this.cbEstado.TabIndex = 7;
             // 
             // txtbEmail

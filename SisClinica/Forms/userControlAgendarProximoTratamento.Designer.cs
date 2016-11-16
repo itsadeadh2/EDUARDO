@@ -217,6 +217,7 @@
             // cbHorarioFinal
             // 
             this.cbHorarioFinal.DisplayMember = "Hora";
+            this.cbHorarioFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioFinal.FormattingEnabled = true;
             this.cbHorarioFinal.Location = new System.Drawing.Point(248, 46);
             this.cbHorarioFinal.Name = "cbHorarioFinal";
@@ -236,6 +237,7 @@
             // cbHorarioInicial
             // 
             this.cbHorarioInicial.DisplayMember = "Hora";
+            this.cbHorarioInicial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioInicial.FormattingEnabled = true;
             this.cbHorarioInicial.Location = new System.Drawing.Point(144, 46);
             this.cbHorarioInicial.Name = "cbHorarioInicial";
@@ -270,6 +272,7 @@
             // 
             // cbTipoDeTratamento
             // 
+            this.cbTipoDeTratamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoDeTratamento.FormattingEnabled = true;
             this.cbTipoDeTratamento.Location = new System.Drawing.Point(124, 86);
             this.cbTipoDeTratamento.Name = "cbTipoDeTratamento";
@@ -280,6 +283,7 @@
             // cbMedicos
             // 
             this.cbMedicos.DisplayMember = "nome do medico";
+            this.cbMedicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedicos.FormattingEnabled = true;
             this.cbMedicos.Location = new System.Drawing.Point(65, 27);
             this.cbMedicos.Name = "cbMedicos";
@@ -291,6 +295,7 @@
             // cbConsultorios
             // 
             this.cbConsultorios.DisplayMember = "Nome";
+            this.cbConsultorios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsultorios.FormattingEnabled = true;
             this.cbConsultorios.Location = new System.Drawing.Point(82, 57);
             this.cbConsultorios.Name = "cbConsultorios";

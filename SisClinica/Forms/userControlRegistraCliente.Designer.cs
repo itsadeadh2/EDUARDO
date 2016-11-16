@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbDadosDoCliente = new System.Windows.Forms.GroupBox();
             this.ptErrorNomeCli = new System.Windows.Forms.PictureBox();
@@ -390,11 +392,33 @@
             // 
             // dtgResponsavel
             // 
+            this.dtgResponsavel.AllowUserToAddRows = false;
+            this.dtgResponsavel.AllowUserToDeleteRows = false;
+            this.dtgResponsavel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgResponsavel.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgResponsavel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgResponsavel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgResponsavel.ColumnHeadersHeight = 25;
+            this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgResponsavel.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgResponsavel.Location = new System.Drawing.Point(40, 218);
             this.dtgResponsavel.Name = "dtgResponsavel";
-            this.dtgResponsavel.Size = new System.Drawing.Size(246, 68);
+            this.dtgResponsavel.ReadOnly = true;
+            this.dtgResponsavel.Size = new System.Drawing.Size(246, 81);
             this.dtgResponsavel.TabIndex = 28;
             this.dtgResponsavel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResponsavel_CellDoubleClick);
             // 

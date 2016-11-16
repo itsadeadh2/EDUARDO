@@ -85,6 +85,7 @@ namespace SisClinica.Forms
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtbNomeCli.Text);
+            
         }
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
@@ -182,7 +183,7 @@ namespace SisClinica.Forms
         private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
-            lblVisCli.Text = lblVisCli.Text + " " + objCliente.nome;
+            lblVisCli.Text ="Cliente:" + " " + objCliente.nome;
         }
 
         //- Métodos

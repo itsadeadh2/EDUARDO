@@ -59,7 +59,7 @@ namespace SisClinica.Forms
         private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
-            lblVisCli.Text = lblVisCli.Text + " " + objCliente.nome;
+            lblVisCli.Text = "Cliente:" + " " + objCliente.nome;
         }
         private void button1_Click(object sender, EventArgs e)
         {

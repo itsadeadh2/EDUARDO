@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.ttHelp = new System.Windows.Forms.ToolTip(this.components);
             this.dtgClientes = new System.Windows.Forms.DataGridView();
@@ -93,13 +97,37 @@
             // 
             this.dtgClientes.AllowUserToAddRows = false;
             this.dtgClientes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgClientes.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Cursor = System.Windows.Forms.Cursors.Help;
-            this.dtgClientes.Location = new System.Drawing.Point(9, 57);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgClientes.Location = new System.Drawing.Point(9, 62);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgClientes.Size = new System.Drawing.Size(315, 108);
             this.dtgClientes.TabIndex = 3;
             this.ttHelp.SetToolTip(this.dtgClientes, "Duplo clique para selecionar o cliente.");
@@ -108,6 +136,7 @@
             // cbMedicos
             // 
             this.cbMedicos.DisplayMember = "nome do medico";
+            this.cbMedicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedicos.FormattingEnabled = true;
             this.cbMedicos.Location = new System.Drawing.Point(65, 27);
             this.cbMedicos.Name = "cbMedicos";
@@ -119,6 +148,7 @@
             // cbConsultorios
             // 
             this.cbConsultorios.DisplayMember = "Nome";
+            this.cbConsultorios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsultorios.FormattingEnabled = true;
             this.cbConsultorios.Location = new System.Drawing.Point(82, 57);
             this.cbConsultorios.Name = "cbConsultorios";
@@ -226,6 +256,7 @@
             // cbHorarioFinal
             // 
             this.cbHorarioFinal.DisplayMember = "Hora";
+            this.cbHorarioFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioFinal.FormattingEnabled = true;
             this.cbHorarioFinal.Location = new System.Drawing.Point(173, 46);
             this.cbHorarioFinal.Name = "cbHorarioFinal";
@@ -246,6 +277,7 @@
             // cbHorarioInicial
             // 
             this.cbHorarioInicial.DisplayMember = "Hora";
+            this.cbHorarioInicial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioInicial.FormattingEnabled = true;
             this.cbHorarioInicial.Location = new System.Drawing.Point(69, 46);
             this.cbHorarioInicial.Name = "cbHorarioInicial";
@@ -289,11 +321,14 @@
             // 
             // cbTipoDeTratamento
             // 
+            this.cbTipoDeTratamento.DisplayMember = "nome";
+            this.cbTipoDeTratamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoDeTratamento.FormattingEnabled = true;
             this.cbTipoDeTratamento.Location = new System.Drawing.Point(124, 86);
             this.cbTipoDeTratamento.Name = "cbTipoDeTratamento";
             this.cbTipoDeTratamento.Size = new System.Drawing.Size(200, 24);
             this.cbTipoDeTratamento.TabIndex = 7;
+            this.cbTipoDeTratamento.ValueMember = "id";
             this.cbTipoDeTratamento.SelectedIndexChanged += new System.EventHandler(this.cbTipoDeTratamento_SelectedIndexChanged);
             // 
             // lblSelecData
@@ -327,6 +362,7 @@
             // lblNomePesq
             // 
             this.lblNomePesq.AutoSize = true;
+            this.lblNomePesq.ForeColor = System.Drawing.Color.White;
             this.lblNomePesq.Location = new System.Drawing.Point(6, 38);
             this.lblNomePesq.Name = "lblNomePesq";
             this.lblNomePesq.Size = new System.Drawing.Size(43, 16);

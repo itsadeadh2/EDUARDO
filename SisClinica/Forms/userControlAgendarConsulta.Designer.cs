@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.btnCadastrarCli = new System.Windows.Forms.Button();
@@ -120,6 +121,14 @@
             this.dtgClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Cursor = System.Windows.Forms.Cursors.Help;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgClientes.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgClientes.Location = new System.Drawing.Point(9, 63);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
@@ -194,6 +203,7 @@
             // cbHorarioFinal
             // 
             this.cbHorarioFinal.DisplayMember = "Hora";
+            this.cbHorarioFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioFinal.FormattingEnabled = true;
             this.cbHorarioFinal.Location = new System.Drawing.Point(178, 55);
             this.cbHorarioFinal.Name = "cbHorarioFinal";
@@ -214,6 +224,7 @@
             // cbHorarioInicial
             // 
             this.cbHorarioInicial.DisplayMember = "Hora";
+            this.cbHorarioInicial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioInicial.FormattingEnabled = true;
             this.cbHorarioInicial.Location = new System.Drawing.Point(74, 55);
             this.cbHorarioInicial.Name = "cbHorarioInicial";
@@ -249,6 +260,7 @@
             // cbMedicos
             // 
             this.cbMedicos.DisplayMember = "nome do medico";
+            this.cbMedicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedicos.FormattingEnabled = true;
             this.cbMedicos.Location = new System.Drawing.Point(110, 63);
             this.cbMedicos.Name = "cbMedicos";
@@ -260,6 +272,7 @@
             // cbConsultorios
             // 
             this.cbConsultorios.DisplayMember = "Nome";
+            this.cbConsultorios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsultorios.FormattingEnabled = true;
             this.cbConsultorios.Location = new System.Drawing.Point(110, 93);
             this.cbConsultorios.Name = "cbConsultorios";
