@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userControlMenuConfiguracoes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBizantino = new System.Windows.Forms.Button();
             this.btnDasNeves = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             this.btnBizantino.Size = new System.Drawing.Size(180, 111);
             this.btnBizantino.TabIndex = 4;
             this.btnBizantino.Text = "Macaco Bizantino";
+            this.ttHistoria.SetToolTip(this.btnBizantino, resources.GetString("btnBizantino.ToolTip"));
             this.btnBizantino.UseVisualStyleBackColor = true;
             this.btnBizantino.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -95,6 +97,8 @@
             this.btnDark.Size = new System.Drawing.Size(180, 111);
             this.btnDark.TabIndex = 2;
             this.btnDark.Text = "Dark trevoso sombrio das trevas";
+            this.ttHistoria.SetToolTip(this.btnDark, "Assim como a escuridão sugiu do nada, essa skin não tem historia, ela é simplesme" +
+        "nte o nada.");
             this.btnDark.UseVisualStyleBackColor = true;
             this.btnDark.Click += new System.EventHandler(this.button1_Click);
             // 
