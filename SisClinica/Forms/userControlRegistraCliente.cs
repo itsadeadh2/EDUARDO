@@ -160,6 +160,10 @@ namespace SisClinica.Forms
                     {
                         objResponsavel.estado = cbEstado.Text;
                     }
+                    else if (ChecaCPF(objResponsavel.cpf))
+                    {
+                        mtbCpfResp.Focus();
+                    }
                 }
             }
             #endregion
@@ -169,11 +173,7 @@ namespace SisClinica.Forms
             else if (ChecaCPF(objCliente.cpf)|| ChecaCPF(objResponsavel.cpf, objCliente.cpf))
             {
                 mtbCpf.Focus();
-            }
-            else if (ChecaCPF(objResponsavel.cpf))
-            {
-                mtbCpfResp.Focus();
-            }
+            }            
             else if (HelperFunctions.ChecaMenorDeIdade(objResponsavel.dataNascimento))
             {
                 MessageBox.Show("O responsável não pode ser menor de idade!");
