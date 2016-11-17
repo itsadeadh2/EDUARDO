@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgendarProxima = new System.Windows.Forms.Button();
             this.lblTotalSessao = new System.Windows.Forms.Label();
@@ -191,6 +192,10 @@
             this.dtgClientes.Location = new System.Drawing.Point(62, 55);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dtgClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgClientes.Size = new System.Drawing.Size(315, 89);
             this.dtgClientes.TabIndex = 19;
             this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
