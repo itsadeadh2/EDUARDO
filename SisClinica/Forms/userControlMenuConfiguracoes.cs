@@ -64,6 +64,9 @@ namespace SisClinica.Forms
             objTipo.nome = mtbNomeTratamento.Text;
             objTipo.valor = Convert.ToDecimal(mtbValorTratamento.Text);
             objTipo.CadastrarNovoTipo();
+            mtbNomeTratamento.Clear();
+            mtbValorTratamento.Clear();
+            MessageBox.Show("Novo Tratamento Cadastrado com sucesso.");
         }
     }
 }
