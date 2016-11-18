@@ -18,6 +18,7 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnCadastrar);
+            HelperFunctions.SetButtonsText(btnCadastrarTratamento);
             HelperFunctions.SetButtonsText(btnDark);
             HelperFunctions.SetButtonsText(btnDasNeves);
             HelperFunctions.SetButtonsText(btnBizantino);
@@ -29,7 +30,7 @@ namespace SisClinica.Forms
             if (new Consultorio().PesquisarPorNome(checkConsult) != null)
             {
                 Consultorio objConsultorio = new Consultorio().PesquisarPorNome(checkConsult);
-                MessageBox.Show("O sistema ja possui um consultorio com esse nome" + "nome do consultorio:" + objConsultorio.nomeConsultorio);
+                MessageBox.Show("O sistema ja possui em registro um consultório com esse nome: "+ objConsultorio.nomeConsultorio);
                 value = true;
             }
             return value;
@@ -70,6 +71,14 @@ namespace SisClinica.Forms
             {
 
             }
+            else if (mtbNomeConsult.Text.Length <1)
+            {
+                MessageBox.Show("Não pode registrar consultorio sem um nome, digite um nome para o consultorio");
+            }
+            else if (mtbNomeConsult.Text.Length >5)
+            {
+                MessageBox.Show("O Consultorio só pode ter de 1 a 5 Caracteres");
+            }
             else
             {
                 objConsultorio.Registrar();
@@ -87,6 +96,11 @@ namespace SisClinica.Forms
             mtbNomeTratamento.Clear();
             mtbValorTratamento.Clear();
             MessageBox.Show("Novo Tratamento Cadastrado com sucesso.");
+        }
+
+        private void mtbNomeConsult_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

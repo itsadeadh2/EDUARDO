@@ -36,10 +36,11 @@
             this.btnDark = new System.Windows.Forms.Button();
             this.lblSkins = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbTratamento = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mtbValorTratamento = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrarTratamento = new System.Windows.Forms.Button();
             this.mtbNomeTratamento = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gpCadastrarConsultorio = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,6 @@
             this.lbNome = new System.Windows.Forms.Label();
             this.lblConsultorio = new System.Windows.Forms.Label();
             this.ttHistoria = new System.Windows.Forms.ToolTip(this.components);
-            this.lbTratamento = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -133,11 +133,21 @@
             this.panel2.Size = new System.Drawing.Size(331, 409);
             this.panel2.TabIndex = 1;
             // 
+            // lbTratamento
+            // 
+            this.lbTratamento.AutoSize = true;
+            this.lbTratamento.ForeColor = System.Drawing.Color.White;
+            this.lbTratamento.Location = new System.Drawing.Point(109, 182);
+            this.lbTratamento.Name = "lbTratamento";
+            this.lbTratamento.Size = new System.Drawing.Size(110, 21);
+            this.lbTratamento.TabIndex = 3;
+            this.lbTratamento.Text = "Tratamentos";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.mtbValorTratamento);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCadastrarTratamento);
             this.groupBox1.Controls.Add(this.mtbNomeTratamento);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -164,16 +174,16 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Valor:";
             // 
-            // button1
+            // btnCadastrarTratamento
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(107, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnCadastrarTratamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarTratamento.Location = new System.Drawing.Point(104, 133);
+            this.btnCadastrarTratamento.Name = "btnCadastrarTratamento";
+            this.btnCadastrarTratamento.Size = new System.Drawing.Size(105, 40);
+            this.btnCadastrarTratamento.TabIndex = 3;
+            this.btnCadastrarTratamento.Text = "Cadastrar";
+            this.btnCadastrarTratamento.UseVisualStyleBackColor = true;
+            this.btnCadastrarTratamento.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // mtbNomeTratamento
             // 
@@ -207,7 +217,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Location = new System.Drawing.Point(110, 83);
+            this.btnCadastrar.Location = new System.Drawing.Point(107, 83);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(105, 40);
             this.btnCadastrar.TabIndex = 3;
@@ -240,16 +250,6 @@
             this.lblConsultorio.Size = new System.Drawing.Size(103, 21);
             this.lblConsultorio.TabIndex = 0;
             this.lblConsultorio.Text = "Consultórios";
-            // 
-            // lbTratamento
-            // 
-            this.lbTratamento.AutoSize = true;
-            this.lbTratamento.ForeColor = System.Drawing.Color.White;
-            this.lbTratamento.Location = new System.Drawing.Point(109, 182);
-            this.lbTratamento.Name = "lbTratamento";
-            this.lbTratamento.Size = new System.Drawing.Size(110, 21);
-            this.lbTratamento.TabIndex = 3;
-            this.lbTratamento.Text = "Tratamentos";
             // 
             // userControlMenuConfiguracoes
             // 
@@ -289,7 +289,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox mtbValorTratamento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrarTratamento;
         private System.Windows.Forms.MaskedTextBox mtbNomeTratamento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbTratamento;
