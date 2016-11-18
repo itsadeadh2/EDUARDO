@@ -91,11 +91,27 @@ namespace SisClinica.Forms
         {
             TipoDeTratamento objTipo = new TipoDeTratamento();
             objTipo.nome = mtbNomeTratamento.Text;
+            
+             if (mtbValorTratamento.Text.Length < 1 && mtbNomeTratamento.Text.Length < 1)
+            {
+                MessageBox.Show("Digite um Nome para o tratamento e o Valor do tratamento");
+            }
+            else if (mtbValorTratamento.Text.Length < 1)
+            {
+                MessageBox.Show("Digite um valor para o tratamento.");
+            }
+            else if (mtbNomeTratamento.Text.Length < 1)
+            {
+                MessageBox.Show("Digite um nome para o Tratamento.");
+            }
+            else
+            {
             objTipo.valor = Convert.ToDecimal(mtbValorTratamento.Text);
             objTipo.CadastrarNovoTipo();
             mtbNomeTratamento.Clear();
             mtbValorTratamento.Clear();
             MessageBox.Show("Novo Tratamento Cadastrado com sucesso.");
+            }
         }
 
         private void mtbNomeConsult_Leave(object sender, EventArgs e)
