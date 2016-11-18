@@ -34,6 +34,28 @@ namespace SisClinica.DAO
             }
             return objConsultorio;
         }
+        public Consultorio PesquisarPorNome(string nome)
+        {
+            Consultorio objConsultorio = new Consultorio();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM consultorio Where nome=@nome";
+            comando.Parameters.AddWithValue("@nome", nome);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+            if (dr.HasRows)
+            {
+                dr.Read();
+                objConsultorio.nomeConsultorio = dr["nome"].ToString();
+                objConsultorio.id = Convert.ToInt32(dr["id"]);
+            }
+            else
+            {
+                objConsultorio = null;
+            }
+            return objConsultorio;
+        }
         public IList<Consultorio> Pesquisar(string nome)
         {
             IList<Consultorio> listaDeConsultorios = new List<Consultorio>();

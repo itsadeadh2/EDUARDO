@@ -22,6 +22,11 @@ namespace SisClinica.Classes
         {
             return new ConsultorioDAO().Pesquisar(id);
         }
+        public Consultorio PesquisarPorNome(string nome)
+        {
+            return new ConsultorioDAO().PesquisarPorNome(nome);
+        }
+
 
         /// <summary>
         /// Retorna todos os consultorios em um DataTable.

@@ -23,7 +23,17 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnBizantino);
             formprin = frmPrin;
         }
-
+        private bool ChecarConsultorio(string checkConsult)
+        {
+            bool value = false;
+            if (new Consultorio().PesquisarPorNome(checkConsult) != null)
+            {
+                Consultorio objConsultorio = new Consultorio().PesquisarPorNome(checkConsult);
+                MessageBox.Show("O sistema ja possui um consultorio com esse nome" + "nome do consultorio:" + objConsultorio.nomeConsultorio);
+                value = true;
+            }
+            return value;
+        }
         private void btnConfigurarHorarios_Click(object sender, EventArgs e)
         {
             userControlHorarios conHora = new userControlHorarios();
@@ -55,7 +65,17 @@ namespace SisClinica.Forms
         {
             Consultorio objConsultorio = new Consultorio();
             objConsultorio.nomeConsultorio = mtbNomeConsult.Text;
-            objConsultorio.Registrar();
+
+            if (ChecarConsultorio(objConsultorio.nomeConsultorio))
+            {
+
+            }
+            else
+            {
+                objConsultorio.Registrar();
+                mtbNomeConsult.Clear();
+                MessageBox.Show("Novo Consultorio Registrado com sucesso");
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
