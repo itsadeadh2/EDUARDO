@@ -65,5 +65,28 @@ namespace SisClinica.DAO
             }
             return objTipo;
         }
+        public TipoDeTratamento PesquisarTratamentosPorNome(string nome)
+        {
+            TipoDeTratamento objTipodeTratamento = new TipoDeTratamento();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "Select * FROM tipodetratamento Where nome=@nome";
+            comando.Parameters.AddWithValue("@nome", nome);
+
+            Conexao con = new Conexao();
+            SqlDataReader dr = con.ExecutarSelect(comando);
+            if (dr.HasRows)
+            {
+                dr.Read();
+                objTipodeTratamento.nome = dr["nome"].ToString();
+                objTipodeTratamento.id = (int)dr["id"];
+                objTipodeTratamento.valor = (decimal)dr["valor"];
+            }
+            else
+            {
+                objTipodeTratamento = null;
+            }
+            return objTipodeTratamento;
+        }
     }
 }

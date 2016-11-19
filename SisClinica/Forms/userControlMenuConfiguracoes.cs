@@ -35,6 +35,17 @@ namespace SisClinica.Forms
             }
             return value;
         }
+        private bool ChecarTratamento(string CheckTrat)
+        {
+            bool value = false;
+            if (new TipoDeTratamento().PesquisarPorNome(CheckTrat) != null)
+            {
+                TipoDeTratamento objTratamento = new TipoDeTratamento().PesquisarPorNome(CheckTrat);
+                MessageBox.Show("Já possui um Tratamento com esse nome: "+ objTratamento.nome);
+                value = true;
+            }
+            return value;
+        }
         private void btnConfigurarHorarios_Click(object sender, EventArgs e)
         {
             userControlHorarios conHora = new userControlHorarios();
@@ -89,10 +100,14 @@ namespace SisClinica.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            TipoDeTratamento objTipo = new TipoDeTratamento();
-            objTipo.nome = mtbNomeTratamento.Text;
-            
-             if (mtbValorTratamento.Text.Length < 1 && mtbNomeTratamento.Text.Length < 1)
+            TipoDeTratamento objTratamento = new TipoDeTratamento();
+            objTratamento.nome = mtbNomeTratamento.Text;
+
+            if (ChecarTratamento(objTratamento.nome))
+            {
+
+            } 
+             else if  (mtbValorTratamento.Text.Length < 1 && mtbNomeTratamento.Text.Length < 1)
             {
                 MessageBox.Show("Digite um Nome para o tratamento e o Valor do tratamento");
             }
@@ -106,8 +121,8 @@ namespace SisClinica.Forms
             }
             else
             {
-            objTipo.valor = Convert.ToDecimal(mtbValorTratamento.Text);
-            objTipo.CadastrarNovoTipo();
+            objTratamento.valor = Convert.ToDecimal(mtbValorTratamento.Text);
+            objTratamento.CadastrarNovoTipo();
             mtbNomeTratamento.Clear();
             mtbValorTratamento.Clear();
             MessageBox.Show("Novo Tratamento Cadastrado com sucesso.");

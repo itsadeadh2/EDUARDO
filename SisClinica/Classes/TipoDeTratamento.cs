@@ -37,5 +37,9 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+        public TipoDeTratamento PesquisarPorNome(string nome)
+        {
+            return new TipoDeTratamentoDAO().PesquisarTratamentosPorNome(nome);
+        }
     }
 }
