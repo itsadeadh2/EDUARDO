@@ -142,6 +142,10 @@ namespace SisClinica.Forms
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgSessoes.DataSource = new Sessoes().BuscaPorClienteMedicoData(txtbxNomePesquisa.Text, tipoDePesquisa, dtpData.Value, tipoDeRetorno, cbNaoConcluido.Checked);
+            if (dtgSessoes.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa não encontrou nenhum resultado em registro!");
+            }
         }
         private void cbConsultas_CheckedChanged(object sender, EventArgs e)
         {

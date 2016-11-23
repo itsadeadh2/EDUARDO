@@ -26,6 +26,10 @@ namespace SisClinica.Forms
         private void btnPesq_Click(object sender, EventArgs e)
         {
             dtgResultados.DataSource = new Medico().Pesquisar(txtbNomePesquisa.Text);
+            if (dtgResultados.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa com o nome:" + txtbNomePesquisa.Text + " não obteve resultados.");
+            }
         }
 
         private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)

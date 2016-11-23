@@ -161,6 +161,11 @@ namespace SisClinica.Forms
         private void btnDtgPesq_Click(object sender, EventArgs e)
         {
             dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
+            if (dtgClientes.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa: " + txtbNomePesquisa.Text + " não encontrou resultados.");
+            }
+             
         }
 
         private void dtgClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

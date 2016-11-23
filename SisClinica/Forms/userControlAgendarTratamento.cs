@@ -85,7 +85,11 @@ namespace SisClinica.Forms
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtbNomeCli.Text);
-            
+            if (dtgClientes.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa: " + txtbNomeCli.Text + " não encontrou resultados.");
+            }
+
         }
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {

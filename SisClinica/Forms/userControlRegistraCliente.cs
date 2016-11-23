@@ -231,6 +231,10 @@ namespace SisClinica.Forms
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgResponsavel.DataSource = new Responsavel().Pesquisar(txtbNomeRespPesquisa.Text);
+            if (dtgResponsavel.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa: " + txtbNomeRespPesquisa.Text + " não encontrou resultados.");
+            }
         }
 
         private void dtgResponsavel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
