@@ -161,10 +161,23 @@ namespace SisClinica.Forms
         }
         private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Controls.Clear();
-            userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
-            Controls.Add(alterCon);
-            alterCon.Show();
+            try
+            {
+                Controls.Clear();
+                userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+                Controls.Add(alterCon);
+                alterCon.Show();
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+                Controls.Clear();
+                UserControl pesqSessoes = new userControlPesquisarSessoes();
+                Controls.Add(pesqSessoes);
+                pesqSessoes.Show();
+            }
+       
         }
 
         private void cbNaoConcluido_CheckedChanged(object sender, EventArgs e)

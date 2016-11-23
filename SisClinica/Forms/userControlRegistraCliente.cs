@@ -235,17 +235,26 @@ namespace SisClinica.Forms
 
         private void dtgResponsavel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            objResponsavel = objResponsavel.Pesquisar(Convert.ToInt32(dtgResponsavel.CurrentRow.Cells["id"].Value));
-            txtbNomeResp.Text = objResponsavel.nome;
-            mtbCpfResp.Text = objResponsavel.cpf;
-            dtpDataNascResp.Value = objResponsavel.dataNascimento;
-            mtbTelefoneResp.Text = objResponsavel.telefone;
-            txtbEmailResp.Text = objResponsavel.email;
-            btnSalvar.Focus();
-            DesativaResponsavel();
-            txtbNomeRespPesquisa.Enabled = true;            
-            btnClearPesquisa.Visible = true;
-            foiPesquisado = true;
+            try
+            {
+                objResponsavel = objResponsavel.Pesquisar(Convert.ToInt32(dtgResponsavel.CurrentRow.Cells["id"].Value));
+                txtbNomeResp.Text = objResponsavel.nome;
+                mtbCpfResp.Text = objResponsavel.cpf;
+                dtpDataNascResp.Value = objResponsavel.dataNascimento;
+                mtbTelefoneResp.Text = objResponsavel.telefone;
+                txtbEmailResp.Text = objResponsavel.email;
+                btnSalvar.Focus();
+                DesativaResponsavel();
+                txtbNomeRespPesquisa.Enabled = true;
+                btnClearPesquisa.Visible = true;
+                foiPesquisado = true;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
+            
         }
 
         private void dtpDataNascResp_Leave(object sender, EventArgs e)
