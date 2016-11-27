@@ -80,6 +80,7 @@
     <Compile Include="Classes\Consultorio.cs" />
     <Compile Include="Classes\Horarios.cs" />
     <Compile Include="Classes\Medico.cs" />
+    <Compile Include="Classes\PaisEstadoCidade.cs" />
     <Compile Include="Classes\Pessoa.cs" />
     <Compile Include="Classes\Responsavel.cs" />
     <Compile Include="Classes\Sessoes.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="DAO\Conexao.cs" />
     <Compile Include="DAO\ConsultorioDAO.cs" />
     <Compile Include="DAO\MedicoDAO.cs" />
+    <Compile Include="DAO\PaisEstadoCidadeDAO.cs" />
     <Compile Include="DAO\ResponsavelDAO.cs" />
     <Compile Include="DAO\SessoesDAO.cs" />
     <Compile Include="Classes\HelperFunctions.cs" />
