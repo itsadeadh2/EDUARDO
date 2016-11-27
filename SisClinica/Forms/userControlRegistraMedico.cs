@@ -45,7 +45,7 @@ namespace SisClinica.Forms
             else if (new Medico().PesquisarPorCRM(objMedico.crm)!=null)
             {
                 objMedico = objMedico.PesquisarPorCRM(objMedico.crm);
-                MessageBox.Show("O sistema já possui um médico com este CRM" + "\n Nome do médico: " + objMedico.crm);
+                MessageBox.Show("O sistema já possui um médico com este CRM" + "\n Nome do médico: " + objMedico.nome);
             }
             else if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
             {
@@ -129,6 +129,7 @@ namespace SisClinica.Forms
             {
                 Medico objMedico = new Medico().PesquisarPorCpf(cpfPessoa);
                 MessageBox.Show("O sistema já possui um Medico com este cpf!" + "\n Nome do cliente: " + objMedico.nome);
+                value = true;
             }
             return value;
         }

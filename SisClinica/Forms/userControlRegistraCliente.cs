@@ -60,24 +60,28 @@ namespace SisClinica.Forms
         private bool ChecaCPF(string cpfPessoa)
         {
             bool value = false;
-            if (new Responsavel().PesquisarPorCPF(cpfPessoa) != null)
-            {
-                Responsavel objResponsavel = new Responsavel().PesquisarPorCPF(cpfPessoa);
-                MessageBox.Show("O sistema já possui um cliente com este cpf!" + "\n Nome do cliente: " + objResponsavel.nome);
-                value = true;
+            if (cpfPessoa!=null)
+            {                
+                if (new Responsavel().PesquisarPorCPF(cpfPessoa) != null)
+                {
+                    Responsavel objResponsavel = new Responsavel().PesquisarPorCPF(cpfPessoa);
+                    MessageBox.Show("O sistema já possui um cliente com este cpf!" + "\n Nome do cliente: " + objResponsavel.nome);
+                    value = true;
+                }
+                else if (new Cliente().PesquisarPorCpf(cpfPessoa) != null)
+                {
+                    Cliente objCliente = new Cliente().PesquisarPorCpf(cpfPessoa);
+                    MessageBox.Show("O sistema já possui um cliente com este cpf!" + "\n Nome do cliente: " + objCliente.nome);
+                    value = true;
+                }
+                else if (new Medico().PesquisarPorCpf(cpfPessoa) != null)
+                {
+                    Medico objMedico = new Medico().PesquisarPorCpf(cpfPessoa);
+                    MessageBox.Show("O sistema já possui um Medico com este cpf!" + "\n Nome do Médico: " + objMedico.nome);
+                    value = true;
+                }
             }
-            else if (new Cliente().PesquisarPorCpf(cpfPessoa) != null)
-            {
-                Cliente objCliente = new Cliente().PesquisarPorCpf(cpfPessoa);
-                MessageBox.Show("O sistema já possui um cliente com este cpf!" + "\n Nome do cliente: " + objCliente.nome);
-                value = true;
-            }
-            else if (new Medico().PesquisarPorCpf(cpfPessoa)!=null)
-            {
-                Medico objMedico = new Medico().PesquisarPorCpf(cpfPessoa);
-                MessageBox.Show("O sistema já possui um Medico com este cpf!" + "\n Nome do cliente: " + objMedico.nome);
-                value = true;
-            }
+            
             return value;
         }
 
@@ -118,6 +122,12 @@ namespace SisClinica.Forms
             UserControl menuAnterior = new userControlMenuNovo();
             Controls.Clear();
             Controls.Add(menuAnterior);
+        }
+
+        private void Reset()
+        {
+            objResponsavel = new Responsavel();
+                  
         }
 
         //- Eventos
@@ -168,15 +178,18 @@ namespace SisClinica.Forms
             }
             #endregion
             if (ChecaNome(objCliente.nome))
-            {             
+            {
+                Reset();
             }
-            else if (ChecaCPF(objCliente.cpf)|| ChecaCPF(objResponsavel.cpf, objCliente.cpf))
+            else if (ChecaCPF(objCliente.cpf) || ChecaCPF(objResponsavel.cpf, objCliente.cpf) || ChecaCPF(objResponsavel.cpf))
             {
                 mtbCpf.Focus();
+                Reset();
             }            
             else if (HelperFunctions.ChecaMenorDeIdade(objResponsavel.dataNascimento))
             {
                 MessageBox.Show("O responsável não pode ser menor de idade!");
+                Reset();
             }
             else if (HelperFunctions.ChecaMenorDeIdade(objCliente.dataNascimento))
             {

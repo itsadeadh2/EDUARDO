@@ -57,6 +57,24 @@ namespace SisClinica.Classes
         }
         public void RegistrarSessao()
         {
+            IList<Sessoes> objSessao = new SessoesDAO().PesquisarPorHorarioInicial(horaInicio);
+            if (objSessao!=null)
+            {
+                foreach (Sessoes s in objSessao)
+                {
+                    if (s.medicoResponsavel.id==medicoResponsavel.id)
+                    {
+                        throw new Exception("O médico selecionado já possui uma sessão neste horario!");
+                    }
+                    else if (s.horaInicio==horaInicio&&s.objConsultorio.id!=objConsultorio.id)
+                    {
+                    }
+                    else if (s.horaInicio==horaInicio)
+                    {
+                        throw new Exception("Já existe uma sessão neste consultorio e neste horário!");
+                    }
+                }
+            }
             if (this.tipoDeSessao=="Tratamento")
             {
                 new SessoesDAO().RegistrarTratamento(this);

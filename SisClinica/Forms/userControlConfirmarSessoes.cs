@@ -81,6 +81,10 @@ namespace SisClinica.Forms
                     Controls.Add(agenProx);
                     agenProx.Show();
                 }
+                else
+                {
+                    dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
+                }
             }
             else
             {
