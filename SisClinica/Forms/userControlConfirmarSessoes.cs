@@ -26,23 +26,25 @@ namespace SisClinica.Forms
         {
             try
             {
-                gbConfirmar.Visible = true;
-                objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
-                if (objSessao.sessaoCompleta == true)
-                {
-                    btnConfirmar.Enabled = false;
-                }
-                else
-                {
-                    btnConfirmar.Enabled = true;
-                }
-                PreencherCampos();
+              
+              objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
+              gbConfirmar.Visible = true;
+            if (objSessao.sessaoCompleta==true)
+            {
+                btnConfirmar.Enabled = false;
+            }
+            else
+            {
+                btnConfirmar.Enabled = true;
+            }
+            PreencherCampos();
             }
             catch (Exception erro)
             {
 
                 MessageBox.Show(erro.Message);
             }
+            
         }
         private void PreencherCampos()
         {

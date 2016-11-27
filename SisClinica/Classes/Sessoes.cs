@@ -129,7 +129,11 @@ namespace SisClinica.Classes
 
         public Sessoes BuscaPorId(int id)
         {
+        
             return new SessoesDAO().Pesquisar(id);
+            
+   
+      
         }
 
         public IList<Sessoes> BuscaPorHoraInicial(DateTime data)
@@ -893,5 +897,6 @@ namespace SisClinica.Classes
         {
             new SessoesDAO().Deletar(this);
         }
+        
     }
 }
