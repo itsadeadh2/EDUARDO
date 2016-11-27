@@ -381,41 +381,48 @@ namespace SisClinica.Classes
             dt.Columns.Add("Situação", typeof(string));
             dt.Columns.Add("Andamento", typeof(string));
             dt.Columns.Add("id", typeof(int));
-
-            foreach (Sessoes objSessoes in lst)
+            if (lst.Count!=0)
             {
-                if (sessaoCompleta)
+                foreach (Sessoes objSessoes in lst)
                 {
-                    if (objSessoes.sessaoCompleta)
+                    if (sessaoCompleta)
                     {
-                        if (objSessoes.tipoDeSessao!="Tratamento")
+                        if (objSessoes.sessaoCompleta)
                         {
-                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, "-", objSessoes.id);
+                            if (objSessoes.tipoDeSessao != "Tratamento")
+                            {
+                                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, "-", objSessoes.id);
+                            }
+                            else
+                            {
+                                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.nroSessao + "/" + objSessoes.qtdeSessoes, objSessoes.id);
+                            }
+
                         }
-                        else
-                        {
-                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.nroSessao + "/" + objSessoes.qtdeSessoes, objSessoes.id);
-                        }
-                        
                     }
-                }
-                else
-                {
-                    if (!objSessoes.sessaoCompleta)
+                    else
                     {
-                        if (objSessoes.tipoDeSessao!="Tratamento")
+                        if (!objSessoes.sessaoCompleta)
                         {
-                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, "-", objSessoes.id);
+                            if (objSessoes.tipoDeSessao != "Tratamento")
+                            {
+                                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, "-", objSessoes.id);
+                            }
+                            else
+                            {
+                                dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.nroSessao + "/" + objSessoes.qtdeSessoes, objSessoes.id);
+                            }
                         }
-                        else
-                        {
-                            dt.Rows.Add(objSessoes.objCliente.nome, objSessoes.medicoResponsavel.nome, objSessoes.tipoDeSessao, objSessoes.dataSessao, objSessoes.horaInicio.TimeOfDay, objSessoes.horaFim.TimeOfDay, objSessoes.situacao, objSessoes.nroSessao + "/" + objSessoes.qtdeSessoes, objSessoes.id);
-                        }
-                    }  
-                                      
+
+                    }
+
                 }
-                
             }
+            else
+            {
+                dt = null;
+            }
+            
             return dt;
         }
 

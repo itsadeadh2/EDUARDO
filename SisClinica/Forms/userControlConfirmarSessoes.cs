@@ -24,17 +24,25 @@ namespace SisClinica.Forms
         Sessoes objSessao;
         private void dtgSessoes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            gbConfirmar.Visible = true;
-            objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
-            if (objSessao.sessaoCompleta==true)
+            try
             {
-                btnConfirmar.Enabled = false;
+                gbConfirmar.Visible = true;
+                objSessao = new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value));
+                if (objSessao.sessaoCompleta == true)
+                {
+                    btnConfirmar.Enabled = false;
+                }
+                else
+                {
+                    btnConfirmar.Enabled = true;
+                }
+                PreencherCampos();
             }
-            else
+            catch (Exception erro)
             {
-                btnConfirmar.Enabled = true;
+
+                MessageBox.Show(erro.Message);
             }
-            PreencherCampos();
         }
         private void PreencherCampos()
         {
