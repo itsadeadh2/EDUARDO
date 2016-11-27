@@ -50,6 +50,10 @@ namespace SisClinica.Classes
                     dt.Rows.Add(objResp.id, objResp.nome, objResp.cpf);
                 }
             }
+            else
+            {
+                dt = null;
+            }
             return dt;
         }
         public void Excluir()

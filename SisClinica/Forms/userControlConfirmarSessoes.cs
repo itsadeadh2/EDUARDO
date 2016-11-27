@@ -13,11 +13,13 @@ namespace SisClinica.Forms
 {
     public partial class userControlConfirmarSessoes : UserControl
     {
+        // Ageitar isso depois
+        DateTime data = DateTime.Now.Date;
         public userControlConfirmarSessoes()
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnConfirmar);
-            DateTime data = DateTime.Now.Date;
+            
             data = data.AddDays(1);
             dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);          
         }
@@ -85,10 +87,13 @@ namespace SisClinica.Forms
                 if (objSessao.tipoDeSessao=="Tratamento")
                 {
                     MessageBox.Show("Última sessão confirmada, tratamento finalizado!");
+                    dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
                 }
                 else
                 {
                     MessageBox.Show("Consulta confirmada!");
+                    dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
+
                 }
                 btnConfirmar.Enabled = false;
             }

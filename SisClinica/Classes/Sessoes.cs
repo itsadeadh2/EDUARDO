@@ -385,7 +385,7 @@ namespace SisClinica.Classes
             dt.Columns.Add("Situação", typeof(string));
             dt.Columns.Add("Andamento", typeof(string));
             dt.Columns.Add("id", typeof(int));
-            if (lst.Count!=0)
+            if (lst.Count != 0)
             {
                 foreach (Sessoes objSessoes in lst)
                 {
@@ -421,12 +421,12 @@ namespace SisClinica.Classes
                     }
 
                 }
+
             }
             else
             {
                 dt = null;
             }
-            
             return dt;
         }
 
