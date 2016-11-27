@@ -82,7 +82,7 @@ namespace SisClinica.Classes
             }
             else
             {
-
+                dt = null;
             }
             return dt;
         }

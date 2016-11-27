@@ -26,22 +26,35 @@ namespace SisClinica.Forms
         private void btnPesq_Click(object sender, EventArgs e)
         {
             dtgResultados.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
+            if (dtgResultados.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa com o nome: " + txtbNomePesquisa.Text + " não obteve resultados.");
+            }
         }
 
         private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
-            if (objCliente != null)
+            try
             {
-                btnAlter.Enabled = true;
-                btnDelete.Enabled = true;
-                btnFullInfo.Enabled = true;
+                objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
+                if (objCliente != null)
+                {
+                    btnAlter.Enabled = true;
+                    btnDelete.Enabled = true;
+                    btnFullInfo.Enabled = true;
+                }
+                //lblNomeCliente.Text = "Nome: " + objCliente.nome;
+                //lblCPF.Text = "CPF: " + objCliente.cpf;
+                //lblResponsavel.Text = "Responsável: " + objCliente.objResponsavel.nome;
+                //implementacao da situacao
+                //implementãção do lblsituacao
             }
-            //lblNomeCliente.Text = "Nome: " + objCliente.nome;
-            //lblCPF.Text = "CPF: " + objCliente.cpf;
-            //lblResponsavel.Text = "Responsável: " + objCliente.objResponsavel.nome;
-            //implementacao da situacao
-            //implementãção do lblsituacao
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
+   
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -53,16 +66,15 @@ namespace SisClinica.Forms
                 {
                     objCliente.Excluir(objCliente.id);
                     MessageBox.Show("Cliente deletado com sucesso!");
+                    dtgResultados.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
                 }
             }
             else
             {
                 objCliente.Excluir(objCliente.id);
                 MessageBox.Show("Cliente deletado com sucesso!");
-                Controls.Clear();
-                userControlPesquisarCliente uc = new userControlPesquisarCliente();
-                Controls.Add(uc);
-                uc.Show();
+                dtgResultados.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
+
             }
         }
 

@@ -58,8 +58,17 @@ namespace SisClinica.Forms
         //- Eventos
         private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
-            lblVisCli.Text = "Cliente:" + " " + objCliente.nome;
+            try
+            {
+                objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
+                lblVisCli.Text = "Cliente:" + " " + objCliente.nome;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -148,6 +157,10 @@ namespace SisClinica.Forms
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtbNomeCli.Text);
+            if (dtgClientes.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa: " + txtbNomeCli.Text + " não encontrou resultados.");
+            }
         }
         
         //- metodos

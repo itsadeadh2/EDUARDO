@@ -161,12 +161,26 @@ namespace SisClinica.Forms
         private void btnDtgPesq_Click(object sender, EventArgs e)
         {
             dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
+            if (dtgClientes.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa: " + txtbNomePesquisa.Text + " não encontrou resultados.");
+            }
+             
         }
 
         private void dtgClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            objSessaoSalvar.objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
-            txtbNomeCliente.Text = objSessaoSalvar.objCliente.nome;
+            try
+            {
+                objSessaoSalvar.objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgClientes.CurrentRow.Cells["id"].Value));
+                txtbNomeCliente.Text = objSessaoSalvar.objCliente.nome;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
+     
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

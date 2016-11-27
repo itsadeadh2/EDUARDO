@@ -26,14 +26,27 @@ namespace SisClinica.Forms
         private void btnPesq_Click(object sender, EventArgs e)
         {
             dtgResultados.DataSource = new Medico().Pesquisar(txtbNomePesquisa.Text);
+            if (dtgResultados.DataSource == null)
+            {
+                MessageBox.Show("A pesquisa com o nome:" + txtbNomePesquisa.Text + " não obteve resultados.");
+            }
         }
 
         private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
-            btnFullInfo.Enabled = true;
-            btnPesq.Enabled = true;
-            btnDelete.Enabled = true;
+            try
+            {
+                objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
+                btnFullInfo.Enabled = true;
+                btnPesq.Enabled = true;
+                btnDelete.Enabled = true;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -44,16 +57,14 @@ namespace SisClinica.Forms
                 if (resultado==DialogResult.Yes)
                 {
                     objMedico.Excluir();
+                    dtgResultados.DataSource = new Medico().Pesquisar(txtbNomePesquisa.Text);
                 }                
             }
             else
             {
                 objMedico.Excluir();
                 MessageBox.Show("Médico excluído com sucesso!");
-                Controls.Clear();
-                userControlPesquisaMedico uc = new userControlPesquisaMedico();
-                Controls.Add(uc);
-                uc.Show();                
+                dtgResultados.DataSource = new Medico().Pesquisar(txtbNomePesquisa.Text);
             }
         }
 

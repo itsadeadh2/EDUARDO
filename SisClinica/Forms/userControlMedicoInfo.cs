@@ -95,17 +95,26 @@ namespace SisClinica.Forms
 
         private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)).tipoDeSessao == "Consulta")
+            try
             {
-                Controls.Clear();
-                userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
-                Controls.Add(alterCon);
-                alterCon.Show();
+                if (new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)).tipoDeSessao == "Consulta")
+                {
+                    Controls.Clear();
+                    userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+                    Controls.Add(alterCon);
+                    alterCon.Show();
+                }
+                else
+                {
+
+                }
             }
-            else
+            catch (Exception erro)
             {
 
+                MessageBox.Show(erro.Message);
             }
+
         }
     }
 }
