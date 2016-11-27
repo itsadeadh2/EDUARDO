@@ -16,6 +16,7 @@ namespace SisClinica.Forms
         public userControlClienteInfo()
         {
             InitializeComponent();
+            linkLblNomeResp.Enabled = false;
         }
 
         Cliente objCliente;
@@ -36,7 +37,8 @@ namespace SisClinica.Forms
             uc.dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorCliente(uc.objCliente);
             if (uc.objCliente.objResponsavel!=null)
             {
-                uc.lblResponsavel.Text = uc.objCliente.objResponsavel.nome;
+                uc.linkLblNomeResp.Text = uc.objCliente.objResponsavel.nome;
+                uc.linkLblNomeResp.Enabled = true;
             }
             
 
@@ -65,6 +67,14 @@ namespace SisClinica.Forms
                 MessageBox.Show(erro.Message);
             }
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Controls.Clear();
+            userControlResponsavelInfo ucResp = new userControlResponsavelInfo().Preencher(objCliente.objResponsavel);
+            Controls.Add(ucResp);
+            ucResp.Show();
         }
     }
 }

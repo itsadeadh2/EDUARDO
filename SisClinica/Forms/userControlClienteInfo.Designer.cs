@@ -51,7 +51,7 @@
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
-            this.lblResponsavel = new System.Windows.Forms.Label();
+            this.linkLblNomeResp = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSessoes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -313,22 +313,25 @@
             this.lbNome.TabIndex = 14;
             this.lbNome.Text = "Nome:";
             // 
-            // lblResponsavel
+            // linkLblNomeResp
             // 
-            this.lblResponsavel.AutoSize = true;
-            this.lblResponsavel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResponsavel.Location = new System.Drawing.Point(448, 221);
-            this.lblResponsavel.Name = "lblResponsavel";
-            this.lblResponsavel.Size = new System.Drawing.Size(61, 17);
-            this.lblResponsavel.TabIndex = 22;
-            this.lblResponsavel.Text = "nenhum";
+            this.linkLblNomeResp.AutoSize = true;
+            this.linkLblNomeResp.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.linkLblNomeResp.LinkColor = System.Drawing.Color.White;
+            this.linkLblNomeResp.Location = new System.Drawing.Point(448, 221);
+            this.linkLblNomeResp.Name = "linkLblNomeResp";
+            this.linkLblNomeResp.Size = new System.Drawing.Size(63, 17);
+            this.linkLblNomeResp.TabIndex = 23;
+            this.linkLblNomeResp.TabStop = true;
+            this.linkLblNomeResp.Text = "Nenhum";
+            this.linkLblNomeResp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // userControlClienteInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.lblResponsavel);
+            this.Controls.Add(this.linkLblNomeResp);
             this.Controls.Add(this.lbDataNascimento);
             this.Controls.Add(this.lbTelefone);
             this.Controls.Add(this.lbEstado);
@@ -382,6 +385,6 @@
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.Label lblResponsavel;
+        private System.Windows.Forms.LinkLabel linkLblNomeResp;
     }
 }
