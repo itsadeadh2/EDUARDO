@@ -17,6 +17,16 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnSalvar);
+            cbEstado.ValueMember = "idEstado";
+            cbEstado.DisplayMember = "siglaEstado";
+            cbEstado.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
+            cbEstado.ValueMember = "idEstado";
+            cbEstado.DisplayMember = "siglaEstado";
+            cbEstadoCRM.ValueMember = "idEstado";
+            cbEstadoCRM.DisplayMember = "siglaEstado";
+            cbEstadoCRM.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
+            cbEstadoCRM.ValueMember = "idEstado";
+            cbEstadoCRM.DisplayMember = "siglaEstado";
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -61,6 +71,12 @@ namespace SisClinica.Forms
                 Controls.Add(menuAnterior);
                 menuAnterior.Show();
             }
+        }
+        private void SetCidade()
+        {
+            cbCidade.DataSource = new PaisEstadoCidade().BuscarCidadesPorEstado(Convert.ToInt32(cbEstado.SelectedValue));
+            cbCidade.DisplayMember = "nomeCidade";
+            cbCidade.ValueMember = "idCidade";
         }
 
         private void txtbnome_Leave(object sender, EventArgs e)
@@ -149,6 +165,11 @@ namespace SisClinica.Forms
                 value = true;
             }
             return value;
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetCidade();
         }
     }
 }

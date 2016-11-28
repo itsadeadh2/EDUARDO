@@ -52,7 +52,7 @@ namespace SisClinica.DAO
                 {
                     PaisEstadoCidade objPaisEstadoCidade = new PaisEstadoCidade();
                     objPaisEstadoCidade.idCidade = (int)dr["cod_cidade"];
-                    objPaisEstadoCidade.idEstado = (int)dr["cod_estado"];
+                    objPaisEstadoCidade.idEstado = idEstado;
                     objPaisEstadoCidade.nomeCidade = dr["nom_cidade"].ToString();
                     listaPaisEstadoCidade.Add(objPaisEstadoCidade);
                 }
@@ -78,9 +78,7 @@ namespace SisClinica.DAO
                 while (dr.Read())
                 {
                     PaisEstadoCidade objPaisEstadoCidade = new PaisEstadoCidade();
-                    objPaisEstadoCidade.idCidade = (int)dr["cod_cidade"];
-                    objPaisEstadoCidade.idEstado = (int)dr["cod_estado"];
-                    objPaisEstadoCidade.nomeCidade = dr["nom_cidade"].ToString();
+                    objPaisEstadoCidade.idEstado = Convert.ToInt32(dr["cod_estado"]);
                     objPaisEstadoCidade.siglaEstado = dr["sgl_estado"].ToString();
                     listaPaisEstadoCidade.Add(objPaisEstadoCidade);
                 }

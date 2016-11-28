@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbDadosDoCliente = new System.Windows.Forms.GroupBox();
             this.ptErrorNomeCli = new System.Windows.Forms.PictureBox();
@@ -155,6 +154,7 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
@@ -185,18 +185,20 @@
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.cbEstado.Location = new System.Drawing.Point(112, 223);
+            this.cbEstado.Location = new System.Drawing.Point(112, 193);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(59, 24);
             this.cbEstado.TabIndex = 16;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
-            this.cbCidade.Location = new System.Drawing.Point(112, 193);
+            this.cbCidade.Location = new System.Drawing.Point(112, 223);
             this.cbCidade.Name = "cbCidade";
-            this.cbCidade.Size = new System.Drawing.Size(59, 24);
+            this.cbCidade.Size = new System.Drawing.Size(180, 24);
             this.cbCidade.TabIndex = 15;
             // 
             // txtbEndereco
@@ -219,7 +221,7 @@
             // 
             this.lbEstado.AutoSize = true;
             this.lbEstado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.Location = new System.Drawing.Point(55, 231);
+            this.lbEstado.Location = new System.Drawing.Point(55, 201);
             this.lbEstado.Name = "lbEstado";
             this.lbEstado.Size = new System.Drawing.Size(48, 16);
             this.lbEstado.TabIndex = 12;
@@ -229,7 +231,7 @@
             // 
             this.lbCidade.AutoSize = true;
             this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.Location = new System.Drawing.Point(50, 201);
+            this.lbCidade.Location = new System.Drawing.Point(50, 231);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(53, 16);
             this.lbCidade.TabIndex = 11;
@@ -396,14 +398,6 @@
             this.dtgResponsavel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgResponsavel.ColumnHeadersHeight = 25;
             this.dtgResponsavel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgResponsavel.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgResponsavel.Location = new System.Drawing.Point(40, 218);
             this.dtgResponsavel.Name = "dtgResponsavel";
             this.dtgResponsavel.ReadOnly = true;

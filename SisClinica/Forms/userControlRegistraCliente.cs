@@ -27,6 +27,11 @@ namespace SisClinica.Forms
             {
                 DesativaResponsavel();
             }
+            cbEstado.DisplayMember = "siglaEstado";
+            cbEstado.ValueMember = "idEstado";
+            cbEstado.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
+            cbEstado.DisplayMember = "siglaEstado";
+            cbEstado.ValueMember = "idEstado";
         }
 
         //- Variáveis
@@ -56,7 +61,12 @@ namespace SisClinica.Forms
             dtgResponsavel.Enabled = false;
             txtbNomeRespPesquisa.Enabled = false;
         }
-
+        private void SetCidade()
+        {
+            cbCidade.DataSource = new PaisEstadoCidade().BuscarCidadesPorEstado(Convert.ToInt32(cbEstado.SelectedValue));
+            cbCidade.DisplayMember = "nomeCidade";
+            cbCidade.ValueMember = "idCidade";
+        }
         private bool ChecaCPF(string cpfPessoa)
         {
             bool value = false;
@@ -365,6 +375,11 @@ namespace SisClinica.Forms
             {
                 AtivaResponsavel();
             }
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetCidade();
         }
     }
 }

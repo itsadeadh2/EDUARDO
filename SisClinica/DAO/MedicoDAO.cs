@@ -162,8 +162,9 @@ namespace SisClinica.DAO
         {
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "UPDATE MEDICO set email=@email, endereco=@endereco, cidade=@cidade, estado=@estado, nome=@nome, telefone=@telefone";
+            comando.CommandText = "UPDATE MEDICO set email=@email, endereco=@endereco, cidade=@cidade, estado=@estado, nome=@nome, telefone=@telefone where id=@id";
             comando.Parameters.AddWithValue("@email", objMedico.email);
+            comando.Parameters.AddWithValue("@id", objMedico.id);
             comando.Parameters.AddWithValue("@endereco", objMedico.endereco);
             comando.Parameters.AddWithValue("@cidade", objMedico.cidade);
             comando.Parameters.AddWithValue("@estado", objMedico.estado);

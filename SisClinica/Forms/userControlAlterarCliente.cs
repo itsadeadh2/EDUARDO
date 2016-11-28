@@ -17,6 +17,7 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             HelperFunctions.SetButtons(btnSalvar);
+            
         }
         Cliente objCliente;
         public userControlAlterarCliente Preencher(Cliente objCli)
@@ -38,6 +39,13 @@ namespace SisClinica.Forms
             {
                 uc.linklblResponsavel.Enabled = false;
             }
+            uc.cbEstado.DisplayMember = "siglaEstado";
+            uc.cbEstado.ValueMember = "idEstado";
+            uc.cbEstado.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
+            uc.cbEstado.DisplayMember = "siglaEstado";
+            uc.cbEstado.ValueMember = "idEstado";
+            uc.cbEstado.SelectedIndex = uc.cbEstado.FindStringExact(uc.objCliente.estado);
+            uc.cbCidade.SelectedIndex = uc.cbCidade.FindStringExact(uc.objCliente.cidade);
             return uc;
         }
 
@@ -47,6 +55,13 @@ namespace SisClinica.Forms
             userControlResponsavelInfo ucResp = new userControlResponsavelInfo().Preencher(objCliente.objResponsavel);
             Controls.Add(ucResp);
             ucResp.Show();
+        }
+
+        private void SetCidade()
+        {
+            cbCidade.DataSource = new PaisEstadoCidade().BuscarCidadesPorEstado(Convert.ToInt32(cbEstado.SelectedValue));
+            cbCidade.DisplayMember = "nomeCidade";
+            cbCidade.ValueMember = "idCidade";
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -67,6 +82,11 @@ namespace SisClinica.Forms
                 objCliente.Alterar();
                 MessageBox.Show("Cliente alterado!");
             }
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetCidade();
         }
     }
 }

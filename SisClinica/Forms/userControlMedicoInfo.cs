@@ -19,6 +19,7 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtonsText(btnCancelar);
             HelperFunctions.SetButtonsText(btnAlterar);
+            
         }
 
         Medico objMedico;
@@ -32,9 +33,15 @@ namespace SisClinica.Forms
             uc.txtbEmail.Text = objMed.email;
             uc.mtbTelefone.Text = objMed.telefone;
             uc.txtbEndereco.Text = objMed.endereco;
-
             uc.dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorMedico(objMed);
             uc.objMedico = objMed;
+            uc.cbEstado.DisplayMember = "siglaEstado";
+            uc.cbEstado.ValueMember = "idEstado";
+            uc.cbEstado.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
+            uc.cbEstado.DisplayMember = "siglaEstado";
+            uc.cbEstado.ValueMember = "idEstado";
+            uc.cbEstado.SelectedIndex = uc.cbEstado.FindStringExact(uc.objMedico.estado);
+            uc.cbCidade.SelectedIndex = uc.cbCidade.FindStringExact(uc.objMedico.cidade);
             return uc;
         }
 
@@ -51,7 +58,12 @@ namespace SisClinica.Forms
             mtbTelefone.Enabled = true;
             txtbEndereco.Enabled = true;
         }
-
+        private void SetCidade()
+        {
+            cbCidade.DataSource = new PaisEstadoCidade().BuscarCidadesPorEstado(Convert.ToInt32(cbEstado.SelectedValue));
+            cbCidade.DisplayMember = "nomeCidade";
+            cbCidade.ValueMember = "idCidade";
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (HelperFunctions.ChecaNome(txtbnome.Text))
@@ -82,15 +94,10 @@ namespace SisClinica.Forms
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtbnome.Text = objMedico.nome;
-            cbEstado.Text = objMedico.estado;
-            cbCidade.Text = objMedico.cidade;
-            txtbEmail.Text = objMedico.email;
-            mtbTelefone.Text = objMedico.telefone;
-            txtbEndereco.Text = objMedico.endereco;
-            btnSalvar.Visible = false;
-            btnCancelar.Visible = false;
-            btnAlterar.Enabled = true;
+            userControlMedicoInfo uc = new userControlMedicoInfo().Preencher(objMedico);
+            Controls.Clear();
+            Controls.Add(uc);
+            uc.Show();
         }
 
         private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -115,6 +122,11 @@ namespace SisClinica.Forms
                 MessageBox.Show(erro.Message);
             }
 
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetCidade();
         }
     }
 }

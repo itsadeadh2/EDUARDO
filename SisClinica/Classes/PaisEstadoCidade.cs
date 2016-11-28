@@ -9,10 +9,8 @@ namespace SisClinica.Classes
 {
     public class PaisEstadoCidade
     {
-        public int idPais { get; set; }
         public int idEstado { get; set; }
         public int idCidade { get; set; }
-        public string siglaPais { get; set; }
         public string siglaEstado { get; set; }
         public string nomeCidade { get; set; }
 

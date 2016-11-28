@@ -252,11 +252,12 @@
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
             this.cbCidade.Location = new System.Drawing.Point(334, 184);
             this.cbCidade.Name = "cbCidade";
-            this.cbCidade.Size = new System.Drawing.Size(62, 25);
+            this.cbCidade.Size = new System.Drawing.Size(151, 25);
             this.cbCidade.TabIndex = 8;
             // 
             // cbEstado
@@ -296,6 +297,7 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(129, 25);
             this.cbEstado.TabIndex = 7;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // txtbEmail
             // 

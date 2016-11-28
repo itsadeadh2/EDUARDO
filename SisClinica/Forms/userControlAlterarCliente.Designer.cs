@@ -68,6 +68,7 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
@@ -98,18 +99,20 @@
             "São Paulo\t ",
             "Sergipe\t ",
             "Tocantins"});
-            this.cbEstado.Location = new System.Drawing.Point(133, 270);
+            this.cbEstado.Location = new System.Drawing.Point(133, 239);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(89, 25);
             this.cbEstado.TabIndex = 34;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
-            this.cbCidade.Location = new System.Drawing.Point(133, 239);
+            this.cbCidade.Location = new System.Drawing.Point(134, 270);
             this.cbCidade.Name = "cbCidade";
-            this.cbCidade.Size = new System.Drawing.Size(89, 25);
+            this.cbCidade.Size = new System.Drawing.Size(179, 25);
             this.cbCidade.TabIndex = 33;
             // 
             // txtbEndereco
@@ -132,7 +135,7 @@
             // 
             this.lbEstado.AutoSize = true;
             this.lbEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.Location = new System.Drawing.Point(67, 277);
+            this.lbEstado.Location = new System.Drawing.Point(67, 246);
             this.lbEstado.Name = "lbEstado";
             this.lbEstado.Size = new System.Drawing.Size(56, 17);
             this.lbEstado.TabIndex = 30;
@@ -142,7 +145,7 @@
             // 
             this.lbCidade.AutoSize = true;
             this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.Location = new System.Drawing.Point(62, 247);
+            this.lbCidade.Location = new System.Drawing.Point(63, 278);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(61, 17);
             this.lbCidade.TabIndex = 29;

@@ -56,7 +56,7 @@
             this.txtbEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbEmail.Location = new System.Drawing.Point(155, 129);
             this.txtbEmail.Name = "txtbEmail";
-            this.txtbEmail.Size = new System.Drawing.Size(264, 26);
+            this.txtbEmail.Size = new System.Drawing.Size(322, 26);
             this.txtbEmail.TabIndex = 21;
             // 
             // cbEstado
@@ -97,15 +97,17 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(62, 28);
             this.cbEstado.TabIndex = 18;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // cbCidade
             // 
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCidade.Enabled = false;
             this.cbCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCidade.FormattingEnabled = true;
-            this.cbCidade.Location = new System.Drawing.Point(331, 92);
+            this.cbCidade.Location = new System.Drawing.Point(294, 92);
             this.cbCidade.Name = "cbCidade";
-            this.cbCidade.Size = new System.Drawing.Size(62, 28);
+            this.cbCidade.Size = new System.Drawing.Size(183, 28);
             this.cbCidade.TabIndex = 19;
             // 
             // txtbEndereco
@@ -114,7 +116,7 @@
             this.txtbEndereco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbEndereco.Location = new System.Drawing.Point(155, 203);
             this.txtbEndereco.Name = "txtbEndereco";
-            this.txtbEndereco.Size = new System.Drawing.Size(264, 26);
+            this.txtbEndereco.Size = new System.Drawing.Size(322, 26);
             this.txtbEndereco.TabIndex = 23;
             // 
             // mtbTelefone
@@ -133,7 +135,7 @@
             this.txtbnome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbnome.Location = new System.Drawing.Point(155, 55);
             this.txtbnome.Name = "txtbnome";
-            this.txtbnome.Size = new System.Drawing.Size(290, 26);
+            this.txtbnome.Size = new System.Drawing.Size(322, 26);
             this.txtbnome.TabIndex = 13;
             // 
             // lbEstado
@@ -190,7 +192,7 @@
             // 
             this.lbCidade.AutoSize = true;
             this.lbCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.Location = new System.Drawing.Point(257, 95);
+            this.lbCidade.Location = new System.Drawing.Point(220, 95);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(68, 20);
             this.lbCidade.TabIndex = 24;
