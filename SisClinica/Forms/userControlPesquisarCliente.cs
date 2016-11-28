@@ -39,9 +39,9 @@ namespace SisClinica.Forms
                 objCliente = new Cliente().PesquisarPorId(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
                 if (objCliente != null)
                 {
-                    btnAlter.Enabled = true;
-                    btnDelete.Enabled = true;
-                    btnFullInfo.Enabled = true;
+                    btnAlter.Visible = true;
+                    btnDelete.Visible = true;
+                    btnFullInfo.Visible = true;
                 }
                 //lblNomeCliente.Text = "Nome: " + objCliente.nome;
                 //lblCPF.Text = "CPF: " + objCliente.cpf;

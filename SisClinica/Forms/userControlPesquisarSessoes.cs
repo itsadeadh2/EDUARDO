@@ -40,44 +40,51 @@ namespace SisClinica.Forms
                 
                 if (cbCliente.Checked && cbMedico.Checked && cbData.Checked)
                 {
-                    dtpData.Enabled = true;
+                    lbData.Visible = true;
+                    dtpData.Visible = true;
                     tipoDePesquisa = tdp.clienteMedicoEData;
                     cbNaoConcluido.Enabled = false;
                 }
                 else if (cbCliente.Checked && cbMedico.Checked)
                 {
                     tipoDePesquisa = tdp.clienteEMedico;
-                    dtpData.Enabled = false;
+                    lbData.Visible = false;
+                    dtpData.Visible = false;
                     cbNaoConcluido.Enabled = false;
                 }
                 else if (cbCliente.Checked && cbData.Checked)
                 {
                     tipoDePesquisa = tdp.clienteData;
-                    dtpData.Enabled = true;
+                    lbData.Visible = true;
+                    dtpData.Visible = true;
                     cbNaoConcluido.Enabled = false;
                 }
                 else if (cbMedico.Checked && cbData.Checked)
                 {
                     tipoDePesquisa = tdp.clienteMedicoEData;
-                    dtpData.Enabled = true;
+                    lbData.Visible = true;
+                    dtpData.Visible = true;
                     cbNaoConcluido.Enabled = false;
                 }
                 else if (cbCliente.Checked)
                 {
                     tipoDePesquisa = tdp.cliente;
-                    dtpData.Enabled = false;
+                    lbData.Visible = false;
+                    dtpData.Visible = false;                    
                     cbNaoConcluido.Enabled = false;
 
                 }
                 else if (cbMedico.Checked)
                 {
                     tipoDePesquisa = tdp.medico;
-                    dtpData.Enabled = false;
+                    dtpData.Visible = false;
+                    lbData.Visible = false;
                     cbNaoConcluido.Enabled = false;
                 }
                 else if (cbData.Checked)
                 {
-                    dtpData.Enabled = true;
+                    lbData.Visible = true;
+                    dtpData.Visible = true;
                     txtbxNomePesquisa.Enabled = false;              
                     tipoDePesquisa = tdp.data;
                     cbNaoConcluido.Enabled = true;
@@ -88,8 +95,8 @@ namespace SisClinica.Forms
 
                 else if (cbData.Checked && (cbCliente.Checked || cbMedico.Checked))
                 {
-
-                    dtpData.Enabled = true;
+                    lbData.Visible = true;
+                    dtpData.Visible = true;
                     if (cbCliente.Checked)
                     {
                         tipoDePesquisa = tdp.clienteData;
@@ -109,7 +116,8 @@ namespace SisClinica.Forms
             {
                 btnPesquisar.Enabled = false;
                 txtbxNomePesquisa.Enabled = false;
-                dtpData.Enabled = false;
+                lbData.Visible = false;
+                dtpData.Visible = false;
                 cbNaoConcluido.Enabled = false;
             }
             if (cbConsultas.Checked || cbTratamentos.Checked)

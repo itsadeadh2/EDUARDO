@@ -50,7 +50,7 @@
             this.dtgSessoesDoDia.AllowUserToAddRows = false;
             this.dtgSessoesDoDia.AllowUserToDeleteRows = false;
             this.dtgSessoesDoDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgSessoesDoDia.BackgroundColor = System.Drawing.Color.White;
+            this.dtgSessoesDoDia.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgSessoesDoDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgSessoesDoDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

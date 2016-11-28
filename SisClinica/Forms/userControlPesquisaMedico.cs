@@ -37,9 +37,9 @@ namespace SisClinica.Forms
             try
             {
                 objMedico = new Medico().Pesquisar(Convert.ToInt32(dtgResultados.CurrentRow.Cells["id"].Value));
-                btnFullInfo.Enabled = true;
-                btnPesq.Enabled = true;
-                btnDelete.Enabled = true;
+                btnFullInfo.Visible = true;
+                btnPesq.Visible = true;
+                btnDelete.Visible = true;
             }
             catch (Exception erro)
             {

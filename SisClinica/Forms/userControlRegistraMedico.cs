@@ -47,6 +47,18 @@ namespace SisClinica.Forms
                 MessageBox.Show("Nome inválido!");
                 txtbnome.Focus();
             }
+            if (mtbCRM.TextLength<4 || mtbCRM.TextLength>10)
+            {
+                MessageBox.Show("Crm inválido! O crm deve conter no mínimo 4 ou no máximo 10 dígitos.");
+            }
+            if (txtbDigitoCRM.TextLength <1 || txtbDigitoCRM.TextLength>2)
+            {
+                MessageBox.Show("Informe corretamente o(s) ultimo(s) dígito do Crm, no qual deve conter no mínimo 1 ou no máximo 2 dígitos.");
+            }
+            if (mtbCPF.TextLength<14)
+            {
+                MessageBox.Show("Cpf Inválido!");
+            }
             else if (ChecaCPF(objMedico.cpf))
             {
 

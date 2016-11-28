@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbDadosDoCliente = new System.Windows.Forms.GroupBox();
             this.ptErrorNomeCli = new System.Windows.Forms.PictureBox();
@@ -401,6 +402,9 @@
             this.dtgResponsavel.Location = new System.Drawing.Point(40, 218);
             this.dtgResponsavel.Name = "dtgResponsavel";
             this.dtgResponsavel.ReadOnly = true;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dtgResponsavel.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgResponsavel.Size = new System.Drawing.Size(246, 81);
             this.dtgResponsavel.TabIndex = 28;
             this.dtgResponsavel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResponsavel_CellDoubleClick);
