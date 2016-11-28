@@ -129,9 +129,10 @@ namespace SisClinica.DAO
             return objCliente;
         }
 
-        public Cliente PesquisarPorResponsavel(Responsavel objResponsavel)
+        public IList<Cliente> PesquisarPorResponsavel(Responsavel objResponsavel)
         {
-            Cliente objCliente = new Cliente();
+            
+            IList<Cliente> listaDeClientes = new List<Cliente>();
             SqlCommand comando = new SqlCommand();
             comando.CommandType = CommandType.Text;
             comando.CommandText = "SELECT * FROM Cliente WHERE cpf_responsavel LIKE @cpf";
@@ -142,24 +143,28 @@ namespace SisClinica.DAO
 
             if (dr.HasRows)
             {
-                dr.Read();
-                objCliente.nome = dr["nome"].ToString();
-                objCliente.cpf = dr["cpf"].ToString();
-                objCliente.endereco = dr["endereco"].ToString();
-                objCliente.cidade = dr["cidade"].ToString();
-                objCliente.estado = dr["estado"].ToString();
-                objCliente.email = dr["email"].ToString();
-                objCliente.telefone = dr["telefone"].ToString();
-                objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
-                objCliente.adicionalInfo = dr["adicionalInfo"].ToString();
-                objCliente.id = Convert.ToInt32(dr["id"]);
-                objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf_responsavel"].ToString());
+                while (dr.Read())
+                {
+                    Cliente objCliente = new Cliente();
+                    objCliente.nome = dr["nome"].ToString();
+                    objCliente.cpf = dr["cpf"].ToString();
+                    objCliente.endereco = dr["endereco"].ToString();
+                    objCliente.cidade = dr["cidade"].ToString();
+                    objCliente.estado = dr["estado"].ToString();
+                    objCliente.email = dr["email"].ToString();
+                    objCliente.telefone = dr["telefone"].ToString();
+                    objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
+                    objCliente.adicionalInfo = dr["adicionalInfo"].ToString();
+                    objCliente.id = Convert.ToInt32(dr["id"]);
+                    objCliente.objResponsavel = new ResponsavelDAO().Pesquisar(dr["cpf_responsavel"].ToString());
+                    listaDeClientes.Add(objCliente);
+                }
             }
             else
             {
-                objCliente = null;
+                listaDeClientes = null;
             }
-            return objCliente;
+            return listaDeClientes;
         }
         /// <summary>
         /// Retorna um cliente baseado no nome

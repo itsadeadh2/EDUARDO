@@ -85,6 +85,31 @@ namespace SisClinica.Forms
             return value;
         }
 
+        private bool ChecaCPFSemAviso(string cpfPessoa)
+        {
+            bool value = false;
+            if (cpfPessoa != null)
+            {
+                if (new Responsavel().PesquisarPorCPF(cpfPessoa) != null)
+                {
+                    Responsavel objResponsavel = new Responsavel().PesquisarPorCPF(cpfPessoa);
+                    value = true;
+                }
+                else if (new Cliente().PesquisarPorCpf(cpfPessoa) != null)
+                {
+                    Cliente objCliente = new Cliente().PesquisarPorCpf(cpfPessoa);
+                    value = true;
+                }
+                else if (new Medico().PesquisarPorCpf(cpfPessoa) != null)
+                {
+                    Medico objMedico = new Medico().PesquisarPorCpf(cpfPessoa);
+                    value = true;
+                }
+            }
+
+            return value;
+        }
+
         private bool ChecaCPF(string cpfResp, string cpfCli)
         {
             bool value = false;
@@ -95,6 +120,7 @@ namespace SisClinica.Forms
             }
             return value;
         }
+
 
         private bool ChecaNome(string nome)
         {
@@ -181,10 +207,18 @@ namespace SisClinica.Forms
             {
                 Reset();
             }
-            else if (ChecaCPF(objCliente.cpf) || ChecaCPF(objResponsavel.cpf, objCliente.cpf) || ChecaCPF(objResponsavel.cpf))
+            else if (ChecaCPF(objCliente.cpf) || ChecaCPF(objResponsavel.cpf, objCliente.cpf) || !foiPesquisado && ChecaCPFSemAviso(objResponsavel.cpf))
             {
                 mtbCpf.Focus();
-                Reset();
+                if (foiPesquisado)
+                {
+
+                }
+                else
+                {
+                    ChecaCPF(objResponsavel.cpf);
+                    Reset();
+                }                
             }            
             else if (HelperFunctions.ChecaMenorDeIdade(objResponsavel.dataNascimento))
             {
@@ -212,8 +246,6 @@ namespace SisClinica.Forms
                 }                
                 else
                 {
-                    objResponsavel.Registrar();
-                    objResponsavel = objResponsavel.PesquisarPorCPF(objResponsavel.cpf);
                     objCliente.objResponsavel = objResponsavel;
                     objCliente.Registrar();
                     MessageBox.Show("Cliente e Responsável registrados e vinculados com sucesso!");

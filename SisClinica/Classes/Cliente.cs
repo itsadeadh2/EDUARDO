@@ -39,9 +39,25 @@ namespace SisClinica.Classes
             return new ClienteDAO().Pesquisar(cpf);
            
         }
-        public Cliente PesquisarPorResponsavel(Responsavel objResponsavel)
+        public DataTable PesquisarPorResponsavel(Responsavel objResponsavel)
         {
-            return new ClienteDAO().PesquisarPorResponsavel(objResponsavel);
+            IList<Cliente> lista = new ClienteDAO().PesquisarPorResponsavel(objResponsavel);
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Nome", typeof(string));
+            dt.Columns.Add("CPF", typeof(string));
+            if (lista!=null)
+            {
+                foreach (Cliente c in lista)
+                {
+                    dt.Rows.Add(c.nome, c.cpf);
+                }
+            }
+            else
+            {
+                dt = null;
+            }
+            return dt;
         }
 
         /// <summary>

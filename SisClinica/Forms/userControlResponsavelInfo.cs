@@ -31,6 +31,7 @@ namespace SisClinica.Forms
             uc.dtpDataNasc.Value = uc.objResponsavel.dataNascimento;
             uc.mtbTelefone.Text = uc.objResponsavel.telefone;
             uc.txtbEmail.Text = uc.objResponsavel.email;
+            uc.dtgClientes.DataSource = new Cliente().PesquisarPorResponsavel(uc.objResponsavel);
             return uc;
         }
 
@@ -73,9 +74,9 @@ namespace SisClinica.Forms
         private void Voltar()
         {
             Controls.Clear();
-            userControlAlterarCliente alterCli = new userControlAlterarCliente().Preencher(new Cliente().PesquisarPorResponsavel(objResponsavel));
-            Controls.Add(alterCli);
-            alterCli.Show();
+            userControlPesquisarCliente uc = new userControlPesquisarCliente();
+            Controls.Add(uc);
+            uc.Show();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -104,6 +105,14 @@ namespace SisClinica.Forms
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Salvar();
+        }
+
+        private void dtgClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Controls.Clear();
+            userControlClienteInfo uc = new userControlClienteInfo().PreencheFormulario(new Cliente().PesquisarPorCpf(dtgClientes.CurrentRow.Cells["CPF"].Value.ToString()));
+            Controls.Add(uc);
+            uc.Show();
         }
     }
 }
