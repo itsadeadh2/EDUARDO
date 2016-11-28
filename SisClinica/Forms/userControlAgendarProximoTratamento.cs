@@ -16,7 +16,9 @@ namespace SisClinica.Forms
         public userControlAgendarProximoTratamento()
         {
             InitializeComponent();
-            HelperFunctions.SetButtonsText(btnSalvar);           
+            HelperFunctions.SetButtonsText(btnSalvar);
+            cbTipoDeTratamento.ValueMember = "id";
+            cbTipoDeTratamento.DisplayMember = "nome";           
         }
 
         private Cliente objCliente;
