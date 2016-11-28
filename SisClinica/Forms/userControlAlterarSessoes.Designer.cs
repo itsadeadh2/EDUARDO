@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgendarProxima = new System.Windows.Forms.Button();
             this.lblTotalSessao = new System.Windows.Forms.Label();
@@ -192,10 +192,10 @@
             this.dtgClientes.Location = new System.Drawing.Point(62, 55);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dtgClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dtgClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgClientes.Size = new System.Drawing.Size(315, 89);
             this.dtgClientes.TabIndex = 19;
             this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
@@ -249,13 +249,14 @@
             // cbConsultorios
             // 
             this.cbConsultorios.DisplayMember = "Nome";
+            this.cbConsultorios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsultorios.Enabled = false;
             this.cbConsultorios.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbConsultorios.FormattingEnabled = true;
-            this.cbConsultorios.Location = new System.Drawing.Point(118, 305);
+            this.cbConsultorios.Location = new System.Drawing.Point(118, 277);
             this.cbConsultorios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbConsultorios.Name = "cbConsultorios";
-            this.cbConsultorios.Size = new System.Drawing.Size(298, 25);
+            this.cbConsultorios.Size = new System.Drawing.Size(93, 25);
             this.cbConsultorios.TabIndex = 4;
             this.cbConsultorios.ValueMember = "id";
             this.cbConsultorios.SelectedIndexChanged += new System.EventHandler(this.cbConsultorios_SelectedIndexChanged);
@@ -276,10 +277,10 @@
             this.dtpData.Enabled = false;
             this.dtpData.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(120, 247);
+            this.dtpData.Location = new System.Drawing.Point(118, 307);
             this.dtpData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(146, 22);
+            this.dtpData.Size = new System.Drawing.Size(93, 22);
             this.dtpData.TabIndex = 3;
             this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
@@ -298,7 +299,7 @@
             // 
             this.lblSelecConsult.AutoSize = true;
             this.lblSelecConsult.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelecConsult.Location = new System.Drawing.Point(34, 308);
+            this.lblSelecConsult.Location = new System.Drawing.Point(37, 280);
             this.lblSelecConsult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelecConsult.Name = "lblSelecConsult";
             this.lblSelecConsult.Size = new System.Drawing.Size(78, 17);
@@ -323,7 +324,7 @@
             // 
             this.lblMedico.AutoSize = true;
             this.lblMedico.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedico.Location = new System.Drawing.Point(56, 278);
+            this.lblMedico.Location = new System.Drawing.Point(58, 250);
             this.lblMedico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedico.Name = "lblMedico";
             this.lblMedico.Size = new System.Drawing.Size(57, 17);
@@ -371,7 +372,7 @@
             // 
             this.lblSelecData.AutoSize = true;
             this.lblSelecData.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelecData.Location = new System.Drawing.Point(69, 252);
+            this.lblSelecData.Location = new System.Drawing.Point(67, 312);
             this.lblSelecData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelecData.Name = "lblSelecData";
             this.lblSelecData.Size = new System.Drawing.Size(41, 17);
@@ -395,10 +396,11 @@
             // cbMedicos
             // 
             this.cbMedicos.DisplayMember = "nome do medico";
+            this.cbMedicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedicos.Enabled = false;
             this.cbMedicos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMedicos.FormattingEnabled = true;
-            this.cbMedicos.Location = new System.Drawing.Point(118, 275);
+            this.cbMedicos.Location = new System.Drawing.Point(120, 247);
             this.cbMedicos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMedicos.Name = "cbMedicos";
             this.cbMedicos.Size = new System.Drawing.Size(298, 25);
