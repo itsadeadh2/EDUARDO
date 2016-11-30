@@ -19,9 +19,12 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnPesquisar);
         }
 
+        //-Atributos
         private Sessoes objSessao;
         private tdp tipoDePesquisa;
-        private tdr tipoDeRetorno = tdr.consultaETratamento;        
+        private tdr tipoDeRetorno = tdr.consultaETratamento;      
+        
+        //-Métodos  
         private void cbCliente_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();
@@ -176,7 +179,7 @@ namespace SisClinica.Forms
             try
             {
                 Controls.Clear();
-                userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+                userControlAlterarSessoes alterCon = new userControlAlterarSessoes(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
                 Controls.Add(alterCon);
                 alterCon.Show();
             }
@@ -191,7 +194,6 @@ namespace SisClinica.Forms
             }
        
         }
-
         private void cbNaoConcluido_CheckedChanged(object sender, EventArgs e)
         {
             DeterminaAtivacao();

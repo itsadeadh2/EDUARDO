@@ -13,35 +13,43 @@ namespace SisClinica.Forms
 {
     public partial class userControlAgendarProximoTratamento : UserControl
     {
-        public userControlAgendarProximoTratamento()
+        public userControlAgendarProximoTratamento(Sessoes objS)
         {
             InitializeComponent();
-            HelperFunctions.SetButtonsText(btnSalvar);           
+            HelperFunctions.SetButtonsText(btnSalvar);            
+            cbMedicos.DataSource = new Medico().Pesquisar();
+            cbConsultorios.DataSource = new Consultorio().Pesquisar();
+            cbTipoDeTratamento.DataSource = new TipoDeTratamento().Pesquisar();
+            cbTipoDeTratamento.DisplayMember = "nome";
+            cbTipoDeTratamento.ValueMember = "id";
+            lblVisCli.Text = "Cliente: " + objS.objCliente.nome;
+            lblVisMedic.Text = "Médico: " + objS.medicoResponsavel.nome;
+            lblVisQtde.Text = "Sessões restantes: " + (objS.qtdeSessoes - objS.nroSessao);
+            lblVisTipo.Text = "Tipo de tratamento: " + objS.tipoDeTratamento.nome;
+            lblVisConsult.Text = "Consultório: " + objS.objConsultorio.nomeConsultorio;
+            lblVisHora.Text = "Horário: " + objS.horaInicio.TimeOfDay.ToString() + " as " + objS.horaFim.TimeOfDay.ToString();           
+
+            if (objS.quitada == true)
+            {
+                lblValortotal.Text = "Valor total: " + "Quitada";
+                lblValorPorSessao.Text = "Valor por sessão: " + "Quitada";
+            }
+            else
+            {
+                lblValortotal.Text = "Valor total: " + "R$" + objS.tipoDeTratamento.valor;
+                lblValorPorSessao.Text = "Valor por sessão: " + "R$" + objS.valorSessao;
+            }
+            objSessao = objS;
+            ChecaTurno();
         }
 
+        //-Atributos
         private Cliente objCliente;
         private Sessoes objSessao = new Sessoes();        
         private string turno;
         private bool editable = false;
+        
         // - Métodos
-
-        public userControlAgendarProximoTratamento Preencher(Sessoes objS)
-        {
-            userControlAgendarProximoTratamento uc = new userControlAgendarProximoTratamento();
-            uc.cbMedicos.DataSource = new Medico().Pesquisar();
-            uc.cbConsultorios.DataSource = new Consultorio().Pesquisar();
-            uc.cbTipoDeTratamento.DataSource = new TipoDeTratamento().Pesquisar();
-            uc.cbTipoDeTratamento.DisplayMember = "nome";
-            uc.cbTipoDeTratamento.ValueMember = "id";
-            uc.lblVisCli.Text = "Cliente: " + objS.objCliente.nome;
-            uc.lblValorPorSessao.Text = "Valor por sessão: " + "R$" + objS.valorSessao;
-            uc.lblValortotal.Text = "Valor total: " + "R$" + objS.tipoDeTratamento.valor;
-            uc.objSessao = objS; 
-            uc.ChecaTurno();
-
-            return uc;
-        }
-
         private void ChecaTurno()
         {
             if (rdbManha.Checked)
@@ -91,6 +99,7 @@ namespace SisClinica.Forms
             }
         }
 
+        //- Eventos
         private void button1_Click(object sender, EventArgs e)
         {
             if (cbHorarioInicial.SelectedValue == null)
@@ -114,26 +123,21 @@ namespace SisClinica.Forms
                 Controls.Clear();
             }            
         }
-
-
         private void cbMedicos_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetMedico();
         }
-
         private void cbConsultorios_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetConsultorio();
         }
-
         private void cbTipoDeTratamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             objSessao.tipoDeTratamento = new TipoDeTratamento().Pesquisar(Convert.ToInt32(cbTipoDeTratamento.SelectedValue));
         }
-
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
-            if (HelperFunctions.ChecaDataSessao(dtpData.Value)!=true)
+            if (HelperFunctions.ChecaData(dtpData.Value)!=true)
             {
                 ChecaTurno();
                 SetHora();
@@ -144,17 +148,14 @@ namespace SisClinica.Forms
                 dtpData.Value = DateTime.Now;
             }
         }
-
         private void rdbManha_CheckedChanged(object sender, EventArgs e)
         {
             ChecaTurno();
         }
-
         private void rdbTarde_CheckedChanged(object sender, EventArgs e)
         {
             ChecaTurno();
         }
-
         private void cbHorarioInicial_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbHorarioFinal.DataSource = new Sessoes().GerarListaDeHorariosFinais(objSessao.medicoResponsavel, objSessao.objConsultorio, Convert.ToDateTime(cbHorarioInicial.SelectedValue), turno);

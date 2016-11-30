@@ -13,9 +13,19 @@ namespace SisClinica.Forms
 {
     public partial class userControlAlterarSessoes : UserControl
     {
-        public userControlAlterarSessoes()
+        public userControlAlterarSessoes(Sessoes objSess)
         {
             InitializeComponent();
+            cbConsultorios.ValueMember = "id";
+            cbConsultorios.DisplayMember = "nome";
+            cbConsultorios.DataSource = new Consultorio().Pesquisar();
+            cbConsultorios.ValueMember = "id";
+            cbConsultorios.DisplayMember = "nome";
+            cbMedicos.ValueMember = "id medico";
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.DataSource = new Medico().Pesquisar();
+            cbMedicos.ValueMember = "id medico";
+            cbMedicos.DisplayMember = "nome do medico";
             HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtonsText(btnAlterar);
             HelperFunctions.SetButtonsText(btnExcluir);
@@ -23,8 +33,44 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnCancelar);
             HelperFunctions.SetButtons(btnDtgPesq);
 
+            if (objSess.sessaoCompleta == true)
+            {
+                btnAlterar.Enabled = false;
+            }
+            lblTipoSessao.Text = objSess.tipoDeSessao;
+            lblSituacao.Text = objSess.situacao;
+            txtbNomeCliente.Text = objSess.objCliente.nome;
+            dtpData.Value = objSess.dataSessao;
+            cbMedicos.SelectedIndex = cbMedicos.FindStringExact(objSess.medicoResponsavel.nome);
+            cbConsultorios.SelectedIndex = cbConsultorios.FindStringExact(objSess.objConsultorio.nomeConsultorio);
+            if (objSess.horaFim.TimeOfDay <= Convert.ToDateTime("12:00").TimeOfDay)
+            {
+                rdbManha.Checked = true;
+            }
+            else
+            {
+                rdbTarde.Checked = true;
+            }
+            if (objSess.tipoDeSessao == "Tratamento")
+            {
+                lblvalortotal.Visible = true;
+                lblTotal.Visible = true;
+                lblTotalSessao.Visible = true;
+                lblValorSessao.Visible = true;
+                lblTotal.Text = "R$" + objSess.tipoDeTratamento.valor.ToString();
+                lblTotalSessao.Text = "R$" + objSess.valorSessao.ToString();
+                if (objSess.tratamentoPosterior == null && objSess.nroSessao < objSess.qtdeSessoes)
+                {
+                    btnAgendarProxima.Visible = true;
+                }
+            }
+            cbHorarioInicial.Text = objSess.horaInicio.TimeOfDay.ToString();
+            cbHorarioFinal.Text = objSess.horaFim.TimeOfDay.ToString();
+            objSessao = objSess;
+
         }
 
+        ///-Atributos
         private Cliente objCliente;
         private Sessoes objSessao = new Sessoes();
         private Sessoes objSessaoSalvar;
@@ -32,6 +78,8 @@ namespace SisClinica.Forms
         private Medico objMedico;
         private string turno;
         private bool editable = false;
+
+        //-Métodos
         private void AtivaDesativaControles()
         {
             editable = !editable;
@@ -47,47 +95,7 @@ namespace SisClinica.Forms
             cbHorarioFinal.Enabled = !cbHorarioFinal.Enabled;
             cbHorarioInicial.Enabled = !cbHorarioInicial.Enabled;
             btnExcluir.Visible = !btnExcluir.Visible;
-        }        
-        public userControlAlterarSessoes Preencher(Sessoes objSess)
-        {
-            userControlAlterarSessoes uc = new userControlAlterarSessoes();
-            if (objSess.sessaoCompleta==true)
-            {
-                uc.btnAlterar.Enabled = false;
-            }
-            uc.lblTipoSessao.Text = objSess.tipoDeSessao;
-            uc.lblSituacao.Text = objSess.situacao;
-            uc.txtbNomeCliente.Text = objSess.objCliente.nome;
-            uc.dtpData.Value = objSess.dataSessao;
-            uc.cbMedicos.Text = objSess.medicoResponsavel.nome;
-            uc.cbConsultorios.Text = objSess.objConsultorio.nomeConsultorio;
-            if (objSess.horaFim.TimeOfDay<=Convert.ToDateTime("12:00").TimeOfDay)
-            {
-                uc.rdbManha.Checked = true;
-            }
-            else
-            {
-                uc.rdbTarde.Checked = true;
-            }
-            if (objSess.tipoDeSessao=="Tratamento")
-            {
-                uc.lblvalortotal.Visible = true;
-                uc.lblTotal.Visible = true;
-                uc.lblTotalSessao.Visible = true;
-                uc.lblValorSessao.Visible = true;
-                uc.lblTotal.Text = "R$" + objSess.tipoDeTratamento.valor.ToString();
-                uc.lblTotalSessao.Text = "R$" + objSess.valorSessao.ToString();
-                if (objSess.tratamentoPosterior==null&&objSess.nroSessao<objSess.qtdeSessoes)
-                {
-                    uc.btnAgendarProxima.Visible = true;
-                }
-            }
-            uc.cbHorarioInicial.Text = objSess.horaInicio.TimeOfDay.ToString(); 
-            uc.cbHorarioFinal.Text = objSess.horaFim.TimeOfDay.ToString();
-            uc.objSessao = objSess;
-            return uc;
         }
-
         private void ChecaTurno()
         {
             if (rdbManha.Checked)
@@ -137,11 +145,10 @@ namespace SisClinica.Forms
             }
         }
 
+        //-Eventos
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            ChecaTurno();
-            cbConsultorios.DataSource = new Consultorio().Pesquisar();
-            cbMedicos.DataSource = new Medico().Pesquisar();
+            ChecaTurno();            
             SetConsultorio();
             SetMedico();
             SetHora();
@@ -152,12 +159,10 @@ namespace SisClinica.Forms
             AtivaDesativaControles();
             objSessaoSalvar = objSessao; 
         }
-
         private void cbHorarioInicial_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbHorarioFinal.DataSource = new Sessoes().GerarListaDeHorariosFinais(objSessao.medicoResponsavel, objSessao.objConsultorio, Convert.ToDateTime(cbHorarioInicial.SelectedValue), turno, objSessao);
         }
-
         private void btnDtgPesq_Click(object sender, EventArgs e)
         {
             dtgClientes.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
@@ -167,7 +172,6 @@ namespace SisClinica.Forms
             }
              
         }
-
         private void dtgClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -182,7 +186,6 @@ namespace SisClinica.Forms
             }
      
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (editable==true)
@@ -207,12 +210,11 @@ namespace SisClinica.Forms
                 
             }                        
         }
-
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             if (editable==true)
             {
-                if (HelperFunctions.ChecaDataSessao(dtpData.Value)!=true)
+                if (HelperFunctions.ChecaData(dtpData.Value)!=true)
                 {
                     ChecaTurno();
                     SetHora();
@@ -224,7 +226,6 @@ namespace SisClinica.Forms
                 }                
             }
         }
-
         private void cbMedicos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (editable==true)
@@ -232,7 +233,6 @@ namespace SisClinica.Forms
                 SetHora();
             }
         }
-
         private void cbConsultorios_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (editable==true)
@@ -240,7 +240,6 @@ namespace SisClinica.Forms
                 SetHora();
             }
         }
-
         private void rdbManha_CheckedChanged(object sender, EventArgs e)
         {
             if (editable==true)
@@ -249,7 +248,6 @@ namespace SisClinica.Forms
                 SetHora();
             }
         }
-
         private void rdbTarde_CheckedChanged(object sender, EventArgs e)
         {
             if (editable==true)
@@ -258,15 +256,13 @@ namespace SisClinica.Forms
                 SetHora();
             }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(objSessao);
+            userControlAlterarSessoes alterCon = new userControlAlterarSessoes(objSessao);
             Controls.Clear();
             Controls.Add(alterCon);            
             alterCon.Show();
         }
-
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             objSessao.Excluir();
@@ -281,10 +277,9 @@ namespace SisClinica.Forms
             //Controls.Add(pesqSess);
             //pesqSess.Show();
         }
-
         private void btnAgendarProxima_Click(object sender, EventArgs e)
         {
-            userControlAgendarProximoTratamento agenProx = new userControlAgendarProximoTratamento().Preencher(objSessao);
+            userControlAgendarProximoTratamento agenProx = new userControlAgendarProximoTratamento(objSessao);
             Controls.Clear();
             Controls.Add(agenProx);
             agenProx.Show();

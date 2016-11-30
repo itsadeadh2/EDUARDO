@@ -18,7 +18,6 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtons(btnPesqCliente);
             HelperFunctions.SetButtons(btnPesqMed);            
         }
-
         private void btnPesqCliente_Click(object sender, EventArgs e)
         {
             Controls.Clear();
@@ -26,7 +25,6 @@ namespace SisClinica.Forms
             Controls.Add(pesqCli);
             pesqCli.Show();
         }
-
         private void btnPesqMed_Click(object sender, EventArgs e)
         {
             Controls.Clear();

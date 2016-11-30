@@ -10,16 +10,14 @@ namespace SisClinica.Classes
 {
     public class Medico:Pessoa
     {
+        //-Propriedades
         public string crm { get; set; }
-
-        /// <summary>
-        /// Registra o objeto medico no banco de dados.
-        /// </summary>
+        
+        //-Métodos
         public void Registrar()
         {
             new MedicoDAO().Registrar(this);
         }
-
         /// <summary>
         /// Pesquisa um medico.
         /// </summary>
@@ -29,12 +27,10 @@ namespace SisClinica.Classes
         {
            return new MedicoDAO().Pesquisar(id);
         }
-
         public Medico PesquisarPorCRM(string crm)
         {
             return new MedicoDAO().PesquisarPorCrm(crm);
         }
-
         /// <summary>
         /// Retorna todos os medicos
         /// </summary>
@@ -58,9 +54,8 @@ namespace SisClinica.Classes
             }
             return dt;
         }
-
         /// <summary>
-        /// Pesquisa vários medicos
+        /// Pesquisa médicos por nome no formato de um datatable
         /// </summary>
         /// <param name="nome">nome do medico</param>
         /// <returns>DataTable de medicos</returns>
@@ -86,6 +81,11 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+        /// <summary>
+        /// Pesquisa médicos por nome no formato de um iList
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <returns></returns>
         public IList<Medico> iListPesquisar(string nome)
         {
             return new MedicoDAO().Pesquisar(nome);
@@ -94,12 +94,10 @@ namespace SisClinica.Classes
         {
             return new MedicoDAO().PesquisarPorCpf(cpf);
         }
-
         public void Alterar()
         {
             new MedicoDAO().Alterar(this);
         }
-
         public void Excluir()
         {
             IList < Sessoes > lista = new Sessoes().BuscaPorMedico(this);

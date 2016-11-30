@@ -13,6 +13,7 @@ namespace SisClinica.Forms
 {
     public partial class userControlRegistraCliente : UserControl
     {
+        UserControl menuAnt;
         public userControlRegistraCliente()
         {
             InitializeComponent();
@@ -49,7 +50,6 @@ namespace SisClinica.Forms
             dtgResponsavel.Enabled = true;
             txtbNomeRespPesquisa.Enabled = true;
         }
-
         private void DesativaResponsavel()
         {
             txtbNomeResp.Enabled = false;
@@ -94,7 +94,6 @@ namespace SisClinica.Forms
             
             return value;
         }
-
         private bool ChecaCPFSemAviso(string cpfPessoa)
         {
             bool value = false;
@@ -119,7 +118,6 @@ namespace SisClinica.Forms
 
             return value;
         }
-
         private bool ChecaCPF(string cpfResp, string cpfCli)
         {
             bool value = false;
@@ -130,36 +128,24 @@ namespace SisClinica.Forms
             }
             return value;
         }
-
-
         private bool ChecaNome(string nome)
         {
-            bool value = false;
-            if (nome.Length < 3)
+            if (HelperFunctions.ChecaNome(nome))
             {
                 MessageBox.Show("Nome inválido!");
-                value = true;
             }
-            return value;
+            return HelperFunctions.ChecaNome(nome);
         }
-
         private bool ChecaNomeSemAviso(string nome)
         {
-            bool value = false;
-            if (nome.Length < 3)
-            {
-                value = true;
-            }
-            return value;
+            return HelperFunctions.ChecaNome(nome);
         }
-
         private void RetornarAoMenuAnterior()
         {
-            UserControl menuAnterior = new userControlMenuNovo();
+            UserControl ant = new userControlMenuNovo();
             Controls.Clear();
-            Controls.Add(menuAnterior);
+            Controls.Add(ant);
         }
-
         private void Reset()
         {
             objResponsavel = new Responsavel();
@@ -176,8 +162,7 @@ namespace SisClinica.Forms
             objCliente.dataNascimento = dtpDataNasc.Value;
             objCliente.email = txtbemail.Text;
             objCliente.endereco = txtbEndereco.Text;
-            objCliente.cidade = cbCidade.Text;
-            objCliente.estado = cbEstado.Text;
+            objCliente.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade(Convert.ToInt32(cbCidade.SelectedValue)); //cbCidade.Text;           
             objCliente.telefone = mtbTelefone.Text;
             objCliente.adicionalInfo = rtbAdicionalInfo.Text;            
             if (HelperFunctions.ChecaMenorDeIdade(objCliente.dataNascimento))
@@ -198,14 +183,10 @@ namespace SisClinica.Forms
                     {
                         objResponsavel.endereco = txtbEndereco.Text;
                     }
-                    if (objResponsavel.cidade == null)
+                    if (objResponsavel.paisEstadoCidade == null)
                     {
-                        objResponsavel.cidade = cbCidade.Text;
-                    }
-                    if (objResponsavel.estado == null)
-                    {
-                        objResponsavel.estado = cbEstado.Text;
-                    }
+                        objResponsavel.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade(Convert.ToInt32(cbCidade.SelectedValue));
+                    }                    
                     else if (ChecaCPF(objResponsavel.cpf))
                     {
                         mtbCpfResp.Focus();
@@ -226,8 +207,17 @@ namespace SisClinica.Forms
                 }
                 else
                 {
-                    ChecaCPF(objResponsavel.cpf);
-                    Reset();
+                    if (HelperFunctions.ChecaMenorDeIdade(objCliente.dataNascimento))
+                    {
+                        ChecaCPF(objResponsavel.cpf);
+                        Reset();
+                    }
+                    else
+                    {
+                        ChecaCPF(objCliente.cpf);
+                        Reset();
+                    }
+
                 }                
             }            
             else if (HelperFunctions.ChecaMenorDeIdade(objResponsavel.dataNascimento))
@@ -270,7 +260,6 @@ namespace SisClinica.Forms
                 RetornarAoMenuAnterior();
             }
         }
-
         private void dtpDataNasc_ValueChanged(object sender, EventArgs e)
         {
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
@@ -282,7 +271,6 @@ namespace SisClinica.Forms
                 DesativaResponsavel();
             }
         }        
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dtgResponsavel.DataSource = new Responsavel().Pesquisar(txtbNomeRespPesquisa.Text);
@@ -291,7 +279,6 @@ namespace SisClinica.Forms
                 MessageBox.Show("A pesquisa: " + txtbNomeRespPesquisa.Text + " não encontrou resultados.");
             }
         }
-
         private void dtgResponsavel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -315,38 +302,31 @@ namespace SisClinica.Forms
             }
             
         }
-
         private void dtpDataNascResp_Leave(object sender, EventArgs e)
         {
 
         }
-
         private void mtbCpf_Leave(object sender, EventArgs e)
         {
 
         }
-
         private void mtbCpfResp_Leave(object sender, EventArgs e)
         {
 
         }
-
         private void txtbNomeCompletoCli_Leave(object sender, EventArgs e)
         {
             ptErrorNomeCli.Visible = ChecaNomeSemAviso(txtbNomeCompletoCli.Text);
            
         }
-
         private void txtbNomeResp_Leave(object sender, EventArgs e)
         {
             ChecaNome(txtbNomeResp.Text);
         }
-
         private void txtbNomeRespPesquisa_Leave(object sender, EventArgs e)
         {
             ChecaNome(txtbNomeRespPesquisa.Text);
         }
-
         private void txtbNomeRespPesquisa_TextChanged(object sender, EventArgs e)
         {
             if (txtbNomeRespPesquisa.TextLength<3)
@@ -358,7 +338,6 @@ namespace SisClinica.Forms
                 btnPesquisar.Enabled = true;
             }
         }
-
         private void btnClearPesquisa_Click(object sender, EventArgs e)
         {
             objResponsavel = new Responsavel();
@@ -376,7 +355,6 @@ namespace SisClinica.Forms
                 AtivaResponsavel();
             }
         }
-
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetCidade();

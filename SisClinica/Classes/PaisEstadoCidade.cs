@@ -9,11 +9,13 @@ namespace SisClinica.Classes
 {
     public class PaisEstadoCidade
     {
+        //-Propriedades
         public int idEstado { get; set; }
         public int idCidade { get; set; }
         public string siglaEstado { get; set; }
         public string nomeCidade { get; set; }
 
+        //-Métodos
         public IList<PaisEstadoCidade> BuscarTodosOsEstados()
         {
             return new PaisEstadoCidadeDAO().BuscarTodosOsEstados();

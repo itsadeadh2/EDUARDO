@@ -36,16 +36,16 @@ namespace SisClinica.Forms
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.painelBGSubButtons = new System.Windows.Forms.Panel();
+            this.painelBGBtnHome = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.painelTopBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.painelDinamico = new System.Windows.Forms.Panel();
-            this.painelBGSubButtons = new System.Windows.Forms.Panel();
-            this.painelBGBtnHome = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
             this.painelButtons.SuspendLayout();
-            this.painelTopBar.SuspendLayout();
             this.painelBGBtnHome.SuspendLayout();
+            this.painelTopBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // painelButtons
@@ -115,6 +115,46 @@ namespace SisClinica.Forms
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
+            // painelBGSubButtons
+            // 
+            this.painelBGSubButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(40)))));
+            this.painelBGSubButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painelBGSubButtons.Location = new System.Drawing.Point(0, 100);
+            this.painelBGSubButtons.Name = "painelBGSubButtons";
+            this.painelBGSubButtons.Size = new System.Drawing.Size(155, 409);
+            this.painelBGSubButtons.TabIndex = 1;
+            // 
+            // painelBGBtnHome
+            // 
+            this.painelBGBtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
+            this.painelBGBtnHome.Controls.Add(this.btnHome);
+            this.painelBGBtnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelBGBtnHome.Location = new System.Drawing.Point(0, 0);
+            this.painelBGBtnHome.Name = "painelBGBtnHome";
+            this.painelBGBtnHome.Size = new System.Drawing.Size(155, 100);
+            this.painelBGBtnHome.TabIndex = 1;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(68)))), ((int)(((byte)(43)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(155, 100);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseEnter += new System.EventHandler(this.btnHome_MouseEnter);
+            this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            // 
             // painelTopBar
             // 
             this.painelTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
@@ -165,47 +205,6 @@ namespace SisClinica.Forms
             this.painelDinamico.Size = new System.Drawing.Size(672, 409);
             this.painelDinamico.TabIndex = 2;
             // 
-            // painelBGSubButtons
-            // 
-            this.painelBGSubButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(40)))));
-            this.painelBGSubButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelBGSubButtons.Location = new System.Drawing.Point(0, 100);
-            this.painelBGSubButtons.Name = "painelBGSubButtons";
-            this.painelBGSubButtons.Size = new System.Drawing.Size(155, 409);
-            this.painelBGSubButtons.TabIndex = 1;
-            // 
-            // painelBGBtnHome
-            // 
-            this.painelBGBtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(91)))), ((int)(((byte)(57)))));
-            this.painelBGBtnHome.Controls.Add(this.btnHome);
-            this.painelBGBtnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelBGBtnHome.Location = new System.Drawing.Point(0, 0);
-            this.painelBGBtnHome.Name = "painelBGBtnHome";
-            this.painelBGBtnHome.Size = new System.Drawing.Size(155, 100);
-            this.painelBGBtnHome.TabIndex = 1;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(68)))), ((int)(((byte)(43)))));
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(155, 100);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            this.btnHome.MouseEnter += new System.EventHandler(this.btnHome_MouseEnter);
-            this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
-            this.btnHome.MouseHover += new System.EventHandler(this.btnHome_MouseHover);
-            // 
             // newFrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,8 +218,8 @@ namespace SisClinica.Forms
             this.Name = "newFrmPrincipal";
             this.Text = "newFrmPrincipal";
             this.painelButtons.ResumeLayout(false);
-            this.painelTopBar.ResumeLayout(false);
             this.painelBGBtnHome.ResumeLayout(false);
+            this.painelTopBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

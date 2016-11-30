@@ -10,14 +10,11 @@ namespace SisClinica.Classes
 {
     public class Consultorio
     {
+        //-Propriedades
         public int id { get; set; }
         public string nomeConsultorio { get; set; }
-
-        /// <summary>
-        /// Encontra um consultorio.
-        /// </summary>
-        /// <param name="id">id do consultorio</param>
-        /// <returns>objeto consultorio</returns>
+        
+        //-Métodos                
         public Consultorio Pesquisar(int id)
         {
             return new ConsultorioDAO().Pesquisar(id);
@@ -26,8 +23,6 @@ namespace SisClinica.Classes
         {
             return new ConsultorioDAO().PesquisarPorNome(nome);
         }
-
-
         /// <summary>
         /// Retorna todos os consultorios em um DataTable.
         /// </summary>
@@ -52,7 +47,6 @@ namespace SisClinica.Classes
             }
             return dt;
         }
-
         /// <summary>
         /// Encontra consultorios baseado no nome
         /// </summary>
@@ -77,12 +71,6 @@ namespace SisClinica.Classes
             }
             return dt;
         }
-
-        public void Excluir()
-        {
-
-        }
-
         public void Registrar()
         {
             new ConsultorioDAO().Registrar(this);

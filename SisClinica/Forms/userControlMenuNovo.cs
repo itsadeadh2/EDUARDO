@@ -20,7 +20,6 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtons(btnNovoCliente);
             HelperFunctions.SetButtons(btnTratamento);
         }
-
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
             Controls.Clear();
@@ -28,7 +27,6 @@ namespace SisClinica.Forms
             Controls.Add(regCli);
             regCli.Show();
         }
-
         private void btnMedico_Click(object sender, EventArgs e)
         {
             Controls.Clear();
@@ -36,20 +34,18 @@ namespace SisClinica.Forms
             Controls.Add(regMed);
             regMed.Show();
         }
-
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             Controls.Clear();
-            UserControl agenCons = new userControlAgendarConsulta();
+            UserControl agenCons = new userControlAgendarConsulta(this);
             Controls.Add(agenCons);
             agenCons.Show();
 
         }
-
         private void btnTratamento_Click(object sender, EventArgs e)
         {
             Controls.Clear();
-            UserControl agenTrat = new userControlAgendarTratamento();
+            UserControl agenTrat = new userControlAgendarTratamento(this);
             Controls.Add(agenTrat);
             agenTrat.Show();
         }

@@ -21,8 +21,11 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnAlter);
             HelperFunctions.SetButtonsText(btnDelete);
         }
+
+        //-Atributos
         private Cliente objCliente;
 
+        //-Eventos
         private void btnPesq_Click(object sender, EventArgs e)
         {
             dtgResultados.DataSource = new Cliente().PesquisarPorNome(txtbNomePesquisa.Text);
@@ -31,7 +34,6 @@ namespace SisClinica.Forms
                 MessageBox.Show("A pesquisa com o nome: " + txtbNomePesquisa.Text + " não obteve resultados.");
             }
         }
-
         private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -56,7 +58,6 @@ namespace SisClinica.Forms
             }
    
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (new Sessoes().BuscaPorCliente(objCliente)!=null)
@@ -77,26 +78,19 @@ namespace SisClinica.Forms
 
             }
         }
-
         private void btnFullInfo_Click(object sender, EventArgs e)
         {
             Controls.Clear();
-            UserControl cliInfo = new userControlClienteInfo().PreencheFormulario(objCliente);
+            UserControl cliInfo = new userControlClienteInfo(objCliente);
             Controls.Add(cliInfo);
             cliInfo.Show();
         }
-
         private void btnAlter_Click(object sender, EventArgs e)
         {
             Controls.Clear();
-            userControlAlterarCliente ucAlterCli = new userControlAlterarCliente().Preencher(objCliente);
+            userControlAlterarCliente ucAlterCli = new userControlAlterarCliente(objCliente);
             Controls.Add(ucAlterCli);
             ucAlterCli.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("nigger");
-        }
+        }       
     }
 }

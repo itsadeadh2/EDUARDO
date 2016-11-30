@@ -13,57 +13,45 @@ namespace SisClinica.Forms
 {
     public partial class userControlAlterarCliente : UserControl
     {
-        public userControlAlterarCliente()
+        public userControlAlterarCliente(Cliente objCli)
         {
             InitializeComponent();
             HelperFunctions.SetButtons(btnSalvar);
-            
-        }
-        Cliente objCliente;
-        public userControlAlterarCliente Preencher(Cliente objCli)
-        {
-            userControlAlterarCliente uc = new userControlAlterarCliente();
-            uc.objCliente = objCli;
-            uc.txtbNomeCompletoCli.Text = uc.objCliente.nome;
-            uc.mtbTelefone.Text = uc.objCliente.telefone;
-            uc.txtbemail.Text = uc.objCliente.email;
-            uc.txtbEndereco.Text = uc.objCliente.endereco;
-            uc.cbCidade.Text = uc.objCliente.cidade;
-            uc.cbEstado.Text = uc.objCliente.estado;
-            uc.rtbAdicionalInfo.Text = uc.objCliente.adicionalInfo;
-            if (uc.objCliente.objResponsavel!=null)
+            objCliente = objCli;
+            txtbNomeCompletoCli.Text = objCliente.nome;
+            mtbTelefone.Text = objCliente.telefone;
+            txtbemail.Text = objCliente.email;
+            txtbEndereco.Text = objCliente.endereco;
+            cbCidade.SelectedValue = objCliente.paisEstadoCidade.idCidade;
+            cbEstado.SelectedValue = objCliente.paisEstadoCidade.idEstado;
+            rtbAdicionalInfo.Text = objCliente.adicionalInfo;
+            if (objCliente.objResponsavel != null)
             {
-                uc.linklblResponsavel.Text = uc.objCliente.objResponsavel.nome;
+                linklblResponsavel.Text = objCliente.objResponsavel.nome;
             }
             else
             {
-                uc.linklblResponsavel.Enabled = false;
+               linklblResponsavel.Enabled = false;
             }
-            uc.cbEstado.DisplayMember = "siglaEstado";
-            uc.cbEstado.ValueMember = "idEstado";
-            uc.cbEstado.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
-            uc.cbEstado.DisplayMember = "siglaEstado";
-            uc.cbEstado.ValueMember = "idEstado";
-            uc.cbEstado.SelectedIndex = uc.cbEstado.FindStringExact(uc.objCliente.estado);
-            uc.cbCidade.SelectedIndex = uc.cbCidade.FindStringExact(uc.objCliente.cidade);
-            return uc;
-        }
+            cbEstado.DisplayMember = "siglaEstado";
+            cbEstado.ValueMember = "idEstado";
+            cbEstado.DataSource = new PaisEstadoCidade().BuscarTodosOsEstados();
+            cbEstado.DisplayMember = "siglaEstado";
+            cbEstado.ValueMember = "idEstado";
+            cbEstado.SelectedValue = objCliente.paisEstadoCidade.idEstado;
+            cbCidade.SelectedValue = objCliente.paisEstadoCidade.idCidade;
 
+        }
+        Cliente objCliente;
+
+        //-Eventos
         private void linklblResponsavel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Controls.Clear();
-            userControlResponsavelInfo ucResp = new userControlResponsavelInfo().Preencher(objCliente.objResponsavel);
+            userControlResponsavelInfo ucResp = new userControlResponsavelInfo(objCliente.objResponsavel);
             Controls.Add(ucResp);
             ucResp.Show();
         }
-
-        private void SetCidade()
-        {
-            cbCidade.DataSource = new PaisEstadoCidade().BuscarCidadesPorEstado(Convert.ToInt32(cbEstado.SelectedValue));
-            cbCidade.DisplayMember = "nomeCidade";
-            cbCidade.ValueMember = "idCidade";
-        }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (HelperFunctions.ChecaNome(txtbNomeCompletoCli.Text))
@@ -76,17 +64,23 @@ namespace SisClinica.Forms
                 objCliente.telefone = mtbTelefone.Text;
                 objCliente.email = txtbemail.Text;
                 objCliente.endereco = txtbEndereco.Text;
-                objCliente.cidade = cbCidade.Text;
-                objCliente.estado = cbEstado.Text;
+                objCliente.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade(Convert.ToInt32(cbCidade.SelectedValue)); //cbCidade.Text;
                 objCliente.adicionalInfo = rtbAdicionalInfo.Text;
                 objCliente.Alterar();
                 MessageBox.Show("Cliente alterado!");
             }
         }
-
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetCidade();
+        }
+
+        //-Métodos
+        private void SetCidade()
+        {
+            cbCidade.DataSource = new PaisEstadoCidade().BuscarCidadesPorEstado(Convert.ToInt32(cbEstado.SelectedValue));
+            cbCidade.DisplayMember = "nomeCidade";
+            cbCidade.ValueMember = "idCidade";
         }
     }
 }

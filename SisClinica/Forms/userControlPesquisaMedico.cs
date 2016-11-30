@@ -13,6 +13,7 @@ namespace SisClinica.Forms
 {
     public partial class userControlPesquisaMedico : UserControl
     {
+        //-Construtor
         public userControlPesquisaMedico()
         {
             InitializeComponent();
@@ -21,8 +22,10 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnDelete);
         }
 
+        //-Atributos
         Medico objMedico;
 
+        //-Eventos
         private void btnPesq_Click(object sender, EventArgs e)
         {
             dtgResultados.DataSource = new Medico().Pesquisar(txtbNomePesquisa.Text);
@@ -31,7 +34,6 @@ namespace SisClinica.Forms
                 MessageBox.Show("A pesquisa com o nome:" + txtbNomePesquisa.Text + " não obteve resultados.");
             }
         }
-
         private void dtgResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -48,7 +50,6 @@ namespace SisClinica.Forms
             }
 
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (new Sessoes().BuscaPorMedico(objMedico)!=null)
@@ -67,11 +68,10 @@ namespace SisClinica.Forms
                 dtgResultados.DataSource = new Medico().Pesquisar(txtbNomePesquisa.Text);
             }
         }
-
         private void btnFullInfo_Click(object sender, EventArgs e)
         {
             Controls.Clear();
-            userControlMedicoInfo medicoInfo = new userControlMedicoInfo().Preencher(objMedico);
+            userControlMedicoInfo medicoInfo = new userControlMedicoInfo(objMedico);
             Controls.Add(medicoInfo);
             medicoInfo.Show();
         }

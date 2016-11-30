@@ -13,29 +13,28 @@ namespace SisClinica.Forms
 {
     public partial class userControlResponsavelInfo : UserControl
     {
-        public userControlResponsavelInfo()
+        UserControl menuA;
+        public userControlResponsavelInfo(Responsavel objResp)
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtonsText(btnAlterar);
             HelperFunctions.SetButtonsText(btnCancelar);
             HelperFunctions.SetButtonsText(btnVoltar);
-        }
-        Responsavel objResponsavel;
-        public userControlResponsavelInfo Preencher(Responsavel objResp)
-        {
-            userControlResponsavelInfo uc = new userControlResponsavelInfo();
-            uc.objResponsavel = new Responsavel().Pesquisar(objResp.id);
-            uc.txtbNome.Text = uc.objResponsavel.nome;
-            uc.lblCPF.Text = uc.objResponsavel.cpf;
-            uc.dtpDataNasc.Value = uc.objResponsavel.dataNascimento;
-            uc.mtbTelefone.Text = uc.objResponsavel.telefone;
-            uc.txtbEmail.Text = uc.objResponsavel.email;
-            uc.dtgClientes.DataSource = new Cliente().PesquisarPorResponsavel(uc.objResponsavel);
-            return uc;
+
+            objResponsavel = new Responsavel().Pesquisar(objResp.id);
+            txtbNome.Text = objResponsavel.nome;
+            lblCPF.Text = objResponsavel.cpf;
+            dtpDataNasc.Value = objResponsavel.dataNascimento;
+            mtbTelefone.Text = objResponsavel.telefone;
+            txtbEmail.Text = objResponsavel.email;
+            dtgClientes.DataSource = new Cliente().PesquisarPorResponsavel(objResponsavel);
         }
 
-        // - Métodos
+        //-Atributos
+        Responsavel objResponsavel;        
+
+        //-Métodos
         private void Salvar()
         {
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
@@ -79,6 +78,7 @@ namespace SisClinica.Forms
             uc.Show();
         }
 
+        //-Eventos
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             txtbEmail.Enabled = true;
@@ -91,26 +91,22 @@ namespace SisClinica.Forms
             btnSalvar.Visible = true;
             btnCancelar.Visible = true;
         }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Voltar();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Cancelar();
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Salvar();
         }
-
         private void dtgClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Controls.Clear();
-            userControlClienteInfo uc = new userControlClienteInfo().PreencheFormulario(new Cliente().PesquisarPorCpf(dtgClientes.CurrentRow.Cells["CPF"].Value.ToString()));
+            userControlClienteInfo uc = new userControlClienteInfo(new Cliente().PesquisarPorCpf(dtgClientes.CurrentRow.Cells["CPF"].Value.ToString()));
             Controls.Add(uc);
             uc.Show();
         }

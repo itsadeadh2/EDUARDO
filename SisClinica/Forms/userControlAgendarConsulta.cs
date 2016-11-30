@@ -13,15 +13,13 @@ namespace SisClinica.Forms
 {
     public partial class userControlAgendarConsulta : UserControl
     {
-        public userControlAgendarConsulta()
+        private userControlMenuNovo menuAnt;
+        public userControlAgendarConsulta(userControlMenuNovo menu)
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnSalvar);
             HelperFunctions.SetButtonsText(btnCadastrarCli);
-            HelperFunctions.SetButtons(btnPesquisar);
-           
-            
-
+            HelperFunctions.SetButtons(btnPesquisar);      
             ChecaTurno();
             cbConsultorios.DataSource = new Consultorio().Pesquisar();
             cbMedicos.DataSource = new Medico().Pesquisar();
@@ -47,14 +45,16 @@ namespace SisClinica.Forms
                 MessageBox.Show("O sistema não possui médicos suficientes para fazer agendamentos, por favor, cadastre um médico.");
                 RetornarAoMenuAnterior();
             }
+            menuAnt = menu;
         }
 
+        //- Atributos
         private Cliente objCliente;
         private Sessoes objSessao = new Sessoes();
         private Consultorio objConsultorio;
         private Medico objMedico;
         private string turno;
-
+        
         //- Eventos
         private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -83,7 +83,7 @@ namespace SisClinica.Forms
         }
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
-            if (HelperFunctions.ChecaDataSessao(dtpData.Value)!=true)
+            if (HelperFunctions.ChecaData(dtpData.Value)!=true)
             {
                 ChecaTurno();
                 SetHora();
@@ -108,7 +108,7 @@ namespace SisClinica.Forms
         }
         private void cbConsultorios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetConsultorio();
+            SetConsultorio();            
         }
         private void cbHorarioFinal_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -226,7 +226,6 @@ namespace SisClinica.Forms
         private void RetornarAoMenuAnterior()
         {
             Controls.Clear();
-            UserControl menuAnt = new userControlMenuNovo();
             Controls.Add(menuAnt);
             menuAnt.Show();
         }        

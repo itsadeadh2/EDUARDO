@@ -15,12 +15,12 @@ namespace SisClinica.Classes
         public Medico medicoResponsavel { get; set; }
         public Cliente objCliente { get; set; }
         public Consultorio objConsultorio { get; set; }
+        public TipoDeTratamento tipoDeTratamento { get; set; }
+        public Sessoes tratamentoPosterior { get; set; }
         public DateTime dataSessao { get; set; }
         public DateTime horaInicio  { get; set; }
         public DateTime horaFim { get; set; }
         public string tipoDeSessao { get; set; }
-        public TipoDeTratamento tipoDeTratamento { get; set; }
-        public Sessoes tratamentoPosterior { get; set; }
         public string situacao { get; set; }
         public int nroSessao { get; set; }
         public int qtdeSessoes { get; set; }
@@ -29,53 +29,33 @@ namespace SisClinica.Classes
         public bool sessaoCompleta { get; set; }
         public int id { get; set; }
 
-        //-Propriedades que planejo utilizar no futuro para configurar os horarios.
-            //public static DateTime horaEntrada { get; set; }
-            //public static DateTime horaAlmoco { get; set; }
-            //public static DateTime horarioReentrada { get; set; }
-            //public static DateTime fimExpediente { get; set; }
-
-        /// <summary>
-        /// Altera a data da Sessão
-        /// </summary>
-        /// <param name="novaData">nova data</param>
-        public void AlterarData(DateTime novaData)
-        {
-            
-        }
-        public void AlterarMedico(Medico novoMedico)
-        {
-
-        }
-        public void AdicionarTratamentoPosterior()
-        {
-            new SessoesDAO().AdicionarTratamentoPosterior(this);
-        }
-        public int RegistrarSessaoPosterior()
-        {
-            return new SessoesDAO().RegistraTratamentoPosterior(this);
-        }
+        //-Métodos        
         public void RegistrarSessao()
         {
-            IList<Sessoes> objSessao = new SessoesDAO().PesquisarPorHorarioInicial(horaInicio);
-            if (objSessao!=null)
+            //Pesquisa todas as sessões que tenham o horario inicial da sessao sendo registrada e checa se elas estão no mesmo consultório ou com o mesmo médico.
+            #region
+            IList<Sessoes> objSessao = new SessoesDAO().PesquisarPorHorarioInicial(horaInicio); 
+            if (objSessao != null)
             {
                 foreach (Sessoes s in objSessao)
                 {
-                    if (s.medicoResponsavel.id==medicoResponsavel.id)
+                    if (s.medicoResponsavel.id == medicoResponsavel.id)
                     {
                         throw new Exception("O médico selecionado já possui uma sessão neste horario!");
                     }
-                    else if (s.horaInicio==horaInicio&&s.objConsultorio.id!=objConsultorio.id)
+                    else if (s.horaInicio == horaInicio && s.objConsultorio.id != objConsultorio.id)
                     {
                     }
-                    else if (s.horaInicio==horaInicio)
+                    else if (s.horaInicio == horaInicio)
                     {
                         throw new Exception("Já existe uma sessão neste consultorio e neste horário!");
                     }
                 }
             }
-            if (this.tipoDeSessao=="Tratamento")
+            #endregion
+
+            //Checa se a sessão é do tipo Tratamento ou consulta e registra-as de acordo.
+            if (this.tipoDeSessao == "Tratamento")
             {
                 new SessoesDAO().RegistrarTratamento(this);
             }
@@ -83,9 +63,22 @@ namespace SisClinica.Classes
             {
                 new SessoesDAO().RegistrarConsulta(this);
             }
-             
         }
-
+        /// <summary>
+        /// Adiciona o tratamento posterior de uma sessão já existente.
+        /// </summary>
+        public void AdicionarTratamentoPosterior()
+        {
+            new SessoesDAO().AdicionarTratamentoPosterior(this);
+        }
+        /// <summary>
+        /// Registra a sessão posterior de um determinado tratamento
+        /// </summary>
+        /// <returns></returns>
+        public int RegistrarSessaoPosterior()
+        {
+            return new SessoesDAO().RegistraTratamentoPosterior(this);
+        }
         /// <summary>
         /// Retorna uma sessao que tenha o médico, data e consultorios passados como parametros
         /// </summary>
@@ -93,13 +86,12 @@ namespace SisClinica.Classes
         /// <param name="objMedico">Medico Responsavel</param>
         /// <param name="objConsultorio">Consultorio</param>
         /// <returns></returns>
-        public Sessoes BuscaPorData(DateTime data, Medico objMedico, Consultorio objConsultorio)
+        public Sessoes BuscaPorDataMedicoConsultorio(DateTime data, Medico objMedico, Consultorio objConsultorio)
         {
             return new SessoesDAO().Pesquisar(data, objMedico, objConsultorio);
         }
-
         /// <summary>
-        /// Pesquisa uma sessão com a data informada.
+        /// Pesquisa sessões com a data informada e retorna um iList.
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
@@ -107,6 +99,11 @@ namespace SisClinica.Classes
         {
             return new SessoesDAO().PesquisarPorData(data.Date);
         }
+        /// <summary>
+        /// Pesquisa sessões com a data informada e retorna um datatable.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public DataTable DataTableBuscaPorData(DateTime data)
         {
             IList<Sessoes> lst = new Sessoes().BuscaPorData(data.Date);
@@ -139,26 +136,31 @@ namespace SisClinica.Classes
             }
             return dt;
         }
-
+        /// <summary>
+        /// Pesquisa uma sessão que tenha o médico, data e consultórios passados como parametros, exceto os da sessão passada como parâmetro.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="objMedico"></param>
+        /// <param name="objConsultorio"></param>
+        /// <param name="sessaoAIgnorar"></param>
+        /// <returns></returns>
         public Sessoes BuscaPorData(DateTime data, Medico objMedico, Consultorio objConsultorio, Sessoes sessaoAIgnorar)
         {
             return new SessoesDAO().Pesquisar(data, objMedico, objConsultorio, sessaoAIgnorar);
         }
-
         public Sessoes BuscaPorId(int id)
-        {
-        
+        {        
             return new SessoesDAO().Pesquisar(id);
-            
-   
-      
         }
-
+        /// <summary>
+        /// Busca as sessões com o horário inicial passado como parâmetro.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public IList<Sessoes> BuscaPorHoraInicial(DateTime data)
         {
             return new SessoesDAO().PesquisarPorHorarioInicial(data);
         }
-
         public DataTable DataTableBuscaPorMedico(Medico objMedico)
         {
             IList<Sessoes> lst = new SessoesDAO().Pesquisar(objMedico);
@@ -207,7 +209,15 @@ namespace SisClinica.Classes
         {
             return new SessoesDAO().Pesquisar(objCliente);
         }
-
+        /// <summary>
+        /// Busca sessões de acordo com critérios de pesquisa.
+        /// </summary>
+        /// <param name="nome"> Nome que pode ser utilizado tanto para o cliente quanto para o médico. </param>
+        /// <param name="tipoDePesquisa"> Enum que define o tipo de pesquisa </param>
+        /// <param name="data"> Data </param>
+        /// <param name="tipoDeRetorno"> Enum que define qual será o tipo de retorno </param>
+        /// <param name="sessaoCompleta"> Parâmetro que define se sessões completas devem aparecer ou não. </param>
+        /// <returns></returns>
         public DataTable BuscaPorClienteMedicoData(string nome,tdp tipoDePesquisa, DateTime data, tdr tipoDeRetorno, bool sessaoCompleta)
         {
             IList<Sessoes> listaPorData = new Sessoes().BuscaPorData(data);
@@ -447,7 +457,6 @@ namespace SisClinica.Classes
             }
             return dt;
         }
-
         /// <summary>
         /// Retorna uma lista de sessoes com um determinado medico
         /// </summary>
@@ -457,7 +466,6 @@ namespace SisClinica.Classes
         {
             return new SessoesDAO().Pesquisar(objMedicoDaBusca);
         }
-
         /// <summary>
         /// Retorna uma lista de sessoes em um determinado consultório
         /// </summary>
@@ -467,7 +475,6 @@ namespace SisClinica.Classes
         {
             return new SessoesDAO().Pesquisar(objConsultorio);
         }
-
         /// <summary>
         /// Gera um DataTable com os horarios disponíveis para a data selecionada
         /// </summary>
@@ -482,10 +489,6 @@ namespace SisClinica.Classes
             DateTime ha = data.Date;
             DateTime hr = data.Date;
             DateTime fe = data.Date;
-            //hi = Convert.ToDateTime("08:00");
-            //ha = Convert.ToDateTime("11:30");
-            //hr = Convert.ToDateTime("14:00");
-            //fe = Convert.ToDateTime("18:00");
             hi = hi.AddHours(8);
             ha = ha.AddHours(11);
             ha = ha.AddMinutes(30);
@@ -501,7 +504,7 @@ namespace SisClinica.Classes
             {
                 if (hora.Date==DateTime.Now.Date)
                 {
-                    if (HelperFunctions.ChecaHorarioSessao(hora.TimeOfDay)!=true)
+                    if (HelperFunctions.ChecaHorario(hora.TimeOfDay)!=true)
                     {
                         if (turno == "Manhã")
                         {
@@ -559,6 +562,14 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+        /// <summary>
+        /// Gera uma lista de horários finais de acordo com o horário inicial passado como parâmetro.
+        /// </summary>
+        /// <param name="objMedico"></param>
+        /// <param name="objConsultorio"></param>
+        /// <param name="horarioInicialSelecionado"></param>
+        /// <param name="turno"></param>
+        /// <returns></returns>
         public DataTable GerarListaDeHorariosFinais(Medico objMedico, Consultorio objConsultorio, DateTime horarioInicialSelecionado, string turno)
         {
             DateTime ha = horarioInicialSelecionado.Date;
@@ -585,7 +596,15 @@ namespace SisClinica.Classes
             
             return dt;
         }
-
+        /// <summary>
+        /// Gera uma lista com os horários disponíveis para a data selecionad ignorando a sessão passada como parâmetro
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="objMedico"></param>
+        /// <param name="objConsultorio"></param>
+        /// <param name="turno"></param>
+        /// <param name="sessaoAIgnorar"></param>
+        /// <returns></returns>
         public DataTable GerarListaDeHorariosIniciais(DateTime data, Medico objMedico, Consultorio objConsultorio, string turno, Sessoes sessaoAIgnorar)
         {
             DateTime hi = data.Date;
@@ -611,7 +630,7 @@ namespace SisClinica.Classes
             {
                 if (hora.Date == DateTime.Now.Date)
                 {
-                    if (HelperFunctions.ChecaHorarioSessao(hora.TimeOfDay) != true)
+                    if (HelperFunctions.ChecaHorario(hora.TimeOfDay) != true)
                     {
                         if (turno == "Manhã")
                         {
@@ -669,6 +688,15 @@ namespace SisClinica.Classes
             }
             return dt;
         }
+        /// <summary>
+        /// Gera uma lista com os horários finais de acordo com o horário inicial selecionado ignorando a sessão passada como parâmetro
+        /// </summary>
+        /// <param name="objMedico"></param>
+        /// <param name="objConsultorio"></param>
+        /// <param name="horarioInicialSelecionado"></param>
+        /// <param name="turno"></param>
+        /// <param name="sessaoAIgnorar"></param>
+        /// <returns></returns>
         public DataTable GerarListaDeHorariosFinais(Medico objMedico, Consultorio objConsultorio, DateTime horarioInicialSelecionado, string turno, Sessoes sessaoAIgnorar)
         {
             DateTime ha = horarioInicialSelecionado.Date;
@@ -695,11 +723,10 @@ namespace SisClinica.Classes
 
             return dt;
         }
-
         /// <summary>
         /// Implementa o algoritmo para geração dos horários disponíveis.
         /// </summary>
-        /// <param name="horarioInicial">Horario de entrada no expediente</param>
+        /// <param name="horarioDeEntrada">Horario de entrada no expediente</param>
         /// <param name="horarioDeAlmoco">Horario de saída para o almoço</param>
         /// <param name="horarioDeReentrada">Horário de re-entrada</param>
         /// <param name="fimDoExpediente">Hora de término do expediente</param>
@@ -707,7 +734,7 @@ namespace SisClinica.Classes
         /// <param name="objMedico">Medico que será responsavel</param>
         /// <param name="objConsultorio">Consultorio onde será feita a sessão</param>
         /// <returns>lista de horarios disponiveis</returns>
-        private IList<DateTime> GerarHorariosDeInicio(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno)
+        private IList<DateTime> GerarHorariosDeInicio(DateTime horarioDeEntrada, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno)
         {
             IList<DateTime> listaDeHorarios = new List<DateTime>();
             IList<DateTime> horariosRetornar = new List<DateTime>();
@@ -724,7 +751,7 @@ namespace SisClinica.Classes
                 {
                     listaDeHorarios.Add(dataComparacao);
                 }
-                else if (dataComparacao <= horarioDeAlmoco && dataComparacao >= horarioInicial)
+                else if (dataComparacao <= horarioDeAlmoco && dataComparacao >= horarioDeEntrada)
                 {
                     listaDeHorarios.Add(dataComparacao);
                 }
@@ -733,7 +760,7 @@ namespace SisClinica.Classes
             foreach (DateTime dt in listaDeHorarios)
             {
 
-                Sessoes objSessaoComparar = new Sessoes().BuscaPorData(dt,objMedico, objConsultorio);
+                Sessoes objSessaoComparar = new Sessoes().BuscaPorDataMedicoConsultorio(dt,objMedico, objConsultorio);
                 if (objSessaoComparar==null)
                 {
                     if (dt>=horaFim)
@@ -784,7 +811,7 @@ namespace SisClinica.Classes
             bool stopAdding = false;
             foreach (DateTime dt in listaDeHorarios)
             {
-                Sessoes objSessaoComparar = new Sessoes().BuscaPorData(dt, objMedico, objConsultorio);
+                Sessoes objSessaoComparar = new Sessoes().BuscaPorDataMedicoConsultorio(dt, objMedico, objConsultorio);
                 if (objSessaoComparar == null && stopAdding==false)
                 {
                     if (dt >= horaFim)
@@ -803,7 +830,19 @@ namespace SisClinica.Classes
             }
             return horariosRetornar;
         }
-
+        /// <summary>
+        /// Implementa o algoritmo para a geração dos horário disponíveis ignorando uma sessão.
+        /// </summary>
+        /// <param name="horarioInicial"></param>
+        /// <param name="horarioDeAlmoco"></param>
+        /// <param name="horarioDeReentrada"></param>
+        /// <param name="fimDoExpediente"></param>
+        /// <param name="data"></param>
+        /// <param name="objMedico"></param>
+        /// <param name="objConsultorio"></param>
+        /// <param name="turno"></param>
+        /// <param name="sessaoAIgnorar"></param>
+        /// <returns></returns>
         private IList<DateTime> GerarHorariosDeInicio(DateTime horarioInicial, DateTime horarioDeAlmoco, DateTime horarioDeReentrada, DateTime fimDoExpediente, DateTime data, Medico objMedico, Consultorio objConsultorio, string turno, Sessoes sessaoAIgnorar)
         {
             IList<DateTime> listaDeHorarios = new List<DateTime>();
@@ -900,7 +939,6 @@ namespace SisClinica.Classes
             }
             return horariosRetornar;
         }
-
         public void AlterarSessao()
         {
             new SessoesDAO().AlterarSessao(this);
@@ -910,7 +948,6 @@ namespace SisClinica.Classes
         {
             new SessoesDAO().CompletarSessao(this);
         }
-
         public void Excluir()
         {
             new SessoesDAO().Deletar(this);

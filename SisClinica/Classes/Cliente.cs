@@ -14,8 +14,8 @@ namespace SisClinica.Classes
         public string adicionalInfo { get; set; }
         public Responsavel objResponsavel { get; set; }
         public string situacao { get; set; }
-        //-Métodos
-
+       
+        //-Métodos                
         public void Excluir(int id)
         {
             IList<Sessoes> lista = new Sessoes().BuscaPorCliente(this);
@@ -27,13 +27,7 @@ namespace SisClinica.Classes
             {
                 new ClienteDAO().ExcluirComSessao(this);
             }
-        }
-
-        /// <summary>
-        /// Encontra um objeto do tipo cliente.
-        /// </summary>
-        /// <param name="cpf">CPF do cliente</param>
-        /// <returns>objeto cliente</returns>
+        }        
         public Cliente PesquisarPorCpf(string cpf)
         {
             return new ClienteDAO().Pesquisar(cpf);
@@ -59,17 +53,10 @@ namespace SisClinica.Classes
             }
             return dt;
         }
-
-        /// <summary>
-        /// Encontra um objeto do tipo cliente.
-        /// </summary>
-        /// <param name="id">id para a busca</param>
-        /// <returns>objeto cliente</returns>
         public Cliente PesquisarPorId(int id)
         {
             return new ClienteDAO().Pesquisar(id);
         }
-
         /// <summary>
         /// Determina se o cliente possui um responsável e caso tenha, vincula-o ao cliente. Caso não tenha, apenas registra o cliente.
         /// </summary>
@@ -84,18 +71,15 @@ namespace SisClinica.Classes
                 new ClienteDAO().Registrar(this);
             }                
         }
-
         public void Alterar()
         {
             new ClienteDAO().Alterar(this);
         }
-
         /// <summary>
         /// Retorna uma data table com alguns dados essenciais do cliente.
         /// </summary>
         /// <param name="nome">Nome do cliente</param>
         /// <returns> DataTable com: ID, Nome, CPF, Nome Responsavel, CPF Responsavel</returns>
-
         public IList<Cliente> iListPesquisarPorNome(string nome)
         {
             return new ClienteDAO().PesquisarPorNome(nome);

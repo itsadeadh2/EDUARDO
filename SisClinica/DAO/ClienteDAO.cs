@@ -24,8 +24,8 @@ namespace SisClinica.DAO
             comando.Parameters.AddWithValue("@cpf", objCliente.cpf);
             comando.Parameters.AddWithValue("@email", objCliente.email);
             comando.Parameters.AddWithValue("@endereco", objCliente.endereco);
-            comando.Parameters.AddWithValue("@cidade", objCliente.cidade);
-            comando.Parameters.AddWithValue("@estado", objCliente.estado);
+            comando.Parameters.AddWithValue("@cidade", objCliente.paisEstadoCidade.idCidade);
+            comando.Parameters.AddWithValue("@estado", objCliente.paisEstadoCidade.idEstado);
             comando.Parameters.AddWithValue("@nome", objCliente.nome);
             comando.Parameters.AddWithValue("@telefone", objCliente.telefone);
             comando.Parameters.AddWithValue("@dataNascimento", objCliente.dataNascimento);
@@ -44,8 +44,8 @@ namespace SisClinica.DAO
             comando.Parameters.AddWithValue("@cpf", objCliente.cpf);
             comando.Parameters.AddWithValue("@email", objCliente.email);
             comando.Parameters.AddWithValue("@endereco", objCliente.endereco);
-            comando.Parameters.AddWithValue("@cidade", objCliente.cidade);
-            comando.Parameters.AddWithValue("@estado", objCliente.estado);
+            comando.Parameters.AddWithValue("@cidade", objCliente.paisEstadoCidade.idCidade);
+            comando.Parameters.AddWithValue("@estado", objCliente.paisEstadoCidade.idEstado);
             comando.Parameters.AddWithValue("@nome", objCliente.nome);
             comando.Parameters.AddWithValue("@telefone", objCliente.telefone);
             comando.Parameters.AddWithValue("@dataNascimento", objCliente.dataNascimento);
@@ -76,8 +76,7 @@ namespace SisClinica.DAO
                 objCliente.nome = dr["nome"].ToString();
                 objCliente.cpf = dr["cpf"].ToString();
                 objCliente.endereco = dr["endereco"].ToString();
-                objCliente.cidade = dr["cidade"].ToString();
-                objCliente.estado = dr["estado"].ToString();
+                objCliente.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                 objCliente.email = dr["email"].ToString();
                 objCliente.telefone = dr["telefone"].ToString();
                 objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -113,8 +112,7 @@ namespace SisClinica.DAO
                 objCliente.nome = dr["nome"].ToString();
                 objCliente.cpf = dr["cpf"].ToString();
                 objCliente.endereco = dr["endereco"].ToString();
-                objCliente.cidade = dr["cidade"].ToString();
-                objCliente.estado = dr["estado"].ToString();
+                objCliente.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                 objCliente.email = dr["email"].ToString();
                 objCliente.telefone = dr["telefone"].ToString();
                 objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -149,8 +147,7 @@ namespace SisClinica.DAO
                     objCliente.nome = dr["nome"].ToString();
                     objCliente.cpf = dr["cpf"].ToString();
                     objCliente.endereco = dr["endereco"].ToString();
-                    objCliente.cidade = dr["cidade"].ToString();
-                    objCliente.estado = dr["estado"].ToString();
+                    objCliente.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                     objCliente.email = dr["email"].ToString();
                     objCliente.telefone = dr["telefone"].ToString();
                     objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -190,8 +187,7 @@ namespace SisClinica.DAO
                     objCliente.nome = dr["nome"].ToString();
                     objCliente.cpf = dr["cpf"].ToString();
                     objCliente.endereco = dr["endereco"].ToString();
-                    objCliente.cidade = dr["cidade"].ToString();
-                    objCliente.estado = dr["estado"].ToString();
+                    objCliente.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                     objCliente.email = dr["email"].ToString();
                     objCliente.telefone = dr["telefone"].ToString();
                     objCliente.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -235,8 +231,8 @@ namespace SisClinica.DAO
             comando.CommandText = "UPDATE Cliente SET email=@email, endereco=@endereco, cidade=@cidade, estado=@estado, nome=@nome, telefone=@telefone, dataNascimento=@dtNasc, adicionalInfo = @ainfo where id=@id";
             comando.Parameters.AddWithValue("@email", objCliente.email);
             comando.Parameters.AddWithValue("@endereco", objCliente.endereco);
-            comando.Parameters.AddWithValue("@cidade", objCliente.cidade);
-            comando.Parameters.AddWithValue("@estado", objCliente.estado);
+            comando.Parameters.AddWithValue("@cidade", objCliente.paisEstadoCidade.idCidade);
+            comando.Parameters.AddWithValue("@estado", objCliente.paisEstadoCidade.idEstado);
             comando.Parameters.AddWithValue("@nome", objCliente.nome);
             comando.Parameters.AddWithValue("@telefone", objCliente.telefone);
             comando.Parameters.AddWithValue("@dtNasc", objCliente.dataNascimento);

@@ -13,24 +13,13 @@ namespace SisClinica.Forms
 {
     public partial class newFrmPrincipal : Form
     {
-        public enum skin { padrao, macacoBizantino, macacoDasNeves, darkTrevosoSombrioDasTrevas}
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect, // x-coordinate of upper-left corner
-            int nTopRect, // y-coordinate of upper-left corner
-            int nRightRect, // x-coordinate of lower-right corner
-            int nBottomRect, // y-coordinate of lower-right corner
-            int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
-         );
+        public enum skin { padrao, macacoBizantino, macacoDasNeves, darkTrevosoSombrioDasTrevas} // Enum usado para definir o tipo de skin        
         public newFrmPrincipal()
-        {
+        {            
             InitializeComponent();
             if (WindowState!=FormWindowState.Maximized)
             {
                 this.FormBorderStyle = FormBorderStyle.None;
-                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
             }
             userControlHome home = new userControlHome();
             painelDinamico.Controls.Add(home);
@@ -43,17 +32,12 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtons(btnMinimize);
             btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(68)))), ((int)(((byte)(43)))));
             btnHome.FlatAppearance.MouseOverBackColor = btnHome.BackColor;
+            SetSkin(skin.padrao);
         }
         private void panel5_MouseHover(object sender, EventArgs e)
         {
-            //btnHome.BackgroundImage.
-        }       
-
-        private void btnHome_MouseHover(object sender, EventArgs e)
-        {          
             
-        }
-
+        }       
         private void btnHome_Click(object sender, EventArgs e)
         {
             userControlHome uc = new userControlHome();
@@ -61,12 +45,10 @@ namespace SisClinica.Forms
             painelDinamico.Controls.Add(uc);
             uc.Show();
         }
-
         private void btnHome_MouseEnter(object sender, EventArgs e)
         {
             btnHome.BackgroundImage = Properties.Resources.borda;
         }
-
         private void btnHome_MouseLeave(object sender, EventArgs e)
         {
             btnHome.BackgroundImage = null;
@@ -79,7 +61,6 @@ namespace SisClinica.Forms
             btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(0, 53, 45);
             btn.FlatAppearance.MouseOverBackColor = btn.BackColor;
         }
-
         private void btnNovo_Click(object sender, EventArgs e)
         {
             painelDinamico.Controls.Clear();
@@ -88,7 +69,6 @@ namespace SisClinica.Forms
             painelDinamico.Controls.Add(menuNovo);
             menuNovo.Show();
         }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             painelDinamico.Controls.Clear();
@@ -97,22 +77,22 @@ namespace SisClinica.Forms
             painelDinamico.Controls.Add(menuPesquisar);
             menuPesquisar.Show();
         }
+
+        //- Eventos
+        //- Implementação da movimentação do form (arrastando com a topbar).
+        #region
         private bool _dragging = false;
         private Point _offset;
         private Point _start_point = new Point(0, 0);
-
-
         private void topbar_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void topbar_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
-
         private void topbar_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -121,17 +101,15 @@ namespace SisClinica.Forms
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
+        #endregion
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             painelDinamico.Controls.Clear();
@@ -139,7 +117,6 @@ namespace SisClinica.Forms
             painelDinamico.Controls.Add(conSess);
             conSess.Show();
         }
-
         private void btnConfigurar_Click(object sender, EventArgs e)
         {
             userControlMenuConfiguracoes menuConf = new userControlMenuConfiguracoes(this);
@@ -148,13 +125,14 @@ namespace SisClinica.Forms
             menuConf.Show();
         }
 
+        //- Métodos extras
         public void SetSkin(skin skn)
         {
             switch (skn)
             {
 
                 case skin.padrao:
-                    painelDinamico.BackColor = Color.FromArgb(164, 217, 212);
+                    painelDinamico.BackColor = Color.FromArgb(24, 107, 98);
                     painelBGSubButtons.BackColor = Color.FromArgb(0, 47, 40);
                     painelBGBtnHome.BackColor = Color.FromArgb(55, 91, 57);
                     painelButtons.BackColor = Color.FromArgb(0,87,73);

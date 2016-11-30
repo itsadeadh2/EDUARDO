@@ -10,12 +10,20 @@ namespace SisClinica.Forms
 {
     public static class HelperFunctions
     {
+        /// <summary>
+        /// Remove as bordas dos botões e muda a cor do MouseDown para branco. Utilizado geralmente para os botões que não possuem texto.
+        /// </summary>
+        /// <param name="btn">Botão</param>
         public static void SetButtons(Button btn)
         {
             btn.FlatAppearance.BorderSize = 0;
             btn.FlatAppearance.MouseDownBackColor = Color.White;
             btn.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
+        /// <summary>
+        /// Remove as bordas e define a aparencia do botão como flat, também muda as cores do MouseDown e MouseOver. Utilizado geralmente para os botões que contem texto.
+        /// </summary>
+        /// <param name="btn">Botão</param>
         public static void SetButtonsText(Button btn)
         {
             btn.FlatStyle = FlatStyle.Flat;
@@ -25,6 +33,12 @@ namespace SisClinica.Forms
             btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 51, 51);
             btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(102, 102, 102);
         }
+        /// <summary>
+        /// Remove as bordas e muda a cor do mouseOver e mouseClick para as cores passadas como parâmetro.
+        /// </summary>
+        /// <param name="btn"></param>
+        /// <param name="mouseOver">Cor do MouseOver</param>
+        /// <param name="mouseClick">Cor do MouseClic</param>
         public static void SetButtons(Button btn, Color mouseOver, Color mouseClick)
         {
             btn.FlatAppearance.BorderSize = 0;
@@ -46,13 +60,12 @@ namespace SisClinica.Forms
             {
                 return false;
             }
-        }
-        public static void SetUserControl(UserControl uc)
-        {
-            uc.BackColor = Color.FromArgb(164, 217, 212);
-            uc.Width = 672;
-            uc.Height = 409;
-        }
+        }        
+        /// <summary>
+        /// Checa se o nome tem o nome é valido.
+        /// </summary>
+        /// <param name="nome">nome</param>
+        /// <returns></returns>
         public static bool ChecaNome(string nome)
         {
             bool value;
@@ -66,7 +79,12 @@ namespace SisClinica.Forms
             }
             return value;
         }
-        public static bool ChecaDataSessao(DateTime data)
+        /// <summary>
+        /// Checa se a data da sessão é uma data válida.
+        /// </summary>
+        /// <param name="data">Data</param>
+        /// <returns></returns>
+        public static bool ChecaData(DateTime data)
         {
             bool value;
             if (data.Date<DateTime.Now.Date)
@@ -79,7 +97,12 @@ namespace SisClinica.Forms
             }
             return value;
         }
-        public static bool ChecaHorarioSessao(TimeSpan horario)
+        /// <summary>
+        /// Checa se o horário é valido.
+        /// </summary>
+        /// <param name="horario"></param>
+        /// <returns></returns>
+        public static bool ChecaHorario(TimeSpan horario)
         {
             bool value;
             if (horario<DateTime.Now.TimeOfDay)

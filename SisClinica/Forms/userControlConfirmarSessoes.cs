@@ -23,7 +23,10 @@ namespace SisClinica.Forms
             data = data.AddDays(1);
             dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);          
         }
+        //-Atributos
         Sessoes objSessao;
+
+        //-Eventos
         private void dtgSessoes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -47,13 +50,54 @@ namespace SisClinica.Forms
                 MessageBox.Show(erro.Message);
             }
             
+        }        
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (objSessao!=null)
+            {
+                objSessao.sessaoCompleta = true;
+                objSessao.CompletarSessao();
+                if (objSessao.nroSessao < objSessao.qtdeSessoes)
+                {
+                    DialogResult resultado = MessageBox.Show("A " + objSessao.nroSessao + "° sessão do tratamento foi confirmada, gostaria de marcar a " + (objSessao.nroSessao + 1) + "° sessão agora?", "Aviso", MessageBoxButtons.YesNo);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        userControlAgendarProximoTratamento agenProx = new userControlAgendarProximoTratamento(objSessao);
+                        Controls.Clear();
+                        Controls.Add(agenProx);
+                        agenProx.Show();
+                    }
+                    else
+                    {
+                        dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
+                    }
+                }
+                else
+                {
+                    if (objSessao.tipoDeSessao == "Tratamento")
+                    {
+                        MessageBox.Show("Última sessão confirmada, tratamento finalizado!");
+                        dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Consulta confirmada!");
+                        dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
+
+                    }
+                    btnConfirmar.Enabled = false;
+                }
+                gbConfirmar.Visible = false;
+            }            
         }
+
+        //-Métodos
         private void PreencherCampos()
         {
             lblCliente.Text = objSessao.objCliente.nome;
             lblMedico.Text = objSessao.medicoResponsavel.nome;
             lblTipo.Text = objSessao.tipoDeSessao;
-            if (objSessao.tipoDeSessao=="Tratamento")
+            if (objSessao.tipoDeSessao == "Tratamento")
             {
                 lblTipoTrat.Text = objSessao.tipoDeTratamento.nome;
             }
@@ -61,46 +105,19 @@ namespace SisClinica.Forms
             {
                 lblTipoTrat.Text = "-";
             }
-            lblValor.Text = "R$"+objSessao.valorSessao.ToString();
+            if (objSessao.quitada == true)
+            {
+                lblValor.Text = "Sessão quitada";
+            }
+            else
+            {
+                lblValor.Text = "R$" + objSessao.valorSessao.ToString();
+            }
+
             lblCPF.Text = objSessao.objCliente.cpf;
             lblCRM.Text = objSessao.medicoResponsavel.crm;
             lblConsultorio.Text = objSessao.objConsultorio.nomeConsultorio;
             lblHorario.Text = objSessao.horaInicio.TimeOfDay.ToString() + " as " + objSessao.horaFim.TimeOfDay.ToString();
-        }
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            objSessao.sessaoCompleta = true;
-            objSessao.CompletarSessao();
-            if (objSessao.nroSessao < objSessao.qtdeSessoes)
-            {
-                DialogResult resultado = MessageBox.Show("A " + objSessao.nroSessao + "° sessão do tratamento foi confirmada, gostaria de marcar a " + (objSessao.nroSessao + 1) + "° sessão agora?", "Aviso", MessageBoxButtons.YesNo);
-                if (resultado == DialogResult.Yes)
-                {
-                    userControlAgendarProximoTratamento agenProx = new userControlAgendarProximoTratamento().Preencher(objSessao);
-                    Controls.Clear();
-                    Controls.Add(agenProx);
-                    agenProx.Show();
-                }
-                else
-                {
-                    dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
-                }
-            }
-            else
-            {
-                if (objSessao.tipoDeSessao=="Tratamento")
-                {
-                    MessageBox.Show("Última sessão confirmada, tratamento finalizado!");
-                    dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
-                }
-                else
-                {
-                    MessageBox.Show("Consulta confirmada!");
-                    dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);
-
-                }
-                btnConfirmar.Enabled = false;
-            }
         }
     }
 }

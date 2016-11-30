@@ -18,7 +18,6 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtons(btnPessoa);
             HelperFunctions.SetButtons(btnSessoes);
         }
-
         private void btnPessoa_Click(object sender, EventArgs e)
         {
             Controls.Clear();
@@ -26,7 +25,6 @@ namespace SisClinica.Forms
             Controls.Add(pesqPessoas);
             pesqPessoas.Show();
         }
-
         private void btnSessoes_Click(object sender, EventArgs e)
         {
             Controls.Clear();

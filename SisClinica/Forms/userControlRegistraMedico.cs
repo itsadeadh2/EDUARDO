@@ -29,6 +29,7 @@ namespace SisClinica.Forms
             cbEstadoCRM.DisplayMember = "siglaEstado";
         }
 
+        //-Eventos
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Medico objMedico = new Medico();
@@ -38,8 +39,7 @@ namespace SisClinica.Forms
             objMedico.dataNascimento = dtpDataNasc.Value;
             objMedico.telefone = mtbTelefone.Text;
             objMedico.endereco = txtbEndereco.Text;
-            objMedico.cidade = cbCidade.Text;
-            objMedico.estado = cbEstado.Text;
+            objMedico.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade(Convert.ToInt32(cbCidade.SelectedValue)); //cbCidade.Text;
             objMedico.email = txtbEmail.Text;
 
             if (objMedico.nome.Length<3)
@@ -90,7 +90,6 @@ namespace SisClinica.Forms
             cbCidade.DisplayMember = "nomeCidade";
             cbCidade.ValueMember = "idCidade";
         }
-
         private void txtbnome_Leave(object sender, EventArgs e)
         {
             if (txtbnome.TextLength<3)
@@ -102,7 +101,6 @@ namespace SisClinica.Forms
                 ptbNomeError.Visible = false;
             }
         }
-
         private void dtpDataNasc_Leave(object sender, EventArgs e)
         {
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
@@ -114,7 +112,6 @@ namespace SisClinica.Forms
                 ptbDtNascError.Visible = false;
             }
         }
-
         private void mtbCPF_Leave(object sender, EventArgs e)
         {
             if (ChecaCPFSemMensagem(mtbCPF.Text))
@@ -126,7 +123,6 @@ namespace SisClinica.Forms
                 ptbCPFError.Visible = false;
             }
         }
-
         private void dtpDataNasc_ValueChanged(object sender, EventArgs e)
         {
             if (HelperFunctions.ChecaMenorDeIdade(dtpDataNasc.Value))
@@ -137,7 +133,13 @@ namespace SisClinica.Forms
             {
                 ptbDtNascError.Visible = false;
             }
+        }        
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetCidade();
         }
+
+        //-Métodos
         private bool ChecaCPF(string cpfPessoa)
         {
             bool value = false;
@@ -177,11 +179,6 @@ namespace SisClinica.Forms
                 value = true;
             }
             return value;
-        }
-
-        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SetCidade();
         }
     }
 }

@@ -33,8 +33,8 @@ namespace SisClinica.DAO
             comando.Parameters.AddWithValue("@cpf", objResponsvavel.cpf);
             comando.Parameters.AddWithValue("@email", objResponsvavel.email);
             comando.Parameters.AddWithValue("@endereco", objResponsvavel.endereco);
-            comando.Parameters.AddWithValue("@cidade", objResponsvavel.cidade);
-            comando.Parameters.AddWithValue("@estado", objResponsvavel.estado);
+            comando.Parameters.AddWithValue("@cidade", objResponsvavel.paisEstadoCidade.idCidade);
+            comando.Parameters.AddWithValue("@estado", objResponsvavel.paisEstadoCidade.idCidade);
             comando.Parameters.AddWithValue("@nome", objResponsvavel.nome);
             comando.Parameters.AddWithValue("@telefone", objResponsvavel.telefone);
             comando.Parameters.AddWithValue("@dataNascimento", objResponsvavel.dataNascimento);
@@ -61,8 +61,7 @@ namespace SisClinica.DAO
                 objResponsavel.cpf = dr["cpf"].ToString();
                 objResponsavel.email = dr["email"].ToString();
                 objResponsavel.endereco = dr["endereco"].ToString();
-                objResponsavel.cidade = dr["cidade"].ToString();
-                objResponsavel.estado = dr["estado"].ToString();
+                objResponsavel.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                 objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.telefone = dr["telefone"].ToString();
                 objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -92,8 +91,7 @@ namespace SisClinica.DAO
                 objResponsavel.cpf = dr["cpf"].ToString();
                 objResponsavel.email = dr["email"].ToString();
                 objResponsavel.endereco = dr["endereco"].ToString();
-                objResponsavel.cidade = dr["cidade"].ToString();
-                objResponsavel.estado = dr["estado"].ToString();
+                objResponsavel.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                 objResponsavel.nome = dr["nome"].ToString();
                 objResponsavel.telefone = dr["telefone"].ToString();
                 objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);
@@ -126,8 +124,7 @@ namespace SisClinica.DAO
                     objResponsavel.cpf = dr["cpf"].ToString();
                     objResponsavel.email = dr["email"].ToString();
                     objResponsavel.endereco = dr["endereco"].ToString();
-                    objResponsavel.cidade = dr["cidade"].ToString();
-                    objResponsavel.estado = dr["estado"].ToString();
+                    objResponsavel.paisEstadoCidade = new PaisEstadoCidade().BuscarCidade((int)dr["cidade"]);
                     objResponsavel.nome = dr["nome"].ToString();
                     objResponsavel.telefone = dr["telefone"].ToString();
                     objResponsavel.dataNascimento = Convert.ToDateTime(dr["dataNascimento"]);

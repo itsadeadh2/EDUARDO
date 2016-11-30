@@ -12,8 +12,7 @@ using SisClinica.Classes;
 namespace SisClinica.Forms
 {
     public partial class userControlMenuConfiguracoes : UserControl
-    {
-        newFrmPrincipal formprin = null;
+    {        
         public userControlMenuConfiguracoes(newFrmPrincipal frmPrin)
         {
             InitializeComponent();
@@ -24,55 +23,26 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnBizantino);
             formprin = frmPrin;
         }
-        private bool ChecarConsultorio(string checkConsult)
-        {
-            bool value = false;
-            if (new Consultorio().PesquisarPorNome(checkConsult) != null)
-            {
-                Consultorio objConsultorio = new Consultorio().PesquisarPorNome(checkConsult);
-                MessageBox.Show("O sistema ja possui em registro um consultório com esse nome: "+ objConsultorio.nomeConsultorio);
-                value = true;
-            }
-            return value;
-        }
-        private bool ChecarTratamento(string CheckTrat)
-        {
-            bool value = false;
-            if (new TipoDeTratamento().PesquisarPorNome(CheckTrat) != null)
-            {
-                TipoDeTratamento objTratamento = new TipoDeTratamento().PesquisarPorNome(CheckTrat);
-                MessageBox.Show("Já possui um Tratamento com esse nome: "+ objTratamento.nome);
-                value = true;
-            }
-            return value;
-        }
-        private void btnConfigurarHorarios_Click(object sender, EventArgs e)
-        {
-            userControlHorarios conHora = new userControlHorarios();
-            Controls.Clear();
-            Controls.Add(conHora);
-            conHora.Show();
-        }
 
+        //-Atributos
+        newFrmPrincipal formprin = null;
+
+        //-Eventos
         private void button1_Click(object sender, EventArgs e)
         {
             formprin.SetSkin(newFrmPrincipal.skin.darkTrevosoSombrioDasTrevas);
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             formprin.SetSkin(newFrmPrincipal.skin.macacoDasNeves);
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             formprin.SetSkin(newFrmPrincipal.skin.macacoBizantino);
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
         }
-
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Consultorio objConsultorio = new Consultorio();
@@ -97,7 +67,6 @@ namespace SisClinica.Forms
                 MessageBox.Show("Novo Consultorio Registrado com sucesso");
             }
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             TipoDeTratamento objTratamento = new TipoDeTratamento();
@@ -128,10 +97,33 @@ namespace SisClinica.Forms
             MessageBox.Show("Novo Tratamento Cadastrado com sucesso.");
             }
         }
-
         private void mtbNomeConsult_Leave(object sender, EventArgs e)
         {
 
+        }
+
+        //-Métodos
+        private bool ChecarConsultorio(string checkConsult)
+        {
+            bool value = false;
+            if (new Consultorio().PesquisarPorNome(checkConsult) != null)
+            {
+                Consultorio objConsultorio = new Consultorio().PesquisarPorNome(checkConsult);
+                MessageBox.Show("O sistema ja possui em registro um consultório com esse nome: " + objConsultorio.nomeConsultorio);
+                value = true;
+            }
+            return value;
+        }
+        private bool ChecarTratamento(string CheckTrat)
+        {
+            bool value = false;
+            if (new TipoDeTratamento().PesquisarPorNome(CheckTrat) != null)
+            {
+                TipoDeTratamento objTratamento = new TipoDeTratamento().PesquisarPorNome(CheckTrat);
+                MessageBox.Show("Já possui um Tratamento com esse nome: " + objTratamento.nome);
+                value = true;
+            }
+            return value;
         }
     }
 }

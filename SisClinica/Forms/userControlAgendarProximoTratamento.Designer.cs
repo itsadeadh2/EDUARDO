@@ -37,7 +37,6 @@
             this.lblVisHora = new System.Windows.Forms.Label();
             this.lblVisConsult = new System.Windows.Forms.Label();
             this.lblVisCli = new System.Windows.Forms.Label();
-            this.lblVisData = new System.Windows.Forms.Label();
             this.gbTratamento = new System.Windows.Forms.GroupBox();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.lbData = new System.Windows.Forms.Label();
@@ -69,7 +68,6 @@
             this.bgVisualizacao.Controls.Add(this.lblVisHora);
             this.bgVisualizacao.Controls.Add(this.lblVisConsult);
             this.bgVisualizacao.Controls.Add(this.lblVisCli);
-            this.bgVisualizacao.Controls.Add(this.lblVisData);
             this.bgVisualizacao.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bgVisualizacao.ForeColor = System.Drawing.Color.White;
             this.bgVisualizacao.Location = new System.Drawing.Point(15, 258);
@@ -100,7 +98,7 @@
             // lblVisQtde
             // 
             this.lblVisQtde.AutoSize = true;
-            this.lblVisQtde.Location = new System.Drawing.Point(9, 115);
+            this.lblVisQtde.Location = new System.Drawing.Point(9, 114);
             this.lblVisQtde.Name = "lblVisQtde";
             this.lblVisQtde.Size = new System.Drawing.Size(138, 16);
             this.lblVisQtde.TabIndex = 6;
@@ -109,7 +107,7 @@
             // lblVisTipo
             // 
             this.lblVisTipo.AutoSize = true;
-            this.lblVisTipo.Location = new System.Drawing.Point(9, 51);
+            this.lblVisTipo.Location = new System.Drawing.Point(9, 57);
             this.lblVisTipo.Name = "lblVisTipo";
             this.lblVisTipo.Size = new System.Drawing.Size(116, 16);
             this.lblVisTipo.TabIndex = 5;
@@ -118,7 +116,7 @@
             // lblVisMedic
             // 
             this.lblVisMedic.AutoSize = true;
-            this.lblVisMedic.Location = new System.Drawing.Point(9, 35);
+            this.lblVisMedic.Location = new System.Drawing.Point(9, 38);
             this.lblVisMedic.Name = "lblVisMedic";
             this.lblVisMedic.Size = new System.Drawing.Size(125, 16);
             this.lblVisMedic.TabIndex = 4;
@@ -127,7 +125,7 @@
             // lblVisHora
             // 
             this.lblVisHora.AutoSize = true;
-            this.lblVisHora.Location = new System.Drawing.Point(9, 99);
+            this.lblVisHora.Location = new System.Drawing.Point(9, 95);
             this.lblVisHora.Name = "lblVisHora";
             this.lblVisHora.Size = new System.Drawing.Size(49, 16);
             this.lblVisHora.TabIndex = 3;
@@ -136,7 +134,7 @@
             // lblVisConsult
             // 
             this.lblVisConsult.AutoSize = true;
-            this.lblVisConsult.Location = new System.Drawing.Point(9, 67);
+            this.lblVisConsult.Location = new System.Drawing.Point(9, 76);
             this.lblVisConsult.Name = "lblVisConsult";
             this.lblVisConsult.Size = new System.Drawing.Size(70, 16);
             this.lblVisConsult.TabIndex = 2;
@@ -150,15 +148,6 @@
             this.lblVisCli.Size = new System.Drawing.Size(49, 16);
             this.lblVisCli.TabIndex = 1;
             this.lblVisCli.Text = "Cliente:";
-            // 
-            // lblVisData
-            // 
-            this.lblVisData.AutoSize = true;
-            this.lblVisData.Location = new System.Drawing.Point(9, 83);
-            this.lblVisData.Name = "lblVisData";
-            this.lblVisData.Size = new System.Drawing.Size(167, 16);
-            this.lblVisData.TabIndex = 0;
-            this.lblVisData.Text = "Data do primeiro tratamento:";
             // 
             // gbTratamento
             // 
@@ -376,7 +365,6 @@
         private System.Windows.Forms.Label lblVisHora;
         private System.Windows.Forms.Label lblVisConsult;
         private System.Windows.Forms.Label lblVisCli;
-        private System.Windows.Forms.Label lblVisData;
         private System.Windows.Forms.GroupBox gbTratamento;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Label lbData;

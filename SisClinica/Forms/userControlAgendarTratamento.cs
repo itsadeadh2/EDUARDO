@@ -13,7 +13,8 @@ namespace SisClinica.Forms
 {
     public partial class userControlAgendarTratamento : UserControl
     {
-        public userControlAgendarTratamento()
+        userControlMenuNovo menuAnt;
+        public userControlAgendarTratamento(userControlMenuNovo menu)
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnSalvar);
@@ -53,9 +54,10 @@ namespace SisClinica.Forms
                 MessageBox.Show("O sistema não possui nenhum tipo de tratamento disponível, por favor, cadastre um tipo de tratamento.");
                 RetornarAoMenuAnterior();
             }
+            menuAnt = menu;
         }
 
-        //- Variáveis
+        //- Atributos
         private Cliente objCliente;
         private Sessoes objSessao = new Sessoes();
         private TipoDeTratamento objTipoDeTratamento;
@@ -63,14 +65,7 @@ namespace SisClinica.Forms
         private Medico objMedico;
         private string turno;
         
-        //- Eventos
-        private void RetornarAoMenuAnterior()
-        {
-            Controls.Clear();
-            UserControl menuAnt = new userControlMenuNovo();
-            Controls.Add(menuAnt);
-            menuAnt.Show();
-        }     
+        //- Eventos        
         private void btnCadastrarCli_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Você será levado ao menu de cadastro de clientes e todas as informações já preenchidas serão perdidas deseja continuar?", "Aviso", MessageBoxButtons.YesNo);
@@ -93,7 +88,7 @@ namespace SisClinica.Forms
         }
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
-            if (HelperFunctions.ChecaDataSessao(dtpData.Value)!=true)
+            if (HelperFunctions.ChecaData(dtpData.Value)!=true)
             {
                 ChecaTurno();
                 SetHora();
@@ -200,6 +195,12 @@ namespace SisClinica.Forms
         }
 
         //- Métodos
+        private void RetornarAoMenuAnterior()
+        {
+            Controls.Clear();
+            Controls.Add(menuAnt);
+            menuAnt.Show();
+        }
         private void SetTipoDeTratamento()
         {
             if (objMedico == null)
@@ -276,9 +277,9 @@ namespace SisClinica.Forms
             lblVisHora.Text = "Horário: " + objSessao.horaInicio.TimeOfDay.ToString() + " as " + objSessao.horaFim.TimeOfDay.ToString();
         }
 
-        private void checkPago_CheckedChanged(object sender, EventArgs e)
+        private void mtbQtdeSessoes_TextChanged(object sender, EventArgs e)
         {
-
+            lblVisQtde.Text = "Quantidade de sessões: " + mtbQtdeSessoes.Text;
         }
     }
 }

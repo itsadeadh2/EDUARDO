@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgendarProxima = new System.Windows.Forms.Button();
             this.lblTotalSessao = new System.Windows.Forms.Label();
@@ -192,10 +192,10 @@
             this.dtgClientes.Location = new System.Drawing.Point(62, 55);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dtgClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dtgClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgClientes.Size = new System.Drawing.Size(315, 89);
             this.dtgClientes.TabIndex = 19;
             this.dtgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
@@ -248,7 +248,6 @@
             // 
             // cbConsultorios
             // 
-            this.cbConsultorios.DisplayMember = "Nome";
             this.cbConsultorios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsultorios.Enabled = false;
             this.cbConsultorios.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,7 +257,6 @@
             this.cbConsultorios.Name = "cbConsultorios";
             this.cbConsultorios.Size = new System.Drawing.Size(93, 25);
             this.cbConsultorios.TabIndex = 4;
-            this.cbConsultorios.ValueMember = "id";
             this.cbConsultorios.SelectedIndexChanged += new System.EventHandler(this.cbConsultorios_SelectedIndexChanged);
             // 
             // lbHorario
@@ -395,7 +393,6 @@
             // 
             // cbMedicos
             // 
-            this.cbMedicos.DisplayMember = "nome do medico";
             this.cbMedicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMedicos.Enabled = false;
             this.cbMedicos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -405,7 +402,6 @@
             this.cbMedicos.Name = "cbMedicos";
             this.cbMedicos.Size = new System.Drawing.Size(298, 25);
             this.cbMedicos.TabIndex = 5;
-            this.cbMedicos.ValueMember = "id medico";
             this.cbMedicos.SelectedIndexChanged += new System.EventHandler(this.cbMedicos_SelectedIndexChanged);
             // 
             // rdbManha

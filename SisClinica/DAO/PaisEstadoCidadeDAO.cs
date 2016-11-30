@@ -25,8 +25,11 @@ namespace SisClinica.DAO
             if (dr.HasRows)
             {
                 dr.Read();
+                                
                 objPaisEstadoCidade.idCidade = (int)dr["cod_cidade"];
                 objPaisEstadoCidade.idEstado = (int)dr["cod_estado"];
+                PaisEstadoCidade e = new PaisEstadoCidade().BuscarEstado(objPaisEstadoCidade.idEstado);
+                objPaisEstadoCidade.siglaEstado = e.siglaEstado;
                 objPaisEstadoCidade.nomeCidade = dr["nom_cidade"].ToString();
             }
             else
@@ -35,6 +38,22 @@ namespace SisClinica.DAO
             }
             return objPaisEstadoCidade;
         }
+        //private string SiglaEstado(int idEstado)
+        //{
+        //    string value;
+        //    SqlCommand comando = new SqlCommand();
+        //    comando.CommandType = CommandType.Text;
+        //    comando.CommandText = "SELECT sgl_estado FROM estado WHERE cod_estado = @id";
+        //    comando.Parameters.AddWithValue("@id", idEstado);
+
+        //    Conexao con = new Conexao();
+        //    SqlDataReader dr = con.ExecutarSelect(comando);
+        //    if (dr.HasRows)
+        //    {
+        //        dr.Read();
+        //        value = dr["sgl_estado"].ToString();
+        //    }
+        //}
         public IList<PaisEstadoCidade> BuscarCidadesPorEstado(int idEstado)
         {
             IList<PaisEstadoCidade> listaPaisEstadoCidade = new List<PaisEstadoCidade>();
@@ -101,10 +120,8 @@ namespace SisClinica.DAO
             SqlDataReader dr = con.ExecutarSelect(comando);
             if (dr.HasRows)
             {
-                dr.Read();
-                objPaisEstadoCidade.idCidade = (int)dr["cod_cidade"];
-                objPaisEstadoCidade.idEstado = (int)dr["cod_estado"];
-                objPaisEstadoCidade.nomeCidade = dr["nom_cidade"].ToString();
+                dr.Read();               
+                objPaisEstadoCidade.idEstado = (int)dr["cod_estado"];                
                 objPaisEstadoCidade.siglaEstado = dr["sgl_estado"].ToString();
             }
             else

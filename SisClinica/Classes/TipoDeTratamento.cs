@@ -10,10 +10,12 @@ namespace SisClinica.Classes
 {
     public class TipoDeTratamento
     {
+        //-Propriedades
         public string nome { get; set; }
         public decimal valor { get; set; }
         public int id { get; set; }
 
+        //-Métodos
         public void CadastrarNovoTipo()
         {
             new TipoDeTratamentoDAO().CadastrarNovoTipo(this);

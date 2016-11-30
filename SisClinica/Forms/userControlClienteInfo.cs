@@ -13,38 +13,32 @@ namespace SisClinica.Forms
 {
     public partial class userControlClienteInfo : UserControl
     {
-        public userControlClienteInfo()
+        public userControlClienteInfo(Cliente objCli)
         {
             InitializeComponent();
             linkLblNomeResp.Enabled = false;
+            objCliente = new Cliente().PesquisarPorId(objCli.id);
+            lblNome.Text =objCliente.nome;
+            lblCPF.Text = objCliente.cpf;
+            lblDataNasc.Text = objCliente.dataNascimento.Date.ToString("dd/MM/yyyy");
+            lblEndereco.Text = objCliente.endereco;
+            lblEstado.Text = objCliente.paisEstadoCidade.siglaEstado;
+            lblCidade.Text = objCliente.paisEstadoCidade.nomeCidade;
+            lblEmail.Text = objCliente.email;
+            lblTelefone.Text = objCliente.telefone;
+            rtbAdicionalInfo.Text = objCliente.adicionalInfo;
+            dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorCliente(objCliente);
+            if (objCliente.objResponsavel != null)
+            {
+                linkLblNomeResp.Text = objCliente.objResponsavel.nome;
+                linkLblNomeResp.Enabled = true;
+            }
         }
 
+        //-Atributos
         Cliente objCliente;
 
-        public userControlClienteInfo PreencheFormulario(Cliente objCli)
-        {
-            userControlClienteInfo uc = new userControlClienteInfo();
-            uc.objCliente = new Cliente().PesquisarPorId(objCli.id);
-            uc.lblNome.Text = uc.objCliente.nome;
-            uc.lblCPF.Text = uc.objCliente.cpf;
-            uc.lblDataNasc.Text = uc.objCliente.dataNascimento.Date.ToString("dd/MM/yyyy");
-            uc.lblEndereco.Text = uc.objCliente.endereco;
-            uc.lblEstado.Text = uc.objCliente.estado;
-            uc.lblCidade.Text = uc.objCliente.cidade;
-            uc.lblEmail.Text = uc.objCliente.email;
-            uc.lblTelefone.Text = uc.objCliente.telefone;
-            uc.rtbAdicionalInfo.Text = uc.objCliente.adicionalInfo;
-            uc.dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorCliente(uc.objCliente);
-            if (uc.objCliente.objResponsavel!=null)
-            {
-                uc.linkLblNomeResp.Text = uc.objCliente.objResponsavel.nome;
-                uc.linkLblNomeResp.Enabled = true;
-            }
-            
-
-            return uc;
-        }
-
+        //-Eventos
         private void dtgSessoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -52,7 +46,7 @@ namespace SisClinica.Forms
                 if (new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)).tipoDeSessao == "Consulta")
                 {
                     Controls.Clear();
-                    userControlAlterarSessoes alterCon = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
+                    userControlAlterarSessoes alterCon = new userControlAlterarSessoes(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoes.CurrentRow.Cells["id"].Value)));
                     Controls.Add(alterCon);
                     alterCon.Show();
                 }
@@ -68,11 +62,10 @@ namespace SisClinica.Forms
             }
 
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Controls.Clear();
-            userControlResponsavelInfo ucResp = new userControlResponsavelInfo().Preencher(objCliente.objResponsavel);
+            userControlResponsavelInfo ucResp = new userControlResponsavelInfo(objCliente.objResponsavel);
             Controls.Add(ucResp);
             ucResp.Show();
         }

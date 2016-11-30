@@ -10,28 +10,18 @@ namespace SisClinica.Classes
 {
     public class Responsavel : Pessoa
     {
-        /// <summary>
-        /// Registra o responsável no banco de dados
-        /// </summary>
         public void Registrar()
         {
             new ResponsavelDAO().Registrar(this);
-        }
-        /// <summary>
-        /// Pesquisa um responsável
-        /// </summary>
-        /// <param name="id">id do responsavel</param>
-        /// <returns>objeto responsavel</returns>
+        }        
         public Responsavel Pesquisar(int id)
         {
             return new ResponsavelDAO().Pesquisar(id);
         }
-
         public void Alterar()
         {
             new ResponsavelDAO().Alterar(this);
         }
-
         public Responsavel PesquisarPorCPF(string cpf)
         {
             return new ResponsavelDAO().Pesquisar(cpf);
@@ -55,10 +45,6 @@ namespace SisClinica.Classes
                 dt = null;
             }
             return dt;
-        }
-        public void Excluir()
-        {
-
-        }
+        }        
     }
 }

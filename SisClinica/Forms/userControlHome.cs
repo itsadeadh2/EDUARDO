@@ -17,6 +17,7 @@ namespace SisClinica.Forms
         {
             InitializeComponent();
             DateTime data = DateTime.Now;
+            //AGEITAR ISSO DEPOIS
             data = data.AddDays(1);
             lblData.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
             IList<Sessoes> lst = new Sessoes().BuscaPorData(data);
@@ -44,7 +45,7 @@ namespace SisClinica.Forms
         {
             try
             {
-                userControlAlterarSessoes uc = new userControlAlterarSessoes().Preencher(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoesDoDia.CurrentRow.Cells["id"].Value)));
+                userControlAlterarSessoes uc = new userControlAlterarSessoes(new Sessoes().BuscaPorId(Convert.ToInt32(dtgSessoesDoDia.CurrentRow.Cells["id"].Value)));
                 Controls.Clear();
                 Controls.Add(uc);
                 uc.Show();
