@@ -16,9 +16,7 @@ namespace SisClinica.Forms
         public userControlHome()
         {
             InitializeComponent();
-            DateTime data = DateTime.Now;
-            //AGEITAR ISSO DEPOIS
-            data = data.AddDays(1);
+            DateTime data = DateTime.Now;            
             lblData.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
             IList<Sessoes> lst = new Sessoes().BuscaPorData(data);
             DataTable dt = new DataTable();

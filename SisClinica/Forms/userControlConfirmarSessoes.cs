@@ -13,14 +13,12 @@ namespace SisClinica.Forms
 {
     public partial class userControlConfirmarSessoes : UserControl
     {
-        // Ageitar isso depois
         DateTime data = DateTime.Now.Date;
         public userControlConfirmarSessoes()
         {
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnConfirmar);
             
-            data = data.AddDays(1);
             dtgSessoes.DataSource = new Sessoes().DataTableBuscaPorData(data);          
         }
         //-Atributos
