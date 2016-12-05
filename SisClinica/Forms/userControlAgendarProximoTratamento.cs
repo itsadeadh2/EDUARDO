@@ -16,12 +16,26 @@ namespace SisClinica.Forms
         public userControlAgendarProximoTratamento(Sessoes objS)
         {
             InitializeComponent();
-            HelperFunctions.SetButtonsText(btnSalvar);            
+            HelperFunctions.SetButtonsText(btnSalvar);
+            //Medico
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.ValueMember = "id medico";
             cbMedicos.DataSource = new Medico().Pesquisar();
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.ValueMember = "id medico";
+            //Consultorio
+            cbConsultorios.DisplayMember = "Nome";
+            cbConsultorios.ValueMember = "id";
             cbConsultorios.DataSource = new Consultorio().Pesquisar();
+            cbConsultorios.DisplayMember = "Nome";
+            cbConsultorios.ValueMember = "id";
+            //Tipo de tratamento
+            cbTipoDeTratamento.DisplayMember = "nome";
+            cbTipoDeTratamento.ValueMember = "id";
             cbTipoDeTratamento.DataSource = new TipoDeTratamento().Pesquisar();
             cbTipoDeTratamento.DisplayMember = "nome";
             cbTipoDeTratamento.ValueMember = "id";
+
             lblVisCli.Text = "Cliente: " + objS.objCliente.nome;
             lblVisMedic.Text = "Médico: " + objS.medicoResponsavel.nome;
             lblVisQtde.Text = "Sessões restantes: " + (objS.qtdeSessoes - objS.nroSessao);
@@ -125,15 +139,27 @@ namespace SisClinica.Forms
         }
         private void cbMedicos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.ValueMember = "id medico";
             SetMedico();
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.ValueMember = "id medico";
         }
         private void cbConsultorios_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbConsultorios.DisplayMember = "Nome";
+            cbConsultorios.ValueMember = "id";
             SetConsultorio();
+            cbConsultorios.DisplayMember = "Nome";
+            cbConsultorios.ValueMember = "id";
         }
         private void cbTipoDeTratamento_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbTipoDeTratamento.DisplayMember = "nome";
+            cbTipoDeTratamento.ValueMember = "id";
             objSessao.tipoDeTratamento = new TipoDeTratamento().Pesquisar(Convert.ToInt32(cbTipoDeTratamento.SelectedValue));
+            cbTipoDeTratamento.DisplayMember = "nome";
+            cbTipoDeTratamento.ValueMember = "id";
         }
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {

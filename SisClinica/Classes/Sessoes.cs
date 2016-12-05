@@ -43,6 +43,10 @@ namespace SisClinica.Classes
                     {
                         throw new Exception("O médico selecionado já possui uma sessão neste horario!");
                     }
+                    else if (s.objCliente.id == objCliente.id)
+                    {
+                        throw new Exception("O cliente já possui uma sessão neste horário!");
+                    }
                     else if (s.horaInicio == horaInicio && s.objConsultorio.id != objConsultorio.id)
                     {
                     }

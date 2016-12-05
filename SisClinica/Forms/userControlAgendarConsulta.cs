@@ -226,8 +226,9 @@ namespace SisClinica.Forms
         private void RetornarAoMenuAnterior()
         {
             Controls.Clear();
-            Controls.Add(menuAnt);
-            menuAnt.Show();
+            userControlMenuNovo uc = new userControlMenuNovo();
+            Controls.Add(uc);
+            uc.Show();            
         }        
     }
 }
