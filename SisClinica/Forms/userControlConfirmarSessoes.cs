@@ -16,6 +16,7 @@ namespace SisClinica.Forms
         DateTime data = DateTime.Now.Date;
         public userControlConfirmarSessoes()
         {
+            //data = data.AddDays(1);
             InitializeComponent();
             HelperFunctions.SetButtonsText(btnConfirmar);
             

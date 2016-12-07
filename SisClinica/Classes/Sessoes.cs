@@ -43,6 +43,10 @@ namespace SisClinica.Classes
                     {
                         throw new Exception("O médico selecionado já possui uma sessão neste horario!");
                     }
+                    else if (s.objCliente.id == objCliente.id)
+                    {
+                        throw new Exception("O cliente já possui uma sessão neste horário!");
+                    }
                     else if (s.horaInicio == horaInicio && s.objConsultorio.id != objConsultorio.id)
                     {
                     }
@@ -98,6 +102,32 @@ namespace SisClinica.Classes
         public IList<Sessoes> BuscaPorData(DateTime data)
         {
             return new SessoesDAO().PesquisarPorData(data.Date);
+        }
+        public DataTable DataTableBuscaPorDataHome(DateTime data)
+        {
+            IList<Sessoes> lst = new Sessoes().BuscaPorData(data);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Tipo", typeof(string));
+            dt.Columns.Add("Cliente", typeof(string));
+            dt.Columns.Add("Médico responsável", typeof(string));
+            dt.Columns.Add("Horário", typeof(string));
+            dt.Columns.Add("Consultorio", typeof(string));
+            dt.Columns.Add("id", typeof(int));
+            if (lst != null)
+            {
+                foreach (Sessoes objSessao in lst)
+                {
+                    if (objSessao.sessaoCompleta != true)
+                    {
+                        dt.Rows.Add(objSessao.tipoDeSessao, objSessao.objCliente.nome, objSessao.medicoResponsavel.nome, objSessao.horaInicio.TimeOfDay + " as " + objSessao.horaFim.TimeOfDay, objSessao.objConsultorio.nomeConsultorio, objSessao.id);
+                    }
+                }
+            }
+            else
+            {
+                dt = null;
+            }
+            return dt;
         }
         /// <summary>
         /// Pesquisa sessões com a data informada e retorna um datatable.

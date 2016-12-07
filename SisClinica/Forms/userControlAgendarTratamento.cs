@@ -21,8 +21,24 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtonsText(btnCadastrarCli);
             HelperFunctions.SetButtons(btnPesquisar);
             ChecaTurno();
+
+            //Consultorios
+            cbConsultorios.DisplayMember = "nome";
+            cbConsultorios.ValueMember = "id";
             cbConsultorios.DataSource = new Consultorio().Pesquisar();
+            cbConsultorios.DisplayMember = "nome";
+            cbConsultorios.ValueMember = "id";
+
+            //Medicos;
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.ValueMember = "id medico";
             cbMedicos.DataSource = new Medico().Pesquisar();
+            cbMedicos.DisplayMember = "nome do medico";
+            cbMedicos.ValueMember = "id medico";
+
+            //Tipo de tratamento
+            cbTipoDeTratamento.DisplayMember = "Nome";
+            cbTipoDeTratamento.ValueMember = "id";
             cbTipoDeTratamento.DataSource = new TipoDeTratamento().Pesquisar();
             cbTipoDeTratamento.DisplayMember = "Nome";
             cbTipoDeTratamento.ValueMember = "id";
@@ -198,8 +214,9 @@ namespace SisClinica.Forms
         private void RetornarAoMenuAnterior()
         {
             Controls.Clear();
-            Controls.Add(menuAnt);
-            menuAnt.Show();
+            userControlMenuNovo uc = new userControlMenuNovo();
+            Controls.Add(uc);
+            uc.Show();
         }
         private void SetTipoDeTratamento()
         {

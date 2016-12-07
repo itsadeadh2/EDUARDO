@@ -64,8 +64,17 @@ namespace SisClinica.Forms
                     btnAgendarProxima.Visible = true;
                 }
             }
-            cbHorarioInicial.Text = objSess.horaInicio.TimeOfDay.ToString();
-            cbHorarioFinal.Text = objSess.horaFim.TimeOfDay.ToString();
+            cbHorarioInicial.DisplayMember = "Hora";
+            cbHorarioInicial.ValueMember = "data";
+            cbHorarioInicial.SelectedIndex = cbHorarioInicial.FindStringExact(objSess.horaInicio.TimeOfDay.ToString());   //objSess.horaInicio.TimeOfDay.ToString();
+            cbHorarioInicial.DisplayMember = "Hora";
+            cbHorarioInicial.ValueMember = "data";
+
+            cbHorarioFinal.DisplayMember = "Hora";
+            cbHorarioFinal.ValueMember = "data";
+            cbHorarioFinal.SelectedIndex = cbHorarioFinal.FindStringExact(objSess.horaFim.TimeOfDay.ToString());   //objSess.horaFim.TimeOfDay.ToString();
+            cbHorarioFinal.DisplayMember = "Hora";
+            cbHorarioFinal.ValueMember = "data";
             objSessao = objSess;
 
         }
