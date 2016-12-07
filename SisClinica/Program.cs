@@ -20,7 +20,7 @@ namespace SisClinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new newFrmPrincipal());
+             Application.Run(new newFrmPrincipal());
         }
     }
 }

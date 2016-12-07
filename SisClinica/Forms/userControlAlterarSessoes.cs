@@ -59,7 +59,7 @@ namespace SisClinica.Forms
                 lblValorSessao.Visible = true;
                 lblTotal.Text = "R$" + objSess.tipoDeTratamento.valor.ToString();
                 lblTotalSessao.Text = "R$" + objSess.valorSessao.ToString();
-                if (objSess.tratamentoPosterior == null && objSess.nroSessao < objSess.qtdeSessoes)
+                if (objSess.tratamentoPosterior == null && objSess.nroSessao < objSess.qtdeSessoes && objSess.sessaoCompleta==true)
                 {
                     btnAgendarProxima.Visible = true;
                 }

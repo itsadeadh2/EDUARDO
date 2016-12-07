@@ -32,7 +32,7 @@ namespace SisClinica.Forms
             HelperFunctions.SetButtons(btnMinimize);
             btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(68)))), ((int)(((byte)(43)))));
             btnHome.FlatAppearance.MouseOverBackColor = btnHome.BackColor;
-            SetSkin(skin.padrao);
+            SetSkin(skin.darkTrevosoSombrioDasTrevas);
         }
         private void panel5_MouseHover(object sender, EventArgs e)
         {
