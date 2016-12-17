@@ -16,7 +16,7 @@ namespace SisClinica.Forms
         public userControlHome()
         {
             InitializeComponent();
-            DateTime data = DateTime.Now;            
+            DateTime data = DateTime.Now;                     
             lblData.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
 
             dtgSessoesDoDia.DataSource = new Sessoes().DataTableBuscaPorDataHome(data);

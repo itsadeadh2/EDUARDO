@@ -40,6 +40,7 @@ namespace SisClinica.Forms
             cbEstado.ValueMember = "idEstado";
             cbEstado.SelectedValue = objCliente.paisEstadoCidade.idEstado;
             cbCidade.SelectedValue = objCliente.paisEstadoCidade.idCidade;
+            HelperFunctions.SetButtonsText(btnSalvar);
 
         }
         Cliente objCliente;
